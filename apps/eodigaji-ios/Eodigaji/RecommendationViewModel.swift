@@ -30,7 +30,11 @@ public final class RecommendationViewModel: ObservableObject {
     @Published public private(set) var liveError: Error?
     @Published public private(set) var liveResultsOrigin: OriginLocation?
     @Published public private(set) var liveResultsMaxTravelTime: MaxTravelTimeMinutes?
-    @Published public var originQuery = ""
+    @Published public var originQuery = "" {
+        didSet {
+            originSearchGeneration += 1
+        }
+    }
     @Published public private(set) var originSearchResults: [OriginLocation] = []
     @Published public private(set) var originError: Error?
     @Published public private(set) var originSearchError: Error?
@@ -45,6 +49,7 @@ public final class RecommendationViewModel: ObservableObject {
     private let originSearchService: (any OriginSearching)?
     private var didRequestInitialOrigin = false
     private var originSelectionGeneration = 0
+    private var originSearchGeneration = 0
 
     public init(
         service: any RecommendationServicing,
@@ -186,6 +191,7 @@ public final class RecommendationViewModel: ObservableObject {
         hasCompletedOriginSearch = false
         originSearchError = nil
         originSearchResults = []
+        let requestGeneration = originSearchGeneration
 
         defer {
             isSearchingOrigins = false
@@ -199,9 +205,12 @@ public final class RecommendationViewModel: ObservableObject {
         }
 
         do {
-            originSearchResults = try await originSearchService.search(query: query, region: region)
+            let results = try await originSearchService.search(query: query, region: region)
+            guard requestGeneration == originSearchGeneration else { return }
+            originSearchResults = results
             hasCompletedOriginSearch = true
         } catch {
+            guard requestGeneration == originSearchGeneration else { return }
             originSearchError = error
         }
     }

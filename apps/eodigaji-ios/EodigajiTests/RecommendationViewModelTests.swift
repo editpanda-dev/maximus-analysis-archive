@@ -5,6 +5,61 @@ import XCTest
 
 @MainActor
 final class RecommendationViewModelTests: XCTestCase {
+    func testRecommendMapsCurrentSelectionsToLegacyRequestAndStoresResponse() async {
+        let expectedResponse = Self.sampleResponse
+        let service = StubRecommendationService(result: .success(expectedResponse))
+        let viewModel = RecommendationViewModel(service: service)
+
+        viewModel.origin = "청량리역"
+        viewModel.transportMode = .publicTransit
+        viewModel.maxTravelTimeMinutes = .sixty
+        viewModel.timeSlot = .morning
+        viewModel.purpose = .culture
+
+        await viewModel.recommend()
+
+        let request = await service.receivedRequest
+        XCTAssertEqual(
+            request,
+            RecommendationRequest(
+                origin: "청량리역",
+                transportMode: .publicTransit,
+                maxTravelTimeMinutes: .sixty,
+                timeSlot: .morning,
+                purpose: .culture
+            )
+        )
+        XCTAssertEqual(viewModel.response, expectedResponse)
+        XCTAssertTrue(viewModel.shouldShowResults)
+        XCTAssertNil(viewModel.error)
+        XCTAssertFalse(viewModel.isLoading)
+    }
+
+    func testLegacyDismissResultsPreservesResponse() async {
+        let viewModel = RecommendationViewModel(
+            service: StubRecommendationService(result: .success(Self.sampleResponse))
+        )
+
+        await viewModel.recommend()
+        viewModel.dismissResults()
+
+        XCTAssertFalse(viewModel.shouldShowResults)
+        XCTAssertEqual(viewModel.response, Self.sampleResponse)
+    }
+
+    func testLegacyRecommendStoresClientErrorAndClearsResults() async {
+        let viewModel = RecommendationViewModel(
+            service: StubRecommendationService(result: .failure(StubError.unavailable))
+        )
+
+        await viewModel.recommend()
+
+        XCTAssertNil(viewModel.response)
+        XCTAssertNotNil(viewModel.error)
+        XCTAssertTrue(viewModel.errorMessage?.contains("추천") == true)
+        XCTAssertFalse(viewModel.isLoading)
+    }
+
     func testRecommendLivePassesSelectedMapOriginAndConditionsToLiveService() async {
         let expectedRecommendation = Self.sampleRecommendation
         let service = StubLiveRecommendationService(result: .success([expectedRecommendation]))
@@ -193,6 +248,31 @@ final class RecommendationViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.liveResults, [Self.sampleRecommendation])
     }
 
+    func testPendingOriginSearchDoesNotPublishResultsAfterQueryChanges() async {
+        let searchService = PendingViewModelOriginSearchService()
+        let viewModel = RecommendationViewModel(
+            liveService: StubLiveRecommendationService(result: .success([])),
+            originSearchService: searchService
+        )
+        let staleResult = OriginLocation(
+            name: "이전 검색 결과",
+            coordinate: CLLocationCoordinate2D(latitude: 37.3389, longitude: 127.2697),
+            source: .searchedPlace
+        )
+        viewModel.originQuery = "첫 검색어"
+
+        let request = Task { await viewModel.searchOrigins() }
+        await searchService.waitUntilRequested()
+        viewModel.originQuery = "새 검색어"
+        searchService.complete(with: .success([staleResult]))
+        await request.value
+
+        XCTAssertEqual(viewModel.originQuery, "새 검색어")
+        XCTAssertTrue(viewModel.originSearchResults.isEmpty)
+        XCTAssertFalse(viewModel.hasCompletedOriginSearch)
+        XCTAssertNil(viewModel.originSearchError)
+    }
+
     private static let sampleRecommendation = LiveRecommendation(
         placeName: "서울숲",
         address: "서울 성동구 뚝섬로 273",
@@ -207,6 +287,44 @@ final class RecommendationViewModelTests: XCTestCase {
             )
         ]
     )
+
+    private static let sampleResponse = RecommendationResponse(
+        resultStatus: .ok,
+        eligibleCount: 1,
+        recommendations: [
+            Recommendation(
+                id: "culture_001",
+                name: "서울숲",
+                district: "성동구",
+                journeyTimeMinutes: 38,
+                routeStatus: .availableVerified,
+                costStatus: .unavailable,
+                costWon: nil,
+                tags: ["산책", "문화"],
+                reason: "문화 목적에 맞는 fixture 추천입니다.",
+                signal: "fixture_culture_profile",
+                method: "fixture_rule_v1",
+                vintage: "F0-fixture-v1"
+            )
+        ],
+        rankingBasis: .f0PublicRule,
+        fixture: true,
+        limitations: "데모 fixture이며 실시간 대중교통 정보가 아닙니다."
+    )
+}
+
+private actor StubRecommendationService: RecommendationServicing {
+    private let result: Result<RecommendationResponse, Error>
+    private(set) var receivedRequest: RecommendationRequest?
+
+    init(result: Result<RecommendationResponse, Error>) {
+        self.result = result
+    }
+
+    func recommendations(for request: RecommendationRequest) async throws -> RecommendationResponse {
+        receivedRequest = request
+        return try result.get()
+    }
 }
 
 @MainActor
@@ -327,6 +445,31 @@ private final class PendingLiveRecommendationService: LiveRecommendationServicin
     }
 
     func complete(with result: Result<[LiveRecommendation], Error>) {
+        let continuation = continuation
+        self.continuation = nil
+        continuation?.resume(with: result)
+    }
+}
+
+@MainActor
+private final class PendingViewModelOriginSearchService: OriginSearching {
+    private var continuation: CheckedContinuation<[OriginLocation], Error>?
+    private var requestWaiters: [CheckedContinuation<Void, Never>] = []
+
+    func search(query: String, region: MKCoordinateRegion?) async throws -> [OriginLocation] {
+        try await withCheckedThrowingContinuation { continuation in
+            self.continuation = continuation
+            requestWaiters.forEach { $0.resume() }
+            requestWaiters = []
+        }
+    }
+
+    func waitUntilRequested() async {
+        guard continuation == nil else { return }
+        await withCheckedContinuation { requestWaiters.append($0) }
+    }
+
+    func complete(with result: Result<[OriginLocation], Error>) {
         let continuation = continuation
         self.continuation = nil
         continuation?.resume(with: result)

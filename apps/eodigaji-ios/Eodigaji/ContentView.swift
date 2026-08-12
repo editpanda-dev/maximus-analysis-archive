@@ -300,7 +300,7 @@ struct ContentView: View {
     }
 
     private var privacyNotice: some View {
-        Text("출발 좌표는 기기 안에서 Apple MapKit 요청에만 사용되며 서버로 전송하지 않습니다.")
+        Text("출발 좌표는 이 앱의 백엔드로 전송하지 않으며, 장소 검색과 경로 계산을 위해 Apple 지도 서비스에서 사용됩니다.")
             .font(.caption2.weight(.semibold))
             .multilineTextAlignment(.center)
             .foregroundStyle(.secondary)
