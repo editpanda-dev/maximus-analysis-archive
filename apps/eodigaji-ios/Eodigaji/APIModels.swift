@@ -1,3 +1,4 @@
+import CoreLocation
 import Foundation
 
 public enum TransportMode: String, Codable, CaseIterable, Sendable {
@@ -26,6 +27,68 @@ public enum Purpose: String, Codable, CaseIterable, Sendable {
     case shopping
     case culture
     case rest
+}
+
+public enum LiveRouteTransportType: Equatable, Sendable {
+    case walking
+    case transit
+    case automobile
+    case other
+}
+
+public struct LiveRouteStep: Equatable, Sendable {
+    public let instructions: String
+    public let distanceMeters: CLLocationDistance
+    public let transportType: LiveRouteTransportType
+
+    public init(
+        instructions: String,
+        distanceMeters: CLLocationDistance,
+        transportType: LiveRouteTransportType
+    ) {
+        self.instructions = instructions
+        self.distanceMeters = distanceMeters
+        self.transportType = transportType
+    }
+}
+
+public struct LiveRecommendation: Equatable, Sendable {
+    public let placeName: String
+    public let address: String
+    public let destinationCoordinate: CLLocationCoordinate2D
+    public let expectedTravelTime: TimeInterval
+    public let distanceMeters: CLLocationDistance
+    public let routeSteps: [LiveRouteStep]
+
+    public var journeyTimeMinutes: Int {
+        Int(ceil(expectedTravelTime / 60))
+    }
+
+    public init(
+        placeName: String,
+        address: String,
+        destinationCoordinate: CLLocationCoordinate2D,
+        expectedTravelTime: TimeInterval,
+        distanceMeters: CLLocationDistance,
+        routeSteps: [LiveRouteStep]
+    ) {
+        self.placeName = placeName
+        self.address = address
+        self.destinationCoordinate = destinationCoordinate
+        self.expectedTravelTime = expectedTravelTime
+        self.distanceMeters = distanceMeters
+        self.routeSteps = routeSteps
+    }
+
+    public static func == (lhs: LiveRecommendation, rhs: LiveRecommendation) -> Bool {
+        lhs.placeName == rhs.placeName
+            && lhs.address == rhs.address
+            && lhs.destinationCoordinate.latitude == rhs.destinationCoordinate.latitude
+            && lhs.destinationCoordinate.longitude == rhs.destinationCoordinate.longitude
+            && lhs.expectedTravelTime == rhs.expectedTravelTime
+            && lhs.distanceMeters == rhs.distanceMeters
+            && lhs.routeSteps == rhs.routeSteps
+    }
 }
 
 public struct RecommendationRequest: Codable, Equatable, Sendable {
