@@ -12,7 +12,6 @@ final class APIModelsTests: XCTestCase {
         )
 
         let encoder = JSONEncoder()
-        encoder.keyEncodingStrategy = .convertToSnakeCase
         let json = try JSONSerialization.jsonObject(with: encoder.encode(request)) as? [String: Any]
 
         XCTAssertEqual(json?["origin"] as? String, "회기역")
@@ -52,7 +51,6 @@ final class APIModelsTests: XCTestCase {
         )
 
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         let response = try decoder.decode(RecommendationResponse.self, from: data)
 
         XCTAssertEqual(response.resultStatus, .ok)

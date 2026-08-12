@@ -60,7 +60,6 @@ public final class RecommendationAPIClient: RecommendationAPIClientProtocol {
         let body: Data
         do {
             let encoder = JSONEncoder()
-            encoder.keyEncodingStrategy = .convertToSnakeCase
             body = try encoder.encode(request)
         } catch {
             throw RecommendationAPIError.encoding(message: error.localizedDescription)
@@ -114,7 +113,6 @@ public final class RecommendationAPIClient: RecommendationAPIClientProtocol {
 
         do {
             let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
             return try decoder.decode(Response.self, from: data)
         } catch {
             throw RecommendationAPIError.decoding(message: error.localizedDescription)
