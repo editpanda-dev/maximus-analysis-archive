@@ -12,6 +12,7 @@ public final class RecommendationViewModel: ObservableObject {
     @Published public private(set) var isLoading = false
     @Published public private(set) var response: RecommendationResponse?
     @Published public private(set) var error: Error?
+    @Published public private(set) var shouldShowResults = false
 
     private let service: any RecommendationServicing
 
@@ -63,6 +64,7 @@ public final class RecommendationViewModel: ObservableObject {
         isLoading = true
         error = nil
         response = nil
+        shouldShowResults = false
 
         defer {
             isLoading = false
@@ -70,6 +72,7 @@ public final class RecommendationViewModel: ObservableObject {
 
         do {
             response = try await service.recommendations(for: currentRequest)
+            shouldShowResults = true
         } catch {
             self.error = error
         }
@@ -77,5 +80,9 @@ public final class RecommendationViewModel: ObservableObject {
 
     public func retry() async {
         await recommend()
+    }
+
+    public func dismissResults() {
+        shouldShowResults = false
     }
 }

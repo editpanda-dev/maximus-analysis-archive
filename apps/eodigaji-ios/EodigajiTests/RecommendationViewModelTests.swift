@@ -28,8 +28,21 @@ final class RecommendationViewModelTests: XCTestCase {
             )
         )
         XCTAssertEqual(viewModel.response, expectedResponse)
+        XCTAssertTrue(viewModel.shouldShowResults)
         XCTAssertNil(viewModel.error)
         XCTAssertFalse(viewModel.isLoading)
+    }
+
+    func testDismissResultsReturnsToConditionsWithoutDiscardingResponse() async throws {
+        let viewModel = RecommendationViewModel(
+            service: StubRecommendationService(result: .success(Self.sampleResponse))
+        )
+
+        await viewModel.recommend()
+        viewModel.dismissResults()
+
+        XCTAssertFalse(viewModel.shouldShowResults)
+        XCTAssertEqual(viewModel.response, Self.sampleResponse)
     }
 
     func testRecommendStoresClientErrorAndClearsResults() async throws {

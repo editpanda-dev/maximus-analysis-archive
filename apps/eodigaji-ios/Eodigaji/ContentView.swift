@@ -11,25 +11,37 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("출발지와 조건을 입력하면 목적에 맞는 장소를 찾아드려요.")
-                            .font(.body)
-                            .foregroundStyle(.secondary)
+            Group {
+                if viewModel.shouldShowResults, let response = viewModel.response {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 24) {
+                            recommendationResults(response)
+                        }
+                        .padding(20)
                     }
-
-                    recommendationForm
-                    recommendButton
-                    requestState
-
-                    if let response = viewModel.response {
-                        recommendationResults(response)
+                    .navigationTitle("추천 결과")
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button("조건으로") {
+                                viewModel.dismissResults()
+                            }
+                        }
                     }
+                } else {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 24) {
+                            Text("출발지와 조건을 입력하면 목적에 맞는 장소를 찾아드려요.")
+                                .font(.body)
+                                .foregroundStyle(.secondary)
+                            recommendationForm
+                            recommendButton
+                            requestState
+                        }
+                        .padding(20)
+                    }
+                    .navigationTitle("어디가지")
                 }
-                .padding(20)
             }
-            .navigationTitle("어디가지")
             .navigationBarTitleDisplayMode(.inline)
             .safeAreaInset(edge: .top, spacing: 0) {
                 fixtureDisclaimer
