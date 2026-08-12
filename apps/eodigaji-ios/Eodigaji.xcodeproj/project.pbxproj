@@ -15,6 +15,8 @@
 		E10000000000000000000006 /* APIModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* APIModelsTests.swift */; };
 		E10000000000000000000007 /* RecommendationAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* RecommendationAPIClientTests.swift */; };
 		E10000000000000000000008 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* XCTest.framework */; };
+		E20000000000000000000001 /* RecommendationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* RecommendationViewModelTests.swift */; };
+		E20000000000000000000002 /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000002 /* RecommendationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		B10000000000000000000008 /* RecommendationAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationAPIClientTests.swift; sourceTree = "<group>"; };
 		B10000000000000000000009 /* EodigajiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EodigajiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10000000000000000000010 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		B20000000000000000000001 /* RecommendationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModelTests.swift; sourceTree = "<group>"; };
+		B20000000000000000000002 /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				B10000000000000000000003 /* APIModels.swift */,
 				B10000000000000000000004 /* RecommendationAPIClient.swift */,
 				B10000000000000000000005 /* DevelopmentConfiguration.swift */,
+				B20000000000000000000002 /* RecommendationViewModel.swift */,
 			);
 			path = Eodigaji;
 			sourceTree = "<group>";
@@ -76,6 +81,7 @@
 			children = (
 				B10000000000000000000007 /* APIModelsTests.swift */,
 				B10000000000000000000008 /* RecommendationAPIClientTests.swift */,
+				B20000000000000000000001 /* RecommendationViewModelTests.swift */,
 			);
 			path = EodigajiTests;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 				E10000000000000000000003 /* APIModels.swift in Sources */,
 				E10000000000000000000004 /* RecommendationAPIClient.swift in Sources */,
 				E10000000000000000000005 /* DevelopmentConfiguration.swift in Sources */,
+				E20000000000000000000002 /* RecommendationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +230,7 @@
 			files = (
 				E10000000000000000000006 /* APIModelsTests.swift in Sources */,
 				E10000000000000000000007 /* RecommendationAPIClientTests.swift in Sources */,
+				E20000000000000000000001 /* RecommendationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

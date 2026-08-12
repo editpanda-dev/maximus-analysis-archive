@@ -29,9 +29,12 @@ public enum RecommendationAPIError: Error, LocalizedError, Equatable, Sendable {
     }
 }
 
-public protocol RecommendationAPIClientProtocol: AnyObject {
-    func health() async throws -> HealthResponse
+public protocol RecommendationServicing: AnyObject {
     func recommendations(for request: RecommendationRequest) async throws -> RecommendationResponse
+}
+
+public protocol RecommendationAPIClientProtocol: RecommendationServicing {
+    func health() async throws -> HealthResponse
 }
 
 public final class RecommendationAPIClient: RecommendationAPIClientProtocol {
