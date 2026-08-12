@@ -3,6 +3,8 @@ import CoreLocation
 public struct OriginLocation: Equatable {
     public enum Source: Equatable {
         case currentDevice
+        case searchedPlace
+        case mapPin
     }
 
     public let name: String

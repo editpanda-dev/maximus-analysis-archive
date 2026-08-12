@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel: RecommendationViewModel
+    @State private var isOriginPickerPresented = false
+    @State private var selectedMapOrigin: OriginLocation?
 
     init(apiClient: any RecommendationServicing = RecommendationAPIClient()) {
         _viewModel = StateObject(
@@ -50,6 +52,24 @@ struct ContentView: View {
                 fixtureDisclaimer
             }
         }
+        .sheet(isPresented: $isOriginPickerPresented) {
+            NavigationStack {
+                OriginPickerView(initialOrigin: selectedMapOrigin) { origin in
+                    selectedMapOrigin = origin
+                    viewModel.origin = origin.name
+                    isOriginPickerPresented = false
+                }
+                .navigationTitle("지도에서 출발지 선택")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("닫기") {
+                            isOriginPickerPresented = false
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private var recommendationForm: some View {
@@ -64,6 +84,18 @@ struct ContentView: View {
                     .textFieldStyle(.roundedBorder)
                     .textInputAutocapitalization(.never)
                     .accessibilityLabel("출발지")
+                Button("지도에서 선택") {
+                    isOriginPickerPresented = true
+                }
+                .buttonStyle(.bordered)
+                .accessibilityLabel("지도에서 출발지 선택")
+
+                if let selectedMapOrigin {
+                    Text("선택한 지도 좌표: \(selectedMapOrigin.coordinate.latitude), \(selectedMapOrigin.coordinate.longitude)")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                        .accessibilityLabel("선택한 지도 좌표 \(selectedMapOrigin.coordinate.latitude), \(selectedMapOrigin.coordinate.longitude)")
+                }
             }
 
             LabeledContent("이동 수단") {

@@ -21,6 +21,10 @@
 		E30000000000000000000002 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30000000000000000000002 /* CoreLocation.framework */; };
 		E30000000000000000000003 /* OriginLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000003 /* OriginLocation.swift */; };
 		E30000000000000000000004 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000004 /* LocationService.swift */; };
+		E40000000000000000000001 /* OriginSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000001 /* OriginSearchServiceTests.swift */; };
+		E40000000000000000000002 /* OriginSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000002 /* OriginSearchService.swift */; };
+		E40000000000000000000003 /* OriginPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000003 /* OriginPickerView.swift */; };
+		E40000000000000000000004 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40000000000000000000004 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		B30000000000000000000002 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B30000000000000000000003 /* OriginLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginLocation.swift; sourceTree = "<group>"; };
 		B30000000000000000000004 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		B40000000000000000000001 /* OriginSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginSearchServiceTests.swift; sourceTree = "<group>"; };
+		B40000000000000000000002 /* OriginSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginSearchService.swift; sourceTree = "<group>"; };
+		B40000000000000000000003 /* OriginPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginPickerView.swift; sourceTree = "<group>"; };
+		B40000000000000000000004 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30000000000000000000002 /* CoreLocation.framework in Frameworks */,
+				E40000000000000000000004 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +92,8 @@
 				B20000000000000000000002 /* RecommendationViewModel.swift */,
 				B30000000000000000000003 /* OriginLocation.swift */,
 				B30000000000000000000004 /* LocationService.swift */,
+				B40000000000000000000002 /* OriginSearchService.swift */,
+				B40000000000000000000003 /* OriginPickerView.swift */,
 			);
 			path = Eodigaji;
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 				B10000000000000000000008 /* RecommendationAPIClientTests.swift */,
 				B20000000000000000000001 /* RecommendationViewModelTests.swift */,
 				B30000000000000000000001 /* LocationServiceTests.swift */,
+				B40000000000000000000001 /* OriginSearchServiceTests.swift */,
 			);
 			path = EodigajiTests;
 			sourceTree = "<group>";
@@ -112,6 +124,7 @@
 			children = (
 				B10000000000000000000010 /* XCTest.framework */,
 				B30000000000000000000002 /* CoreLocation.framework */,
+				B40000000000000000000004 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,6 +249,8 @@
 				E20000000000000000000002 /* RecommendationViewModel.swift in Sources */,
 				E30000000000000000000003 /* OriginLocation.swift in Sources */,
 				E30000000000000000000004 /* LocationService.swift in Sources */,
+				E40000000000000000000002 /* OriginSearchService.swift in Sources */,
+				E40000000000000000000003 /* OriginPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +262,7 @@
 				E10000000000000000000007 /* RecommendationAPIClientTests.swift in Sources */,
 				E20000000000000000000001 /* RecommendationViewModelTests.swift in Sources */,
 				E30000000000000000000001 /* LocationServiceTests.swift in Sources */,
+				E40000000000000000000001 /* OriginSearchServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
