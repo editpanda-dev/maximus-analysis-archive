@@ -16,7 +16,7 @@ struct LivePlaceSearchRequest {
     let region: MKCoordinateRegion
 }
 
-struct LivePlaceCandidate {
+struct LivePlaceCandidate: Sendable {
     let name: String
     let address: String
     let coordinate: CLLocationCoordinate2D
@@ -28,7 +28,7 @@ struct LiveDirectionsRequest {
     let transportType: MKDirectionsTransportType
 }
 
-struct LiveTransitRoute: Equatable {
+struct LiveTransitRoute: Equatable, Sendable {
     let expectedTravelTime: TimeInterval
     let distanceMeters: CLLocationDistance
     let steps: [LiveRouteStep]
@@ -48,17 +48,24 @@ protocol LiveDirectionsPort: AnyObject {
 public final class LiveRecommendationService: LiveRecommendationServicing {
     private let searchPort: any LivePlaceSearchPort
     private let directionsPort: any LiveDirectionsPort
+    private let maximumConcurrentDirections: Int
 
     public convenience init() {
         self.init(
             searchPort: MapKitLivePlaceSearchPort(),
-            directionsPort: MapKitLiveDirectionsPort()
+            directionsPort: MapKitLiveDirectionsPort(),
+            maximumConcurrentDirections: 4
         )
     }
 
-    init(searchPort: any LivePlaceSearchPort, directionsPort: any LiveDirectionsPort) {
+    init(
+        searchPort: any LivePlaceSearchPort,
+        directionsPort: any LiveDirectionsPort,
+        maximumConcurrentDirections: Int = 4
+    ) {
         self.searchPort = searchPort
         self.directionsPort = directionsPort
+        self.maximumConcurrentDirections = max(1, maximumConcurrentDirections)
     }
 
     public func recommend(
@@ -77,17 +84,16 @@ public final class LiveRecommendationService: LiveRecommendationServicing {
             )
         )
         let maximumTravelTime = TimeInterval(maxTravelTime.rawValue * 60)
+        let routedCandidates = try await routes(
+            for: candidates,
+            from: origin.coordinate
+        )
         var eligible: [(offset: Int, recommendation: LiveRecommendation)] = []
 
-        for (offset, candidate) in candidates.enumerated() {
-            let route = try await directionsPort.route(
-                for: LiveDirectionsRequest(
-                    source: origin.coordinate,
-                    destination: candidate.coordinate,
-                    transportType: .transit
-                )
-            )
-
+        for routedCandidate in routedCandidates {
+            let offset = routedCandidate.offset
+            let candidate = routedCandidate.candidate
+            let route = routedCandidate.route
             guard let route, route.expectedTravelTime <= maximumTravelTime else {
                 continue
             }
@@ -117,6 +123,63 @@ public final class LiveRecommendationService: LiveRecommendationServicing {
             return lhs.offset < rhs.offset
         }.map(\.recommendation)
     }
+
+    private func routes(
+        for candidates: [LivePlaceCandidate],
+        from source: CLLocationCoordinate2D
+    ) async throws -> [RoutedLivePlaceCandidate] {
+        guard !candidates.isEmpty else { return [] }
+
+        return try await withThrowingTaskGroup(of: RoutedLivePlaceCandidate.self) { group in
+            let initialRequestCount = min(maximumConcurrentDirections, candidates.count)
+            for offset in 0..<initialRequestCount {
+                let candidate = candidates[offset]
+                group.addTask { @MainActor [self] in
+                    try await route(candidate: candidate, offset: offset, from: source)
+                }
+            }
+
+            var nextOffset = initialRequestCount
+            var routedCandidates: [RoutedLivePlaceCandidate] = []
+            routedCandidates.reserveCapacity(candidates.count)
+
+            while let routedCandidate = try await group.next() {
+                routedCandidates.append(routedCandidate)
+
+                if nextOffset < candidates.count {
+                    let offset = nextOffset
+                    let candidate = candidates[offset]
+                    nextOffset += 1
+                    group.addTask { @MainActor [self] in
+                        try await route(candidate: candidate, offset: offset, from: source)
+                    }
+                }
+            }
+
+            return routedCandidates
+        }
+    }
+
+    private func route(
+        candidate: LivePlaceCandidate,
+        offset: Int,
+        from source: CLLocationCoordinate2D
+    ) async throws -> RoutedLivePlaceCandidate {
+        let route = try await directionsPort.route(
+            for: LiveDirectionsRequest(
+                source: source,
+                destination: candidate.coordinate,
+                transportType: .transit
+            )
+        )
+        return RoutedLivePlaceCandidate(offset: offset, candidate: candidate, route: route)
+    }
+}
+
+private struct RoutedLivePlaceCandidate: Sendable {
+    let offset: Int
+    let candidate: LivePlaceCandidate
+    let route: LiveTransitRoute?
 }
 
 @MainActor

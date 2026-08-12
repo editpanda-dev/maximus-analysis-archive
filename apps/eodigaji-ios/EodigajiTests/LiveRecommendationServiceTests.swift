@@ -128,6 +128,88 @@ final class LiveRecommendationServiceTests: XCTestCase {
         XCTAssertEqual(result.routeSteps, route.steps)
     }
 
+    func testDirectionsRequestsAreBoundedAndResultsStayStableWhenCompletionOrderDiffers() async throws {
+        let candidates = [
+            candidate(name: "다 카페", longitude: 127.21),
+            candidate(name: "나 카페", longitude: 127.22),
+            candidate(name: "가 카페", longitude: 127.23),
+            candidate(name: "라 카페", longitude: 127.24),
+            candidate(name: "마 카페", longitude: 127.25),
+        ]
+        let directions = ControlledLiveDirectionsPort(
+            routes: [
+                127.21: Self.route(travelTime: 20 * 60),
+                127.22: Self.route(travelTime: 10 * 60),
+                127.23: Self.route(travelTime: 20 * 60),
+                127.24: Self.route(travelTime: 30 * 60),
+                127.25: Self.route(travelTime: 5 * 60),
+            ]
+        )
+        let service = LiveRecommendationService(
+            searchPort: StubLivePlaceSearchPort(candidates: candidates),
+            directionsPort: directions,
+            maximumConcurrentDirections: 2
+        )
+
+        let recommendationTask = Task { @MainActor in
+            try await service.recommend(
+                from: Self.origin,
+                purpose: .cafe,
+                maxTravelTime: .thirty
+            )
+        }
+
+        guard await waitForStartedCount(2, in: directions) else {
+            directions.enableAutomaticCompletion()
+            _ = try await recommendationTask.value
+            XCTFail("Expected two concurrent directions requests")
+            return
+        }
+
+        XCTAssertEqual(directions.maximumActiveRequestCount, 2)
+        directions.finish(longitude: 127.22)
+        guard await waitForStartedCount(3, in: directions) else {
+            directions.enableAutomaticCompletion()
+            _ = try await recommendationTask.value
+            XCTFail("Expected a third request after one slot became available")
+            return
+        }
+        directions.finish(longitude: 127.23)
+        guard await waitForStartedCount(4, in: directions) else {
+            directions.enableAutomaticCompletion()
+            _ = try await recommendationTask.value
+            XCTFail("Expected a fourth request after one slot became available")
+            return
+        }
+        directions.finish(longitude: 127.21)
+        guard await waitForStartedCount(5, in: directions) else {
+            directions.enableAutomaticCompletion()
+            _ = try await recommendationTask.value
+            XCTFail("Expected a fifth request after one slot became available")
+            return
+        }
+        directions.finish(longitude: 127.24)
+        directions.finish(longitude: 127.25)
+
+        let results = try await recommendationTask.value
+
+        XCTAssertEqual(directions.maximumActiveRequestCount, 2)
+        XCTAssertEqual(results.map(\.placeName), ["마 카페", "나 카페", "가 카페", "다 카페", "라 카페"])
+    }
+
+    private func waitForStartedCount(
+        _ expectedCount: Int,
+        in directions: ControlledLiveDirectionsPort
+    ) async -> Bool {
+        for _ in 0..<500 {
+            if directions.startedCount >= expectedCount {
+                return true
+            }
+            try? await Task.sleep(nanoseconds: 1_000_000)
+        }
+        return false
+    }
+
     private static let origin = OriginLocation(
         name: "출발지",
         coordinate: CLLocationCoordinate2D(latitude: 37.55, longitude: 127.00),
@@ -175,4 +257,51 @@ private final class StubLiveDirectionsPort: LiveDirectionsPort {
         requests.append(request)
         return try response(request)
     }
+}
+
+@MainActor
+private final class ControlledLiveDirectionsPort: LiveDirectionsPort {
+    private let routes: [CLLocationDegrees: LiveTransitRoute]
+    private var pending: [CLLocationDegrees: CheckedContinuation<LiveTransitRoute?, Never>] = [:]
+    private var automaticallyCompletes = false
+    private(set) var startedCount = 0
+    private(set) var maximumActiveRequestCount = 0
+    private var activeRequestCount = 0
+
+    init(routes: [CLLocationDegrees: LiveTransitRoute]) {
+        self.routes = routes
+    }
+
+    func route(for request: LiveDirectionsRequest) async throws -> LiveTransitRoute? {
+        let longitude = request.destination.longitude
+        startedCount += 1
+        activeRequestCount += 1
+        maximumActiveRequestCount = max(maximumActiveRequestCount, activeRequestCount)
+
+        if automaticallyCompletes {
+            activeRequestCount -= 1
+            return routes[longitude]
+        }
+
+        return await withCheckedContinuation { continuation in
+            pending[longitude] = continuation
+        }
+    }
+
+    func finish(longitude: CLLocationDegrees) {
+        guard let continuation = pending.removeValue(forKey: longitude) else { return }
+        activeRequestCount -= 1
+        continuation.resume(returning: routes[longitude])
+    }
+
+    func enableAutomaticCompletion() {
+        automaticallyCompletes = true
+        let suspended = pending
+        pending.removeAll()
+        activeRequestCount -= suspended.count
+        for (longitude, continuation) in suspended {
+            continuation.resume(returning: routes[longitude])
+        }
+    }
+
 }
