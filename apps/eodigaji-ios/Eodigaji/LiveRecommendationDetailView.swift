@@ -1,0 +1,152 @@
+import MapKit
+import SwiftUI
+
+struct AppleMapsTransitRoute {
+    let mapItems: [MKMapItem]
+    let launchOptions: [String: Any]
+
+    init(origin: OriginLocation, recommendation: LiveRecommendation) {
+        let sourceItem = MKMapItem(
+            placemark: MKPlacemark(coordinate: origin.coordinate)
+        )
+        sourceItem.name = origin.name
+
+        let destinationItem = MKMapItem(
+            placemark: MKPlacemark(coordinate: recommendation.destinationCoordinate)
+        )
+        destinationItem.name = recommendation.placeName
+
+        mapItems = [sourceItem, destinationItem]
+        launchOptions = [
+            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeTransit
+        ]
+    }
+
+    func open() {
+        MKMapItem.openMaps(with: mapItems, launchOptions: launchOptions)
+    }
+}
+
+struct LiveRecommendationDetailView: View {
+    let origin: OriginLocation
+    let recommendation: LiveRecommendation
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(recommendation.placeName)
+                        .font(.title2.weight(.bold))
+
+                    if !recommendation.address.isEmpty {
+                        Text(recommendation.address)
+                            .foregroundStyle(.secondary)
+                    }
+
+                    HStack(spacing: 16) {
+                        Label(
+                            "약 \(recommendation.journeyTimeMinutes)분",
+                            systemImage: "clock.fill"
+                        )
+                        Label(
+                            distanceText(recommendation.distanceMeters),
+                            systemImage: "point.topleft.down.to.point.bottomright.curvepath"
+                        )
+                    }
+                    .font(.subheadline.weight(.semibold))
+                }
+
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("출발지")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                    Label(origin.name, systemImage: "location.fill")
+                        .font(.headline)
+                }
+                .padding(14)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.accentColor.opacity(0.08))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("상세 경로")
+                        .font(.title3.weight(.semibold))
+
+                    if recommendation.routeSteps.isEmpty {
+                        Text("Apple MapKit에서 단계별 안내를 제공하지 않았습니다. Apple 지도에서 최신 경로를 확인해 주세요.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .padding(.vertical, 8)
+                    } else {
+                        ForEach(Array(recommendation.routeSteps.enumerated()), id: \.offset) { offset, step in
+                            LiveRouteStepCard(number: offset + 1, step: step)
+                        }
+                    }
+                }
+
+                Button {
+                    AppleMapsTransitRoute(origin: origin, recommendation: recommendation).open()
+                } label: {
+                    Label("Apple 지도에서 대중교통 경로 열기", systemImage: "map.fill")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+
+                Text("표시된 시간·거리·이동 단계는 Apple MapKit이 제공한 예상값입니다. 요금, 혼잡도, 도착 시각 또는 환승 성공을 보장하지 않습니다.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .padding(20)
+        }
+        .navigationTitle("경로 상세")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+private struct LiveRouteStepCard: View {
+    let number: Int
+    let step: LiveRouteStep
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(Color.accentColor.opacity(0.14))
+                    .frame(width: 34, height: 34)
+                Image(systemName: step.transportType.systemImageName)
+                    .foregroundStyle(.tint)
+            }
+
+            VStack(alignment: .leading, spacing: 5) {
+                HStack {
+                    Text("\(number). \(step.transportType.shortLabel)")
+                        .font(.subheadline.weight(.semibold))
+                    Spacer()
+                    Text(distanceText(step.distanceMeters))
+                        .font(.caption.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                }
+                Text(step.instructions)
+                    .font(.subheadline)
+            }
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.thinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .accessibilityElement(children: .combine)
+    }
+}
+
+private extension LiveRouteTransportType {
+    var systemImageName: String {
+        switch self {
+        case .walking: return "figure.walk"
+        case .transit: return "tram.fill"
+        case .automobile: return "car.fill"
+        case .other: return "arrow.forward"
+        }
+    }
+}

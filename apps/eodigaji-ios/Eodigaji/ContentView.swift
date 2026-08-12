@@ -1,62 +1,48 @@
+import Foundation
 import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel: RecommendationViewModel
+    @State private var isOriginSearchPresented = false
     @State private var isOriginPickerPresented = false
-    @State private var selectedMapOrigin: OriginLocation?
 
-    init(apiClient: any RecommendationServicing = RecommendationAPIClient()) {
+    @MainActor
+    init(
+        apiClient _: any RecommendationServicing = RecommendationAPIClient(),
+        liveService: (any LiveRecommendationServicing)? = nil,
+        locationService: (any LocationServicing)? = nil,
+        originSearchService: (any OriginSearching)? = nil
+    ) {
         _viewModel = StateObject(
-            wrappedValue: RecommendationViewModel(service: apiClient)
+            wrappedValue: RecommendationViewModel(
+                liveService: liveService ?? LiveRecommendationService(),
+                locationService: locationService,
+                originSearchService: originSearchService
+            )
         )
     }
 
     var body: some View {
         NavigationStack {
             Group {
-                if viewModel.shouldShowResults, let response = viewModel.response {
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 24) {
-                            recommendationResults(response)
-                        }
-                        .padding(20)
-                    }
-                    .navigationTitle("추천 결과")
-                    .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
-                            Button("조건으로") {
-                                viewModel.dismissResults()
-                            }
-                        }
-                    }
+                if viewModel.shouldShowResults, let origin = viewModel.liveResultsOrigin {
+                    liveResults(from: origin)
                 } else {
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 24) {
-                            Text("출발지와 조건을 입력하면 목적에 맞는 장소를 찾아드려요.")
-                                .font(.body)
-                                .foregroundStyle(.secondary)
-                            recommendationForm
-                            recommendButton
-                            requestState
-                        }
-                        .padding(20)
-                    }
-                    .navigationTitle("어디가지")
+                    conditionForm
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .safeAreaInset(edge: .top, spacing: 0) {
-                fixtureDisclaimer
-            }
             .safeAreaInset(edge: .bottom, spacing: 0) {
-                fixtureDisclaimer
+                privacyNotice
             }
+        }
+        .sheet(isPresented: $isOriginSearchPresented) {
+            OriginSearchSheet(viewModel: viewModel)
         }
         .sheet(isPresented: $isOriginPickerPresented) {
             NavigationStack {
-                OriginPickerView(initialOrigin: selectedMapOrigin) { origin in
-                    selectedMapOrigin = origin
-                    viewModel.origin = origin.name
+                OriginPickerView(initialOrigin: viewModel.selectedOrigin) { origin in
+                    viewModel.selectOrigin(origin)
                     isOriginPickerPresented = false
                 }
                 .navigationTitle("지도에서 출발지 선택")
@@ -70,57 +56,105 @@ struct ContentView: View {
                 }
             }
         }
+        .task {
+            await viewModel.requestInitialCurrentLocation()
+        }
     }
 
-    private var recommendationForm: some View {
+    private var conditionForm: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                Text("출발지 주변의 장소와 대중교통 경로를 Apple MapKit으로 실시간 확인합니다.")
+                    .font(.body)
+                    .foregroundStyle(.secondary)
+
+                originSection
+                recommendationConditions
+                recommendButton
+                requestState
+            }
+            .padding(20)
+        }
+        .navigationTitle("어디가지")
+    }
+
+    private var originSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("출발지")
+                .font(.title3.weight(.semibold))
+
+            if let origin = viewModel.selectedOrigin {
+                VStack(alignment: .leading, spacing: 5) {
+                    Label(origin.name, systemImage: origin.source.systemImageName)
+                        .font(.headline)
+                    Text(origin.source.koreanLabel)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text("위도 \(origin.coordinate.latitude.formatted(.number.precision(.fractionLength(5)))), 경도 \(origin.coordinate.longitude.formatted(.number.precision(.fractionLength(5))))")
+                        .font(.caption.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                }
+                .padding(14)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.accentColor.opacity(0.08))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+            } else {
+                Text("현재 위치, 장소 검색 또는 지도 핀으로 출발지를 선택해 주세요.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .padding(.vertical, 4)
+            }
+
+            HStack(spacing: 8) {
+                Button {
+                    Task { await viewModel.requestCurrentLocation() }
+                } label: {
+                    Label(
+                        viewModel.isResolvingOrigin ? "확인 중" : "현재 위치",
+                        systemImage: "location.fill"
+                    )
+                }
+                .disabled(viewModel.isResolvingOrigin)
+
+                Button {
+                    isOriginSearchPresented = true
+                } label: {
+                    Label("장소 검색", systemImage: "magnifyingglass")
+                }
+
+                Button {
+                    isOriginPickerPresented = true
+                } label: {
+                    Label("지도 핀", systemImage: "mappin.and.ellipse")
+                }
+            }
+            .buttonStyle(.bordered)
+            .labelStyle(.iconOnly)
+
+            if let message = viewModel.originErrorMessage {
+                Label(message, systemImage: "location.slash")
+                    .font(.footnote)
+                    .foregroundStyle(.red)
+            }
+        }
+    }
+
+    private var recommendationConditions: some View {
         VStack(alignment: .leading, spacing: 18) {
             Text("추천 조건")
                 .font(.title3.weight(.semibold))
 
-            VStack(alignment: .leading, spacing: 8) {
-                Text("출발지")
-                    .font(.subheadline.weight(.semibold))
-                TextField("예: 회기역", text: $viewModel.origin)
-                    .textFieldStyle(.roundedBorder)
-                    .textInputAutocapitalization(.never)
-                    .accessibilityLabel("출발지")
-                Button("지도에서 선택") {
-                    isOriginPickerPresented = true
-                }
-                .buttonStyle(.bordered)
-                .accessibilityLabel("지도에서 출발지 선택")
-
-                if let selectedMapOrigin {
-                    Text("선택한 지도 좌표: \(selectedMapOrigin.coordinate.latitude), \(selectedMapOrigin.coordinate.longitude)")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                        .accessibilityLabel("선택한 지도 좌표 \(selectedMapOrigin.coordinate.latitude), \(selectedMapOrigin.coordinate.longitude)")
-                }
-            }
-
             LabeledContent("이동 수단") {
-                Text(viewModel.transportMode.koreanLabel)
+                Text("대중교통")
                     .fontWeight(.semibold)
-                    .accessibilityLabel("이동 수단 대중교통, 고정")
             }
 
             Picker("최대 이동 시간", selection: $viewModel.maxTravelTimeMinutes) {
                 ForEach(MaxTravelTimeMinutes.allCases, id: \.rawValue) { minutes in
-                    Text("\(minutes.rawValue)분")
-                        .tag(minutes)
+                    Text("\(minutes.rawValue)분").tag(minutes)
                 }
             }
             .pickerStyle(.segmented)
-            .accessibilityLabel("최대 이동 시간")
-
-            Picker("시간대", selection: $viewModel.timeSlot) {
-                ForEach(TimeSlot.allCases, id: \.rawValue) { timeSlot in
-                    Text(timeSlot.koreanLabel)
-                        .tag(timeSlot)
-                }
-            }
-            .pickerStyle(.menu)
-            .accessibilityLabel("시간대")
 
             VStack(alignment: .leading, spacing: 10) {
                 Text("추천 목적")
@@ -139,7 +173,7 @@ struct ContentView: View {
     }
 
     private func purposeButton(_ purpose: Purpose) -> some View {
-        let isSelected = viewModel.purpose.rawValue == purpose.rawValue
+        let isSelected = viewModel.purpose == purpose
 
         return Button {
             viewModel.purpose = purpose
@@ -154,34 +188,25 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 8)
                 .fill(isSelected ? Color.accentColor.opacity(0.12) : .clear)
         )
-        .accessibilityLabel("추천 목적 \(purpose.koreanLabel)")
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 
     private var recommendButton: some View {
         Button {
-            Task {
-                await viewModel.recommend()
-            }
+            Task { await viewModel.recommendLive() }
         } label: {
             HStack(spacing: 8) {
                 if viewModel.isLoading {
-                    ProgressView()
-                        .controlSize(.small)
+                    ProgressView().controlSize(.small)
                 }
-                Text(viewModel.isLoading ? "추천 받는 중…" : "추천 받기")
+                Text(viewModel.isLoading ? "검색·경로 계산 중…" : "실시간 추천 받기")
                     .fontWeight(.semibold)
             }
             .frame(maxWidth: .infinity)
         }
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
-        .disabled(
-            viewModel.isLoading
-                || viewModel.origin.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-        )
-        .accessibilityLabel("추천 받기")
-        .accessibilityValue(viewModel.isLoading ? "불러오는 중" : "준비됨")
+        .disabled(viewModel.isLoading || viewModel.selectedOrigin == nil)
     }
 
     @ViewBuilder
@@ -189,145 +214,208 @@ struct ContentView: View {
         if viewModel.isLoading {
             HStack {
                 Spacer()
-                ProgressView("추천을 불러오는 중…")
+                ProgressView("주변 장소를 찾고 대중교통 경로를 계산하는 중…")
                 Spacer()
             }
             .padding(.vertical, 8)
         }
 
-        if let errorMessage = viewModel.errorMessage {
+        if let message = viewModel.liveErrorMessage {
             VStack(alignment: .leading, spacing: 12) {
-                Label("추천을 불러오지 못했어요", systemImage: "wifi.exclamationmark")
+                Label("실시간 추천을 불러오지 못했어요", systemImage: "wifi.exclamationmark")
                     .font(.headline)
-                Text(errorMessage)
+                Text(message)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                 Button("다시 시도") {
-                    Task {
-                        await viewModel.retry()
-                    }
+                    Task { await viewModel.retryLive() }
                 }
                 .buttonStyle(.bordered)
-                .accessibilityHint("같은 조건으로 추천을 다시 요청합니다")
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(Color.red.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 12))
-            .accessibilityElement(children: .contain)
         }
     }
 
-    private func recommendationResults(_ response: RecommendationResponse) -> some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(alignment: .firstTextBaseline) {
-                Text("추천 결과")
-                    .font(.title3.weight(.semibold))
-                Spacer()
-                Text("후보 \(response.eligibleCount)곳")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-            }
+    private func liveResults(from origin: OriginLocation) -> some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                HStack(alignment: .firstTextBaseline) {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(origin.name)
+                            .font(.headline)
+                        Text("대중교통 · 최대 \((viewModel.liveResultsMaxTravelTime ?? viewModel.maxTravelTimeMinutes).rawValue)분")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    Text("\(viewModel.liveResults.count)곳")
+                        .font(.subheadline.weight(.semibold))
+                }
 
-            if response.recommendations.isEmpty {
-                Text("조건에 맞는 추천 장소가 없습니다. 조건을 바꿔 다시 시도해 보세요.")
+                if let updatedAt = viewModel.lastUpdatedAt {
+                    Label(
+                        "Apple MapKit 기준 예상 경로 · \(updatedAt.formatted(date: .omitted, time: .shortened)) 조회",
+                        systemImage: "clock"
+                    )
+                    .font(.caption)
                     .foregroundStyle(.secondary)
-                    .padding(.vertical, 8)
-            } else {
-                LazyVStack(spacing: 12) {
-                    ForEach(response.recommendations, id: \.id) { recommendation in
-                        RecommendationResultCard(recommendation: recommendation)
+                }
+
+                if viewModel.liveResults.isEmpty {
+                    ContentUnavailableView(
+                        "확인된 대중교통 경로가 없어요",
+                        systemImage: "tram.fill",
+                        description: Text("이동 시간을 늘리거나 다른 출발지를 선택해 주세요. 다른 교통수단이나 fixture 결과로 대체하지 않습니다.")
+                    )
+                    .padding(.vertical, 32)
+                } else {
+                    LazyVStack(spacing: 12) {
+                        ForEach(Array(viewModel.liveResults.enumerated()), id: \.offset) { _, recommendation in
+                            NavigationLink {
+                                LiveRecommendationDetailView(
+                                    origin: origin,
+                                    recommendation: recommendation
+                                )
+                            } label: {
+                                LiveRecommendationCard(recommendation: recommendation)
+                            }
+                            .buttonStyle(.plain)
+                        }
                     }
                 }
             }
-
-            DisclosureGroup("추천 기준 및 한계") {
-                VStack(alignment: .leading, spacing: 8) {
-                    LabeledContent("랭킹 기준") {
-                        Text(response.rankingBasis.rawValue)
-                            .font(.caption)
-                    }
-                    LabeledContent("응답 유형") {
-                        Text(response.fixture ? "fixture" : "fixture 아님")
-                            .font(.caption)
-                    }
-                    Text(response.limitations)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+            .padding(20)
+        }
+        .navigationTitle("실시간 추천")
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("조건으로") {
+                    viewModel.dismissResults()
                 }
-                .padding(.top, 8)
             }
-            .font(.subheadline.weight(.semibold))
-            .accessibilityHint("추천 순위의 기준과 데이터 한계를 보여줍니다")
         }
     }
 
-    private var fixtureDisclaimer: some View {
-        Text("Fixture 기반 데모입니다. 실시간 대중교통 정보가 아니며, 개인화 추천이나 결과의 인과관계를 보장하지 않습니다.")
-            .font(.footnote.weight(.semibold))
+    private var privacyNotice: some View {
+        Text("출발 좌표는 기기 안에서 Apple MapKit 요청에만 사용되며 서버로 전송하지 않습니다.")
+            .font(.caption2.weight(.semibold))
             .multilineTextAlignment(.center)
-            .foregroundStyle(.orange)
+            .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 12)
-            .padding(.vertical, 8)
+            .padding(.vertical, 7)
             .background(.thinMaterial)
-            .accessibilityLabel("Fixture 기반 데모이며 실시간 대중교통 정보가 아니고 개인화 추천이나 결과의 인과관계를 보장하지 않음")
     }
 }
 
-private struct RecommendationResultCard: View {
-    let recommendation: Recommendation
+private struct OriginSearchSheet: View {
+    @ObservedObject var viewModel: RecommendationViewModel
+    @Environment(\.dismiss) private var dismiss
 
-    private static let wonFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.locale = Locale(identifier: "ko_KR")
-        return formatter
-    }()
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    HStack {
+                        TextField("예: 모현 한국외대", text: $viewModel.originQuery)
+                            .textInputAutocapitalization(.never)
+                            .submitLabel(.search)
+                            .onSubmit(search)
+                        Button(action: search) {
+                            Image(systemName: "magnifyingglass")
+                        }
+                        .disabled(
+                            viewModel.isSearchingOrigins
+                                || viewModel.originQuery.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                        )
+                    }
+                } footer: {
+                    Text("선택한 출발지 근처를 우선해 Apple 지도에서 검색합니다.")
+                }
+
+                if viewModel.isSearchingOrigins {
+                    HStack {
+                        Spacer()
+                        ProgressView("장소 검색 중…")
+                        Spacer()
+                    }
+                } else if let message = viewModel.originSearchErrorMessage {
+                    Label(message, systemImage: "exclamationmark.magnifyingglass")
+                        .foregroundStyle(.red)
+                } else if viewModel.hasCompletedOriginSearch && viewModel.originSearchResults.isEmpty {
+                    ContentUnavailableView(
+                        "검색 결과가 없어요",
+                        systemImage: "magnifyingglass",
+                        description: Text("검색어를 바꾸거나 지도에서 출발지 핀을 선택해 주세요.")
+                    )
+                } else if !viewModel.originSearchResults.isEmpty {
+                    Section("검색 결과") {
+                        ForEach(Array(viewModel.originSearchResults.enumerated()), id: \.offset) { _, origin in
+                            Button {
+                                viewModel.selectOrigin(origin)
+                                dismiss()
+                            } label: {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(origin.name)
+                                        .foregroundStyle(.primary)
+                                    Text("위도 \(origin.coordinate.latitude.formatted(.number.precision(.fractionLength(5)))), 경도 \(origin.coordinate.longitude.formatted(.number.precision(.fractionLength(5))))")
+                                        .font(.caption.monospacedDigit())
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("출발지 검색")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("닫기") { dismiss() }
+                }
+            }
+        }
+    }
+
+    private func search() {
+        Task { await viewModel.searchOrigins() }
+    }
+}
+
+private struct LiveRecommendationCard: View {
+    let recommendation: LiveRecommendation
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(recommendation.name)
-                        .font(.headline)
-                    Text(recommendation.district)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-
-                Spacer(minLength: 8)
-
-                Text("대중교통 \(recommendation.journeyTimeMinutes)분")
-                    .font(.subheadline.weight(.semibold))
-                    .multilineTextAlignment(.trailing)
+                Text(recommendation.placeName)
+                    .font(.headline)
+                Spacer()
+                Text("\(recommendation.journeyTimeMinutes)분")
+                    .font(.headline)
             }
 
-            if !recommendation.tags.isEmpty {
-                HStack(spacing: 6) {
-                    ForEach(recommendation.tags, id: \.self) { tag in
-                        Text("#\(tag)")
-                            .font(.caption)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
-                            .background(Color.accentColor.opacity(0.1))
-                            .clipShape(Capsule())
-                    }
-                }
-            }
-
-            HStack(alignment: .firstTextBaseline) {
-                Text(costText)
+            if !recommendation.address.isEmpty {
+                Text(recommendation.address)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
-                Spacer()
             }
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text("추천 이유")
+            HStack(spacing: 6) {
+                Label(distanceText(recommendation.distanceMeters), systemImage: "point.topleft.down.to.point.bottomright.curvepath")
+                Spacer()
+                Image(systemName: "chevron.right")
+            }
+            .font(.caption)
+            .foregroundStyle(.secondary)
+
+            if !recommendation.routeSteps.isEmpty {
+                Text(recommendation.routeSteps.map(\.transportType.shortLabel).joined(separator: " → "))
                     .font(.caption.weight(.semibold))
-                Text(recommendation.reason)
-                    .font(.subheadline)
+                    .lineLimit(2)
             }
         }
         .padding(16)
@@ -335,63 +423,55 @@ private struct RecommendationResultCard: View {
         .background(.thinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 14))
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(
-            "\(recommendation.name), \(recommendation.district), 대중교통 \(recommendation.journeyTimeMinutes)분, \(costText), 추천 이유 \(recommendation.reason)"
-        )
-    }
-
-    private var costText: String {
-        guard case .available = recommendation.costStatus,
-              let costWon = recommendation.costWon else {
-            return "요금 정보 없음"
-        }
-
-        let formatted = Self.wonFormatter.string(from: NSNumber(value: costWon)) ?? "\(costWon)"
-        return "\(formatted)원"
     }
 }
 
-private extension TransportMode {
-    var koreanLabel: String {
-        switch self {
-        case .publicTransit:
-            return "대중교통"
-        }
+func distanceText(_ meters: Double) -> String {
+    if meters < 1_000 {
+        return "\(Int(meters.rounded()))m"
     }
+
+    return String(format: "%.1fkm", meters / 1_000)
 }
 
-private extension TimeSlot {
+extension Purpose {
     var koreanLabel: String {
         switch self {
-        case .morning:
-            return "아침"
-        case .lunch:
-            return "점심"
-        case .afternoon:
-            return "오후"
-        case .evening:
-            return "저녁"
-        case .night:
-            return "밤"
+        case .food: return "맛집"
+        case .cafe: return "카페"
+        case .date: return "데이트"
+        case .shopping: return "쇼핑"
+        case .culture: return "문화"
+        case .rest: return "휴식"
         }
     }
 }
 
-private extension Purpose {
+extension LiveRouteTransportType {
+    var shortLabel: String {
+        switch self {
+        case .walking: return "도보"
+        case .transit: return "대중교통"
+        case .automobile: return "자동차"
+        case .other: return "이동"
+        }
+    }
+}
+
+private extension OriginLocation.Source {
     var koreanLabel: String {
         switch self {
-        case .food:
-            return "맛집"
-        case .cafe:
-            return "카페"
-        case .date:
-            return "데이트"
-        case .shopping:
-            return "쇼핑"
-        case .culture:
-            return "문화"
-        case .rest:
-            return "휴식"
+        case .currentDevice: return "기기의 현재 위치"
+        case .searchedPlace: return "Apple 지도 검색 결과"
+        case .mapPin: return "지도에서 선택한 핀"
+        }
+    }
+
+    var systemImageName: String {
+        switch self {
+        case .currentDevice: return "location.fill"
+        case .searchedPlace: return "magnifyingglass"
+        case .mapPin: return "mappin"
         }
     }
 }
