@@ -17,6 +17,10 @@
 		E10000000000000000000008 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* XCTest.framework */; };
 		E20000000000000000000001 /* RecommendationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* RecommendationViewModelTests.swift */; };
 		E20000000000000000000002 /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000002 /* RecommendationViewModel.swift */; };
+		E30000000000000000000001 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000001 /* LocationServiceTests.swift */; };
+		E30000000000000000000002 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30000000000000000000002 /* CoreLocation.framework */; };
+		E30000000000000000000003 /* OriginLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000003 /* OriginLocation.swift */; };
+		E30000000000000000000004 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30000000000000000000004 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		B10000000000000000000010 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 		B20000000000000000000001 /* RecommendationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModelTests.swift; sourceTree = "<group>"; };
 		B20000000000000000000002 /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
+		B30000000000000000000001 /* LocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceTests.swift; sourceTree = "<group>"; };
+		B30000000000000000000002 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B30000000000000000000003 /* OriginLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginLocation.swift; sourceTree = "<group>"; };
+		B30000000000000000000004 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30000000000000000000002 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +81,8 @@
 				B10000000000000000000004 /* RecommendationAPIClient.swift */,
 				B10000000000000000000005 /* DevelopmentConfiguration.swift */,
 				B20000000000000000000002 /* RecommendationViewModel.swift */,
+				B30000000000000000000003 /* OriginLocation.swift */,
+				B30000000000000000000004 /* LocationService.swift */,
 			);
 			path = Eodigaji;
 			sourceTree = "<group>";
@@ -82,6 +93,7 @@
 				B10000000000000000000007 /* APIModelsTests.swift */,
 				B10000000000000000000008 /* RecommendationAPIClientTests.swift */,
 				B20000000000000000000001 /* RecommendationViewModelTests.swift */,
+				B30000000000000000000001 /* LocationServiceTests.swift */,
 			);
 			path = EodigajiTests;
 			sourceTree = "<group>";
@@ -99,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B10000000000000000000010 /* XCTest.framework */,
+				B30000000000000000000002 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,6 +234,8 @@
 				E10000000000000000000004 /* RecommendationAPIClient.swift in Sources */,
 				E10000000000000000000005 /* DevelopmentConfiguration.swift in Sources */,
 				E20000000000000000000002 /* RecommendationViewModel.swift in Sources */,
+				E30000000000000000000003 /* OriginLocation.swift in Sources */,
+				E30000000000000000000004 /* LocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +246,7 @@
 				E10000000000000000000006 /* APIModelsTests.swift in Sources */,
 				E10000000000000000000007 /* RecommendationAPIClientTests.swift in Sources */,
 				E20000000000000000000001 /* RecommendationViewModelTests.swift in Sources */,
+				E30000000000000000000001 /* LocationServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +292,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "어디가지";
 				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 출발점으로 사용하기 위해 위치 접근 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +319,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "어디가지";
 				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 출발점으로 사용하기 위해 위치 접근 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
