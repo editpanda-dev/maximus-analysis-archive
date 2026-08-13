@@ -61,6 +61,13 @@ class LiveRecommendation(BaseModel):
     route_steps: list[RouteStep] = Field(default_factory=list)
 
 
+class DistrictRecommendation(BaseModel):
+    district_name: str = Field(min_length=1)
+    fastest_travel_time_seconds: int = Field(ge=0)
+    place_count: int = Field(ge=1)
+    places: list[LiveRecommendation] = Field(min_length=1)
+
+
 class LiveRecommendationResponse(BaseModel):
     result_status: Literal["ok", "no_eligible_candidates"]
     provider: Literal["kakao"] = "kakao"

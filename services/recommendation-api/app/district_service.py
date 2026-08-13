@@ -1,0 +1,51 @@
+from .live_models import DistrictRecommendation, LiveRecommendation
+
+
+DISTRICT_SUFFIXES = ("읍", "면", "동")
+
+
+def extract_administrative_district(address: str) -> str | None:
+    for token in address.split():
+        if token.endswith(DISTRICT_SUFFIXES) and len(token) > 1:
+            return token
+    return None
+
+
+def build_district_recommendations(
+    places: list[LiveRecommendation], maximum_districts: int = 5
+) -> list[DistrictRecommendation]:
+    places_by_district: dict[str, list[LiveRecommendation]] = {}
+    for place in places:
+        district_name = extract_administrative_district(place.address)
+        if district_name:
+            places_by_district.setdefault(district_name, []).append(place)
+
+    districts = []
+    for district_name, district_places in places_by_district.items():
+        sorted_places = sorted(
+            district_places,
+            key=lambda place: (
+                place.expected_travel_time_seconds,
+                place.distance_meters,
+                place.place_name,
+            ),
+        )
+        fastest_place = sorted_places[0]
+        districts.append(
+            DistrictRecommendation(
+                district_name=district_name,
+                fastest_travel_time_seconds=fastest_place.expected_travel_time_seconds,
+                place_count=len(sorted_places),
+                places=sorted_places,
+            )
+        )
+
+    districts.sort(
+        key=lambda district: (
+            district.fastest_travel_time_seconds,
+            -district.place_count,
+            district.places[0].distance_meters,
+            district.district_name,
+        )
+    )
+    return districts[: min(5, max(1, maximum_districts))]
