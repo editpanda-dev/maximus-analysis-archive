@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from .kakao_client import KakaoClient
 from .district_service import build_district_recommendations
 from .live_models import (
+    DistrictCandidate,
     KakaoPlace,
     LiveDistrictRecommendationResponse,
     LiveRecommendation,
@@ -58,7 +59,8 @@ class KakaoTransitRecommendationService:
         self, request: LiveRecommendationRequest
     ) -> LiveDistrictRecommendationResponse:
         eligible = await self._eligible_recommendations(request)
-        districts = build_district_recommendations(eligible)
+        candidates = await self._district_candidates(eligible)
+        districts = build_district_recommendations(candidates)
 
         return LiveDistrictRecommendationResponse(
             result_status="ok" if districts else "no_eligible_candidates",
@@ -115,3 +117,29 @@ class KakaoTransitRecommendationService:
             )
         )
         return eligible
+
+    async def _district_candidates(
+        self, recommendations: list[LiveRecommendation]
+    ) -> list[DistrictCandidate]:
+        semaphore = asyncio.Semaphore(self._maximum_concurrent_routes)
+
+        async def candidate_for(
+            recommendation: LiveRecommendation,
+        ) -> DistrictCandidate | None:
+            async with semaphore:
+                district = await self._client.administrative_district(
+                    longitude=recommendation.destination_longitude,
+                    latitude=recommendation.destination_latitude,
+                )
+            if district is None:
+                return None
+            return DistrictCandidate(
+                district_code=district.code,
+                district_name=district.name,
+                place=recommendation,
+            )
+
+        resolved = await asyncio.gather(
+            *(candidate_for(recommendation) for recommendation in recommendations)
+        )
+        return [candidate for candidate in resolved if candidate]

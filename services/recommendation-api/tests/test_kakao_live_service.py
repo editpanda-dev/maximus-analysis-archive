@@ -39,11 +39,13 @@ def valid_request(**overrides):
 
 
 class StubKakaoClient:
-    def __init__(self, places=(), routes=None):
+    def __init__(self, places=(), routes=None, districts=None):
         self.places = list(places)
         self.routes = routes or {}
+        self.districts = districts or {}
         self.searches = []
         self.route_requests = []
+        self.district_lookup_coordinates = []
 
     async def search_places(self, *, keyword, longitude, latitude):
         self.searches.append(
@@ -61,6 +63,10 @@ class StubKakaoClient:
     ):
         self.route_requests.append((destination_longitude, destination_latitude))
         return self.routes.get((destination_longitude, destination_latitude))
+
+    async def administrative_district(self, *, longitude, latitude):
+        self.district_lookup_coordinates.append((longitude, latitude))
+        return self.districts.get((longitude, latitude))
 
 
 def place(name, longitude, latitude):
@@ -430,6 +436,41 @@ def test_over_limit_and_missing_transit_routes_are_excluded():
     assert recommendation.route_steps == route(30).steps
     assert result.provider == "kakao"
     assert result.fixture is False
+    assert client.district_lookup_coordinates == []
+
+
+def test_district_recommendations_resolve_only_route_eligible_places_and_omit_missing_h():
+    places = [
+        place("30분 카페", 127.1, 37.1),
+        place("H 없는 카페", 127.2, 37.2),
+        place("31분 카페", 127.3, 37.3),
+        place("경로 없는 카페", 127.4, 37.4),
+    ]
+    client = StubKakaoClient(
+        places,
+        routes={
+            (127.1, 37.1): route(30),
+            (127.2, 37.2): route(29),
+            (127.3, 37.3): route(31),
+            (127.4, 37.4): None,
+        },
+        districts={
+            (127.1, 37.1): KakaoAdministrativeDistrict(
+                code="1168065000", name="신사동"
+            ),
+            (127.2, 37.2): None,
+        },
+    )
+    service = KakaoTransitRecommendationService(client)
+
+    response = run(service.recommend_districts(valid_request(max_travel_time_minutes=30)))
+
+    assert set(client.district_lookup_coordinates) == {(127.1, 37.1), (127.2, 37.2)}
+    assert response.eligible_count == 2
+    assert [district.district_name for district in response.districts] == ["신사동"]
+    assert [
+        recommendation.place_name for recommendation in response.districts[0].places
+    ] == ["30분 카페"]
 
 
 def test_empty_provider_results_do_not_fall_back_to_fixture_candidates():
