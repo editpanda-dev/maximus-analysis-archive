@@ -8,13 +8,13 @@ struct ContentView: View {
 
     @MainActor
     init(
-        liveService: (any LiveRecommendationServicing)? = nil,
+        districtService: (any DistrictRecommendationServicing)? = nil,
         locationService: (any LocationServicing)? = nil,
         originSearchService: (any OriginSearching)? = nil
     ) {
         _viewModel = StateObject(
             wrappedValue: RecommendationViewModel(
-                liveService: liveService ?? KakaoLiveRecommendationAPIClient(),
+                districtService: districtService ?? KakaoDistrictRecommendationAPIClient(),
                 locationService: locationService,
                 originSearchService: originSearchService
             )
@@ -25,7 +25,7 @@ struct ContentView: View {
         NavigationStack {
             Group {
                 if viewModel.shouldShowResults, let origin = viewModel.liveResultsOrigin {
-                    liveResults(from: origin)
+                    districtResults(from: origin)
                 } else {
                     conditionForm
                 }
@@ -192,13 +192,13 @@ struct ContentView: View {
 
     private var recommendButton: some View {
         Button {
-            Task { await viewModel.recommendLive() }
+            Task { await viewModel.recommendDistrictsLive() }
         } label: {
             HStack(spacing: 8) {
                 if viewModel.isLoading {
                     ProgressView().controlSize(.small)
                 }
-                Text(viewModel.isLoading ? "검색·경로 계산 중…" : "실시간 추천 받기")
+                Text(viewModel.isLoading ? "동네·경로 계산 중…" : "동네 추천 받기")
                     .fontWeight(.semibold)
             }
             .frame(maxWidth: .infinity)
@@ -213,7 +213,7 @@ struct ContentView: View {
         if viewModel.isLoading {
             HStack {
                 Spacer()
-                ProgressView("주변 장소를 찾고 대중교통 경로를 계산하는 중…")
+                ProgressView("동네별 장소와 대중교통 경로를 계산하는 중…")
                 Spacer()
             }
             .padding(.vertical, 8)
@@ -227,7 +227,7 @@ struct ContentView: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                 Button("다시 시도") {
-                    Task { await viewModel.retryLive() }
+                    Task { await viewModel.recommendDistrictsLive() }
                 }
                 .buttonStyle(.bordered)
             }
@@ -238,7 +238,7 @@ struct ContentView: View {
         }
     }
 
-    private func liveResults(from origin: OriginLocation) -> some View {
+    private func districtResults(from origin: OriginLocation) -> some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 HStack(alignment: .firstTextBaseline) {
@@ -250,7 +250,7 @@ struct ContentView: View {
                             .foregroundStyle(.secondary)
                     }
                     Spacer()
-                    Text("\(viewModel.liveResults.count)곳")
+                    Text("\(viewModel.liveDistricts.count)개 동네")
                         .font(.subheadline.weight(.semibold))
                 }
 
@@ -263,36 +263,28 @@ struct ContentView: View {
                     .foregroundStyle(.secondary)
                 }
 
-                if viewModel.liveResults.isEmpty {
-                    ContentUnavailableView(
-                        "확인된 대중교통 경로가 없어요",
-                        systemImage: "tram.fill",
-                        description: Text("이동 시간을 늘리거나 다른 출발지를 선택해 주세요. 다른 교통수단이나 fixture 결과로 대체하지 않습니다.")
+                if let district = viewModel.selectedDistrict {
+                    DistrictPlaceListView(
+                        district: district,
+                        origin: origin,
+                        onBack: viewModel.dismissDistrictPlaces
                     )
-                    .padding(.vertical, 32)
                 } else {
-                    LazyVStack(spacing: 12) {
-                        ForEach(Array(viewModel.liveResults.enumerated()), id: \.offset) { _, recommendation in
-                            NavigationLink {
-                                LiveRecommendationDetailView(
-                                    origin: origin,
-                                    recommendation: recommendation
-                                )
-                            } label: {
-                                LiveRecommendationCard(recommendation: recommendation)
-                            }
-                            .buttonStyle(.plain)
-                        }
-                    }
+                    DistrictRecommendationListView(
+                        districts: viewModel.liveDistricts,
+                        onSelect: viewModel.selectDistrict
+                    )
                 }
             }
             .padding(20)
         }
-        .navigationTitle("실시간 추천")
+        .navigationTitle("동네 추천")
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                Button("조건으로") {
-                    viewModel.dismissResults()
+                if viewModel.selectedDistrict == nil {
+                    Button("조건으로") {
+                        viewModel.dismissResults()
+                    }
                 }
             }
         }
@@ -381,6 +373,104 @@ private struct OriginSearchSheet: View {
 
     private func search() {
         Task { await viewModel.searchOrigins() }
+    }
+}
+
+private struct DistrictRecommendationListView: View {
+    let districts: [LiveDistrictRecommendation]
+    let onSelect: (LiveDistrictRecommendation) -> Void
+
+    var body: some View {
+        if districts.isEmpty {
+            ContentUnavailableView(
+                "확인된 대중교통 경로가 없어요",
+                systemImage: "tram.fill",
+                description: Text("이동 시간을 늘리거나 다른 출발지를 선택해 주세요. 다른 교통수단이나 fixture 결과로 대체하지 않습니다.")
+            )
+            .padding(.vertical, 32)
+        } else {
+            LazyVStack(spacing: 12) {
+                ForEach(Array(districts.enumerated()), id: \.offset) { _, district in
+                    Button {
+                        onSelect(district)
+                    } label: {
+                        DistrictRecommendationCard(district: district)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
+    }
+}
+
+private struct DistrictRecommendationCard: View {
+    let district: LiveDistrictRecommendation
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 12) {
+            VStack(alignment: .leading, spacing: 6) {
+                Text(district.districtName)
+                    .font(.headline)
+                Text("가장 빠른 대중교통 경로")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            Spacer()
+            VStack(alignment: .trailing, spacing: 6) {
+                Text("\(Int(ceil(district.fastestTravelTime / 60)))분")
+                    .font(.headline)
+                Text("\(district.placeCount)곳")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            Image(systemName: "chevron.right")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.thinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .accessibilityElement(children: .combine)
+    }
+}
+
+private struct DistrictPlaceListView: View {
+    let district: LiveDistrictRecommendation
+    let origin: OriginLocation
+    let onBack: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(alignment: .firstTextBaseline) {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(district.districtName)
+                        .font(.title3.weight(.semibold))
+                    Text("\(district.placeCount)곳")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+                Button("동네 목록") {
+                    onBack()
+                }
+                .buttonStyle(.bordered)
+            }
+
+            LazyVStack(spacing: 12) {
+                ForEach(Array(district.places.enumerated()), id: \.offset) { _, recommendation in
+                    NavigationLink {
+                        LiveRecommendationDetailView(
+                            origin: origin,
+                            recommendation: recommendation
+                        )
+                    } label: {
+                        LiveRecommendationCard(recommendation: recommendation)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
     }
 }
 

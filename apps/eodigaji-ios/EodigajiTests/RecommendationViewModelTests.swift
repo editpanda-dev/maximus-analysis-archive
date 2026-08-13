@@ -256,19 +256,22 @@ final class RecommendationViewModelTests: XCTestCase {
         let viewModel = RecommendationViewModel(
             liveService: liveService,
             selectedOrigin: firstOrigin,
-            maxTravelTimeMinutes: .twenty
+            maxTravelTimeMinutes: .twenty,
+            purpose: .cafe
         )
 
         let request = Task { await viewModel.recommendLive() }
         await liveService.waitUntilRequested()
         viewModel.selectOrigin(newerOrigin)
         viewModel.maxTravelTimeMinutes = .sixty
+        viewModel.purpose = .culture
         liveService.complete(with: .success([Self.sampleRecommendation]))
         await request.value
 
         XCTAssertEqual(viewModel.selectedOrigin, newerOrigin)
         XCTAssertEqual(viewModel.liveResultsOrigin, firstOrigin)
         XCTAssertEqual(viewModel.liveResultsMaxTravelTime, .twenty)
+        XCTAssertEqual(liveService.receivedPurpose, .cafe)
         XCTAssertEqual(viewModel.liveResults, [Self.sampleRecommendation])
     }
 
@@ -427,7 +430,7 @@ private final class PendingViewModelLocationService: LocationServicing {
     private var requestWaiters: [CheckedContinuation<Void, Never>] = []
 
     func requestCurrentLocation() async throws -> OriginLocation {
-        try await withCheckedThrowingContinuation { continuation in
+        return try await withCheckedThrowingContinuation { continuation in
             self.continuation = continuation
             requestWaiters.forEach { $0.resume() }
             requestWaiters = []
@@ -450,13 +453,15 @@ private final class PendingViewModelLocationService: LocationServicing {
 private final class PendingLiveRecommendationService: LiveRecommendationServicing {
     private var continuation: CheckedContinuation<[LiveRecommendation], Error>?
     private var requestWaiters: [CheckedContinuation<Void, Never>] = []
+    private(set) var receivedPurpose: Purpose?
 
     func recommend(
         from origin: OriginLocation,
         purpose: Purpose,
         maxTravelTime: MaxTravelTimeMinutes
     ) async throws -> [LiveRecommendation] {
-        try await withCheckedThrowingContinuation { continuation in
+        receivedPurpose = purpose
+        return try await withCheckedThrowingContinuation { continuation in
             self.continuation = continuation
             requestWaiters.forEach { $0.resume() }
             requestWaiters = []

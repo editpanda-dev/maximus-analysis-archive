@@ -27,6 +27,8 @@ public final class RecommendationViewModel: ObservableObject {
     @Published public private(set) var shouldShowResults = false
     @Published public private(set) var selectedOrigin: OriginLocation?
     @Published public private(set) var liveResults: [LiveRecommendation] = []
+    @Published public private(set) var liveDistricts: [LiveDistrictRecommendation] = []
+    @Published public private(set) var selectedDistrict: LiveDistrictRecommendation?
     @Published public private(set) var liveError: Error?
     @Published public private(set) var liveResultsOrigin: OriginLocation?
     @Published public private(set) var liveResultsMaxTravelTime: MaxTravelTimeMinutes?
@@ -45,6 +47,7 @@ public final class RecommendationViewModel: ObservableObject {
 
     private let service: (any RecommendationServicing)?
     private let liveService: (any LiveRecommendationServicing)?
+    private let districtService: (any DistrictRecommendationServicing)?
     private let locationService: (any LocationServicing)?
     private let originSearchService: (any OriginSearching)?
     private var didRequestInitialOrigin = false
@@ -61,6 +64,7 @@ public final class RecommendationViewModel: ObservableObject {
     ) {
         self.service = service
         liveService = nil
+        districtService = nil
         locationService = nil
         originSearchService = nil
         self.origin = origin
@@ -80,6 +84,28 @@ public final class RecommendationViewModel: ObservableObject {
     ) {
         service = nil
         self.liveService = liveService
+        districtService = nil
+        self.locationService = locationService ?? LocationService()
+        self.originSearchService = originSearchService ?? OriginSearchService()
+        origin = selectedOrigin?.name ?? ""
+        transportMode = .publicTransit
+        self.maxTravelTimeMinutes = maxTravelTimeMinutes
+        timeSlot = .evening
+        self.purpose = purpose
+        self.selectedOrigin = selectedOrigin
+    }
+
+    public init(
+        districtService: any DistrictRecommendationServicing,
+        locationService: (any LocationServicing)? = nil,
+        originSearchService: (any OriginSearching)? = nil,
+        selectedOrigin: OriginLocation? = nil,
+        maxTravelTimeMinutes: MaxTravelTimeMinutes = .thirty,
+        purpose: Purpose = .food
+    ) {
+        service = nil
+        liveService = nil
+        self.districtService = districtService
         self.locationService = locationService ?? LocationService()
         self.originSearchService = originSearchService ?? OriginSearchService()
         origin = selectedOrigin?.name ?? ""
@@ -225,6 +251,7 @@ public final class RecommendationViewModel: ObservableObject {
             liveError = LiveRecommendationViewModelError.originRequired
             return
         }
+        let requestedOrigin = selectedOrigin
         let requestedMaxTravelTime = maxTravelTimeMinutes
         let requestedPurpose = purpose
 
@@ -241,11 +268,11 @@ public final class RecommendationViewModel: ObservableObject {
 
         do {
             liveResults = try await liveService.recommend(
-                from: selectedOrigin,
+                from: requestedOrigin,
                 purpose: requestedPurpose,
                 maxTravelTime: requestedMaxTravelTime
             )
-            liveResultsOrigin = selectedOrigin
+            liveResultsOrigin = requestedOrigin
             liveResultsMaxTravelTime = requestedMaxTravelTime
             lastUpdatedAt = Date()
             shouldShowResults = true
@@ -256,6 +283,56 @@ public final class RecommendationViewModel: ObservableObject {
 
     public func retryLive() async {
         await recommendLive()
+    }
+
+    public func recommendDistrictsLive() async {
+        guard !isLoading,
+              let districtService else {
+            return
+        }
+
+        guard let selectedOrigin else {
+            liveError = LiveRecommendationViewModelError.originRequired
+            return
+        }
+        let requestedOrigin = selectedOrigin
+        let requestedMaxTravelTime = maxTravelTimeMinutes
+        let requestedPurpose = purpose
+
+        isLoading = true
+        liveError = nil
+        liveResults = []
+        liveDistricts = []
+        selectedDistrict = nil
+        liveResultsOrigin = nil
+        liveResultsMaxTravelTime = nil
+        shouldShowResults = false
+
+        defer {
+            isLoading = false
+        }
+
+        do {
+            liveDistricts = try await districtService.recommendDistricts(
+                from: requestedOrigin,
+                purpose: requestedPurpose,
+                maxTravelTime: requestedMaxTravelTime
+            )
+            liveResultsOrigin = requestedOrigin
+            liveResultsMaxTravelTime = requestedMaxTravelTime
+            lastUpdatedAt = Date()
+            shouldShowResults = true
+        } catch {
+            liveError = error
+        }
+    }
+
+    public func selectDistrict(_ district: LiveDistrictRecommendation) {
+        selectedDistrict = district
+    }
+
+    public func dismissDistrictPlaces() {
+        selectedDistrict = nil
     }
 
     public var originErrorMessage: String? {
