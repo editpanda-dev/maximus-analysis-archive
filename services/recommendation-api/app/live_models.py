@@ -76,3 +76,13 @@ class LiveRecommendationResponse(BaseModel):
     recommendations: list[LiveRecommendation] = Field(default_factory=list)
     fixture: Literal[False] = False
     limitations: str = Field(min_length=1)
+
+
+class LiveDistrictRecommendationResponse(BaseModel):
+    result_status: Literal["ok", "no_eligible_candidates"]
+    provider: Literal["kakao"] = "kakao"
+    queried_at: datetime
+    eligible_count: int = Field(ge=0)
+    districts: list[DistrictRecommendation] = Field(default_factory=list)
+    fixture: Literal[False] = False
+    limitations: str = Field(min_length=1)

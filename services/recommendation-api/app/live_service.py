@@ -2,8 +2,10 @@ import asyncio
 from datetime import datetime, timezone
 
 from .kakao_client import KakaoClient
+from .district_service import build_district_recommendations
 from .live_models import (
     KakaoPlace,
+    LiveDistrictRecommendationResponse,
     LiveRecommendation,
     LiveRecommendationRequest,
     LiveRecommendationResponse,
@@ -41,6 +43,34 @@ class KakaoTransitRecommendationService:
     async def recommend(
         self, request: LiveRecommendationRequest
     ) -> LiveRecommendationResponse:
+        eligible = await self._eligible_recommendations(request)
+        recommendations = eligible[: self._maximum_recommendations]
+
+        return LiveRecommendationResponse(
+            result_status="ok" if recommendations else "no_eligible_candidates",
+            queried_at=datetime.now(timezone.utc),
+            eligible_count=len(eligible),
+            recommendations=recommendations,
+            limitations=LIMITATIONS,
+        )
+
+    async def recommend_districts(
+        self, request: LiveRecommendationRequest
+    ) -> LiveDistrictRecommendationResponse:
+        eligible = await self._eligible_recommendations(request)
+        districts = build_district_recommendations(eligible)
+
+        return LiveDistrictRecommendationResponse(
+            result_status="ok" if districts else "no_eligible_candidates",
+            queried_at=datetime.now(timezone.utc),
+            eligible_count=len(eligible),
+            districts=districts,
+            limitations=LIMITATIONS,
+        )
+
+    async def _eligible_recommendations(
+        self, request: LiveRecommendationRequest
+    ) -> list[LiveRecommendation]:
         request = LiveRecommendationRequest.model_validate(request.model_dump())
         places = await self._client.search_places(
             keyword=PURPOSE_KEYWORDS[request.purpose],
@@ -84,12 +114,4 @@ class KakaoTransitRecommendationService:
                 recommendation.place_name,
             )
         )
-        recommendations = eligible[: self._maximum_recommendations]
-
-        return LiveRecommendationResponse(
-            result_status="ok" if recommendations else "no_eligible_candidates",
-            queried_at=datetime.now(timezone.utc),
-            eligible_count=len(eligible),
-            recommendations=recommendations,
-            limitations=LIMITATIONS,
-        )
+        return eligible

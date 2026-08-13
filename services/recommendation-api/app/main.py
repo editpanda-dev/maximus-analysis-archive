@@ -8,7 +8,11 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 from .kakao_client import KakaoClient, KakaoProviderError
-from .live_models import LiveRecommendationRequest, LiveRecommendationResponse
+from .live_models import (
+    LiveDistrictRecommendationResponse,
+    LiveRecommendationRequest,
+    LiveRecommendationResponse,
+)
 from .live_service import KakaoTransitRecommendationService
 from .models import RecommendationRequest, RecommendationResponse
 from .service import recommend
@@ -58,6 +62,29 @@ async def live_recommendations(
     try:
         async with get_live_recommendation_service() as service:
             return await service.recommend(request)
+    except KakaoProviderError as error:
+        if error.status_code == 429:
+            status_code = 429
+        elif 500 <= error.status_code <= 599:
+            status_code = 503
+        else:
+            status_code = 502
+        raise HTTPException(
+            status_code=status_code,
+            detail="Live recommendations are temporarily unavailable.",
+        ) from error
+
+
+@app.post(
+    "/v1/live-district-recommendations",
+    response_model=LiveDistrictRecommendationResponse,
+)
+async def live_district_recommendations(
+    request: LiveRecommendationRequest,
+) -> LiveDistrictRecommendationResponse:
+    try:
+        async with get_live_recommendation_service() as service:
+            return await service.recommend_districts(request)
     except KakaoProviderError as error:
         if error.status_code == 429:
             status_code = 429
