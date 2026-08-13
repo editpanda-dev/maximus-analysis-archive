@@ -13,6 +13,7 @@ if str(SERVICE_ROOT) not in sys.path:
 
 from app.kakao_client import KakaoClient
 from app.live_models import (
+    KakaoAdministrativeDistrict,
     KakaoPlace,
     KakaoTransitRoute,
     LiveRecommendationRequest,
@@ -135,6 +136,76 @@ def test_client_uses_exact_kakao_authorization_and_cafe_keyword_request():
             latitude=37.3345,
         )
     ]
+
+
+def test_reads_only_h_administrative_district_from_coordinate_response():
+    captured = []
+
+    async def handler(request):
+        captured.append(request)
+        return httpx.Response(
+            200,
+            json={
+                "documents": [
+                    {
+                        "region_type": "B",
+                        "code": "1168010100",
+                        "region_3depth_name": "신사동",
+                    },
+                    {
+                        "region_type": "H",
+                        "code": "1168065000",
+                        "region_3depth_name": "신사동",
+                    },
+                ]
+            },
+        )
+
+    async def exercise():
+        async with httpx.AsyncClient(
+            transport=httpx.MockTransport(handler)
+        ) as http_client:
+            client = KakaoClient(api_key="test-rest-key", http_client=http_client)
+            return await client.administrative_district(
+                longitude=127.1, latitude=37.5
+            )
+
+    district = run(exercise())
+
+    assert captured[0].url.path == "/v2/local/geo/coord2regioncode.json"
+    assert captured[0].headers["Authorization"] == "KakaoAK test-rest-key"
+    assert captured[0].url.params["x"] == "127.1"
+    assert captured[0].url.params["y"] == "37.5"
+    assert district == KakaoAdministrativeDistrict(
+        code="1168065000", name="신사동"
+    )
+
+
+def test_returns_no_administrative_district_when_coordinate_response_has_no_h_record():
+    async def handler(request):
+        return httpx.Response(
+            200,
+            json={
+                "documents": [
+                    {
+                        "region_type": "B",
+                        "code": "1168010100",
+                        "region_3depth_name": "신사동",
+                    }
+                ]
+            },
+        )
+
+    async def exercise():
+        async with httpx.AsyncClient(
+            transport=httpx.MockTransport(handler)
+        ) as http_client:
+            client = KakaoClient(api_key="test-rest-key", http_client=http_client)
+            return await client.administrative_district(
+                longitude=127.1, latitude=37.5
+            )
+
+    assert run(exercise()) is None
 
 
 def test_public_transit_client_uses_publictraffic_endpoint_and_provider_values():

@@ -1,41 +1,17 @@
-import re
-
-from .live_models import DistrictRecommendation, LiveRecommendation
-
-
-DISTRICT_SUFFIXES = ("읍", "면", "동")
-DISTRICT_TOKEN_PATTERN = re.compile(
-    r"^[가-힣]+(?:\d+(?:\.\d+)*)?[가-힣]*[읍면동]$"
-)
-LOCALITY_TOKEN_PATTERN = re.compile(r"^[가-힣]+[시군구]$")
-
-
-def extract_administrative_district(address: str) -> str | None:
-    tokens = address.split()
-    for index, token in enumerate(tokens):
-        if (
-            index > 0
-            and LOCALITY_TOKEN_PATTERN.fullmatch(tokens[index - 1])
-            and token.endswith(DISTRICT_SUFFIXES)
-            and DISTRICT_TOKEN_PATTERN.fullmatch(token)
-        ):
-            return token
-    return None
+from .live_models import DistrictCandidate, DistrictRecommendation
 
 
 def build_district_recommendations(
-    places: list[LiveRecommendation], maximum_districts: int = 5
+    candidates: list[DistrictCandidate], maximum_districts: int = 5
 ) -> list[DistrictRecommendation]:
-    places_by_district: dict[str, list[LiveRecommendation]] = {}
-    for place in places:
-        district_name = extract_administrative_district(place.address)
-        if district_name:
-            places_by_district.setdefault(district_name, []).append(place)
+    candidates_by_district: dict[str, list[DistrictCandidate]] = {}
+    for candidate in candidates:
+        candidates_by_district.setdefault(candidate.district_code, []).append(candidate)
 
     districts = []
-    for district_name, district_places in places_by_district.items():
+    for district_candidates in candidates_by_district.values():
         sorted_places = sorted(
-            district_places,
+            (candidate.place for candidate in district_candidates),
             key=lambda place: (
                 place.expected_travel_time_seconds,
                 place.distance_meters,
@@ -45,7 +21,7 @@ def build_district_recommendations(
         fastest_place = sorted_places[0]
         districts.append(
             DistrictRecommendation(
-                district_name=district_name,
+                district_name=district_candidates[0].district_name,
                 fastest_travel_time_seconds=fastest_place.expected_travel_time_seconds,
                 place_count=len(sorted_places),
                 places=sorted_places,

@@ -2,7 +2,12 @@ from typing import Any
 
 import httpx
 
-from .live_models import KakaoPlace, KakaoTransitRoute, RouteStep
+from .live_models import (
+    KakaoAdministrativeDistrict,
+    KakaoPlace,
+    KakaoTransitRoute,
+    RouteStep,
+)
 
 
 LOCAL_API_BASE_URL = "https://dapi.kakao.com"
@@ -49,6 +54,30 @@ class KakaoClient:
         self._raise_for_provider_error(response)
 
         return [self._parse_place(document) for document in response.json()["documents"]]
+
+    async def administrative_district(
+        self, *, longitude: float, latitude: float
+    ) -> KakaoAdministrativeDistrict | None:
+        response = await self._http_client.get(
+            f"{self._local_api_base_url}/v2/local/geo/coord2regioncode.json",
+            headers=self._headers,
+            params={"x": longitude, "y": latitude},
+        )
+        self._raise_for_provider_error(response)
+        record = next(
+            (
+                item
+                for item in response.json()["documents"]
+                if item.get("region_type") == "H"
+            ),
+            None,
+        )
+        if record is None:
+            return None
+        return KakaoAdministrativeDistrict(
+            code=str(record["code"]),
+            name=str(record["region_3depth_name"]),
+        )
 
     async def public_transit_route(
         self,

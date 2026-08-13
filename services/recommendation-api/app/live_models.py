@@ -38,6 +38,11 @@ class KakaoPlace(BaseModel):
     latitude: float
 
 
+class KakaoAdministrativeDistrict(BaseModel):
+    code: str = Field(min_length=1)
+    name: str = Field(min_length=1)
+
+
 class RouteStep(BaseModel):
     instruction: str = Field(min_length=1)
     distance_meters: int = Field(ge=0)
@@ -59,6 +64,12 @@ class LiveRecommendation(BaseModel):
     expected_travel_time_seconds: int = Field(ge=0)
     distance_meters: int = Field(ge=0)
     route_steps: list[RouteStep] = Field(default_factory=list)
+
+
+class DistrictCandidate(BaseModel):
+    district_code: str = Field(min_length=1)
+    district_name: str = Field(min_length=1)
+    place: LiveRecommendation
 
 
 class DistrictRecommendation(BaseModel):

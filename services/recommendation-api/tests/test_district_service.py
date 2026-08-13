@@ -6,17 +6,14 @@ SERVICE_ROOT = Path(__file__).resolve().parents[1]
 if str(SERVICE_ROOT) not in sys.path:
     sys.path.insert(0, str(SERVICE_ROOT))
 
-from app.district_service import (
-    build_district_recommendations,
-    extract_administrative_district,
-)
-from app.live_models import LiveRecommendation
+from app.district_service import build_district_recommendations
+from app.live_models import DistrictCandidate, LiveRecommendation
 
 
-def place(name, address, duration, distance):
+def place(name, duration, distance=1_000):
     return LiveRecommendation(
         place_name=name,
-        address=address,
+        address="카카오 제공 주소",
         destination_latitude=37.334,
         destination_longitude=127.267,
         expected_travel_time_seconds=duration,
@@ -24,79 +21,60 @@ def place(name, address, duration, distance):
     )
 
 
-def six_distinct_places():
+def candidate(code, name, recommendation):
+    return DistrictCandidate(
+        district_code=code,
+        district_name=name,
+        place=recommendation,
+    )
+
+
+def six_code_distinct_candidates():
     return [
-        place(
-            f"후보{index}",
-            f"경기 용인시 처인구 {district} 1",
-            index * 60,
-            index * 100,
+        candidate(
+            f"11680{index:05d}",
+            f"후보동{index}",
+            place(f"후보{index}", index * 60, index * 100),
         )
-        for index, district in enumerate(
-            ("일동", "이동", "삼동", "사동", "오동", "육동"), start=1
-        )
+        for index in range(1, 7)
     ]
 
 
-def test_extracts_administrative_district_from_korean_address():
-    assert (
-        extract_administrative_district("경기 용인시 처인구 모현읍 외대로 42-1")
-        == "모현읍"
-    )
-    assert (
-        extract_administrative_district("서울 송파구 가락1동 송파대로 55")
-        == "가락1동"
-    )
-
-
-def test_rejects_non_korean_or_number_only_district_like_tokens():
-    assert extract_administrative_district("경기 용인시 A동 외대로 1") is None
-    assert extract_administrative_district("경기 용인시 123동 외대로 1") is None
-    assert extract_administrative_district("not-an-address동") is None
-
-
-def test_requires_an_administrative_locality_before_a_district_token():
-    assert extract_administrative_district("활동") is None
-    assert (
-        extract_administrative_district("주말 활동 서울 송파구 가락1동 송파대로 55")
-        == "가락1동"
-    )
-    assert (
-        extract_administrative_district("경기 용인시 처인구 모현읍 외대로 42-1")
-        == "모현읍"
-    )
-
-
-def test_unparseable_address_is_not_assigned_to_a_district():
-    assert extract_administrative_district("주소 정보 없음") is None
-    assert build_district_recommendations(
-        [place("알수없음", "주소 정보 없음", 60, 100)]
-    ) == []
-
-
-def test_groups_mohyeon_eup_places_and_orders_by_fastest_then_count():
-    districts = build_district_recommendations(
+def test_same_display_name_with_different_h_codes_stays_separate():
+    groups = build_district_recommendations(
         [
-            place("썸카페", "경기 용인시 처인구 모현읍 외대로 42-1", 547, 1194),
-            place("이디야", "경기 용인시 처인구 모현읍 외대로 36", 552, 1202),
-            place("죽전카페", "경기 용인시 수지구 죽전동 123", 540, 1400),
+            candidate("1168065000", "신사동", place("강남카페", 600)),
+            candidate("1162058500", "신사동", place("관악카페", 610)),
         ]
     )
 
-    assert [district.district_name for district in districts] == ["죽전동", "모현읍"]
-    assert districts[1].place_count == 2
+    assert [group.place_count for group in groups] == [1, 1]
+    assert len(groups) == 2
+
+
+def test_same_h_code_groups_places_even_when_addresses_differ():
+    groups = build_district_recommendations(
+        [
+            candidate("1168065000", "신사동", place("빠른카페", 600, 900)),
+            candidate("1168065000", "신사동", place("느린카페", 610, 800)),
+        ]
+    )
+
+    assert groups[0].district_name == "신사동"
+    assert groups[0].place_count == 2
+    assert [item.place_name for item in groups[0].places] == ["빠른카페", "느린카페"]
 
 
 def test_orders_places_by_duration_distance_then_name_within_a_district():
-    districts = build_district_recommendations(
+    groups = build_district_recommendations(
         [
-            place("나카페", "경기 용인시 수지구 죽전동 1", 300, 1000),
-            place("다카페", "경기 용인시 수지구 죽전동 2", 300, 900),
-            place("가카페", "경기 용인시 수지구 죽전동 3", 300, 900),
+            candidate("1168065000", "신사동", place("나카페", 300, 1_000)),
+            candidate("1168065000", "신사동", place("다카페", 300, 900)),
+            candidate("1168065000", "신사동", place("가카페", 300, 900)),
         ]
     )
 
-    assert [place.place_name for place in districts[0].places] == [
+    assert [item.place_name for item in groups[0].places] == [
         "가카페",
         "다카페",
         "나카페",
@@ -104,17 +82,17 @@ def test_orders_places_by_duration_distance_then_name_within_a_district():
 
 
 def test_orders_district_ties_by_count_distance_then_name():
-    districts = build_district_recommendations(
+    groups = build_district_recommendations(
         [
-            place("가", "경기 용인시 처인구 가나다동 1", 600, 200),
-            place("나", "경기 용인시 처인구 라마다동 1", 600, 100),
-            place("다", "경기 용인시 처인구 사아동 1", 600, 100),
-            place("라", "경기 용인시 처인구 자차동 1", 600, 300),
-            place("마", "경기 용인시 처인구 자차동 2", 700, 100),
+            candidate("1", "가나다동", place("가", 600, 200)),
+            candidate("2", "라마다동", place("나", 600, 100)),
+            candidate("3", "사아동", place("다", 600, 100)),
+            candidate("4", "자차동", place("라", 600, 300)),
+            candidate("4", "자차동", place("마", 700, 100)),
         ]
     )
 
-    assert [district.district_name for district in districts] == [
+    assert [group.district_name for group in groups] == [
         "자차동",
         "라마다동",
         "사아동",
@@ -122,13 +100,9 @@ def test_orders_district_ties_by_count_distance_then_name():
     ]
 
 
-def test_group_cap_cannot_be_overridden_above_five():
-    districts = build_district_recommendations(six_distinct_places(), maximum_districts=99)
-
-    assert len(districts) == 5
+def test_group_cap_cannot_exceed_five_when_codes_are_distinct():
+    assert len(build_district_recommendations(six_code_distinct_candidates(), 99)) == 5
 
 
 def test_group_cap_has_a_minimum_of_one_district():
-    districts = build_district_recommendations(six_distinct_places(), maximum_districts=0)
-
-    assert len(districts) == 1
+    assert len(build_district_recommendations(six_code_distinct_candidates(), 0)) == 1
