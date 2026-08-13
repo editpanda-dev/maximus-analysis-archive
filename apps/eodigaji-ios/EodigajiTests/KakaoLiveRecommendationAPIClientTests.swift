@@ -89,7 +89,7 @@ final class KakaoLiveRecommendationAPIClientTests: XCTestCase {
         KakaoURLProtocolStub.register(host: "validation.test") { request in
             let data = Data(
                 """
-                {"detail":[{"type":"value_error","loc":["body"],"msg":"Value error, origin coordinates must be within supported South Korea regions","input":{"origin_name":"잘못된 핀","origin_latitude":40.7128,"origin_longitude":-74.006,"purpose":"cafe","max_travel_time_minutes":30},"ctx":{"error":{}}}]}
+                {"detail":[{"type":"less_than_equal","loc":["body","origin_latitude"],"msg":"Input should be less than or equal to 38.7","input":40.7128,"ctx":{"le":38.7}},{"type":"greater_than_equal","loc":["body","origin_longitude"],"msg":"Input should be greater than or equal to 124","input":-74.006,"ctx":{"ge":124}}]}
                 """.utf8
             )
             return (HTTPURLResponse(url: request.url!, statusCode: 422, httpVersion: nil, headerFields: nil)!, data)

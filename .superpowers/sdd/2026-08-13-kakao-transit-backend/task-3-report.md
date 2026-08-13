@@ -28,9 +28,10 @@
 `KakaoLiveRecommendationAPIClient` posts `origin_name`, `origin_latitude`,
 `origin_longitude`, `purpose`, and `max_travel_time_minutes` to
 `/v1/live-recommendations`, then maps Kakao transit route cards into the
-existing `LiveRecommendation` UI model. FastAPI's actual 422 `detail` array
-is decoded into Korean domestic-origin guidance; provider failures retain their
-safe backend message. No MapKit recommendation service, legacy fixture
+existing `LiveRecommendation` UI model. FastAPI's actual Pydantic 422
+`detail` array is decoded into Korean domestic-origin guidance for both
+model-level domestic-region validation and latitude/longitude range errors;
+provider failures retain their safe backend message. No MapKit recommendation service, legacy fixture
 endpoint, or fallback result path is compiled or wired.
 
 `ContentView` now uses this live backend client in production. The UI explains

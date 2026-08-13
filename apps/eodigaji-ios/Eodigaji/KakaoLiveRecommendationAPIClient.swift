@@ -120,6 +120,8 @@ private struct BackendErrorEnvelope: Decodable {
     }
 
     struct ValidationIssue: Decodable {
+        let type: String
+        let loc: [String]
         let msg: String
     }
 
@@ -129,7 +131,11 @@ private struct BackendErrorEnvelope: Decodable {
             return message.isEmpty ? nil : message
         case let .validation(issues):
             guard !issues.isEmpty else { return nil }
-            if issues.contains(where: { $0.msg.contains("origin coordinates must be within supported South Korea regions") }) {
+            if issues.contains(where: { $0.msg.contains("origin coordinates must be within supported South Korea regions") }) ||
+                issues.contains(where: {
+                    ["less_than_equal", "greater_than_equal"].contains($0.type) &&
+                        ($0.loc.contains("origin_latitude") || $0.loc.contains("origin_longitude"))
+                }) {
                 return "출발 좌표가 대한민국 지원 지역 밖입니다. 지도에서 국내 출발지를 선택해 주세요."
             }
             return "요청 내용을 확인한 뒤 다시 시도해 주세요."
