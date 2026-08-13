@@ -1,12 +1,20 @@
+import re
+
 from .live_models import DistrictRecommendation, LiveRecommendation
 
 
 DISTRICT_SUFFIXES = ("읍", "면", "동")
+DISTRICT_TOKEN_PATTERN = re.compile(
+    r"^[가-힣]+(?:\d+(?:\.\d+)*)?[가-힣]*[읍면동]$"
+)
 
 
 def extract_administrative_district(address: str) -> str | None:
     for token in address.split():
-        if token.endswith(DISTRICT_SUFFIXES) and len(token) > 1:
+        if (
+            token.endswith(DISTRICT_SUFFIXES)
+            and DISTRICT_TOKEN_PATTERN.fullmatch(token)
+        ):
             return token
     return None
 

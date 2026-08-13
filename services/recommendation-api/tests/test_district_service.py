@@ -43,6 +43,16 @@ def test_extracts_administrative_district_from_korean_address():
         extract_administrative_district("경기 용인시 처인구 모현읍 외대로 42-1")
         == "모현읍"
     )
+    assert (
+        extract_administrative_district("서울 송파구 가락1동 송파대로 55")
+        == "가락1동"
+    )
+
+
+def test_rejects_non_korean_or_number_only_district_like_tokens():
+    assert extract_administrative_district("경기 용인시 A동 외대로 1") is None
+    assert extract_administrative_district("경기 용인시 123동 외대로 1") is None
+    assert extract_administrative_district("not-an-address동") is None
 
 
 def test_unparseable_address_is_not_assigned_to_a_district():
