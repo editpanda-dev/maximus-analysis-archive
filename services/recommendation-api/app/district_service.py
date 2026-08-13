@@ -7,12 +7,16 @@ DISTRICT_SUFFIXES = ("읍", "면", "동")
 DISTRICT_TOKEN_PATTERN = re.compile(
     r"^[가-힣]+(?:\d+(?:\.\d+)*)?[가-힣]*[읍면동]$"
 )
+LOCALITY_TOKEN_PATTERN = re.compile(r"^[가-힣]+[시군구]$")
 
 
 def extract_administrative_district(address: str) -> str | None:
-    for token in address.split():
+    tokens = address.split()
+    for index, token in enumerate(tokens):
         if (
-            token.endswith(DISTRICT_SUFFIXES)
+            index > 0
+            and LOCALITY_TOKEN_PATTERN.fullmatch(tokens[index - 1])
+            and token.endswith(DISTRICT_SUFFIXES)
             and DISTRICT_TOKEN_PATTERN.fullmatch(token)
         ):
             return token
