@@ -1,9 +1,10 @@
 import os
-from collections.abc import AsyncGenerator
+from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
 from typing import Literal
 
 import httpx
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 from .kakao_client import KakaoClient, KakaoProviderError
@@ -31,7 +32,8 @@ def recommendations(request: RecommendationRequest) -> RecommendationResponse:
     return recommend(request)
 
 
-async def get_live_recommendation_service() -> AsyncGenerator[
+@asynccontextmanager
+async def get_live_recommendation_service() -> AsyncIterator[
     KakaoTransitRecommendationService, None
 ]:
     api_key = os.environ.get("KAKAO_REST_API_KEY", "").strip()
@@ -52,12 +54,10 @@ async def get_live_recommendation_service() -> AsyncGenerator[
 )
 async def live_recommendations(
     request: LiveRecommendationRequest,
-    service: KakaoTransitRecommendationService = Depends(
-        get_live_recommendation_service
-    ),
 ) -> LiveRecommendationResponse:
     try:
-        return await service.recommend(request)
+        async with get_live_recommendation_service() as service:
+            return await service.recommend(request)
     except KakaoProviderError as error:
         if error.status_code == 429:
             status_code = 429
