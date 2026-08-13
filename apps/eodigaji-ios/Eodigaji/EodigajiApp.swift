@@ -4,7 +4,7 @@ import SwiftUI
 struct EodigajiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(apiClient: RecommendationAPIClient())
+            ContentView(liveService: KakaoLiveRecommendationAPIClient())
         }
     }
 }

@@ -29,6 +29,8 @@
 		E50000000000000000000002 /* LiveRecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000002 /* LiveRecommendationService.swift */; };
 		E60000000000000000000001 /* LiveRecommendationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000001 /* LiveRecommendationDetailView.swift */; };
 		E60000000000000000000002 /* LiveRecommendationDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000002 /* LiveRecommendationDetailTests.swift */; };
+		E70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift */; };
+		E70000000000000000000002 /* KakaoLiveRecommendationAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70000000000000000000002 /* KakaoLiveRecommendationAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		B50000000000000000000002 /* LiveRecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRecommendationService.swift; sourceTree = "<group>"; };
 		B60000000000000000000001 /* LiveRecommendationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRecommendationDetailView.swift; sourceTree = "<group>"; };
 		B60000000000000000000002 /* LiveRecommendationDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRecommendationDetailTests.swift; sourceTree = "<group>"; };
+		B70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLiveRecommendationAPIClientTests.swift; sourceTree = "<group>"; };
+		B70000000000000000000002 /* KakaoLiveRecommendationAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLiveRecommendationAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				B40000000000000000000003 /* OriginPickerView.swift */,
 				B50000000000000000000002 /* LiveRecommendationService.swift */,
 				B60000000000000000000001 /* LiveRecommendationDetailView.swift */,
+				B70000000000000000000002 /* KakaoLiveRecommendationAPIClient.swift */,
 			);
 			path = Eodigaji;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				B40000000000000000000001 /* OriginSearchServiceTests.swift */,
 				B50000000000000000000001 /* LiveRecommendationServiceTests.swift */,
 				B60000000000000000000002 /* LiveRecommendationDetailTests.swift */,
+				B70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift */,
 			);
 			path = EodigajiTests;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				E40000000000000000000003 /* OriginPickerView.swift in Sources */,
 				E50000000000000000000002 /* LiveRecommendationService.swift in Sources */,
 				E60000000000000000000001 /* LiveRecommendationDetailView.swift in Sources */,
+				E70000000000000000000002 /* KakaoLiveRecommendationAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +286,7 @@
 				E40000000000000000000001 /* OriginSearchServiceTests.swift in Sources */,
 				E50000000000000000000001 /* LiveRecommendationServiceTests.swift in Sources */,
 				E60000000000000000000002 /* LiveRecommendationDetailTests.swift in Sources */,
+				E70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

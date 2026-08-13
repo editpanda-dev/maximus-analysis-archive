@@ -235,6 +235,88 @@ public enum HealthStatus: String, Codable, Sendable {
     case ok
 }
 
+public struct KakaoLiveRecommendationRequest: Codable, Sendable {
+    public let originName: String
+    public let originLatitude: CLLocationDegrees
+    public let originLongitude: CLLocationDegrees
+    public let purpose: Purpose
+    public let maxTravelTimeMinutes: MaxTravelTimeMinutes
+
+    private enum CodingKeys: String, CodingKey {
+        case originName = "origin_name"
+        case originLatitude = "origin_latitude"
+        case originLongitude = "origin_longitude"
+        case purpose
+        case maxTravelTimeMinutes = "max_travel_time_minutes"
+    }
+
+    public init(origin: OriginLocation, purpose: Purpose, maxTravelTime: MaxTravelTimeMinutes) {
+        originName = origin.name
+        originLatitude = origin.coordinate.latitude
+        originLongitude = origin.coordinate.longitude
+        self.purpose = purpose
+        maxTravelTimeMinutes = maxTravelTime
+    }
+}
+
+struct KakaoLiveRecommendationResponse: Decodable {
+    let recommendations: [KakaoLiveRecommendation]
+}
+
+struct KakaoLiveRecommendation: Decodable {
+    let placeName: String
+    let address: String
+    let destinationLatitude: CLLocationDegrees
+    let destinationLongitude: CLLocationDegrees
+    let expectedTravelTimeSeconds: TimeInterval
+    let distanceMeters: CLLocationDistance
+    let routeSteps: [KakaoLiveRouteStep]
+
+    private enum CodingKeys: String, CodingKey {
+        case placeName = "place_name"
+        case address
+        case destinationLatitude = "destination_latitude"
+        case destinationLongitude = "destination_longitude"
+        case expectedTravelTimeSeconds = "expected_travel_time_seconds"
+        case distanceMeters = "distance_meters"
+        case routeSteps = "route_steps"
+    }
+
+    func asLiveRecommendation() -> LiveRecommendation {
+        LiveRecommendation(
+            placeName: placeName,
+            address: address,
+            destinationCoordinate: CLLocationCoordinate2D(latitude: destinationLatitude, longitude: destinationLongitude),
+            expectedTravelTime: expectedTravelTimeSeconds,
+            distanceMeters: distanceMeters,
+            routeSteps: routeSteps.map(\.asLiveRouteStep)
+        )
+    }
+}
+
+struct KakaoLiveRouteStep: Decodable {
+    let instruction: String
+    let distanceMeters: CLLocationDistance
+    let transportMode: String
+
+    private enum CodingKeys: String, CodingKey {
+        case instruction
+        case distanceMeters = "distance_meters"
+        case transportMode = "transport_mode"
+    }
+
+    var asLiveRouteStep: LiveRouteStep {
+        let type: LiveRouteTransportType
+        switch transportMode {
+        case "walking": type = .walking
+        case "transit": type = .transit
+        case "automobile": type = .automobile
+        default: type = .other
+        }
+        return LiveRouteStep(instructions: instruction, distanceMeters: distanceMeters, transportType: type)
+    }
+}
+
 public struct HealthResponse: Codable, Equatable, Sendable {
     public let status: HealthStatus
     public let fixture: Bool

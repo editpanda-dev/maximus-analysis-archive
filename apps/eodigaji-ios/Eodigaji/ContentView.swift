@@ -15,7 +15,7 @@ struct ContentView: View {
     ) {
         _viewModel = StateObject(
             wrappedValue: RecommendationViewModel(
-                liveService: liveService ?? LiveRecommendationService(),
+                liveService: liveService ?? KakaoLiveRecommendationAPIClient(),
                 locationService: locationService,
                 originSearchService: originSearchService
             )
@@ -64,7 +64,7 @@ struct ContentView: View {
     private var conditionForm: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
-                Text("출발지 주변의 장소와 대중교통 경로를 Apple MapKit으로 실시간 확인합니다.")
+                Text("출발지 주변의 장소와 대중교통 경로를 카카오 기반 실시간 추천으로 확인합니다.")
                     .font(.body)
                     .foregroundStyle(.secondary)
 

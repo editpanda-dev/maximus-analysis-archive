@@ -132,6 +132,30 @@ final class RecommendationViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.isLoading)
     }
 
+    func testLiveBackendValidationErrorIsShownWithoutReplacingResults() async {
+        let viewModel = RecommendationViewModel(
+            liveService: StubLiveRecommendationService(
+                result: .failure(
+                    KakaoLiveRecommendationAPIError.backend(
+                        statusCode: 422,
+                        message: "origin coordinates must be within supported South Korea regions"
+                    )
+                )
+            ),
+            selectedOrigin: OriginLocation(
+                name: "지도 핀",
+                coordinate: CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.006),
+                source: .mapPin
+            )
+        )
+
+        await viewModel.recommendLive()
+
+        XCTAssertTrue(viewModel.liveResults.isEmpty)
+        XCTAssertFalse(viewModel.shouldShowResults)
+        XCTAssertTrue(viewModel.liveErrorMessage?.contains("supported South Korea") == true)
+    }
+
     func testRequestCurrentLocationSelectsReturnedDeviceOrigin() async {
         let expectedOrigin = OriginLocation(
             name: "현재 위치",
