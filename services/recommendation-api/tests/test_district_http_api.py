@@ -12,6 +12,7 @@ if str(SERVICE_ROOT) not in sys.path:
     sys.path.insert(0, str(SERVICE_ROOT))
 
 from app.kakao_client import KakaoProviderError
+from app.live_models import LiveRecommendationResponse
 import app.main as main
 
 
@@ -76,6 +77,24 @@ class FailingDistrictRecommendationService:
         raise KakaoProviderError(self.status_code)
 
 
+class DirectOnlyRecommendationService:
+    def __init__(self):
+        self.recommend_requests = []
+
+    async def recommend(self, request):
+        self.recommend_requests.append(request)
+        return LiveRecommendationResponse(
+            result_status="ok",
+            queried_at=datetime.now(timezone.utc),
+            eligible_count=1,
+            recommendations=[],
+            limitations="Provider-supplied routes only.",
+        )
+
+    async def recommend_districts(self, request):
+        raise AssertionError("direct-place endpoint must not request districts")
+
+
 @pytest.fixture
 def client():
     return TestClient(app)
@@ -101,6 +120,70 @@ def test_live_district_endpoint_returns_grouped_kakao_only_response(
     assert response.json()["provider"] == "kakao"
     assert response.json()["fixture"] is False
     assert response.json()["districts"][0]["district_name"] == "모현읍"
+
+
+def test_live_district_endpoint_keeps_same_named_districts_with_distinct_codes_as_cards(
+    client, service_stub
+):
+    service_stub.response["districts"] = [
+        {
+            "district_name": "신사동",
+            "fastest_travel_time_seconds": 1_200,
+            "place_count": 1,
+            "places": [
+                {
+                    "place_name": "강남 카페",
+                    "address": "서울 강남구 신사동",
+                    "destination_latitude": 37.517,
+                    "destination_longitude": 127.022,
+                    "expected_travel_time_seconds": 1_200,
+                    "distance_meters": 900,
+                    "route_steps": [],
+                }
+            ],
+        },
+        {
+            "district_name": "신사동",
+            "fastest_travel_time_seconds": 1_300,
+            "place_count": 1,
+            "places": [
+                {
+                    "place_name": "관악 카페",
+                    "address": "서울 관악구 신사동",
+                    "destination_latitude": 37.487,
+                    "destination_longitude": 126.927,
+                    "expected_travel_time_seconds": 1_300,
+                    "distance_meters": 1_000,
+                    "route_steps": [],
+                }
+            ],
+        },
+    ]
+
+    response = client.post("/v1/live-district-recommendations", json=valid_payload())
+
+    assert response.status_code == 200
+    assert [item["district_name"] for item in response.json()["districts"]] == [
+        "신사동",
+        "신사동",
+    ]
+    assert [item["place_count"] for item in response.json()["districts"]] == [1, 1]
+
+
+def test_live_recommendations_uses_direct_service_path_without_district_resolution(
+    client, monkeypatch
+):
+    service = DirectOnlyRecommendationService()
+    monkeypatch.setattr(
+        main,
+        "get_live_recommendation_service",
+        lambda: live_service_context(service),
+    )
+
+    response = client.post("/v1/live-recommendations", json=valid_payload())
+
+    assert response.status_code == 200
+    assert len(service.recommend_requests) == 1
 
 
 def test_live_district_endpoint_reports_empty_candidates(client, service_stub):
