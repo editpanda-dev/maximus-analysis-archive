@@ -9,6 +9,14 @@ LOCAL_API_BASE_URL = "https://dapi.kakao.com"
 ROUTING_API_BASE_URL = "https://dapi.kakao.com"
 
 
+class KakaoProviderError(RuntimeError):
+    """Safe provider failure information for the HTTP boundary."""
+
+    def __init__(self, status_code: int) -> None:
+        self.status_code = status_code
+        super().__init__(f"Kakao provider returned HTTP {status_code}")
+
+
 class KakaoClient:
     def __init__(
         self,
@@ -38,7 +46,7 @@ class KakaoClient:
                 "size": 15,
             },
         )
-        response.raise_for_status()
+        self._raise_for_provider_error(response)
 
         return [self._parse_place(document) for document in response.json()["documents"]]
 
@@ -60,7 +68,7 @@ class KakaoClient:
                 "end_y": destination_latitude,
             },
         )
-        response.raise_for_status()
+        self._raise_for_provider_error(response)
         payload = response.json()
         if payload.get("status") != "OK":
             return None
@@ -84,6 +92,13 @@ class KakaoClient:
             distance_meters=int(properties["totalDistance"]),
             steps=self._parse_steps(fastest_route),
         )
+
+    @staticmethod
+    def _raise_for_provider_error(response: httpx.Response) -> None:
+        try:
+            response.raise_for_status()
+        except httpx.HTTPStatusError as error:
+            raise KakaoProviderError(error.response.status_code) from error
 
     @staticmethod
     def _parse_place(document: dict[str, Any]) -> KakaoPlace:
