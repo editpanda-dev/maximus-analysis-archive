@@ -21,6 +21,14 @@ public enum KakaoLiveRecommendationAPIError: Error, Equatable, LocalizedError, S
         case let .backend(_, message): return message
         }
     }
+
+    static func backendMessage(from data: Data, statusCode: Int) -> String {
+        if let envelope = try? JSONDecoder().decode(BackendErrorEnvelope.self, from: data),
+           let message = envelope.userFacingMessage {
+            return message
+        }
+        return "실시간 추천 요청이 실패했습니다. (HTTP \(statusCode))"
+    }
 }
 
 @MainActor
@@ -82,7 +90,7 @@ public final class KakaoLiveRecommendationAPIClient: KakaoLiveRecommendationServ
         guard (200..<300).contains(httpResponse.statusCode) else {
             throw KakaoLiveRecommendationAPIError.backend(
                 statusCode: httpResponse.statusCode,
-                message: Self.backendMessage(from: data, statusCode: httpResponse.statusCode)
+                message: KakaoLiveRecommendationAPIError.backendMessage(from: data, statusCode: httpResponse.statusCode)
             )
         }
         do {
@@ -93,13 +101,6 @@ public final class KakaoLiveRecommendationAPIClient: KakaoLiveRecommendationServ
         }
     }
 
-    private static func backendMessage(from data: Data, statusCode: Int) -> String {
-        if let envelope = try? JSONDecoder().decode(BackendErrorEnvelope.self, from: data),
-           let message = envelope.userFacingMessage {
-            return message
-        }
-        return "실시간 추천 요청이 실패했습니다. (HTTP \(statusCode))"
-    }
 }
 
 private struct BackendErrorEnvelope: Decodable {

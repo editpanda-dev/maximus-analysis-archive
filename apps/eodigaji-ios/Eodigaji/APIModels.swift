@@ -91,6 +91,25 @@ public struct LiveRecommendation: Equatable, Sendable {
     }
 }
 
+public struct LiveDistrictRecommendation: Equatable, Sendable {
+    public let districtName: String
+    public let fastestTravelTime: TimeInterval
+    public let placeCount: Int
+    public let places: [LiveRecommendation]
+
+    public init(
+        districtName: String,
+        fastestTravelTime: TimeInterval,
+        placeCount: Int,
+        places: [LiveRecommendation]
+    ) {
+        self.districtName = districtName
+        self.fastestTravelTime = fastestTravelTime
+        self.placeCount = placeCount
+        self.places = places
+    }
+}
+
 public struct RecommendationRequest: Codable, Equatable, Sendable {
     public let origin: String
     public let transportMode: TransportMode
@@ -290,6 +309,33 @@ struct KakaoLiveRecommendation: Decodable {
             expectedTravelTime: expectedTravelTimeSeconds,
             distanceMeters: distanceMeters,
             routeSteps: routeSteps.map(\.asLiveRouteStep)
+        )
+    }
+}
+
+struct KakaoLiveDistrictRecommendationResponse: Decodable {
+    let districts: [KakaoLiveDistrictRecommendation]
+}
+
+struct KakaoLiveDistrictRecommendation: Decodable {
+    let districtName: String
+    let fastestTravelTimeSeconds: TimeInterval
+    let placeCount: Int
+    let places: [KakaoLiveRecommendation]
+
+    private enum CodingKeys: String, CodingKey {
+        case districtName = "district_name"
+        case fastestTravelTimeSeconds = "fastest_travel_time_seconds"
+        case placeCount = "place_count"
+        case places
+    }
+
+    func asLiveDistrictRecommendation() -> LiveDistrictRecommendation {
+        LiveDistrictRecommendation(
+            districtName: districtName,
+            fastestTravelTime: fastestTravelTimeSeconds,
+            placeCount: placeCount,
+            places: places.map { $0.asLiveRecommendation() }
         )
     }
 }
