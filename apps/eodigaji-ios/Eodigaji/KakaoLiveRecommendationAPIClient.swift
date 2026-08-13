@@ -24,6 +24,15 @@ public enum KakaoLiveRecommendationAPIError: Error, Equatable, LocalizedError, S
 }
 
 @MainActor
+public protocol LiveRecommendationServicing: AnyObject {
+    func recommend(
+        from origin: OriginLocation,
+        purpose: Purpose,
+        maxTravelTime: MaxTravelTimeMinutes
+    ) async throws -> [LiveRecommendation]
+}
+
+@MainActor
 public protocol KakaoLiveRecommendationServicing: LiveRecommendationServicing {}
 
 @MainActor
@@ -86,13 +95,44 @@ public final class KakaoLiveRecommendationAPIClient: KakaoLiveRecommendationServ
 
     private static func backendMessage(from data: Data, statusCode: Int) -> String {
         if let envelope = try? JSONDecoder().decode(BackendErrorEnvelope.self, from: data),
-           !envelope.detail.isEmpty {
-            return envelope.detail
+           let message = envelope.userFacingMessage {
+            return message
         }
         return "실시간 추천 요청이 실패했습니다. (HTTP \(statusCode))"
     }
 }
 
 private struct BackendErrorEnvelope: Decodable {
-    let detail: String
+    let detail: Detail
+
+    enum Detail: Decodable {
+        case message(String)
+        case validation([ValidationIssue])
+
+        init(from decoder: Decoder) throws {
+            let container = try decoder.singleValueContainer()
+            if let message = try? container.decode(String.self) {
+                self = .message(message)
+            } else {
+                self = .validation(try container.decode([ValidationIssue].self))
+            }
+        }
+    }
+
+    struct ValidationIssue: Decodable {
+        let msg: String
+    }
+
+    var userFacingMessage: String? {
+        switch detail {
+        case let .message(message):
+            return message.isEmpty ? nil : message
+        case let .validation(issues):
+            guard !issues.isEmpty else { return nil }
+            if issues.contains(where: { $0.msg.contains("origin coordinates must be within supported South Korea regions") }) {
+                return "출발 좌표가 대한민국 지원 지역 밖입니다. 지도에서 국내 출발지를 선택해 주세요."
+            }
+            return "요청 내용을 확인한 뒤 다시 시도해 주세요."
+        }
+    }
 }

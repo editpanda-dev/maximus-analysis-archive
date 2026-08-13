@@ -25,8 +25,6 @@
 		E40000000000000000000002 /* OriginSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000002 /* OriginSearchService.swift */; };
 		E40000000000000000000003 /* OriginPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40000000000000000000003 /* OriginPickerView.swift */; };
 		E40000000000000000000004 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40000000000000000000004 /* MapKit.framework */; };
-		E50000000000000000000001 /* LiveRecommendationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000001 /* LiveRecommendationServiceTests.swift */; };
-		E50000000000000000000002 /* LiveRecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50000000000000000000002 /* LiveRecommendationService.swift */; };
 		E60000000000000000000001 /* LiveRecommendationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000001 /* LiveRecommendationDetailView.swift */; };
 		E60000000000000000000002 /* LiveRecommendationDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60000000000000000000002 /* LiveRecommendationDetailTests.swift */; };
 		E70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift */; };
@@ -64,8 +62,6 @@
 		B40000000000000000000002 /* OriginSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginSearchService.swift; sourceTree = "<group>"; };
 		B40000000000000000000003 /* OriginPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginPickerView.swift; sourceTree = "<group>"; };
 		B40000000000000000000004 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B50000000000000000000001 /* LiveRecommendationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRecommendationServiceTests.swift; sourceTree = "<group>"; };
-		B50000000000000000000002 /* LiveRecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRecommendationService.swift; sourceTree = "<group>"; };
 		B60000000000000000000001 /* LiveRecommendationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRecommendationDetailView.swift; sourceTree = "<group>"; };
 		B60000000000000000000002 /* LiveRecommendationDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRecommendationDetailTests.swift; sourceTree = "<group>"; };
 		B70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLiveRecommendationAPIClientTests.swift; sourceTree = "<group>"; };
@@ -106,7 +102,6 @@
 				B30000000000000000000004 /* LocationService.swift */,
 				B40000000000000000000002 /* OriginSearchService.swift */,
 				B40000000000000000000003 /* OriginPickerView.swift */,
-				B50000000000000000000002 /* LiveRecommendationService.swift */,
 				B60000000000000000000001 /* LiveRecommendationDetailView.swift */,
 				B70000000000000000000002 /* KakaoLiveRecommendationAPIClient.swift */,
 			);
@@ -121,7 +116,6 @@
 				B20000000000000000000001 /* RecommendationViewModelTests.swift */,
 				B30000000000000000000001 /* LocationServiceTests.swift */,
 				B40000000000000000000001 /* OriginSearchServiceTests.swift */,
-				B50000000000000000000001 /* LiveRecommendationServiceTests.swift */,
 				B60000000000000000000002 /* LiveRecommendationDetailTests.swift */,
 				B70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift */,
 			);
@@ -269,7 +263,6 @@
 				E30000000000000000000004 /* LocationService.swift in Sources */,
 				E40000000000000000000002 /* OriginSearchService.swift in Sources */,
 				E40000000000000000000003 /* OriginPickerView.swift in Sources */,
-				E50000000000000000000002 /* LiveRecommendationService.swift in Sources */,
 				E60000000000000000000001 /* LiveRecommendationDetailView.swift in Sources */,
 				E70000000000000000000002 /* KakaoLiveRecommendationAPIClient.swift in Sources */,
 			);
@@ -284,7 +277,6 @@
 				E20000000000000000000001 /* RecommendationViewModelTests.swift in Sources */,
 				E30000000000000000000001 /* LocationServiceTests.swift in Sources */,
 				E40000000000000000000001 /* OriginSearchServiceTests.swift in Sources */,
-				E50000000000000000000001 /* LiveRecommendationServiceTests.swift in Sources */,
 				E60000000000000000000002 /* LiveRecommendationDetailTests.swift in Sources */,
 				E70000000000000000000001 /* KakaoLiveRecommendationAPIClientTests.swift in Sources */,
 			);

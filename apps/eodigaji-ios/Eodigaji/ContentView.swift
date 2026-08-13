@@ -8,7 +8,6 @@ struct ContentView: View {
 
     @MainActor
     init(
-        apiClient _: any RecommendationServicing = RecommendationAPIClient(),
         liveService: (any LiveRecommendationServicing)? = nil,
         locationService: (any LocationServicing)? = nil,
         originSearchService: (any OriginSearching)? = nil
@@ -257,7 +256,7 @@ struct ContentView: View {
 
                 if let updatedAt = viewModel.lastUpdatedAt {
                     Label(
-                        "Apple MapKit 기준 예상 경로 · \(updatedAt.formatted(date: .omitted, time: .shortened)) 조회",
+                        "카카오 대중교통 경로 기준 · \(updatedAt.formatted(date: .omitted, time: .shortened)) 조회",
                         systemImage: "clock"
                     )
                     .font(.caption)
@@ -300,7 +299,7 @@ struct ContentView: View {
     }
 
     private var privacyNotice: some View {
-        Text("출발 좌표는 이 앱의 백엔드로 전송하지 않으며, 장소 검색과 경로 계산을 위해 Apple 지도 서비스에서 사용됩니다.")
+        Text("선택한 출발지 좌표는 추천을 위해 이 앱의 추천 API로 전송되며, 카카오맵 서비스에서 장소·대중교통 경로를 찾는 데 사용됩니다.")
             .font(.caption2.weight(.semibold))
             .multilineTextAlignment(.center)
             .foregroundStyle(.secondary)

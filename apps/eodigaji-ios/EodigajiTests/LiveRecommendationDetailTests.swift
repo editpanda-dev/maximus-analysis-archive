@@ -4,7 +4,7 @@ import XCTest
 @testable import Eodigaji
 
 final class LiveRecommendationDetailTests: XCTestCase {
-    func testAppleMapsTransitRouteUsesSourceAndDestinationCoordinates() {
+    func testAppleMapsLocationLinkUsesSourceAndDestinationCoordinates() {
         let origin = OriginLocation(
             name: "출발 핀",
             coordinate: CLLocationCoordinate2D(latitude: 37.3389, longitude: 127.2697),
@@ -19,7 +19,7 @@ final class LiveRecommendationDetailTests: XCTestCase {
             routeSteps: []
         )
 
-        let route = AppleMapsTransitRoute(origin: origin, recommendation: recommendation)
+        let route = AppleMapsLocationLink(origin: origin, recommendation: recommendation)
 
         XCTAssertEqual(route.mapItems.count, 2)
         XCTAssertEqual(route.mapItems[0].placemark.coordinate.latitude, 37.3389, accuracy: 0.000_001)

@@ -1,7 +1,7 @@
 import MapKit
 import SwiftUI
 
-struct AppleMapsTransitRoute {
+struct AppleMapsLocationLink {
     let mapItems: [MKMapItem]
     let launchOptions: [String: Any]
 
@@ -73,7 +73,7 @@ struct LiveRecommendationDetailView: View {
                         .font(.title3.weight(.semibold))
 
                     if recommendation.routeSteps.isEmpty {
-                        Text("Apple MapKit에서 단계별 안내를 제공하지 않았습니다. Apple 지도에서 최신 경로를 확인해 주세요.")
+                        Text("카카오 대중교통 경로에서 단계별 안내를 제공하지 않았습니다.")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                             .padding(.vertical, 8)
@@ -85,16 +85,16 @@ struct LiveRecommendationDetailView: View {
                 }
 
                 Button {
-                    AppleMapsTransitRoute(origin: origin, recommendation: recommendation).open()
+                    AppleMapsLocationLink(origin: origin, recommendation: recommendation).open()
                 } label: {
-                    Label("Apple 지도에서 대중교통 경로 열기", systemImage: "map.fill")
+                    Label("Apple 지도에서 위치 열기", systemImage: "map.fill")
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
 
-                Text("표시된 시간·거리·이동 단계는 Apple MapKit이 제공한 예상값입니다. 요금, 혼잡도, 도착 시각 또는 환승 성공을 보장하지 않습니다.")
+                Text("표시된 시간·거리·이동 단계는 카카오 대중교통 경로가 제공한 예상값입니다. Apple 지도에서 위치를 열면 별도의 최신 경로가 계산될 수 있습니다. 요금, 혼잡도, 도착 시각 또는 환승 성공을 보장하지 않습니다.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
