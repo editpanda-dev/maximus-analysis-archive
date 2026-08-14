@@ -439,7 +439,62 @@ def test_over_limit_and_missing_transit_routes_are_excluded():
     assert client.district_lookup_coordinates == []
 
 
-def test_nearby_place_without_kakao_transit_route_uses_walking_estimate():
+def test_thirty_minute_recommendations_exclude_routes_shorter_than_twenty_minutes():
+    places = [
+        place("19분 카페", 127.10, 37.10),
+        place("20분 카페", 127.20, 37.20),
+        place("30분 카페", 127.30, 37.30),
+    ]
+    client = StubKakaoClient(
+        places,
+        routes={
+            (127.10, 37.10): route(19),
+            (127.20, 37.20): route(20),
+            (127.30, 37.30): route(30),
+        },
+    )
+    service = KakaoTransitRecommendationService(client)
+
+    result = run(service.recommend(valid_request(max_travel_time_minutes=30)))
+
+    assert [item.place_name for item in result.recommendations] == [
+        "20분 카페",
+        "30분 카페",
+    ]
+
+
+def test_expands_place_search_when_nearby_candidates_miss_the_selected_time_window():
+    origin = (127.267, 37.334)
+    nearby_place = place("5분 카페", 127.268, 37.334)
+    target_place = place("25분 카페", 127.320, 37.370)
+
+    class TimeWindowSearchClient(StubKakaoClient):
+        async def search_places(self, *, keyword, longitude, latitude):
+            self.searches.append(
+                {"keyword": keyword, "longitude": longitude, "latitude": latitude}
+            )
+            return [nearby_place] if (longitude, latitude) == origin else [target_place]
+
+    client = TimeWindowSearchClient(
+        routes={
+            (nearby_place.longitude, nearby_place.latitude): route(5),
+            (target_place.longitude, target_place.latitude): route(25),
+        }
+    )
+    service = KakaoTransitRecommendationService(client)
+
+    result = run(service.recommend(valid_request(max_travel_time_minutes=30)))
+
+    assert [item.place_name for item in result.recommendations] == ["25분 카페"]
+    assert client.searches[0] == {
+        "keyword": "카페",
+        "longitude": 127.267,
+        "latitude": 37.334,
+    }
+    assert len(client.searches) == 9
+
+
+def test_nearby_walking_route_below_selected_time_window_is_excluded():
     client = StubKakaoClient(
         places=[place("회기역 카페", 127.0577, 37.5904)],
         routes={(127.0577, 37.5904): None},
@@ -457,13 +512,8 @@ def test_nearby_place_without_kakao_transit_route_uses_walking_estimate():
         )
     )
 
-    assert result.result_status == "ok"
-    assert result.eligible_count == 1
-    recommendation = result.recommendations[0]
-    assert recommendation.place_name == "회기역 카페"
-    assert recommendation.expected_travel_time_seconds == 120
-    assert recommendation.route_steps[0].instruction == "도보 약 2분"
-    assert recommendation.route_steps[0].transport_mode == "walking"
+    assert result.result_status == "no_eligible_candidates"
+    assert result.eligible_count == 0
 
 
 def test_district_recommendations_resolve_only_route_eligible_places_and_omit_missing_h():
@@ -530,7 +580,7 @@ def test_route_concurrency_and_result_count_cannot_exceed_product_caps():
             self.peak_in_flight = max(self.peak_in_flight, self.in_flight)
             await asyncio.sleep(0.01)
             self.in_flight -= 1
-            return route(10)
+            return route(20)
 
     client = CountingClient()
     service = KakaoTransitRecommendationService(

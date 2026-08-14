@@ -10,6 +10,11 @@ public enum MaxTravelTimeMinutes: Int, Codable, CaseIterable, Sendable {
     case thirty = 30
     case forty = 40
     case sixty = 60
+
+    public var recommendationWindowLabel: String {
+        let lowerBound = max(0, rawValue - 10)
+        return "\(lowerBound)–\(rawValue)분"
+    }
 }
 
 public enum TimeSlot: String, Codable, CaseIterable, Sendable {

@@ -2,6 +2,10 @@ import XCTest
 @testable import Eodigaji
 
 final class APIModelsTests: XCTestCase {
+    func testThirtyMinuteSelectionDisplaysTwentyToThirtyMinuteRecommendationWindow() {
+        XCTAssertEqual(MaxTravelTimeMinutes.thirty.recommendationWindowLabel, "20–30분")
+    }
+
     func testRecommendationRequestUsesExactSnakeCaseContract() throws {
         let request = RecommendationRequest(
             origin: "회기역",

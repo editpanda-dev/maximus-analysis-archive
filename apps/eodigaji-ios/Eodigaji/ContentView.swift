@@ -171,6 +171,10 @@ struct ContentView: View {
             }
             .pickerStyle(.segmented)
 
+            Text("가까운 곳 대신 \(viewModel.maxTravelTimeMinutes.recommendationWindowLabel) 구간의 동네를 우선 추천합니다.")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+
             VStack(alignment: .leading, spacing: 10) {
                 Text("추천 목적")
                     .font(.subheadline.weight(.semibold))
@@ -257,22 +261,25 @@ struct ContentView: View {
     private func districtResults(from origin: OriginLocation) -> some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                HStack(alignment: .firstTextBaseline) {
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text(origin.name)
-                            .font(.headline)
-                        Text("대중교통 · 최대 \((viewModel.liveResultsMaxTravelTime ?? viewModel.maxTravelTimeMinutes).rawValue)분")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer()
-                    Text("\(viewModel.liveDistricts.count)개 동네")
-                        .font(.subheadline.weight(.semibold))
+                let travelWindow = (viewModel.liveResultsMaxTravelTime ?? viewModel.maxTravelTimeMinutes).recommendationWindowLabel
+
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("추천 결과")
+                        .font(.largeTitle.weight(.bold))
+                    Text("\(origin.name) · \(travelWindow) · \(viewModel.purpose.koreanLabel)")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+
+                HStack(spacing: 7) {
+                    ResultFilterChip(label: travelWindow)
+                    ResultFilterChip(label: viewModel.purpose.koreanLabel)
+                    ResultFilterChip(label: "\(viewModel.liveDistricts.count)개 동네")
                 }
 
                 if let updatedAt = viewModel.lastUpdatedAt {
                     Label(
-                        "카카오 대중교통 경로 기준 · \(updatedAt.formatted(date: .omitted, time: .shortened)) 조회",
+                        "카카오 경로 기준 · \(updatedAt.formatted(date: .omitted, time: .shortened)) 조회",
                         systemImage: "clock"
                     )
                     .font(.caption)
@@ -294,6 +301,7 @@ struct ContentView: View {
             }
             .padding(20)
         }
+        .background(Color(.systemGroupedBackground))
         .navigationTitle("동네 추천")
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -315,6 +323,20 @@ struct ContentView: View {
             .padding(.horizontal, 12)
             .padding(.vertical, 7)
             .background(.thinMaterial)
+    }
+}
+
+private struct ResultFilterChip: View {
+    let label: String
+
+    var body: some View {
+        Text(label)
+            .font(.caption.weight(.semibold))
+            .foregroundStyle(Color(red: 0.22, green: 0.19, blue: 0.64))
+            .padding(.horizontal, 11)
+            .padding(.vertical, 6)
+            .background(Color(red: 0.93, green: 0.95, blue: 1.0))
+            .clipShape(Capsule())
     }
 }
 
@@ -406,11 +428,11 @@ private struct DistrictRecommendationListView: View {
             .padding(.vertical, 32)
         } else {
             LazyVStack(spacing: 12) {
-                ForEach(Array(districts.enumerated()), id: \.offset) { _, district in
+                ForEach(Array(districts.enumerated()), id: \.offset) { index, district in
                     Button {
                         onSelect(district)
                     } label: {
-                        DistrictRecommendationCard(district: district)
+                        DistrictRecommendationCard(district: district, rank: index)
                     }
                     .buttonStyle(.plain)
                 }
@@ -421,31 +443,38 @@ private struct DistrictRecommendationListView: View {
 
 private struct DistrictRecommendationCard: View {
     let district: LiveDistrictRecommendation
+    let rank: Int
 
     var body: some View {
+        let isTopRecommendation = rank == 0
         HStack(alignment: .firstTextBaseline, spacing: 12) {
+            Text(String(format: "%02d", rank + 1))
+                .font(.caption.weight(.bold))
+                .foregroundStyle(isTopRecommendation ? Color.white.opacity(0.45) : Color(.tertiaryLabel))
             VStack(alignment: .leading, spacing: 6) {
                 Text(district.districtName)
-                    .font(.headline)
-                Text("가장 빠른 대중교통 경로")
+                    .font(.title3.weight(.bold))
+                Text("카카오 경로로 확인된 장소 \(district.placeCount)곳")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(isTopRecommendation ? Color.white.opacity(0.58) : .secondary)
             }
             Spacer()
             VStack(alignment: .trailing, spacing: 6) {
                 Text("\(Int(ceil(district.fastestTravelTime / 60)))분")
-                    .font(.headline)
-                Text("\(district.placeCount)곳")
+                    .font(.title3.weight(.bold))
+                    .foregroundStyle(isTopRecommendation ? Color(red: 0.38, green: 0.65, blue: 1) : Color.accentColor)
+                Text("상세 보기")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(isTopRecommendation ? Color.white.opacity(0.58) : .secondary)
             }
             Image(systemName: "chevron.right")
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(isTopRecommendation ? Color.white.opacity(0.58) : .secondary)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.thinMaterial)
+        .foregroundStyle(isTopRecommendation ? Color.white : .primary)
+        .background(isTopRecommendation ? Color(red: 0.05, green: 0.11, blue: 0.29) : Color(.secondarySystemGroupedBackground))
         .clipShape(RoundedRectangle(cornerRadius: 14))
         .accessibilityElement(children: .combine)
     }

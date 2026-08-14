@@ -31,6 +31,10 @@ LIMITATIONS = (
 )
 WALKING_METERS_PER_MINUTE = 80
 EARTH_RADIUS_METERS = 6_371_000
+TRAVEL_TIME_WINDOW_MINUTES = 10
+SEARCH_RING_SAMPLE_COUNT = 8
+SEARCH_RING_METERS_PER_MINUTE = 250
+EXPANDED_SEARCH_PLACES_PER_CENTER = 3
 
 
 class KakaoTransitRecommendationService:
@@ -85,6 +89,18 @@ class KakaoTransitRecommendationService:
             longitude=request.origin_longitude,
             latitude=request.origin_latitude,
         )
+        if not places:
+            return []
+        eligible = await self._eligible_places(request=request, places=places)
+        if eligible:
+            return eligible
+
+        expanded_places = await self._expanded_search_places(request)
+        return await self._eligible_places(request=request, places=expanded_places)
+
+    async def _eligible_places(
+        self, *, request: LiveRecommendationRequest, places: list[KakaoPlace]
+    ) -> list[LiveRecommendation]:
         semaphore = asyncio.Semaphore(self._maximum_concurrent_routes)
 
         async def recommendation_for(
@@ -100,6 +116,8 @@ class KakaoTransitRecommendationService:
             if route is None:
                 route = self._nearby_walking_route(request=request, place=place)
             if route is None:
+                return None
+            if route.duration_seconds < self._minimum_travel_time_seconds(request):
                 return None
             if route.duration_seconds > request.max_travel_time_minutes * 60:
                 return None
@@ -125,6 +143,49 @@ class KakaoTransitRecommendationService:
             )
         )
         return eligible
+
+    async def _expanded_search_places(
+        self, request: LiveRecommendationRequest
+    ) -> list[KakaoPlace]:
+        keyword = PURPOSE_KEYWORDS[request.purpose]
+        searches = await asyncio.gather(
+            *(
+                self._client.search_places(
+                    keyword=keyword,
+                    longitude=longitude,
+                    latitude=latitude,
+                )
+                for longitude, latitude in self._travel_time_ring_centers(request)
+            )
+        )
+        places_by_id: dict[str, KakaoPlace] = {}
+        for places in searches:
+            for place in places[:EXPANDED_SEARCH_PLACES_PER_CENTER]:
+                places_by_id.setdefault(place.id, place)
+        return list(places_by_id.values())
+
+    @staticmethod
+    def _travel_time_ring_centers(
+        request: LiveRecommendationRequest,
+    ) -> list[tuple[float, float]]:
+        target_minutes = request.max_travel_time_minutes - TRAVEL_TIME_WINDOW_MINUTES / 2
+        radius_radians = (
+            target_minutes * SEARCH_RING_METERS_PER_MINUTE / EARTH_RADIUS_METERS
+        )
+        origin_latitude = math.radians(request.origin_latitude)
+        centers = []
+        for index in range(SEARCH_RING_SAMPLE_COUNT):
+            bearing = 2 * math.pi * index / SEARCH_RING_SAMPLE_COUNT
+            latitude = origin_latitude + radius_radians * math.cos(bearing)
+            longitude = math.radians(request.origin_longitude) + (
+                radius_radians * math.sin(bearing) / math.cos(origin_latitude)
+            )
+            centers.append((math.degrees(longitude), math.degrees(latitude)))
+        return centers
+
+    @staticmethod
+    def _minimum_travel_time_seconds(request: LiveRecommendationRequest) -> int:
+        return max(0, request.max_travel_time_minutes - TRAVEL_TIME_WINDOW_MINUTES) * 60
 
     @staticmethod
     def _nearby_walking_route(
