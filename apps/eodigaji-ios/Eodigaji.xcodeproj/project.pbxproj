@@ -34,6 +34,7 @@
 		E80000000000000000000002 /* KakaoDistrictRecommendationAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80000000000000000000002 /* KakaoDistrictRecommendationAPIClient.swift */; };
 		EA00000000000000000000001 /* AppEntryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00000000000000000000001 /* AppEntryViewModelTests.swift */; };
 		EA00000000000000000000002 /* AppEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00000000000000000000002 /* AppEntryView.swift */; };
+		EB00000000000000000000001 /* OriginPickerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000000000000000000001 /* OriginPickerModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		B90000000000000000000001 /* DistrictRecommendationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictRecommendationViewModelTests.swift; sourceTree = "<group>"; };
 		BA00000000000000000000001 /* AppEntryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryViewModelTests.swift; sourceTree = "<group>"; };
 		BA00000000000000000000002 /* AppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryView.swift; sourceTree = "<group>"; };
+		BB00000000000000000000001 /* OriginPickerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginPickerModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				B80000000000000000000001 /* KakaoDistrictRecommendationAPIClientTests.swift */,
 				B90000000000000000000001 /* DistrictRecommendationViewModelTests.swift */,
 				BA00000000000000000000001 /* AppEntryViewModelTests.swift */,
+				BB00000000000000000000001 /* OriginPickerModelTests.swift */,
 			);
 			path = EodigajiTests;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				E80000000000000000000001 /* KakaoDistrictRecommendationAPIClientTests.swift in Sources */,
 				E90000000000000000000001 /* DistrictRecommendationViewModelTests.swift in Sources */,
 				EA00000000000000000000001 /* AppEntryViewModelTests.swift in Sources */,
+				EB00000000000000000000001 /* OriginPickerModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

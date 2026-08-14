@@ -48,6 +48,12 @@ class RouteStep(BaseModel):
     distance_meters: int = Field(ge=0)
     duration_seconds: int = Field(ge=0)
     transport_mode: TransportMode
+    path_coordinates: list["RouteCoordinate"] = Field(default_factory=list)
+
+
+class RouteCoordinate(BaseModel):
+    latitude: float = Field(ge=-90, le=90)
+    longitude: float = Field(ge=-180, le=180)
 
 
 class KakaoTransitRoute(BaseModel):

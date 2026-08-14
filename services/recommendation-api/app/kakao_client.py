@@ -6,6 +6,7 @@ from .live_models import (
     KakaoAdministrativeDistrict,
     KakaoPlace,
     KakaoTransitRoute,
+    RouteCoordinate,
     RouteStep,
 )
 
@@ -154,9 +155,31 @@ class KakaoClient:
                     distance_meters=int(properties["distance"]),
                     duration_seconds=int(properties["time"]),
                     transport_mode=cls._transport_mode(properties.get("type", "")),
+                    path_coordinates=cls._parse_path_coordinates(provider_step),
                 )
             )
         return steps
+
+    @staticmethod
+    def _parse_path_coordinates(provider_step: dict[str, Any]) -> list[RouteCoordinate]:
+        path = provider_step.get("path")
+        points = path.get("points") if isinstance(path, dict) else None
+        if not isinstance(points, list):
+            return []
+
+        coordinates = []
+        for point in points:
+            if not isinstance(point, list) or len(point) < 2:
+                continue
+            try:
+                longitude, latitude = float(point[0]), float(point[1])
+            except (TypeError, ValueError):
+                continue
+            if -180 <= longitude <= 180 and -90 <= latitude <= 90:
+                coordinates.append(
+                    RouteCoordinate(latitude=latitude, longitude=longitude)
+                )
+        return coordinates
 
     @staticmethod
     def _transport_mode(provider_type: str) -> str:

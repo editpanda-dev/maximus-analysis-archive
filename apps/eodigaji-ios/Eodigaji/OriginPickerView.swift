@@ -30,6 +30,19 @@ struct OriginPickerView: View {
 
                 model.selectPin(at: coordinate)
             }
+
+            VStack {
+                Spacer()
+                Button {
+                    model.confirmSelection()
+                } label: {
+                    Label("이 위치로 설정", systemImage: "checkmark.circle.fill")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .padding()
+            }
         }
         .onAppear {
             cameraPosition = .region(model.initialCameraRegion)
@@ -72,6 +85,9 @@ final class OriginPickerModel: ObservableObject {
             source: .mapPin
         )
         selectedOrigin = origin
-        onSelect(origin)
+    }
+
+    func confirmSelection() {
+        onSelect(selectedOrigin)
     }
 }

@@ -2,7 +2,7 @@ import asyncio
 import math
 from datetime import datetime, timezone
 
-from .kakao_client import KakaoClient
+from .kakao_client import KakaoClient, KakaoProviderError
 from .district_service import build_district_recommendations
 from .live_models import (
     DistrictCandidate,
@@ -107,12 +107,19 @@ class KakaoTransitRecommendationService:
             place: KakaoPlace,
         ) -> LiveRecommendation | None:
             async with semaphore:
-                route = await self._client.public_transit_route(
-                    origin_longitude=request.origin_longitude,
-                    origin_latitude=request.origin_latitude,
-                    destination_longitude=place.longitude,
-                    destination_latitude=place.latitude,
-                )
+                try:
+                    route = await self._client.public_transit_route(
+                        origin_longitude=request.origin_longitude,
+                        origin_latitude=request.origin_latitude,
+                        destination_longitude=place.longitude,
+                        destination_latitude=place.latitude,
+                    )
+                except KakaoProviderError as error:
+                    # A bad/unsupported route pair must not discard other live places.
+                    # Rate limits and server failures remain visible to the HTTP boundary.
+                    if error.status_code == 429 or error.status_code >= 500:
+                        raise
+                    return None
             if route is None:
                 route = self._nearby_walking_route(request=request, place=place)
             if route is None:

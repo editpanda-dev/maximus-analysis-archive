@@ -41,19 +41,39 @@ public enum LiveRouteTransportType: Equatable, Sendable {
     case other
 }
 
+public struct LiveRouteCoordinate: Equatable, Sendable {
+    public let latitude: CLLocationDegrees
+    public let longitude: CLLocationDegrees
+
+    public init(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+
+    public var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+}
+
 public struct LiveRouteStep: Equatable, Sendable {
     public let instructions: String
     public let distanceMeters: CLLocationDistance
     public let transportType: LiveRouteTransportType
+    public let duration: TimeInterval
+    public let pathCoordinates: [LiveRouteCoordinate]
 
     public init(
         instructions: String,
         distanceMeters: CLLocationDistance,
-        transportType: LiveRouteTransportType
+        transportType: LiveRouteTransportType,
+        duration: TimeInterval = 0,
+        pathCoordinates: [LiveRouteCoordinate] = []
     ) {
         self.instructions = instructions
         self.distanceMeters = distanceMeters
         self.transportType = transportType
+        self.duration = duration
+        self.pathCoordinates = pathCoordinates
     }
 }
 
@@ -348,12 +368,25 @@ struct KakaoLiveDistrictRecommendation: Decodable {
 struct KakaoLiveRouteStep: Decodable {
     let instruction: String
     let distanceMeters: CLLocationDistance
+    let durationSeconds: TimeInterval
     let transportMode: String
+    let pathCoordinates: [KakaoLiveRouteCoordinate]
 
     private enum CodingKeys: String, CodingKey {
         case instruction
         case distanceMeters = "distance_meters"
+        case durationSeconds = "duration_seconds"
         case transportMode = "transport_mode"
+        case pathCoordinates = "path_coordinates"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        instruction = try container.decode(String.self, forKey: .instruction)
+        distanceMeters = try container.decode(CLLocationDistance.self, forKey: .distanceMeters)
+        durationSeconds = try container.decode(TimeInterval.self, forKey: .durationSeconds)
+        transportMode = try container.decode(String.self, forKey: .transportMode)
+        pathCoordinates = try container.decodeIfPresent([KakaoLiveRouteCoordinate].self, forKey: .pathCoordinates) ?? []
     }
 
     var asLiveRouteStep: LiveRouteStep {
@@ -364,7 +397,22 @@ struct KakaoLiveRouteStep: Decodable {
         case "automobile": type = .automobile
         default: type = .other
         }
-        return LiveRouteStep(instructions: instruction, distanceMeters: distanceMeters, transportType: type)
+        return LiveRouteStep(
+            instructions: instruction,
+            distanceMeters: distanceMeters,
+            transportType: type,
+            duration: durationSeconds,
+            pathCoordinates: pathCoordinates.map(\.asLiveRouteCoordinate)
+        )
+    }
+}
+
+struct KakaoLiveRouteCoordinate: Decodable {
+    let latitude: CLLocationDegrees
+    let longitude: CLLocationDegrees
+
+    var asLiveRouteCoordinate: LiveRouteCoordinate {
+        LiveRouteCoordinate(latitude: latitude, longitude: longitude)
     }
 }
 

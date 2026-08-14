@@ -24,7 +24,8 @@ final class KakaoLiveRecommendationAPIClientTests: XCTestCase {
                   "instruction": "정류장까지 도보",
                   "distance_meters": 200,
                   "duration_seconds": 180,
-                  "transport_mode": "walking"
+                  "transport_mode": "walking",
+                  "path_coordinates": [{"latitude": 37.3389, "longitude": 127.2697}, {"latitude": 37.3400, "longitude": 127.2700}]
                 }, {
                   "instruction": "2호선 탑승",
                   "distance_meters": 4000,
@@ -72,6 +73,8 @@ final class KakaoLiveRecommendationAPIClientTests: XCTestCase {
         XCTAssertEqual(recommendations[0].expectedTravelTime, 1800)
         XCTAssertEqual(recommendations[0].distanceMeters, 4200)
         XCTAssertEqual(recommendations[0].routeSteps.map(\.transportType), [LiveRouteTransportType.walking, .transit])
+        XCTAssertEqual(recommendations[0].routeSteps[0].pathCoordinates.count, 2)
+        XCTAssertEqual(recommendations[0].routeSteps[0].pathCoordinates[0].latitude, 37.3389, accuracy: 0.000_001)
     }
 
     func testFastAPIValidationDetailArrayProvidesKoreanOriginGuidanceWithoutFallback() async throws {

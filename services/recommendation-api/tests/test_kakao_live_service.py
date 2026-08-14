@@ -11,7 +11,7 @@ SERVICE_ROOT = Path(__file__).resolve().parents[1]
 if str(SERVICE_ROOT) not in sys.path:
     sys.path.insert(0, str(SERVICE_ROOT))
 
-from app.kakao_client import KakaoClient
+from app.kakao_client import KakaoClient, KakaoProviderError
 from app.live_models import (
     KakaoAdministrativeDistrict,
     KakaoPlace,
@@ -227,6 +227,7 @@ def test_public_transit_client_uses_publictraffic_endpoint_and_provider_values()
                 },
                 "steps": [
                     {
+                        "path": {"points": [[127.267, 37.334], [127.280, 37.350]]},
                         "properties": {
                             "guidance": "111번 버스 승차",
                             "type": "BUS",
@@ -281,6 +282,10 @@ def test_public_transit_client_uses_publictraffic_endpoint_and_provider_values()
                 distance_meters=11_500,
                 duration_seconds=1_500,
                 transport_mode="transit",
+                path_coordinates=[
+                    {"latitude": 37.334, "longitude": 127.267},
+                    {"latitude": 37.350, "longitude": 127.280},
+                ],
             ),
             RouteStep(
                 instruction="목적지까지 걷기",
@@ -593,3 +598,29 @@ def test_route_concurrency_and_result_count_cannot_exceed_product_caps():
 
     assert client.peak_in_flight == 4
     assert len(result.recommendations) == 5
+
+
+def test_one_unroutable_place_does_not_fail_the_entire_recommendation_request():
+    first = place("경로 오류 카페", 127.10, 37.10)
+    second = place("추천 가능 카페", 127.20, 37.20)
+
+    class PartiallyFailingClient(StubKakaoClient):
+        async def public_transit_route(self, **coordinates):
+            if coordinates["destination_longitude"] == first.longitude:
+                raise KakaoProviderError(400)
+            return route(25)
+
+    client = PartiallyFailingClient(
+        places=[first, second],
+        districts={
+            (second.longitude, second.latitude): KakaoAdministrativeDistrict(
+                code="1111010100", name="테스트동"
+            )
+        },
+    )
+    service = KakaoTransitRecommendationService(client)
+
+    response = run(service.recommend(valid_request(max_travel_time_minutes=30)))
+
+    assert response.result_status == "ok"
+    assert response.eligible_count == 1

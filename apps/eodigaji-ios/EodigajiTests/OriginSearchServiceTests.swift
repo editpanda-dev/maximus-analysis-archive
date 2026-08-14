@@ -22,7 +22,7 @@ final class OriginSearchServiceTests: XCTestCase {
         ])
     }
 
-    func testSelectingMapPinDeliversCoordinateToCallback() {
+    func testConfirmingMapPinDeliversCoordinateToCallback() {
         let coordinate = CLLocationCoordinate2D(latitude: 37.1683, longitude: 127.1790)
         var callbackOrigin: OriginLocation?
         let picker = OriginPickerModel(initialOrigin: nil) { origin in
@@ -30,6 +30,9 @@ final class OriginSearchServiceTests: XCTestCase {
         }
 
         picker.selectPin(at: coordinate)
+        XCTAssertNil(callbackOrigin)
+
+        picker.confirmSelection()
 
         XCTAssertEqual(callbackOrigin?.coordinate.latitude, 37.1683)
         XCTAssertEqual(callbackOrigin?.coordinate.longitude, 127.1790)
