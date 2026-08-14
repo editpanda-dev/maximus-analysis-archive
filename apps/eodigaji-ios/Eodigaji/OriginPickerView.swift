@@ -14,12 +14,7 @@ struct OriginPickerView: View {
 
         _model = StateObject(wrappedValue: OriginPickerModel(initialOrigin: origin, onSelect: onSelect))
         _cameraPosition = State(
-            initialValue: .region(
-                MKCoordinateRegion(
-                    center: origin.coordinate,
-                    span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-                )
-            )
+            initialValue: .region(OriginPickerModel.cameraRegion(for: origin))
         )
     }
 
@@ -35,6 +30,9 @@ struct OriginPickerView: View {
 
                 model.selectPin(at: coordinate)
             }
+        }
+        .onAppear {
+            cameraPosition = .region(model.initialCameraRegion)
         }
         .accessibilityLabel("지도에서 출발지 핀 선택")
     }
@@ -54,6 +52,17 @@ final class OriginPickerModel: ObservableObject {
     init(initialOrigin: OriginLocation?, onSelect: @escaping (OriginLocation) -> Void) {
         selectedOrigin = initialOrigin ?? Self.defaultOrigin
         self.onSelect = onSelect
+    }
+
+    var initialCameraRegion: MKCoordinateRegion {
+        Self.cameraRegion(for: selectedOrigin)
+    }
+
+    static func cameraRegion(for origin: OriginLocation) -> MKCoordinateRegion {
+        MKCoordinateRegion(
+            center: origin.coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+        )
     }
 
     func selectPin(at coordinate: CLLocationCoordinate2D) {

@@ -50,10 +50,13 @@ struct ContentView: View {
                 .navigationTitle("지도에서 출발지 선택")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("닫기") {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button {
                             isOriginPickerPresented = false
+                        } label: {
+                            Label("뒤로", systemImage: "chevron.backward")
                         }
+                        .accessibilityLabel("지도 선택 뒤로가기")
                     }
                 }
             }

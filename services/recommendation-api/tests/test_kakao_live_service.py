@@ -439,6 +439,33 @@ def test_over_limit_and_missing_transit_routes_are_excluded():
     assert client.district_lookup_coordinates == []
 
 
+def test_nearby_place_without_kakao_transit_route_uses_walking_estimate():
+    client = StubKakaoClient(
+        places=[place("회기역 카페", 127.0577, 37.5904)],
+        routes={(127.0577, 37.5904): None},
+    )
+    service = KakaoTransitRecommendationService(client)
+
+    result = run(
+        service.recommend(
+            valid_request(
+                origin_name="회기역",
+                origin_latitude=37.5895,
+                origin_longitude=127.0577,
+                max_travel_time_minutes=30,
+            )
+        )
+    )
+
+    assert result.result_status == "ok"
+    assert result.eligible_count == 1
+    recommendation = result.recommendations[0]
+    assert recommendation.place_name == "회기역 카페"
+    assert recommendation.expected_travel_time_seconds == 120
+    assert recommendation.route_steps[0].instruction == "도보 약 2분"
+    assert recommendation.route_steps[0].transport_mode == "walking"
+
+
 def test_district_recommendations_resolve_only_route_eligible_places_and_omit_missing_h():
     places = [
         place("30분 카페", 127.1, 37.1),

@@ -35,4 +35,18 @@ final class OriginSearchServiceTests: XCTestCase {
         XCTAssertEqual(callbackOrigin?.coordinate.longitude, 127.1790)
         XCTAssertEqual(callbackOrigin?.source, .mapPin)
     }
+
+    func testMapPickerCameraStartsAtTheDisplayedOrigin() {
+        let displayedOrigin = OriginLocation(
+            name: "회기역",
+            coordinate: CLLocationCoordinate2D(latitude: 37.5895, longitude: 127.0577),
+            source: .searchedPlace
+        )
+        let picker = OriginPickerModel(initialOrigin: displayedOrigin) { _ in }
+
+        let region = picker.initialCameraRegion
+
+        XCTAssertEqual(region.center.latitude, 37.5895, accuracy: 0.00001)
+        XCTAssertEqual(region.center.longitude, 127.0577, accuracy: 0.00001)
+    }
 }

@@ -1,4 +1,5 @@
 import asyncio
+import math
 from datetime import datetime, timezone
 
 from .kakao_client import KakaoClient
@@ -6,10 +7,12 @@ from .district_service import build_district_recommendations
 from .live_models import (
     DistrictCandidate,
     KakaoPlace,
+    KakaoTransitRoute,
     LiveDistrictRecommendationResponse,
     LiveRecommendation,
     LiveRecommendationRequest,
     LiveRecommendationResponse,
+    RouteStep,
 )
 
 
@@ -22,9 +25,12 @@ PURPOSE_KEYWORDS = {
     "rest": "휴식",
 }
 LIMITATIONS = (
-    "카카오가 제공한 장소 및 대중교통 경로만 사용합니다. 실시간 도착예정, "
-    "혼잡도, 요금, 환승 성공 여부는 보장하지 않습니다."
+    "카카오 대중교통 경로를 우선 사용합니다. 카카오가 경로를 제공하지 않는 가까운 장소는 "
+    "직선 거리 기반 도보 예상으로 표시합니다. 실시간 도착예정, 혼잡도, 요금, "
+    "환승 성공 여부는 보장하지 않습니다."
 )
+WALKING_METERS_PER_MINUTE = 80
+EARTH_RADIUS_METERS = 6_371_000
 
 
 class KakaoTransitRecommendationService:
@@ -92,6 +98,8 @@ class KakaoTransitRecommendationService:
                     destination_latitude=place.latitude,
                 )
             if route is None:
+                route = self._nearby_walking_route(request=request, place=place)
+            if route is None:
                 return None
             if route.duration_seconds > request.max_travel_time_minutes * 60:
                 return None
@@ -117,6 +125,41 @@ class KakaoTransitRecommendationService:
             )
         )
         return eligible
+
+    @staticmethod
+    def _nearby_walking_route(
+        *, request: LiveRecommendationRequest, place: KakaoPlace
+    ) -> KakaoTransitRoute | None:
+        latitude_delta = math.radians(place.latitude - request.origin_latitude)
+        longitude_delta = math.radians(place.longitude - request.origin_longitude)
+        origin_latitude = math.radians(request.origin_latitude)
+        destination_latitude = math.radians(place.latitude)
+        half_chord = (
+            math.sin(latitude_delta / 2) ** 2
+            + math.cos(origin_latitude)
+            * math.cos(destination_latitude)
+            * math.sin(longitude_delta / 2) ** 2
+        )
+        distance_meters = round(
+            EARTH_RADIUS_METERS * 2 * math.atan2(math.sqrt(half_chord), math.sqrt(1 - half_chord))
+        )
+        duration_minutes = max(1, math.ceil(distance_meters / WALKING_METERS_PER_MINUTE))
+        if duration_minutes > request.max_travel_time_minutes:
+            return None
+
+        duration_seconds = duration_minutes * 60
+        return KakaoTransitRoute(
+            duration_seconds=duration_seconds,
+            distance_meters=distance_meters,
+            steps=[
+                RouteStep(
+                    instruction=f"도보 약 {duration_minutes}분",
+                    distance_meters=distance_meters,
+                    duration_seconds=duration_seconds,
+                    transport_mode="walking",
+                )
+            ],
+        )
 
     async def _district_candidates(
         self, recommendations: list[LiveRecommendation]
