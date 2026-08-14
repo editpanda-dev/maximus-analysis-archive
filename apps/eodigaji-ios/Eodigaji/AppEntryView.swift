@@ -34,7 +34,7 @@ struct AppEntryView: View {
             case .home:
                 HomeView(onStartRecommendation: viewModel.startRecommendation)
             case .recommendation:
-                ContentView()
+                ContentView(onReturnHome: viewModel.returnHome)
             }
         }
     }

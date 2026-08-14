@@ -5,6 +5,14 @@ import XCTest
 
 @MainActor
 final class RecommendationViewModelTests: XCTestCase {
+    func testFreshContentViewModelStartsWithoutDistrictResults() {
+        let viewModel = RecommendationViewModel(districtService: DistrictStub())
+
+        XCTAssertFalse(viewModel.shouldShowResults)
+        XCTAssertTrue(viewModel.liveDistricts.isEmpty)
+        XCTAssertNil(viewModel.selectedDistrict)
+    }
+
     func testRecommendMapsCurrentSelectionsToLegacyRequestAndStoresResponse() async {
         let expectedResponse = Self.sampleResponse
         let service = StubRecommendationService(result: .success(expectedResponse))
@@ -338,6 +346,17 @@ final class RecommendationViewModelTests: XCTestCase {
         fixture: true,
         limitations: "데모 fixture이며 실시간 대중교통 정보가 아닙니다."
     )
+}
+
+@MainActor
+private final class DistrictStub: DistrictRecommendationServicing {
+    func recommendDistricts(
+        from origin: OriginLocation,
+        purpose: Purpose,
+        maxTravelTime: MaxTravelTimeMinutes
+    ) async throws -> [LiveDistrictRecommendation] {
+        []
+    }
 }
 
 private actor StubRecommendationService: RecommendationServicing {

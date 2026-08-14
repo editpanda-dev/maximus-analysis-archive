@@ -5,13 +5,16 @@ struct ContentView: View {
     @StateObject private var viewModel: RecommendationViewModel
     @State private var isOriginSearchPresented = false
     @State private var isOriginPickerPresented = false
+    private let onReturnHome: () -> Void
 
     @MainActor
     init(
+        onReturnHome: @escaping () -> Void = {},
         districtService: (any DistrictRecommendationServicing)? = nil,
         locationService: (any LocationServicing)? = nil,
         originSearchService: (any OriginSearching)? = nil
     ) {
+        self.onReturnHome = onReturnHome
         _viewModel = StateObject(
             wrappedValue: RecommendationViewModel(
                 districtService: districtService ?? KakaoDistrictRecommendationAPIClient(),
@@ -75,6 +78,16 @@ struct ContentView: View {
             .padding(20)
         }
         .navigationTitle("어디가지")
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    onReturnHome()
+                } label: {
+                    Label("홈으로", systemImage: "chevron.backward")
+                }
+                .accessibilityLabel("홈으로 돌아가기")
+            }
+        }
     }
 
     private var originSection: some View {
