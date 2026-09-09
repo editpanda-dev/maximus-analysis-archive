@@ -1,0 +1,14 @@
+{
+  "chosen_model": "nonlinear",
+  "candidate_dongs": 151,
+  "observations": 604,
+  "quarters": [
+    20251,
+    20252,
+    20253,
+    20254
+  ],
+  "purpose_consumption_dongs": 5,
+  "pass_through_dongs": 8,
+  "interpretation_limit": "Association and prediction only; residuals do not establish causality."
+}

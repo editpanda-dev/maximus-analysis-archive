@@ -1,0 +1,14 @@
+# Secrets and local runtime state
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+# Raw/licensed data and API response caches are intentionally not redistributed.
+data/raw/
+data/interim/
+data/external/
+data/processed/**/reachable_stops_by_origin.csv
+data/processed/**/reachable_dongs_by_origin.csv

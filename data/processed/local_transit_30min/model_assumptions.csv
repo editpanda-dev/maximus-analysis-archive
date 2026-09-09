@@ -1,0 +1,2 @@
+﻿model,analysis_hour,cutoff_minutes,origin_walk_m,transfer_walk_m,walk_speed_mps,bus_wait_seconds,metro_wait_seconds,transfer_penalty_seconds
+hourly-average static multimodal graph,10,30,600,250,1.2,300,180,120
