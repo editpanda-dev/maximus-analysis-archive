@@ -6,8 +6,27 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 
-# Raw/licensed data and API response caches are intentionally not redistributed.
-data/raw/
+# Restricted raw data and API response caches are intentionally not redistributed.
+data/raw/*
+!data/raw/README.md
+!data/raw/commercial_area/
+!data/raw/commercial_area/*.zip
+!data/raw/seoul_attracting_facilities_dong.csv
+!data/raw/seoul_commercial_floating_population_dong.csv
+!data/raw/seoul_commercial_sales_dong_2023.csv
+!data/raw/seoul_commercial_sales_dong_2024.csv
+!data/raw/seoul_commercial_sales_dong_2025.csv
+!data/raw/seoul_commercial_stores_dong_2023.csv
+!data/raw/seoul_commercial_stores_dong_2024.csv
+!data/raw/seoul_commercial_stores_dong_2025.csv
+!data/raw/seoul_metro_timetable_20260616.csv
+!data/raw/seoul_resident_population_dong.csv
+!data/raw/seoul_station_master_20260902.csv
+!data/raw/seoul_workplace_population_dong.csv
+!data/raw/tpss_route_section_speedh_2026.08.24-08.30.zip
+!data/raw/tpss_sta_route_hturn_2026.08.24-08.30.zip
+!data/raw/kscc_dx_trnsf_path_sum_20260903.zip
+!data/raw/서울시버스노선별정류소정보_20260902.xlsx
 data/interim/
 data/external/
 data/processed/**/reachable_stops_by_origin.csv

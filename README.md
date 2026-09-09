@@ -22,6 +22,7 @@
 |---|---|
 | `docs/` | 프로젝트 맥락, EDA, 선행연구, 데이터 접근 전략, 분석 로드맵 |
 | `scripts/` | 정류장 출발지 구축, 정적 대중교통 그래프, 상권·매출 결합, 검증 코드 |
+| `data/raw/` | 분석에 쓴 서울시 상권·교통 공개 원본(제외 범위는 해당 폴더 README 참조) |
 | `data/processed/commercial_area_accessibility/` | 공식 상권 25% 후보·지도 GeoJSON·행정동 교차 관계 |
 | `data/processed/local_transit_30min/` | 시간대 안정성 기준 행정동 결과와 모델 가정 |
 | `data/processed/transit_validation/` | 정적 네트워크와 ODsay 등시권 결과의 겹침 검증 |
@@ -29,7 +30,7 @@
 
 ## 재현 순서
 
-원본 데이터와 API 키는 재배포하지 않는다. 서울시 공공데이터·서울 열린데이터광장·ODsay에서 각 이용 조건에 따라 내려받은 뒤, 아래 순서로 실행한다.
+공개 원본은 `data/raw/`에 포함했다. B078/B079처럼 별도 반출 승인이 필요한 자료와 API 캐시는 재배포하지 않으므로, 팀 권한에 따라 별도로 확보한다.
 
 ```bash
 python -m pip install -r requirements-local-transit.txt
