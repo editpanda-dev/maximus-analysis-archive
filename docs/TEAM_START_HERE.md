@@ -30,3 +30,7 @@ python -m scripts.build_commercial_area_purpose_features
 ```
 
 `data/raw/README.md`에 있는 공개 원본은 공유하지만, B078·B079 원본과 ODsay API 키는 커밋하거나 공유하지 않는다.
+
+## Google Colab
+
+`notebooks/README.md`의 순서를 따른다. 먼저 `01_transit_official_commercial_candidates_colab.ipynb`을 실행하면 786개 공식 상권 접근성 후보를 재산출한다. 이후 Colab 코드 셀에서 `python -m scripts.build_commercial_area_purpose_features`를 실행하면 목적별 PATH-v0 기준선을 생성한다.
