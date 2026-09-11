@@ -93,21 +93,16 @@
 
 ## 재현 순서
 
-공개 원본이 `data/raw/`에 있는 상태에서 아래 순서로 실행한다.
+권장 방식은 `notebooks/01_transit_official_commercial_candidates_colab.ipynb`의 셀을 위에서부터 순서대로 실행하는 것이다. 노트북에는 원본 파일 검사, 시간대별 교통망 구축, 대기시간 보정, 시간대별 출력 경로가 포함돼 있다.
+
+도달 정류장 결과가 `data/processed/local_transit_30min/h08`, `h14`, `h19`에 이미 있는 상태에서 상권·목적 피처만 재산출할 때는 아래 두 명령을 실행한다.
 
 ```bash
-python -m pip install -r requirements-local-transit.txt
-python -m scripts.build_seoul_transit_network --hour 8
-python -m scripts.calibrate_transit_times --hours 8 14 19
-python -m scripts.static_multimodal_accessibility --hour 8 --minutes 30
-python -m scripts.static_multimodal_accessibility --hour 14 --minutes 30
-python -m scripts.static_multimodal_accessibility --hour 19 --minutes 30
-python -m scripts.compare_accessibility_periods --threshold 0.25
 python -m scripts.build_commercial_area_accessibility
 python -m scripts.build_commercial_area_purpose_features
 ```
 
-Colab에서는 `notebooks/01_transit_official_commercial_candidates_colab.ipynb`을 먼저 실행하고, 마지막에 `python -m scripts.build_commercial_area_purpose_features`를 실행한다.
+Colab에서는 01번 노트북 마지막에 `python -m scripts.build_commercial_area_purpose_features`를 추가로 실행한다.
 
 ## 다음 작업자에게 넘길 일
 
