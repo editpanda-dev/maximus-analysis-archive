@@ -1,0 +1,5 @@
+﻿validation,model,log_sales_r2
+quarter_holdout,ridge,0.4495422014462004
+quarter_holdout,hist_gradient_boosting,0.8082713819729965
+spatial_group_holdout,ridge,0.43657171131111694
+spatial_group_holdout,hist_gradient_boosting,0.4405031808703094

@@ -20,6 +20,9 @@
    - 2025년 공식 상권별 식사·카페·공부·쇼핑·여가문화 PATH-v0 기준선
 3. `data/processed/flow_sales_gap/`
    - 행정동 단위 유동–매출 괴리 EDA. 공식 상권 추천 점수와 혼동하지 않는다.
+4. `data/processed/commercial_area_sales_gap/`
+   - 786개 공식 상권을 대상으로 점포 수·면적·점포 업종 다양성·상권 유형으로 기대매출을 만들고, 2025년 4개 분기 잔차를 진단한 결과다.
+   - 공식 상권 유동인구를 대체하지 않았으므로 유동–매출 괴리 결과가 아니다. 현재는 후속 조사 상권을 고르는 보조 지표로만 쓴다.
 
 ## 실행 순서
 
@@ -27,6 +30,7 @@
 python -m pip install -r requirements-local-transit.txt
 python -m scripts.build_commercial_area_accessibility
 python -m scripts.build_commercial_area_purpose_features
+python -m scripts.build_commercial_area_sales_gap
 ```
 
 `data/raw/README.md`에 있는 공개 원본은 공유하지만, B078·B079 원본과 ODsay API 키는 커밋하거나 공유하지 않는다.

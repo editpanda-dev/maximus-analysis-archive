@@ -28,6 +28,7 @@
 | `data/processed/transit_validation/` | 정적 네트워크와 ODsay 등시권 결과의 겹침 검증 |
 | `data/processed/flow_sales_gap/` | 유동인구–추정매출 괴리 후보 및 EDA 집계 |
 | `data/processed/commercial_area_purpose_features/` | 786개 공식 상권의 목적별 PATH-v0 피처·순위 |
+| `data/processed/commercial_area_sales_gap/` | 786개 공식 상권의 점포 구조 기반 기대매출·잔차 진단 |
 
 ## 재현 순서
 
@@ -44,6 +45,7 @@ python -m scripts.compare_accessibility_periods
 python -m scripts.download_seoul_commercial_area_sources
 python -m scripts.build_commercial_area_accessibility
 python -m scripts.build_commercial_area_purpose_features
+python -m scripts.build_commercial_area_sales_gap
 ```
 
 ODsay 호출은 `ODSAY_API_KEY` 환경변수로만 수행한다. API 키와 원본 이동·카드 데이터는 커밋하지 않는다.
@@ -53,6 +55,7 @@ ODsay 호출은 `ODSAY_API_KEY` 환경변수로만 수행한다. API 키와 원�
 - 정적 대중교통 모델은 시간대별 평균 배차·노선 정보에 기반한 후보 생성용 모델이다. 실제 이용자 추천에는 요청 시점의 길찾기 API로 최종 30분 조건을 다시 확인해야 한다.
 - `400m` 상권 접근 버퍼는 하차 후 도보 연결을 위한 모델 가정이다. 300m·500m 민감도 분석을 병행할 예정이다.
 - 서울시 상권분석서비스는 2024년 이후 공간 단위 체계가 변경되었으므로, 이전 단위와 새 공식 상권 단위를 단순 코드 기준으로 시계열 결합하지 않는다.
+- 공식 상권 단위 유동인구 원본은 별도 OpenAPI 확보가 필요하다. 따라서 `commercial_area_sales_gap/`은 유동인구 대체값을 쓰지 않은 **점포 구조 기반 매출 괴리 진단**이며, 기존 행정동 `flow_sales_gap/`과 같은 결과로 해석하지 않는다.
 
 ## 팀
 
