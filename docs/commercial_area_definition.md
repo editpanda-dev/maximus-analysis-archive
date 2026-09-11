@@ -20,7 +20,7 @@
 
 400m는 하차 정류장과 상권 내부 목적지를 연결하는 약 5분 내외 도보 연결 구간이다. 이 값은 모델 상수이므로 300m·500m 민감도 분석을 다음 검증 단계에서 함께 수행한다.
 
-최종 추천 풀은 `min(access(a,08), access(a,14), access(a,19)) ≥ 0.25`인 상권이다. 현재 실행에서는 1,650개 공식 폴리곤 중 행정동 탐색 생활권과 겹치는 상권이 130개, 상권 자체도 세 시간대 모두 25% 이상 접근되는 상권이 26개다.
+공식 상권 탐색 풀은 `min(access(a,08), access(a,14), access(a,19)) ≥ 0.25`인 상권이다. 행정동 코드로 상권을 사전 제외하지 않고, 1,650개 공식 폴리곤 전체와 도달 정류장을 직접 공간 결합한다. 2026-09-11 재산출 결과 25% 기준 786개, 50% 기준 634개, 80% 기준 394개가 통과했다. 이는 최종 추천 목록이 아닌 교통 접근성 탐색 풀이다.
 
 ## 행정동과 상권을 붙이는 방식
 
@@ -41,7 +41,8 @@
 
 ## 산출물
 
-- `data/processed/commercial_area_accessibility/commercial_area_candidates_25pct.csv`: 26개 최종 상권 후보와 시간대별 접근률·점포·매출·목적별 피처
+- `data/processed/commercial_area_accessibility/commercial_area_candidates_25pct.csv`: 786개 상권의 시간대별 접근률
+- `data/processed/commercial_area_purpose_features/`: 786개 상권의 2025년 분기별 목적 피처·PATH-v0 기준선 순위
 - `data/processed/commercial_area_accessibility/commercial_area_candidates_25pct.geojson`: 지도용 폴리곤
 - `data/processed/commercial_area_accessibility/commercial_area_dong_overlap.csv`: 경계를 넘는 상권의 모든 행정동 교차 관계
 

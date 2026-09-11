@@ -6,9 +6,8 @@
 
 - 출발지: 동대문구 버스정류장·지하철역 334개
 - 시간대: 08시·14시·19시, 30분 이내 대중교통 네트워크
-- 행정동 탐색 기준: 세 시간대 모두 출발지 25% 이상 접근
 - 공식 상권 기준: 도달 정류장이 상권 경계 400m 이내에 있는 출발지 비율을 시간대별로 계산
-- 최종 상권 후보: 26개 (25% 이상), 14개 (50% 이상), 5개 (80% 이상)
+- 접근성 탐색 후보: 786개 (25% 이상), 634개 (50% 이상), 394개 (80% 이상)
 
 ## 공간 단위
 
@@ -27,6 +26,7 @@
 | `data/processed/local_transit_30min/` | 시간대 안정성 기준 행정동 결과와 모델 가정 |
 | `data/processed/transit_validation/` | 정적 네트워크와 ODsay 등시권 결과의 겹침 검증 |
 | `data/processed/flow_sales_gap/` | 유동인구–추정매출 괴리 후보 및 EDA 집계 |
+| `data/processed/commercial_area_purpose_features/` | 786개 공식 상권의 목적별 PATH-v0 피처·순위 |
 
 ## 재현 순서
 
@@ -42,6 +42,7 @@ python -m scripts.static_multimodal_accessibility --hour 19
 python -m scripts.compare_accessibility_periods
 python -m scripts.download_seoul_commercial_area_sources
 python -m scripts.build_commercial_area_accessibility
+python -m scripts.build_commercial_area_purpose_features
 ```
 
 ODsay 호출은 `ODSAY_API_KEY` 환경변수로만 수행한다. API 키와 원본 이동·카드 데이터는 커밋하지 않는다.

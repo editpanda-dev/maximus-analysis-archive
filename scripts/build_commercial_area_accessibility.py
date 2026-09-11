@@ -89,6 +89,23 @@ def load_areas(path: Path) -> gpd.GeoDataFrame:
     return areas.to_crs(5181).reset_index(drop=True)
 
 
+def prepare_dong_boundaries(dongs: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
+    """Keep the official administrative code distinct from the spatial-data code."""
+    required = {"emd8", "emdcd", "emdnm", "sggnm", "geometry"}
+    missing = required - set(dongs.columns)
+    if missing:
+        raise ValueError(f"Administrative boundaries have missing columns: {sorted(missing)}")
+    out = dongs.rename(columns={
+        "emd8": "spatial_admin_code",
+        "emdcd": "admin_code",
+        "emdnm": "admin_name",
+        "sggnm": "district_name",
+    })[["spatial_admin_code", "admin_code", "admin_name", "district_name", "geometry"]].copy()
+    out["spatial_admin_code"] = out["spatial_admin_code"].map(normalize_admin_code)
+    out["admin_code"] = out["admin_code"].map(normalize_admin_code)
+    return out
+
+
 def build_area_dong_overlap(areas: gpd.GeoDataFrame, dongs: gpd.GeoDataFrame) -> pd.DataFrame:
     """Return every area/dong intersection and its polygon-area share."""
     left = areas[["area_code", "area_name", "area_type_name", "geometry"]]
@@ -164,16 +181,14 @@ def main() -> None:
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     areas = load_areas(args.areas)
-    dongs = gpd.read_file(args.dongs).to_crs(5181).rename(columns={"emd8": "admin_code", "emdnm": "admin_name", "sggnm": "district_name"})
-    dongs["admin_code"] = dongs["admin_code"].map(normalize_admin_code)
+    dongs = prepare_dong_boundaries(gpd.read_file(args.dongs).to_crs(5181))
     overlap = build_area_dong_overlap(areas, dongs)
     overlap.to_csv(args.output_dir / "commercial_area_dong_overlap.csv", index=False, encoding="utf-8-sig")
 
-    periods = pd.read_csv(args.candidates, dtype={"emdcd": str})
-    periods["admin_code"] = periods["emdcd"].map(normalize_admin_code)
-    broad_admin = set(periods.loc[periods.minimum_period_ratio >= 0.25, "admin_code"])
-    eligible_codes = set(overlap.loc[overlap.admin_code.isin(broad_admin), "area_code"])
-    candidate_areas = areas[areas.area_code.isin(eligible_codes)].copy()
+    # Evaluate every official polygon directly against reached stop coordinates.
+    # Administrative dongs are descriptive metadata, not a pre-filter: using a
+    # different code family here previously discarded valid areas such as Hoegi.
+    candidate_areas = areas.copy()
     primary = overlap.sort_values("overlap_share", ascending=False).drop_duplicates("area_code").rename(columns={
         "admin_code": "primary_admin_code", "admin_name": "primary_admin_name", "district_name": "primary_district_name",
         "overlap_share": "primary_admin_overlap_share",
@@ -196,7 +211,7 @@ def main() -> None:
     candidates = summary[summary.minimum_period_ratio >= 0.25].copy()
     candidates.to_csv(args.output_dir / "commercial_area_candidates_25pct.csv", index=False, encoding="utf-8-sig")
     candidate_areas.merge(candidates[["area_code", "minimum_period_ratio", "mean_period_ratio", "access_tier"]], on="area_code", how="inner").to_crs(4326).to_file(args.output_dir / "commercial_area_candidates_25pct.geojson", driver="GeoJSON")
-    report = f"""# 공식 상권 단위 접근성 결과\n\n- 공간 단위: 서울시 상권분석서비스의 공식 상권 폴리곤 {len(areas):,}개\n- 탐색 생활권: 08·14·19시 모두에서 출발지 25% 이상이 접근 가능한 행정동과 겹치는 상권\n- 접근 판정: 30분 내 도달한 정류장이 상권 폴리곤 경계로부터 {args.buffer_m:.0f}m 이내인 출발지의 비율\n- 출발지: {total_origins}개(동대문구 버스정류장·지하철역)\n- 행정동과 겹치는 공식 상권: {len(candidate_areas):,}개\n- 상권 자체 접근성 25% 이상(모든 시간대): {len(candidates):,}개\n- 50% 이상: {(summary.minimum_period_ratio >= 0.5).sum():,}개\n- 80% 이상: {(summary.minimum_period_ratio >= 0.8).sum():,}개\n\n`primary_admin_*`은 상권 폴리곤 면적이 가장 많이 겹치는 행정동일 뿐입니다. 상권이 여러 행정동을 가로지르는 경우도 `commercial_area_dong_overlap.csv`에 모두 보존했습니다.\n"""
+    report = f"""# 공식 상권 단위 접근성 결과\n\n- 공간 단위: 서울시 상권분석서비스의 공식 상권 폴리곤 {len(areas):,}개\n- 계산 방식: 행정동 코드 사전 필터 없이 공식 상권 전체를 도달 정류장과 직접 공간 결합\n- 접근 판정: 30분 내 도달한 정류장이 상권 폴리곤 경계로부터 {args.buffer_m:.0f}m 이내인 출발지의 비율\n- 출발지: {total_origins}개(동대문구 버스정류장·지하철역)\n- 접근성 평가 공식 상권: {len(candidate_areas):,}개\n- 상권 자체 접근성 25% 이상(모든 시간대): {len(candidates):,}개\n- 50% 이상: {(summary.minimum_period_ratio >= 0.5).sum():,}개\n- 80% 이상: {(summary.minimum_period_ratio >= 0.8).sum():,}개\n\n`primary_admin_*`은 상권 폴리곤 면적이 가장 많이 겹치는 행정동일 뿐입니다. `admin_code`는 서울시 상권 통계와 결합 가능한 공식 코드이고, 원 공간자료의 `emd8`은 `spatial_admin_code`로 별도 보존합니다.\n"""
     (args.output_dir / "COMMERCIAL_AREA_ACCESSIBILITY_REPORT.md").write_text(report, encoding="utf-8")
     print(report)
 
