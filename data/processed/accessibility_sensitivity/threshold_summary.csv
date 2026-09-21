@@ -1,0 +1,4 @@
+﻿threshold,periods_required,n_candidates,share_of_25pct_candidates,intersection_with_25pct,candidate_jaccard_vs_25pct,intersection_with_50pct,candidate_jaccard_vs_50pct,intersection_with_80pct,candidate_jaccard_vs_80pct,core4_mean_top10_overlap_vs_25pct,core4_mean_top10_retained_vs_25pct
+25pct,"ratio_08,ratio_14,ratio_19 모두 기준 이상",786,1.0,786,1.0,634,0.806615776081425,394,0.5012722646310432,1.0,1.0
+50pct,"ratio_08,ratio_14,ratio_19 모두 기준 이상",634,0.806615776081425,634,0.806615776081425,634,1.0,394,0.6214511041009464,0.85,0.875
+80pct,"ratio_08,ratio_14,ratio_19 모두 기준 이상",394,0.5012722646310432,394,0.5012722646310432,394,0.6214511041009464,394,1.0,0.525,0.525
