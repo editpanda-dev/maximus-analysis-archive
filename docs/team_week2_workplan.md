@@ -73,7 +73,9 @@
 4. 행정동별 목적 비중과 시간대별 유입량을 계산한다.
 5. 기존 상권-행정동 중첩 테이블로 행정동 피처를 상권 폴리곤 피처로 변환한다.
 
-#### 산출물
+#### 예정 산출물
+
+아래 경로는 **지우진 브랜치에서 새로 생성할 경로**다. 현재 기준 브랜치에 없으므로, 기존 파일과 혼동하지 않는다.
 
 ```text
 data/external/living_movement/
@@ -124,7 +126,9 @@ source_period
 4. 기준별 top 10 교집합 비율과 Jaccard 유사도를 계산한다.
 5. 25%에서는 포함되지만 50% 또는 80%에서 빠지는 상권을 경계 후보로 분류한다.
 
-#### 산출물
+#### 예정 산출물
+
+아래 경로는 **최시현 브랜치에서 새로 생성할 경로**다. 현재 기준 브랜치에 없으므로, 기존 접근성 결과 파일을 덮어쓰지 않는다.
 
 ```text
 data/processed/accessibility_sensitivity/
@@ -161,7 +165,9 @@ boundary_candidate_areas.csv
 5. 786개 상권 폴리곤 내부 및 경계 400m 이내 시설 수를 계산한다.
 6. 공부 top 20 상권의 시설 위치를 지도에서 수동 점검한다.
 
-#### 산출물
+#### 예정 산출물
+
+아래 경로는 **장한별 브랜치에서 새로 생성할 경로**다. 현재 확인한 `마아악히무쓰.xlsx`는 검토용 전달본이며, 아직 원격 저장소 산출물이 아니다.
 
 ```text
 data/external/study_public_facility_poi.csv
@@ -169,6 +175,20 @@ data/processed/study_public_facility_features.csv
 scripts/build_study_public_facility_features.py
 docs/study_poi_source_and_taxonomy.md
 ```
+
+#### 현재 기준선과의 연결
+
+현재 기준 브랜치의 공부 체류형 결과는 다음 파일을 사용한다.
+
+```text
+data/external/kakao_study_stay_pois_20260918.csv
+data/processed/study_stay_poi_enrichment/official_area_study_stay_poi_features_current.csv
+data/processed/study_stay_poi_enrichment/official_area_study_stay_enriched_current.csv
+scripts/build_study_stay_poi_enrichment.py
+docs/team_week2_workplan.md
+```
+
+장한별은 위 기준선을 수정하지 않고, 예정 산출물인 `study_public_facility_*` 파일군을 독립적으로 만든다. 통합 브랜치에서만 `area_code`로 결합한다.
 
 필수 컬럼 예시:
 
@@ -210,7 +230,7 @@ snapshot_date
 - 원격 저장소: `editpanda-dev/maximus-analysis-archive` (비공개)
 - `main`: `b405034` — 786개 상권 매출·구조 괴리 분석까지 반영
 - `codex/year-matched-purpose-mapping`: `b86f118` — 2025년 목적별 폴리곤 매핑과 기존 POI 반영
-- 최신 공부 체류 순위·카카오 POI·관련 스크립트는 현재 로컬에만 있다.
+- `codex/study-stay-baseline`: `3295260` — 최신 공부 체류 순위·카카오 POI·관련 스크립트가 원격에 반영됨
 
 팀의 공통 기준점은 `codex/study-stay-baseline` 브랜치다. 세 개인 브랜치는 이 브랜치에서 생성한다.
 
@@ -237,9 +257,9 @@ codex/integration-week2
 
 | 담당 | 소유 폴더 |
 |---|---|
-| 지우진 | `data/external/living_movement/`, `data/processed/living_movement/`, `scripts/build_living_movement_features.py`, `docs/living_movement_data_dictionary.md` |
-| 최시현 | `data/processed/accessibility_sensitivity/`, `scripts/analyze_accessibility_sensitivity.py`, `docs/accessibility_threshold_validation.md` |
-| 장한별 | `data/external/study_public_facility_poi.csv`, `data/processed/study_public_facility_features.csv`, `scripts/build_study_public_facility_features.py`, `docs/study_poi_source_and_taxonomy.md` |
+| 지우진 | **예정** `data/external/living_movement/`, `data/processed/living_movement/`, `scripts/build_living_movement_features.py`, `docs/living_movement_data_dictionary.md` |
+| 최시현 | **예정** `data/processed/accessibility_sensitivity/`, `scripts/analyze_accessibility_sensitivity.py`, `docs/accessibility_threshold_validation.md` |
+| 장한별 | **예정** `data/external/study_public_facility_poi.csv`, `data/processed/study_public_facility_features.csv`, `scripts/build_study_public_facility_features.py`, `docs/study_poi_source_and_taxonomy.md` |
 
 ### 커밋 규칙
 
