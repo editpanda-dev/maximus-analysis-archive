@@ -13,13 +13,13 @@
 | public_library | 205 | 반영 |
 | reading_room | 14 | 반영 |
 | youth_space | 17 | 반영 |
-| university_learning_facility | 9 | 반영하되 공개 접근 재확인 |
+| university_learning_facility | 9 | 원천에는 보존, 공개 접근 미확인으로 점수 제외 |
 | study_cafe | 10 | 이 파일에서는 제외; 카카오 스냅샷과 통합 단계에서 처리 |
 | large_cafe | 13 | 이 파일에서는 제외; 카카오 스냅샷과 통합 단계에서 처리 |
 
 ## 공간 결합
 
-`scripts/build_study_public_facility_features.py`는 WGS84 좌표를 EPSG:5186으로 변환한 뒤, 공식 상권 폴리곤 내부와 경계 400m 이내를 각각 계산한다. 산출물은 `data/processed/study_public_facility_features.csv`이며 `area_code`로 기존 786개 상권 피처와 결합한다.
+`scripts/build_study_public_facility_features.py`는 WGS84 좌표를 EPSG:5186으로 변환한 뒤, 공식 상권 폴리곤 내부와 경계 400m 이내를 각각 계산한다. 산출물은 `data/processed/study_public_facility_features.csv`이며 `area_code`로 기존 786개 상권 피처와 결합한다. 점수 대상은 공공도서관·열람실·청년공간 236개다. 대학 학습시설은 원천에 유지하지만 `public_access_verified=1`이 확인될 때까지 점수 집계에서 제외한다.
 
 ## 해석 주의
 

@@ -4,7 +4,7 @@
 
 | 분석 범위 | 원천 | 상권 피처 | 생성 스크립트 | 설명 문서 |
 |---|---|---|---|---|
-| 공부 체류: 카카오 보조 POI | `data/external/kakao_study_stay_pois_20260918.csv` | `data/processed/study_stay_poi_enrichment/official_area_study_stay_poi_features_current.csv` | `scripts/build_study_stay_poi_enrichment.py` | `data/processed/study_stay_poi_enrichment/README.md` |
+| 공부 체류: 카카오·공공 학습시설 보조 POI | `data/external/kakao_study_stay_pois_20260918.csv` + `data/external/study_public_facility_poi.csv` | `data/processed/study_stay_poi_enrichment/official_area_study_stay_enriched_current.csv` | `scripts/build_study_stay_poi_enrichment.py` | `data/processed/study_stay_poi_enrichment/README.md` |
 | 공부 체류: 공공 학습시설 | `data/external/study_public_facility_poi.csv` | `data/processed/study_public_facility_features.csv` | `scripts/build_study_public_facility_features.py` | `docs/study_poi_source_and_taxonomy.md` |
 | 목적별 기본 순위 | 서울시 상권·매출 원천 | `data/processed/commercial_area_purpose_features/official_area_purpose_latest_rankings.csv` | `scripts/build_commercial_area_purpose_features.py` | `data/processed/commercial_area_purpose_features/PURPOSE_RANKING_REPORT.md` |
 | 생활이동 목적 피처 | `data/external/living_movement/` | `data/processed/living_movement/official_area_living_movement_features.csv` | `scripts/build_living_movement_features.py` | `docs/living_movement_data_dictionary.md` |

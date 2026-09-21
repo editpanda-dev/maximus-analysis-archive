@@ -16,9 +16,10 @@ SPEC.loader.exec_module(MODULE)
 def test_build_features_counts_public_facilities_only(tmp_path):
     pois = pd.DataFrame(
         [
-            {"place_id": "lib", "facility_type": "public_library", "longitude": 126.98, "latitude": 37.56, "aggregation_eligible": 1},
-            {"place_id": "cafe", "facility_type": "study_cafe", "longitude": 126.98, "latitude": 37.56, "aggregation_eligible": 1},
-            {"place_id": "room", "facility_type": "reading_room", "longitude": 127.20, "latitude": 37.70, "aggregation_eligible": 1},
+            {"place_id": "lib", "facility_type": "public_library", "longitude": 126.98, "latitude": 37.56, "aggregation_eligible": 1, "public_access_verified": 1, "snapshot_date": "2024-01-02"},
+            {"place_id": "cafe", "facility_type": "study_cafe", "longitude": 126.98, "latitude": 37.56, "aggregation_eligible": 1, "public_access_verified": 0, "snapshot_date": "2024-01-02"},
+            {"place_id": "room", "facility_type": "reading_room", "longitude": 127.20, "latitude": 37.70, "aggregation_eligible": 1, "public_access_verified": 0, "snapshot_date": "2024-01-02"},
+            {"place_id": "unverified-university", "facility_type": "university_learning_facility", "longitude": 126.98, "latitude": 37.56, "aggregation_eligible": 1, "public_access_verified": 0, "snapshot_date": "2024-01-02"},
         ]
     )
     poi_path = tmp_path / "pois.csv"
@@ -46,3 +47,5 @@ def test_build_features_counts_public_facilities_only(tmp_path):
     assert features.loc[0, "study_public_inside_count"] == 1
     assert features.loc[0, "poi_public_library_inside_count"] == 1
     assert features.loc[0, "study_public_buffer400_count"] == 1
+    assert features.loc[0, "poi_university_learning_facility_inside_count"] == 0
+    assert features.loc[0, "feature_snapshot_date"] == "2024-01-02"

@@ -21,6 +21,8 @@
 | 공부 재정의 | 문구·서적·학원은 제외하고 체류형 학습으로 정의 | `scripts/build_commercial_area_purpose_features.py` |
 | 공부 POI | 카카오 장소 검색으로 스터디카페 852개, 스타벅스 414개 수집·공간결합 | `data/external/kakao_study_stay_pois_20260918.csv` |
 | 공부 보조순위 | 독서실·카페·스터디카페·스타벅스·접근성 결합 | `data/processed/study_stay_poi_enrichment/` |
+| 공공 학습시설 | 원천 268개 중 공개 접근이 확인된 공공도서관·열람실·청년공간 236개를 상권 내부·400m 인접 피처로 결합 | `data/processed/study_public_facility_features.csv` |
+| 공부 보조순위 통합 | 카카오 POI와 공공 학습시설을 중복 없이 결합한 현재 스냅샷 순위 재산출 | `codex/integrate-study-public-facilities` |
 
 ### 현재 목적별 top 10
 
@@ -188,7 +190,7 @@ scripts/build_study_stay_poi_enrichment.py
 docs/team_week2_workplan.md
 ```
 
-장한별은 위 기준선을 수정하지 않고, 예정 산출물인 `study_public_facility_*` 파일군을 독립적으로 만든다. 통합 브랜치에서만 `area_code`로 결합한다.
+장한별의 `study_public_facility_*` 파일군은 생성 완료됐다. 통합 브랜치에서만 `area_code`로 결합하며, 공통 기준 브랜치 병합 전까지 기존 기준선을 직접 수정하지 않는다.
 
 필수 컬럼 예시:
 
@@ -248,6 +250,7 @@ snapshot_date
 - `main`: `b405034` — 786개 상권 매출·구조 괴리 분석까지 반영
 - `codex/year-matched-purpose-mapping`: `b86f118` — 2025년 목적별 폴리곤 매핑과 기존 POI 반영
 - `codex/study-stay-baseline`: `3295260` — 최신 공부 체류 순위·카카오 POI·관련 스크립트가 원격에 반영됨
+- `codex/integrate-study-public-facilities`: 공공 학습시설 피처와 공부 보조순위 통합본. 검증 후 `codex/study-stay-baseline`에 병합 예정
 
 팀의 공통 기준점은 `codex/study-stay-baseline` 브랜치다. 세 개인 브랜치는 이 브랜치에서 생성한다.
 

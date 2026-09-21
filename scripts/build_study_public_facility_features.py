@@ -40,14 +40,27 @@ def count_by_area(links: pd.DataFrame, areas: pd.DataFrame, suffix: str) -> pd.D
 
 def build_features(pois_path: Path, areas_path: Path, output_path: Path, buffer_m: int) -> pd.DataFrame:
     pois = pd.read_csv(pois_path, dtype={"place_id": "string"})
-    required = {"place_id", "facility_type", "longitude", "latitude", "aggregation_eligible"}
+    required = {
+        "place_id",
+        "facility_type",
+        "longitude",
+        "latitude",
+        "aggregation_eligible",
+        "public_access_verified",
+        "snapshot_date",
+    }
     missing = required.difference(pois.columns)
     if missing:
         raise ValueError(f"POI input is missing columns: {sorted(missing)}")
 
-    pois = pois.loc[
-        pois["aggregation_eligible"].eq(1) & pois["facility_type"].isin(PUBLIC_TYPES)
-    ].copy()
+    eligible_public = pois["aggregation_eligible"].eq(1) & pois["facility_type"].isin(PUBLIC_TYPES)
+    university_access_ok = ~pois["facility_type"].eq("university_learning_facility") | pois[
+        "public_access_verified"
+    ].eq(1)
+    pois = pois.loc[eligible_public & university_access_ok].copy()
+    snapshot_dates = pois["snapshot_date"].dropna().unique()
+    if len(snapshot_dates) != 1:
+        raise ValueError("Eligible public facility POIs must contain one snapshot_date")
     points = gpd.GeoDataFrame(
         pois,
         geometry=gpd.points_from_xy(pois["longitude"], pois["latitude"]),
@@ -72,9 +85,12 @@ def build_features(pois_path: Path, areas_path: Path, output_path: Path, buffer_
     features["study_public_nearby_only_count"] = (
         features[f"study_public_buffer{buffer_m}_count"] - features["study_public_inside_count"]
     )
-    features["feature_snapshot_date"] = pd.Timestamp.now("UTC").date().isoformat()
+    features["feature_snapshot_date"] = snapshot_dates[0]
     features["reachability_rule"] = "Dongdaemun origins; public transit <=30min; all 08/14/19 ratios >=25%"
-    features["source_scope"] = "public_library, reading_room, youth_space, university_learning_facility"
+    features["source_scope"] = (
+        "public_library, reading_room, youth_space, "
+        "university_learning_facility(public_access_verified=1)"
+    )
     output_path.parent.mkdir(parents=True, exist_ok=True)
     features.sort_values("area_code").to_csv(output_path, index=False)
     return features
