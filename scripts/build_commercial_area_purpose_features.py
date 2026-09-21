@@ -13,11 +13,26 @@ from scripts.build_commercial_area_accessibility import normalize_area_code, rea
 from scripts.build_purpose_features import PURPOSES, map_industry_to_purpose, purpose_time_columns
 
 
+def map_industry_to_recommendation_purpose(industry: str) -> str | None:
+    """Map an industry to a user-facing purpose without treating study supplies as study stays."""
+    purpose = map_industry_to_purpose(industry)
+    if purpose != "공부":
+        return purpose
+    return "공부" if industry == "독서실" else None
+
+
 def _percentile(values: pd.Series) -> pd.Series:
     values = values.fillna(0.0)
     if values.nunique(dropna=False) <= 1:
         return pd.Series(50.0, index=values.index)
     return values.rank(method="average", pct=True) * 100
+
+
+def combine_path_score(frame: pd.DataFrame) -> pd.Series:
+    """Use a stay-oriented proxy for study when historic study sales are unavailable."""
+    standard_score = 0.70 * frame["purpose_supply_score"] + 0.30 * frame["lagged_sales_signal"]
+    study_stay_score = 0.90 * frame["purpose_supply_score"] + 0.10 * frame["access_score"]
+    return standard_score.where(frame["purpose"] != "공부", study_stay_score)
 
 
 def build_features(stores: pd.DataFrame, sales: pd.DataFrame, candidates: pd.DataFrame) -> pd.DataFrame:
@@ -27,8 +42,16 @@ def build_features(stores: pd.DataFrame, sales: pd.DataFrame, candidates: pd.Dat
     stores = stores.copy()
     stores["quarter"] = stores["stdr_yyqu_cd"].astype(int)
     stores["area_code"] = stores["trdar_cd"].map(normalize_area_code)
-    stores["purpose"] = stores["svc_induty_cd_nm"].map(map_industry_to_purpose)
-    stores = stores[stores.purpose.notna() & stores.area_code.isin(candidates.area_code)]
+    stores["legacy_purpose"] = stores["svc_induty_cd_nm"].map(map_industry_to_purpose)
+    stores["purpose"] = stores["svc_induty_cd_nm"].map(map_industry_to_recommendation_purpose)
+    stores = stores[stores.area_code.isin(candidates.area_code)]
+    store_market_totals = (
+        stores[stores.legacy_purpose.notna()]
+        .groupby(["quarter", "area_code"], as_index=False)["stor_co"]
+        .sum()
+        .rename(columns={"stor_co": "market_purpose_store_count"})
+    )
+    stores = stores[stores.purpose.notna()]
     store_agg = stores.groupby(["quarter", "area_code", "purpose"], as_index=False).agg(
         purpose_store_count=("stor_co", "sum")
     )
@@ -36,8 +59,16 @@ def build_features(stores: pd.DataFrame, sales: pd.DataFrame, candidates: pd.Dat
     sales = sales.copy()
     sales["quarter"] = sales["기준_년분기_코드"].astype(int)
     sales["area_code"] = sales["상권_코드"].map(normalize_area_code)
-    sales["purpose"] = sales["서비스_업종_코드_명"].map(map_industry_to_purpose)
-    sales = sales[sales.purpose.notna() & sales.area_code.isin(candidates.area_code)].copy()
+    sales["legacy_purpose"] = sales["서비스_업종_코드_명"].map(map_industry_to_purpose)
+    sales["purpose"] = sales["서비스_업종_코드_명"].map(map_industry_to_recommendation_purpose)
+    sales = sales[sales.area_code.isin(candidates.area_code)].copy()
+    sales_market_totals = (
+        sales[sales.legacy_purpose.notna()]
+        .groupby(["quarter", "area_code"], as_index=False)["당월_매출_금액"]
+        .sum()
+        .rename(columns={"당월_매출_금액": "market_purpose_sales_amount"})
+    )
+    sales = sales[sales.purpose.notna()].copy()
     sales["purpose_time_fit_amount"] = 0.0
     for purpose, indices in sales.groupby("purpose").groups.items():
         cols = [column for column in purpose_time_columns(purpose) if column in sales.columns]
@@ -60,17 +91,23 @@ def build_features(stores: pd.DataFrame, sales: pd.DataFrame, candidates: pd.Dat
     out = grid.merge(candidates[meta].drop_duplicates("area_code"), on="area_code", how="left")
     out = out.merge(store_agg, on=["quarter", "area_code", "purpose"], how="left")
     out = out.merge(sale_agg, on=["quarter", "area_code", "purpose"], how="left")
+    out = out.merge(store_market_totals, on=["quarter", "area_code"], how="left")
+    out = out.merge(sales_market_totals, on=["quarter", "area_code"], how="left")
     measures = ["purpose_store_count", "purpose_sales_amount", "purpose_time_fit_amount"]
     out[measures] = out[measures].fillna(0.0)
+    out[["market_purpose_store_count", "market_purpose_sales_amount"]] = out[
+        ["market_purpose_store_count", "market_purpose_sales_amount"]
+    ].fillna(0.0)
 
-    total_stores = out.groupby(["quarter", "area_code"])["purpose_store_count"].transform("sum")
-    total_sales = out.groupby(["quarter", "area_code"])["purpose_sales_amount"].transform("sum")
+    total_stores = out["market_purpose_store_count"]
+    total_sales = out["market_purpose_sales_amount"]
     out["purpose_store_share"] = np.divide(out.purpose_store_count, total_stores, out=np.zeros(len(out)), where=total_stores > 0)
     out["purpose_sales_share"] = np.divide(out.purpose_sales_amount, total_sales, out=np.zeros(len(out)), where=total_sales > 0)
     out["purpose_time_fit_share"] = np.divide(
         out.purpose_time_fit_amount, out.purpose_sales_amount,
         out=np.zeros(len(out)), where=out.purpose_sales_amount > 0,
     )
+    out = out.drop(columns=["market_purpose_store_count", "market_purpose_sales_amount"])
 
     groups = ["quarter", "purpose"]
     out["store_count_percentile"] = out.groupby(groups)["purpose_store_count"].transform(lambda x: _percentile(np.log1p(x)))
@@ -82,9 +119,10 @@ def build_features(stores: pd.DataFrame, sales: pd.DataFrame, candidates: pd.Dat
     out["current_sales_signal"] = (
         0.50 * out.sales_amount_percentile + 0.25 * out.sales_share_percentile + 0.25 * out.time_fit_percentile
     )
+    out["access_score"] = out.groupby("quarter")["minimum_period_ratio"].transform(_percentile)
     out = out.sort_values(["area_code", "purpose", "quarter"])
     out["lagged_sales_signal"] = out.groupby(["area_code", "purpose"])["current_sales_signal"].shift(1)
-    out["path_v0_score"] = 0.70 * out.purpose_supply_score + 0.30 * out.lagged_sales_signal
+    out["path_v0_score"] = combine_path_score(out)
     out["purpose_rank"] = out.groupby(["quarter", "purpose"])["path_v0_score"].rank(method="min", ascending=False)
     return out.sort_values(["quarter", "purpose", "purpose_rank", "area_code"]).reset_index(drop=True)
 
@@ -106,7 +144,7 @@ def main() -> None:
     latest.groupby("purpose", group_keys=False).head(20).to_csv(
         args.output_dir / "official_area_purpose_top20.csv", index=False, encoding="utf-8-sig"
     )
-    report = f"""# 786개 공식 상권 PATH-v0 재산출\n\n- 접근성 25% 탐색 후보: {features.area_code.nunique():,}개\n- 분기·상권·목적 피처: {len(features):,}행\n- 최신 분기: {latest_quarter}\n- 목적: {', '.join(PURPOSES)}\n- 공급 신호: 목적 업종 점포 수 65% + 상권 내 목적 업종 비중 35%\n- 소비 신호: 매출 규모 50% + 목적 매출 비중 25% + 적합 시간대 비중 25%\n- PATH-v0: 공급 신호 70% + 직전 분기 소비 신호 30%\n\n2026년 2분기 행정동 시설 자료는 2025년 순위에 사용하면 미래정보 누출이므로 제외했다. 이 결과는 학습 모형이 아닌 투명한 규칙 기준선이다.\n"""
+    report = f"""# 786개 공식 상권 PATH-v0 재산출\n\n- 접근성 25% 탐색 후보: {features.area_code.nunique():,}개\n- 분기·상권·목적 피처: {len(features):,}행\n- 최신 분기: {latest_quarter}\n- 목적: {', '.join(PURPOSES)}\n- 공부 정의: 체류형 학습 업종인 독서실만 반영. 문구·서적·학원·완구는 학습소비이므로 제외\n- 공부 점수: 독서실 공급 신호 90% + 세 시간대 최소 접근률 10%. 2025년 매출 원천에 독서실 소비가 없어 소비 신호를 임의로 넣지 않음\n- 나머지 목적의 공급 신호: 목적 업종 점포 수 65% + 상권 내 목적 업종 비중 35%\n- 나머지 목적의 소비 신호: 매출 규모 50% + 목적 매출 비중 25% + 적합 시간대 비중 25%\n- PATH-v0: 나머지 목적은 공급 신호 70% + 직전 분기 소비 신호 30%\n\n2026년 2분기 행정동 시설 자료는 2025년 순위에 사용하면 미래정보 누출이므로 제외했다. 이 결과는 학습 모형이 아닌 투명한 규칙 기준선이다.\n"""
     (args.output_dir / "PURPOSE_RANKING_REPORT.md").write_text(report, encoding="utf-8")
     print(report)
 
