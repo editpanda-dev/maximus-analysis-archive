@@ -225,6 +225,23 @@ snapshot_date
 
 ## 7. GitHub 운영 규칙
 
+### 표준 산출물 파일명
+
+이 표의 경로만 팀의 정식 산출물로 사용한다. 파일명에 `final`을 붙이지 않는다. 현재 데이터는 기준일이 있는 스냅샷이므로, `final`은 이후 갱신본과 구분할 수 없게 만든다.
+
+| 구분 | 정식 경로 | 비표준 별칭 (사용 금지) |
+|---|---|---|
+| 현재 공부 체류 POI 원천 | `data/external/kakao_study_stay_pois_20260918.csv` | `study_stay_786_final.xlsx` |
+| 현재 공부 체류 상권 피처 | `data/processed/study_stay_poi_enrichment/official_area_study_stay_poi_features_current.csv` | `study_stay_area_features_final.csv` |
+| 현재 공부 체류 통합 피처 | `data/processed/study_stay_poi_enrichment/official_area_study_stay_enriched_current.csv` | — |
+| 현재 공부 체류 생성 스크립트 | `scripts/build_study_stay_poi_enrichment.py` | `build_study_stay_final.py` |
+| 장한별 공공 학습시설 원천 | `data/external/study_public_facility_poi.csv` | — |
+| 장한별 공공 학습시설 상권 피처 | `data/processed/study_public_facility_features.csv` | — |
+| 장한별 생성 스크립트 | `scripts/build_study_public_facility_features.py` | — |
+| 장한별 출처·분류 문서 | `docs/study_poi_source_and_taxonomy.md` | — |
+
+지우진·최시현의 예정 산출물도 각 담당 절의 경로와 파일명을 그대로 사용한다. 새 별칭을 만들지 않으며, 이름을 바꿔야 할 경우에는 먼저 이 표를 수정하고 같은 커밋에서 참조 문서도 갱신한다.
+
 ### 현재 상태
 
 - 원격 저장소: `editpanda-dev/maximus-analysis-archive` (비공개)
