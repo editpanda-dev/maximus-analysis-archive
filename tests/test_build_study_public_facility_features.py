@@ -45,7 +45,9 @@ def test_build_features_counts_public_facilities_only(tmp_path):
     assert output.exists()
     assert len(features) == 1
     assert features.loc[0, "study_public_inside_count"] == 1
+    assert features.loc[0, "study_public_all_inside_count"] == 2
     assert features.loc[0, "poi_public_library_inside_count"] == 1
+    assert features.loc[0, "poi_university_learning_facility_inside_count"] == 1
     assert features.loc[0, "study_public_buffer400_count"] == 1
-    assert features.loc[0, "poi_university_learning_facility_inside_count"] == 0
+    assert features.loc[0, "study_public_all_buffer400_count"] == 2
     assert features.loc[0, "feature_snapshot_date"] == "2024-01-02"
