@@ -1,0 +1,787 @@
+﻿area_code,area_name,feature_snapshot_date,historical_2025_use_allowed,area_type_name,access_tier,coverage_status,operation_status,viewing_exhibition_buffer400_count,has_viewing_exhibition_buffer400,performance_culture_buffer400_count,has_performance_culture_buffer400,outdoor_park_buffer400_count,has_outdoor_park_buffer400,sports_activity_buffer400_count,has_sports_activity_buffer400,leisure_subtype_total_buffer400_count,leisure_subtype_diversity
+3110008,배화여자대학교(박노수미술관),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,3,True,1,True,0,False,15,3
+3001494,종로·청계 관광특구,2026-09-16,False,관광특구,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,37,True,10,True,3,True,0,False,50,3
+3130021,신설종합시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3130002,세종마을음식문화거리(금천교시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,3,True,1,True,0,False,15,3
+3130001,통인시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,2,True,0,False,0,False,12,2
+3130020,동묘시장(동묘벼룩시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3130019,동대문상가D동,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3130018,동대문문구완구거리(동대문문구완구시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,1,True,0,False,3,3
+3130017,동대문상가C동,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130016,동대문상가B동,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130015,창신골목시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130014,동문시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130013,동대문상가A동,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130012,"동대문종합시장(동대문종합시장 신관, 동대문종합시장D동상가)",2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3130011,충신시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,4,True,0,False,0,False,5,2
+3130010,종로신진시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,0,False,0,False,7,2
+3130009,마전교지하쇼핑센터(구 한일상가),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,0,False,0,False,3,2
+3130007,광장시장(광장전통시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,0,False,0,False,5,2
+3130005,세운상가가동,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3130004,낙원시장(낙원지하시장(대일상가)),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,29,True,2,True,1,True,0,False,32,3
+3120017,동묘앞역(동묘),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3120012,대학로(혜화역),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,42,True,3,True,0,False,56,3
+3120011,종로4가,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,3,True,0,False,0,False,6,2
+3120016,동대문역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3120015,종로6가,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,0,False,0,False,5,2
+3120014,종로5가역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,0,False,0,False,5,2
+3120013,이화사거리,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,6,True,1,True,0,False,9,3
+3120009,종로3가역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,44,True,6,True,3,True,0,False,53,3
+3120010,원남동사거리,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,2,True,0,False,0,False,6,2
+3120008,인사동,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,49,True,7,True,4,True,0,False,60,3
+3120007,북촌(안국역),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,62,True,6,True,2,True,0,False,70,3
+3120006,종각역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,44,True,7,True,2,True,0,False,53,3
+3120005,삼청동,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,38,True,3,True,1,True,0,False,42,3
+3120004,종로구청,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,48,True,6,True,1,True,0,False,55,3
+3120003,광화문역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,36,True,11,True,4,True,0,False,51,3
+3120002,서촌(경복궁역),2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,14,True,4,True,1,True,0,False,19,3
+3120001,서대문역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,2,True,2,True,0,False,15,3
+3110036,동묘앞역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110034,창신1동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3110033,창신역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3110032,수족관거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3110031,창신역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3110030,동대문역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110029,동대문역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,3,True,0,False,8,3
+3110028,이화달팽이길,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,19,True,2,True,0,False,23,3
+3110027,혜화역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,35,True,3,True,0,False,43,3
+3110026,종로5가역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,3,True,0,False,0,False,4,2
+3110025,충신시장옆,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,3,True,0,False,0,False,4,2
+3110024,혜회동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,30,True,2,True,0,False,41,3
+3110023,서울대병원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,23,True,1,True,0,False,28,3
+3110022,경신고등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,21,True,2,True,0,False,34,3
+3110021,성균관대학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,22,True,2,True,0,False,34,3
+3110017,정독도서관,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,27,True,1,True,1,True,0,False,29,3
+3110018,중앙고등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,30,True,3,True,3,True,0,False,36,3
+3110019,창덕궁,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,4,True,2,True,0,False,17,3
+3110020,서울국제고등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,10,True,3,True,0,False,22,3
+3110002,독립문역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110004,대신고등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110035,동묘앞역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3110012,성곡미술관,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,16,True,7,True,3,True,0,False,26,3
+3110013,체부동홍종문가옥,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,12,True,3,True,1,True,0,False,16,3
+3110015,청와대사랑채,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,2,True,0,False,0,False,12,2
+3110007,사직공원(한국사회과학도서관),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,3,True,2,True,0,False,10,3
+3110037,신설동역 12번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110038,경향신문사,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,3,True,1,True,0,False,15,3
+3001493,동대문패션타운 관광특구,2026-09-16,False,관광특구,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,2,True,1,True,0,False,8,3
+3001492,명동 남대문 북창동 다동 무교동 관광특구,2026-09-16,False,관광특구,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,29,True,10,True,2,True,0,False,41,3
+3130048,동평화시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,0,False,0,False,4,2
+3130047,테크노상가(엘리시움),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130024,남대문시장(자유상가),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,2,True,0,False,0,False,8,2
+3130022,숭례문수입상가(남대문시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130035,방산종합시장(방산시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,0,False,0,False,5,2
+3130046,team204(팀204),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130042,약수시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130038,"평화시장(통일상가, 동화상가)",2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,0,False,0,False,7,2
+3130036,중부시장(신중부시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130034,필동 골목형상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,3,True,0,False,0,False,6,2
+3130033,대림상가(청계상가),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,2,True,0,False,0,False,7,2
+3130032,인현시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,3,True,0,False,0,False,9,2
+3130031,청계천공구상가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,8,True,1,True,1,True,0,False,10,3
+3130025,삼익패션타운(남대문시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,0,False,0,False,0,False,5,1
+3130052,서울중앙시장(신중앙시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,1,True,0,False,3,3
+3130051,동화동 골목형상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130050,청평화시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130049,신당 미래유산 먹거리 골목형상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130055,"황학시장(서울중앙시장, 신중앙시장)",2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3130054,황학동주방가구거리상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,4,True,0,False,6,3
+3130053,백학시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,2,True,0,False,4,3
+3130327,"평화시장(남평화시장, 제일평화시장, 신평화패션타운)",2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,2,True,0,False,0,False,7,2
+3120035,퇴계로5가,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3120034,중구청(퇴계로4가),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,8,True,4,True,0,False,0,False,12,2
+3120039,신당역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3120038,약수역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3120037,동대문역사문화공원역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,2,True,0,False,0,False,7,2
+3120036,장충동족발거리(남소영길),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3120029,을지로2가,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,5,True,0,False,0,False,15,2
+3120033,을지로4가역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,2,True,0,False,0,False,8,2
+3120032,충무로역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,7,True,0,False,0,False,17,2
+3120031,을지로3가역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,12,True,6,True,1,True,0,False,19,3
+3120030,중부경찰서(영화인의거리),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,8,True,8,True,0,False,0,False,16,2
+3120028,명동(명동거리),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,15,True,6,True,0,False,0,False,21,2
+3120027,명동역(명동재미로),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,5,True,0,False,0,False,14,2
+3120026,을지로입구역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,18,True,6,True,2,True,0,False,26,3
+3120025,롯데백화점(시청광장 지하쇼핑센터),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,5,True,0,False,0,False,16,2
+3120024,회현역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,0,False,0,False,0,False,7,1
+3120023,서울시청,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,18,True,5,True,2,True,0,False,25,3
+3120022,북창동(시청역_6번),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,12,True,4,True,0,False,0,False,16,2
+3120021,시청역_8번,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,3,True,0,False,0,False,13,2
+3120020,시청역_1번,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,3,True,0,False,0,False,12,2
+3120019,경찰청앞교차로,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,3,True,0,False,0,False,13,2
+3120018,중림동,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,0,False,1,True,8,3
+3120043,서울역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,1,True,1,True,0,False,8,3
+3110591,충정로역 6번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,1,True,3,3
+3110052,장충초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110051,한양공고앞 교차로,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3110050,약수역 7번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110056,신당역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3110055,황학동벼룩시장,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110054,청구역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110053,청구역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110049,장충단 고개,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110048,장충동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,0,False,0,False,0,False,4,1
+3110047,다산성곽길,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,0,False,0,False,3,1
+3110046,버티고개,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110045,동대문역사문화공원역 5번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,0,False,0,False,3,1
+3110044,관성묘,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3110043,충무초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,2,True,0,False,0,False,6,2
+3110042,남산골공원옆,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,0,False,0,False,7,2
+3110041,남산케이블카,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,8,True,2,True,0,False,0,False,10,2
+3110040,중구회현체육센터(정화예술대남산캠퍼스),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,0,False,0,False,0,False,7,1
+3110039,회현역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,0,False,0,False,0,False,4,1
+3110057,황학코아루아파트,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3110058,성심여자고등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,1,True,0,False,3,3
+3001491,이태원 관광특구,2026-09-16,False,관광특구,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,5,True,2,True,0,False,16,3
+3130062,보광시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130061,이태원시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,1,True,0,False,4,3
+3130059,후암시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,0,False,2,True,0,False,7,2
+3130058,이촌종합시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130056,용산용문시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3120041,신용산역(용산역),2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,2,True,3,True,0,False,12,3
+3120040,용산전자상가(용산역),2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,2,True,2,True,0,False,7,3
+3120042,"숙대입구역(남영역, 남영동)",2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3120047,한남오거리,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,3,True,0,False,0,False,8,2
+3120046,이태원(이태원역),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,5,True,2,True,0,False,16,3
+3120045,남영동 먹자골목,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3120044,삼각지역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,1,True,0,False,4,2
+3110099,유엔빌리지길,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3110098,서울독일학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,3,True,0,False,0,False,6,2
+3110097,한남초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,4,True,0,False,0,False,8,2
+3110096,한남힐사이드아파트,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,0,False,0,False,6,2
+3110095,한강진역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,5,True,0,False,0,False,14,2
+3110093,우사단길,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,2,True,0,False,0,False,7,2
+3110092,NH농협은행 보광동지점,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110091,리움미술관,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,2,True,0,False,0,False,8,2
+3110090,한국폴리텍대학서울정수캠퍼스,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110088,오산고등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110087,이태원엔틱가구거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,0,False,0,False,4,2
+3110079,후암동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,1,True,2,True,0,False,10,3
+3110081,해방촌 남동측,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3110060,효창공원앞역 6번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,1,True,0,False,5,3
+3110061,효창동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,1,True,0,False,7,3
+3110062,한강로동땡땡거리(은행나무길),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,1,True,0,False,4,3
+3110063,효창공원앞역 5번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,1,True,0,False,4,2
+3110064,효창공원앞역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,0,False,2,True,0,False,9,2
+3110082,용산구청,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,1,True,0,False,5,3
+3110084,경리단길북측,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,2,True,0,False,5,2
+3110085,경리단길남측,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,2,True,0,False,5,2
+3110086,이태원역 북측,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,2,True,2,True,0,False,8,3
+3110065,남정초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3110066,서울역 15번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,1,True,4,3
+3110067,배문고등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,2,True,0,False,5,3
+3110068,남영역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,0,False,2,True,0,False,6,2
+3110069,숙대입구,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,0,False,1,True,0,False,5,2
+3110071,한강미주맨션아파트,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110072,열정도,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3110073,삼각지역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,0,False,0,False,3,1
+3110074,서울역 12번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,2,True,0,False,6,3
+3110075,숙대입구역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,3,True,0,False,6,2
+3110076,삼각지역 14번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110077,삼광초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,2,True,0,False,5,2
+3110110,상왕십리역 6번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,7,True,0,False,7,1
+3130073,뚝도시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,2,True,0,False,4,2
+3130072,성동용답상가시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130071,성수역 골목형상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,6,True,0,False,9,3
+3130069,"한양대앞상점가(한양시장, 왕십리맛골목)",2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,1,True,0,False,4,3
+3130068,마장축산물시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3130070,뚝섬역상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,5,True,0,False,9,3
+3130067,왕십리도선동상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,2,True,0,False,5,3
+3130066,행당시장상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,2,True,0,False,5,3
+3130065,무학봉상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,5,True,0,False,6,2
+3130064,금남시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3130063,신금호역 골목형상점가,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3120052,성수역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,2,True,9,True,0,False,15,3
+3120051,뚝섬역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,4,True,7,True,0,False,16,3
+3120050,서울숲역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,1,True,3,True,0,False,8,3
+3120049,왕십리역(왕십리),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,5,True,0,False,8,3
+3120048,금호역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3110138,송정체육공원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,5,True,0,False,8,3
+3110137,성수초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,6,True,0,False,10,3
+3110111,대현산장미원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,7,True,0,False,7,1
+3110100,옥수동우편취급국,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110101,옥정중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110102,옥수역 6번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3110103,옥수터널,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3110104,신금호역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110108,성동구립금호도서관,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110109,금호삼성래미안아파트,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3110129,성원어린이공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,4,True,0,False,8,3
+3110130,답십리역 6번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110131,성수동카페거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,8,True,0,False,15,3
+3110132,성수2가3동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,4,True,0,False,6,3
+3110136,경수초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,1,True,6,True,0,False,11,3
+3110105,금동어린이공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110106,금북초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3110107,금호사거리,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3110112,행당역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,5,True,0,False,6,2
+3110113,응봉산,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3110114,왕십리파출소,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3110133,서울교통공사,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110134,성수119안전센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,2,True,0,False,4,2
+3110135,성동세무서,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,5,True,0,False,9,3
+3110115,상왕십리역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3110116,청계천박물관,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3110117,성동구보건소,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3110118,왕십리역 9번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,3,True,0,False,6,3
+3110119,마장지하차도,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3110120,서울숲카페거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,2,True,0,False,0,False,5,2
+3110121,한양대역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3110122,마장역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3110123,마장역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,4,True,0,False,6,2
+3110124,뚝섬역교차로,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,3,True,0,False,10,3
+3110125,사근동살곶이상점가,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,2,True,0,False,5,2
+3110126,서울숲역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,2,True,2,True,0,False,8,3
+3110127,성수1가1동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,5,True,0,False,9,3
+3110128,성원중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,3,True,0,False,6,2
+3110157,자양동우체국,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3130076,능동로골목시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130075,노룬산시장(노룬산골목시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3130074,영동교골목시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3130084,신성시장(신성골목시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3130083,"중곡제일시장(중곡제일골목시장, 광성시장)",2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3130082,면곡골목시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,1,True,2,True,5,3
+3130081,자양골목전통시장(자양골목시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3130080,자양종합시장(기능상실),2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3130079,한아름시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,4,True,0,False,7,3
+3130078,화양제일골목시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,5,True,0,False,8,3
+3130077,조양시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,3,True,0,False,5,3
+3120061,올림픽대교북단,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3120060,강변역(테크노마트),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3120059,구삼강변맛길,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,5,True,0,False,6,2
+3120058,구의사거리,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3120057,아차산역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,3,True,0,False,4,2
+3120056,구의역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3120055,군자역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,1,True,0,False,5,3
+3120054,어린이대공원역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,3,True,4,True,0,False,10,3
+3120053,건대입구역(건대),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,6,True,0,False,13,3
+3110158,중곡3동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,3,True,2,True,2,True,7,3
+3110159,구의역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,5,True,0,False,8,3
+3110160,광진경찰서,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110139,자양4동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110140,건대입구역 6번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,4,True,0,False,7,3
+3110141,건대입구역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,7,True,0,False,8,2
+3110142,화양사거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,5,True,0,False,7,2
+3110144,어린이대공원역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,2,True,0,False,4,3
+3110145,장안초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,1,True,0,False,5,3
+3110146,신자초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3110147,능동우편취급국,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,1,True,3,True,0,False,8,3
+3110148,어린이대공원역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,1,True,0,False,3,3
+3110149,세종대학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,2,True,1,True,0,False,6,3
+3110150,중곡1동 마을마당,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,1,True,0,False,3,2
+3110151,자양한강도서관,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110152,중곡어린이공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3110153,중곡1동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,1,True,0,False,3,2
+3110156,군자역 5번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,2,True,0,False,0,False,6,2
+3110174,아차산역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3110175,푸른동산공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3110178,장로회신학대학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,1,True,0,False,3,2
+3110179,광나루역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,1,True,0,False,3,2
+3110154,광진정말공원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110155,광진구청,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,2,True,0,False,6,3
+3110161,중곡역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,3,True,2,True,2,True,7,3
+3110162,군자역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110143,뚝섬유원지역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110176,해오름공원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3110177,동의초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110163,성자초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3110164,아차산역 5번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,0,False,0,False,2,1
+3110165,국립정신건강센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110166,구의1동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3110167,용마초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3110168,대원고등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110169,성동초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,5,True,0,False,6,2
+3110170,동대부여고,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3110171,중곡4동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3110172,광진초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3110173,구남초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3110180,광진정보도서관,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110181,신설동역 9번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3130104,전곡시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130103,이경시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,1,True,1,1
+3130099,전농로터리시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130098,회기시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130102,이문제일시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130101,답십리현대시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130100,답십리시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130097,답십리 건축자재시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130096,동부시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130095,청량리전통시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3130094,청량리청과물시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130093,동서시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130092,청량리농수산물시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130091,청량종합도매시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3130090,청량리종합시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130089,청량리수산시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130088,경동시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130087,경동광성상가(경동시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130086,서울약령시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130085,용두시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120067,장안동사거리,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,1,True,1,1
+3120066,장한평역(장한평),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120065,회기역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120064,경희대학교(경희대),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120063,청량리역(청량리),2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3120062,신설동역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3110227,답십리공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110226,장안1동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110222,회기역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110182,용두희망어린이공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110183,한국의류시험연구원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110206,텃골근린공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110207,시립대앞사거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110208,시조사삼거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110209,답십리 장령당공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110184,용두사거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110185,용두초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110186,종암초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110187,제기동역 6번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,1,True,0,False,3,3
+3110188,용두동신동아아파트,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3110189,제기동역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110190,고대앞사거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110195,동대문구청,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,1,True,0,False,3,3
+3110196,홍릉근린공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110197,세종대왕기념관교차로,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110198,동대문중앙새마을금고본점,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110199,홍릉시장,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110200,동대문경찰서,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110201,전농119안전센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110202,전농1동주민센터(전농시장),2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110203,떡전교사거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110191,고려대역 6번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110192,동의보감타워,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110193,고려대역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110194,홍파초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110204,간데메공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110205,경희대삼거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110228,장안근린공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110229,장평중학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110230,장안현대홈타운1차아파트,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110231,장안교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,4,True,4,1
+3110232,동대부고,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,3,True,3,1
+3110223,군자초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110224,외대앞역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110225,촬영소사거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110210,서울시립대,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110211,전곡마을마당공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110212,답십리초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110213,청량초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110214,경희대후문,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110215,회기역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110216,전농중학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110217,자동차부품상가,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110218,답십리사거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110219,삼육보건대학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110220,외대앞역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110254,오거리공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,11,True,12,2
+3130108,태능엔터피아(태릉시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,5,True,5,1
+3130107,중랑동부시장(중랑교종합상가),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,2,True,4,3
+3130106,중랑동부시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,8,True,10,3
+3130105,장미제일시장(중화동제일시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,8,True,8,1
+3130116,동성타워프라자,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,5,True,5,1
+3130115,우림골목시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,6,True,8,2
+3130114,유영시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,8,True,8,1
+3130113,신아타운,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,5,True,5,1
+3130112,사가정시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,5,True,5,1
+3130111,"동원전통종합시장(동원시장, 동원전통시장 상점가)",2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,16,True,16,1
+3130110,면목골목시장(면목시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,8,True,9,2
+3130109,묵1동도깨비시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,10,True,12,2
+3120069,상봉역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,12,True,15,3
+3120068,사가정역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,6,True,6,1
+3110279,신내역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,8,True,8,1
+3110276,신내IC북측,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,3,True,3,1
+3110275,하나은행 망우동지점,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,6,True,6,1
+3110274,서일대학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,16,True,16,1
+3110271,신내역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,6,True,6,1
+3110270,혜원여고,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,11,True,11,1
+3110269,용마문화복지센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,11,True,11,1
+3110268,망우3동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,7,True,7,1
+3110267,망우역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,11,True,13,2
+3110266,면목동우체국,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,6,True,6,1
+3110265,망우역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,10,True,12,2
+3110264,면목역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,17,True,17,1
+3110263,면목역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,15,True,15,1
+3110262,상봉역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,11,True,13,2
+3110261,사가정역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,8,True,9,2
+3110260,면목역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,13,True,13,1
+3110259,사가정역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,10,True,10,1
+3110258,면동초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,16,True,16,1
+3110257,상봉역 7번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,12,True,15,3
+3110256,면목2동체육관,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,18,True,19,2
+3110273,장스여성병원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,7,True,7,1
+3110272,신내1동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,12,True,12,1
+3110278,망우본동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,9,True,9,1
+3110277,러스크서울병원,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,6,True,6,1
+3110253,중곡초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,1,True,6,True,9,3
+3110252,장안제일시장,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,23,True,23,1
+3110251,장안중학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,8,True,8,1
+3110242,면목5동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,17,True,17,1
+3110241,먹골역 5번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,12,True,12,1
+3110240,태릉시장 특화거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,7,True,7,1
+3110250,화랑대역 7번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,11,True,12,2
+3110249,중화역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,9,True,9,1
+3110248,먹골파출소,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,11,True,12,2
+3110247,먹골역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,9,True,10,2
+3110246,월드순복음교회,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,6,True,8,3
+3110245,KB국민은행 중화동지점,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,7,True,8,2
+3110244,중화역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,10,True,10,1
+3110243,중랑노인종합복지관,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,16,True,17,2
+3110239,중랑역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,5,True,7,3
+3110238,배꽃어린이공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,8,True,8,1
+3110237,메가박스 상봉,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,8,True,10,3
+3110236,신묵초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,13,True,14,2
+3110235,세화어린이공원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,7,True,7,1
+3110234,중랑역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,8,True,10,3
+3110233,중랑역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,9,True,11,3
+3110255,상봉역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,10,True,11,2
+3110221,의릉,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130128,돌곶이시장(석관황금시장),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130127,석관시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130126,새석관시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3130125,장위전통시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130124,번동시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,0,False,0,False,3,2
+3130122,밤나무골시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3130121,길음시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3130120,돈암시장(돈암제일시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3130123,꿈의숲 장곡 골목형상점가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,0,False,0,False,3,2
+3120075,월곡역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3120074,안암역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3120073,미아사거리,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3120072,성신여대,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3120071,성북구청,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,0,False,0,False,4,2
+3120070,한성대입구역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,9,True,0,False,0,False,15,2
+3110336,석관고등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110335,석계역 7번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110334,석관중앙교회,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110333,돌곶이역 5번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110332,돌곶이역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110331,돌곶이역 8번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110330,돌곶이역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110329,우리은행체육관,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110328,상월곡역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110327,상월곡역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110326,장위동성당,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110325,장곡초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,0,False,0,False,3,2
+3110324,월곡역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110320,KB국민은행 종암동지점,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110321,동덕여대,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3110322,장위1동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,1,True,0,False,4,3
+3110323,상월곡역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,1,True,0,False,3,3
+3110280,북정마을,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,2,True,1,True,0,False,6,3
+3110283,성북초등학교앞,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,3,True,0,False,0,False,10,2
+3110285,홍대부중,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,4,True,0,False,0,False,11,2
+3110286,한성대입구역 5번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,11,True,20,True,1,True,0,False,32,3
+3110288,동구여중,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,8,True,0,False,0,False,12,2
+3110298,솔숲어린이공원,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110299,정릉역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,3,True,2,True,0,False,6,3
+3110300,삼선동주민센터,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3110301,성신여대입구역 7번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,2,True,2,True,0,False,7,3
+3110302,보문역 8번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110303,성신여대입구역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,2,True,2,True,0,False,7,3
+3110304,보문역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,1,True,0,False,2,2
+3110305,보문역 5번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110306,미아초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3110307,길음역 7번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3110308,길음역 8번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3110309,대광초등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110291,한성대입구역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,13,True,2,True,0,False,18,3
+3110293,삼선중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,6,True,0,False,0,False,10,2
+3110295,정릉우체국,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110296,성신여대입구역 4번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,0,False,0,False,5,2
+3110297,경동고등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,5,True,1,True,0,False,8,3
+3110310,길음역 10번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110311,종암아이파크2차후문,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110312,안암역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110313,안암역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110314,종암경찰서,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110315,종암아이파크2차,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110316,숭곡초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,2,True,0,False,4,2
+3110317,종암중학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110318,KT월곡지사,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110319,종암동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130143,방천골목시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130142,강북북부시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130141,강북북부골목시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130140,숭인시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3130139,강북종합전통시장(강북종합골목시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130138,수유프라자,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130137,"수유전통시장(수유시장, 수유골목시장)",2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130136,수유재래시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130135,수유중앙골목시장(수유중앙시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130132,삼양골목시장(삼양시장),2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120078,미아사거리역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3120077,미아역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120076,수유역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110381,번동주공2단지,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110378,송중동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110377,미아사거리역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110376,수송초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3110375,서울북부고용노동지청,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110374,송중초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110373,수유역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110366,광산사거리,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3110371,삼양입구사거리,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110372,강북중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3110360,수유초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110361,삼양사거리역 1번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110364,미아역 8번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110365,미아역 5번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110358,인수동 우편취급국,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110359,수유시장옆,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110367,강북구청,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110368,송천초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110369,성신여대운정그린캠퍼스,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110370,도봉세무서,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110396,쌍문역1번(쌍리단길),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,6,True,0,False,7,2
+3130153,창동역상점가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3130152,오!도봉거리 상점가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3130151,신도봉시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3130148,방학동도깨비시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3130147,쌍문역동측상점가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,5,True,0,False,6,2
+3130146,쌍문시장(쌍문역골목시장),2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,5,True,0,False,7,2
+3130145,쌍문역둘리상점가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,4,True,0,False,6,3
+3120079,창동역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110408,가인초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,2,True,0,False,5,3
+3110407,도봉역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,8,True,0,False,9,2
+3110406,도봉산역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110413,누원고등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3110405,방학역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,7,True,0,False,9,2
+3110403,방학1동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,7,True,0,False,8,2
+3110402,도봉구 정병원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,4,True,0,False,5,2
+3110401,도봉구민회관,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,3,True,0,False,6,3
+3110400,도봉구보건소,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,3,True,0,False,6,3
+3110412,창동중학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110411,도봉역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3110410,방학역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,5,True,0,False,7,2
+3110409,창동역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,2,True,0,False,5,3
+3110394,방학중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,8,True,0,False,8,1
+3110389,한일병원,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,4,True,0,False,5,2
+3110388,도봉우체국,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,6,True,0,False,7,2
+3110397,도봉산입구,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,6,True,0,False,7,2
+3110398,쌍문2동우체국,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,4,True,0,False,7,3
+3110399,창2동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,9,True,0,False,9,1
+3110430,중계초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130159,공릉동 도깨비시장,2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130158,상계역전종합상가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130157,상계중앙시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130156,시영2단지 무지개종합상가(중계 무지개2단지아파트상가),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,0,False,0,False,3,1
+3130155,시영B상가(중계 그린아파트 B 상가),2026-09-16,False,전통시장,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130154,상계주공1단지(가)상가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120083,등나무근린공원,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,0,False,0,False,3,1
+3120082,상계백병원,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120081,노원역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3120086,태릉입구역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,7,True,9,2
+3120084,공릉역,2026-09-16,False,발달상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3120080,마들역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110418,광운대학교 남단,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110417,월계역 3번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3110416,노원초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110435,서울과학기술대,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110434,태릉입구역 4번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,2,True,3,2
+3110433,공릉역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110432,대진고등학교,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110429,공릉동 국수거리,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,2,True,5,3
+3110420,광운대역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110419,수락산디자인거리,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110428,상계5동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110427,노원 을지대학교병원,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110426,상계2동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110425,계상초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110442,화랑대철도공원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110440,상계3동4동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110439,당고개역 5번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110424,상계초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110415,수락산역 4번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3110414,장석교회,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110423,석계역 2번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110438,경춘선숲길 우측,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110437,당고개역 2번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110436,상계제일중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110422,노원역 9번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110421,석계역 1번,2026-09-16,False,골목상권,core_80pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110431,상계역,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130181,아현가구거리상점가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,0,False,0,False,2,1
+3130182,영천시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130179,"이화여대 3,5,7길 상점가",2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,0,False,0,False,0,False,6,1
+3130178,이대 앞 스타트업 상점가,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,0,False,0,False,0,False,5,1
+3130177,인왕시장(홍제골목형상점가),2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130176,유진상가,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3130175,신촌 상인회(신촌상점가),2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3120097,충정로역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,1,True,4,3
+3120095,홍제역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120096,"이화여대(이대역, 이대)",2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,1,True,0,False,0,False,7,2
+3120094,"신촌역(신촌역, 신촌로터리)",2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,3,True,0,False,0,False,8,2
+3110514,서대문우체국,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,3,True,0,False,0,False,6,2
+3110530,아현역 1번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110533,충정로역 7번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110532,아현역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,0,False,0,False,3,2
+3110529,홍제3동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110527,홍제역 2번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110525,홍은종합사회복지관,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110539,미근동,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,2,True,0,False,0,False,7,2
+3110538,충정로역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110537,충정로현대아파트,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110536,돈의문센트레빌아파트입구,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3110522,홍제역 3번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110521,홍제역 4번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110520,경의중앙 신촌역,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,0,False,0,False,6,2
+3110535,영천시장입구,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110534,경기대학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110566,경의선책거리,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,2,True,0,False,0,False,9,2
+3130198,아현시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130197,마포시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130196,공덕시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3130195,도화동 상점가,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3130194,용강동 상점가,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120107,공덕역(공덕오거리),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3120106,마포역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120103,홍대입구역(홍대),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,15,True,7,True,0,False,0,False,22,2
+3120102,서교동(홍대),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,12,True,3,True,0,False,0,False,15,2
+3110579,마포역 4번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110578,대흥역 2번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110577,용강동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110576,대흥역 3번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110575,대흥동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,0,False,0,False,6,2
+3110574,서강대학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110573,신촌역 6번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110572,서강대역 1번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,0,False,0,False,3,2
+3110571,신수동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110589,애오개역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,1,True,3,3
+3110569,홍대땡땡거리,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,0,False,0,False,4,2
+3110587,공덕동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,1,True,1,True,0,False,6,3
+3110586,서울서부지방법원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,1,True,0,False,5,3
+3110585,마포경찰서,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110583,공덕래미안3차아파트,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110582,이대역 5번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,0,False,0,False,3,2
+3110581,염리초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110580,양원초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3110584,아현역 4번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3120153,노량진역(노량진),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,1,True,4,3
+3110832,노량진초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,1,True,0,False,3,2
+3120174,논현역 5번,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,0,False,0,False,1,1
+3120178,신사역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,2,True,0,False,0,False,9,2
+3120170,삼호가든사거리,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120167,고속터미널(고속터미널역),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3120177,신논현역 1번,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3120176,논현역 4번,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110927,잠원역,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110968,강남구청역 2번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,0,False,0,False,3,2
+3001496,강남 마이스 관광특구,2026-09-16,False,관광특구,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,5,True,0,False,0,False,15,2
+3130303,영동전통시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3130302,강남시장(강남구 강남시장),2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,0,False,0,False,6,2
+3120196,서울세관,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,3,True,0,False,0,False,9,2
+3120195,성수대교남단,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,12,True,3,True,0,False,0,False,15,2
+3120194,언주역(차병원),2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,3,True,0,False,0,False,3,1
+3120193,도산공원교차로,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,16,True,4,True,0,False,0,False,20,2
+3120191,학동역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,3,True,0,False,0,False,8,2
+3120190,강남을지병원,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,19,True,5,True,0,False,0,False,24,2
+3120207,선정릉역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,3,True,0,False,0,False,3,1
+3120203,강남구청역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,2,True,0,False,0,False,5,2
+3120200,학동사거리,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,24,True,2,True,0,False,0,False,26,2
+3120188,압구정역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,14,True,5,True,0,False,0,False,19,2
+3120187,신논현역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,1,True,0,False,0,False,4,2
+3120223,휘문고교사거리,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,4,True,0,False,0,False,8,2
+3120222,삼성역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,6,True,0,False,0,False,15,2
+3120218,코엑스,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,8,True,4,True,0,False,0,False,12,2
+3120216,경기고교사거리(경기고교앞사거리),2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3120215,포스코사거리,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,9,True,3,True,0,False,0,False,12,2
+3120214,영동대교남단교차로,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,0,False,0,False,3,1
+3120213,삼성중앙역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,2,True,0,False,0,False,8,2
+3120209,"강남구청(청담역_8번, 강남세무서)",2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3120208,청담사거리(청담동명품거리),2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,14,True,0,False,0,False,0,False,14,1
+3120186,가로수길,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,8,True,4,True,0,False,0,False,12,2
+3120185,논현역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,1,True,0,False,0,False,5,2
+3110966,논현2동주민센터,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,1,True,0,False,0,False,8,2
+3110982,강남구보훈회관,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,0,False,0,False,0,0
+3110976,언북초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,0,False,0,False,0,False,7,1
+3110974,언주중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,2,True,0,False,0,False,2,1
+3110962,도산공원북측,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,10,True,2,True,0,False,0,False,12,2
+3110961,언주역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,0,False,0,False,5,2
+3110959,신구중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,14,True,3,True,0,False,0,False,17,2
+3110957,언북중학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,3,True,0,False,0,False,10,2
+3110955,논현초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,0,False,0,False,5,2
+3110953,학동근린공원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,2,True,0,False,0,False,6,2
+3110952,논현목련공원,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,2,True,0,False,0,False,4,2
+3110951,신사은행나무공원,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,7,True,2,True,0,False,0,False,9,2
+3110950,논현역 7번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,0,False,0,False,7,2
+3110949,한남IC,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,1,True,0,False,0,False,7,2
+3110990,청담역 12번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3110988,청담역 3번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3110985,청담근린공원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,0,False,0,False,0,False,5,1
+3110973,강남구청역 4번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,0,False,0,False,2,2
+3110971,선정릉역 4번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,4,True,0,False,0,False,4,1
+3110970,학동초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,3,True,0,False,0,False,4,2
+3001495,잠실 관광특구,2026-09-16,False,관광특구,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,13,True,8,True,9,True,0,False,30,3
+3130313,방이시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,2,True,0,False,8,3
+3130311,새마을시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3130314,풍납시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,3,True,0,False,0,False,0,False,3,1
+3120230,송파사거리(송파역),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,3,True,0,False,8,3
+3120229,방이동먹자골목,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,2,True,3,True,0,False,11,3
+3120239,오금역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3120238,방이역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3120233,몽촌토성역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,2,True,0,False,8,3
+3120232,송파나루역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,4,True,0,False,11,3
+3120228,석촌역(석촌호수),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,5,True,6,True,0,False,17,3
+3120227,잠실역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,8,True,5,True,3,True,0,False,16,3
+3120225,잠실새내역(신천),2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,3,True,0,False,4,2
+3111035,오금공원(오주중학교),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3111015,석촌역 3번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,4,True,3,True,3,True,0,False,10,3
+3111014,송파나루역 2번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,3,True,0,False,9,3
+3111022,석촌중학교(방이육교),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3111021,방이역 4번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,2,True,0,False,5,3
+3111013,송파나루역 1번(송리단길),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,6,True,4,True,4,True,0,False,14,3
+3111012,석촌역 6번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,3,True,4,True,0,False,9,3
+3111011,잠실나루역,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,0,False,0,False,1,1
+3111010,석촌역 7번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,4,True,6,True,0,False,12,3
+3111032,방이역 1번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3111020,방이동고분군(방산고등학교),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3111019,한성백제역 3번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,5,True,1,True,1,True,0,False,7,3
+3111004,삼전역 1번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,3,True,0,False,4,2
+3111030,방이역 2번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3111029,오금역 4번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,4,True,0,False,4,1
+3111018,풍납초등학교(풍납백제문화공원),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,0,False,0,False,0,False,2,1
+3111078,굽은다리역 4번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3111080,굽은다리역 3번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,4,True,0,False,5,2
+3111077,길동주민센터(강동도서관),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3111050,강동구청(강동구청역 2번),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,2,True,0,False,4,3
+3111051,천호역 6번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,2,True,1,True,2,True,0,False,5,3
+3111052,암사역 3번(천호동자전거거리),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3111053,성내천어린이공원(하니사랑길),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,2,True,0,False,5,3
+3111054,암사역 4번(삼성광나루아파트),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3111056,천호태영아파트,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3111057,천호공원(해공체육문화센터),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3111059,강동역 4번(강풀만화거리),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,5,True,0,False,6,2
+3111058,성내중학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,4,True,0,False,6,3
+3111060,암사역 2번(서울강동초등학교),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3111048,천호역 1번(천호문구완구거리),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,1,True,0,False,2,2
+3111049,천호지구대(천호동자전거거리),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3111061,암사역 1번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3111062,둔촌동역 3번(성내3동주민센터),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3111063,강동구립 천호도서관,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3111064,둔촌동역 4번,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,4,True,0,False,5,2
+3111066,암사동성당(효정하나플러스아파트),2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,5,True,0,False,5,1
+3111067,강동구립성내도서관,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3111068,강동성심병원,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3111069,천호1동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,5,True,0,False,6,2
+3111070,천호초등학교,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3111071,천동초등학교,2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3111072,굽은다리역 1번(십자성마을),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,4,True,0,False,5,2
+3111073,둔촌동역 1번(한산중학교),2026-09-16,False,골목상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3111074,명일역 1번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,7,True,0,False,7,1
+3111075,굽은다리역 2번,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,7,True,0,False,8,2
+3111076,둔촌2동주민센터,2026-09-16,False,골목상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,1,True,0,False,1,1
+3120242,강동구청역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,2,True,1,True,0,False,4,3
+3120246,길동역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,6,True,0,False,6,1
+3120247,굽은다리역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,5,True,0,False,6,2
+3120248,명일역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,5,True,0,False,6,2
+3120249,고덕역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,2,True,0,False,3,2
+3120243,천호역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,4,True,0,False,5,2
+3120244,암사역,2026-09-16,False,발달상권,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3120245,둔촌역,2026-09-16,False,발달상권,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,3,True,0,False,4,2
+3130318,로데오거리상점가,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,3,True,0,False,4,2
+3130319,성내전통시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,2,True,0,False,3,2
+3130320,암사종합시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,3,True,0,False,3,1
+3130321,장신구 특화거리 상점가,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,1,True,4,True,0,False,6,3
+3130323,둔촌역전통시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,1,True,3,True,0,False,4,2
+3130324,길동복조리시장,2026-09-16,False,전통시장,base_50pct_all_periods,source_snapshot_partial,mixed_source_status,0,False,0,False,2,True,0,False,2,1
+3130325,명일전통시장,2026-09-16,False,전통시장,exploration_25pct_all_periods,source_snapshot_partial,mixed_source_status,1,True,0,False,5,True,0,False,6,2
