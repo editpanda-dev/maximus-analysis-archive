@@ -1,0 +1,8 @@
+{
+  "review_queue_input_rows": 427,
+  "review_queue_spatially_matched_rows": 340,
+  "review_queue_inside_rows": 238,
+  "review_queue_buffer_only_rows": 102,
+  "complete_eligible_size_adjusted_scores": 218,
+  "supply_only_eligible_size_adjusted_scores": 232
+}
