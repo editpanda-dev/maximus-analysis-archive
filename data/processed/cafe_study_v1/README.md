@@ -36,6 +36,8 @@ python3 scripts/build_kakao_walk_access.py
 
 생성되는 `c_stay_s4_review_queue_786_kakao_walk.csv`의 `walk_distance_m`을 사용해 400m·500m·600m 접근 여부를 판단한다. API 결과가 없는 행은 `route_status`를 유지하고 점수에 사용하지 않는다.
 
+2026-09-29 실행 결과는 340개 후보 전부에 거리를 부여했다. 상권 내부 238개는 0m, 경계 외부 102개는 카카오 도보 경로 결과(`OK` 101개, `SAME_POINT` 1개)다. 보행거리 기준 접근 후보는 400m 323개, 500m 333개, 600m 338개다.
+
 ## 재현
 
 ```bash
