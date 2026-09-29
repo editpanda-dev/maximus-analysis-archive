@@ -25,7 +25,16 @@
 
 ## 보행 네트워크 상태
 
-공개 OSM 한국 PBF 원천은 확인했지만 약 288MB이며, 현재 저장소에는 보행 가능한 노드·간선·출입구 연결 데이터가 없다. 따라서 이 폴더의 거리 값은 `euclidean_legacy_distance_m`만 제공한다. 실제 보행거리·400/500/600m 민감도는 보행망을 확보·검증한 별도 산출물에서 생성해야 한다.
+카카오맵 도보 경로 REST API를 이용하는 `scripts/build_kakao_walk_access.py`를 추가했다. 상권 내부 POI는 0m로 처리하고, 상권 외부·직선거리 400m 후보는 선택된 공식 상권 폴리곤의 가장 가까운 경계점에서 POI까지 `route_mode=SHORTEST` 도보 경로를 조회한다. 이 경계점은 실제 출입구가 아닌 투명한 경계 프록시다.
+
+API 키는 저장소에 넣지 않는다. 아래처럼 실행하면 동일 `place_id × nearest_area_code` 조합은 결과 CSV를 캐시로 재사용하며, 기본값으로 새 API 호출을 최대 900건으로 제한한다.
+
+```bash
+export KAKAO_REST_API_KEY='발급받은_REST_API_키'
+python3 scripts/build_kakao_walk_access.py
+```
+
+생성되는 `c_stay_s4_review_queue_786_kakao_walk.csv`의 `walk_distance_m`을 사용해 400m·500m·600m 접근 여부를 판단한다. API 결과가 없는 행은 `route_status`를 유지하고 점수에 사용하지 않는다.
 
 ## 재현
 
