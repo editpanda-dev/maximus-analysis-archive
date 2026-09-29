@@ -42,3 +42,11 @@ def test_fetch_walk_route_keeps_non_route_status_as_unknown():
 
     assert result["route_status"] == "ROUTE_RESULT_NOT_FOUND"
     assert pd.isna(result["walk_distance_m"])
+
+
+def test_fetch_walk_route_treats_same_point_as_zero_distance():
+    from scripts.build_kakao_walk_access import fetch_walk_route
+
+    result = fetch_walk_route(_Session({"status": "SAME_POINT"}), "key", 1, 2, 1, 2)
+
+    assert result == {"route_status": "SAME_POINT", "walk_distance_m": 0.0, "walk_time_s": 0.0}

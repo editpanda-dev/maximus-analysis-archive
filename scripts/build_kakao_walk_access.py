@@ -48,6 +48,8 @@ def fetch_walk_route(
     response.raise_for_status()
     payload = response.json()
     status = str(payload.get("status", "UNKNOWN_RESPONSE"))
+    if status == "SAME_POINT":
+        return {"route_status": status, "walk_distance_m": 0.0, "walk_time_s": 0.0}
     if status != "OK":
         return {"route_status": status, "walk_distance_m": np.nan, "walk_time_s": np.nan}
     properties = payload.get("route", {}).get("properties", {})
@@ -134,6 +136,8 @@ def build_walk_access(
         results.append({**row._asdict(), **route})
 
     result = pd.DataFrame(results).drop(columns=["geometry"], errors="ignore")
+    same_point = result["route_status"].eq("SAME_POINT")
+    result.loc[same_point, ["walk_distance_m", "walk_time_s"]] = 0.0
     result["walk_access_400"] = result["walk_distance_m"].le(400)
     result["walk_access_500"] = result["walk_distance_m"].le(500)
     result["walk_access_600"] = result["walk_distance_m"].le(600)
