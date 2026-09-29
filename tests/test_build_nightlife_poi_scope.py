@@ -30,6 +30,8 @@ def test_scope_nightlife_pois_counts_cooking_pubs_but_keeps_adult_venues_out_of_
     assert len(detail) == 3
     assert detail.loc[detail.place_id == "a", "scope_status"].iat[0] == "INSIDE_OFFICIAL_AREA"
     assert detail.loc[detail.place_id == "c", "scope_status"].iat[0] == "OUTSIDE_SELECTED_AREA"
+    assert detail.loc[detail.place_id == "c", "nearest_area_code"].iat[0] == "2"
+    assert detail.loc[detail.place_id == "c", "euclidean_distance_m"].iat[0] > 400
     first = features.loc[features.area_code == "1"].iloc[0]
     assert first.night_food_inside_count == 1
     assert first.adult_nightlife_inside_count == 0
@@ -44,3 +46,36 @@ def test_nightlife_collector_can_be_invoked_directly():
         text=True, capture_output=True, check=False,
     )
     assert result.returncode == 0, result.stderr
+
+
+class _KeywordResponse:
+    def __init__(self, page):
+        self.page = page
+
+    def raise_for_status(self):
+        return None
+
+    def json(self):
+        return {
+            "documents": [{"id": f"p{self.page}-{i}", "x": "127", "y": "37"} for i in range(15)],
+            "meta": {"is_end": False},
+        }
+
+
+class _KeywordClient:
+    def __init__(self):
+        self.calls = []
+
+    def get(self, url, headers, params):
+        self.calls.append(params)
+        return _KeywordResponse(params["page"])
+
+
+def test_keyword_collector_marks_a_tile_truncated_when_page_three_is_not_end():
+    from scripts.collect_kakao_nightlife_pois import fetch_tile
+
+    items, audit = fetch_tile(_KeywordClient(), "key", "night_food", (126, 37, 127, 38), 0)
+
+    assert len(items) == 45
+    assert audit["truncated"] is True
+    assert audit["document_count"] == 45

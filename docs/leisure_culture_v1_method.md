@@ -22,7 +22,9 @@
 
 `호프-간이주점`은 식사 해석에서 빼고 야간 여가에 추가했다. 원천 100대 업종에는 `요리주점`, `유흥주점`이라는 별도 코드가 없으므로 2025년 매출·점포 시계열에는 임의로 대입하지 않는다. 최신 현황은 아래 카카오 POI 보조 신호로만 보강한다.
 
-2026-09-30 카카오 스냅샷에서는 중복 제거 후 1,229개 POI를 수집했고, 786개 공식 상권 내부에 `호프,요리주점` 387개와 유흥주점 352개가 매핑됐다. 유흥주점 수는 `adult_nightlife_inside_count`로만 보존하며, `adult_nightlife_recommendation_eligible=False`를 고정한다.
+2026-09-30 카카오 스냅샷에서는 중복 제거 후 1,229개 POI를 수집했다. 4×4 기본 타일 32개 검색에서 3페이지·45개 상한에 걸린 타일은 0개였으며, 수집 감사 파일에 이 결과를 남겼다. 향후 상한이 감지되면 해당 타일을 최대 2단계까지 4분할해 다시 검색한다.
+
+공식 상권 내부에는 `호프,요리주점` 387개와 유흥주점 352개가 있었다. 경계 밖 POI 중 직선거리 400m 이내인 167개만 카카오 최단 보행경로로 재검증했고, 148개가 실제 도보 400m 이내였다. 최종 도보권 개수는 `호프,요리주점` 465개, 유흥주점 422개다. 유흥주점 수는 `adult_nightlife_walk400_count`로만 보존하며, `adult_nightlife_recommendation_eligible=False`를 고정한다.
 
 ## 점수 구조
 
@@ -38,14 +40,16 @@ historical_leisure_context_score
 current_poi_explanation_score
   = 0.55 × 상권 내부 문화 POI 밀도 백분위
   + 0.25 × 상권 내부 문화 POI 유형 다양성 백분위
-  + 0.20 × 상권 내부 호프·요리주점 POI 밀도 백분위
+  + 0.20 × 상권 내부 또는 경계 도보 400m 내 호프·요리주점 POI 밀도 백분위
 
 current_exploration_score_raw
   = 0.70 × historical_leisure_context_score
   + 0.30 × current_poi_explanation_score
 ```
 
-400m 밖 인접 POI는 `poi_nearby_only_count`로 남겨 설명에 활용하지만, 내부 시설 밀도 점수에 합산하지 않는다. 따라서 큰 폴리곤이 단지 반경 안의 주변 시설을 많이 끌어안아 유리해지는 문제를 줄인다.
+현재 요리주점 신호를 넣기 전·후의 크기 보정 전 Top 10은 8개가 겹쳤다. 즉 새 신호가 순위를 전면 교체하지는 않지만 일부 후보의 순서를 실제로 바꾸며, 영향 정도는 `leisure_culture_v1_audit.json`에서 계속 감사한다.
+
+문화 POI는 기존처럼 상권 내부만 점수화한다. 이번에 보강한 야간 POI는 상권 내부 또는 경계에서 실제 보행거리 400m 이내인 경우만 합산한다. 직선거리 400m 초과 POI는 도보거리도 400m 이하가 될 수 없으므로 API를 호출하지 않고 제외했다. 경계 밖 POI의 출발점은 상권 경계상 최단점이라는 대리점이므로 실제 출입구 기반 경로와는 차이가 날 수 있다.
 
 ## 크기 쏠림 보정과 제외
 
@@ -60,16 +64,21 @@ current_exploration_score_raw
 - `data/processed/leisure_culture_v1/leisure_culture_v1_size_adjusted_top10.csv`: 크기 보정 후 추천 가능 Top 10
 - `data/processed/leisure_culture_v1/leisure_culture_v1_audit.json`: 행 수·관광특구 수·크기 상관 감사
 - `data/external/kakao_nightlife_pois_20260930.csv`: 키워드·카테고리·좌표·카카오 place ID가 보존된 최신 POI 원천
-- `data/processed/nightlife_poi_v1/official_area_nightlife_poi_features_786.csv`: 상권 내부 호프·요리주점/유흥주점 개수
+- `data/external/kakao_nightlife_pois_20260930_collection_audit.json`: 검색 타일·상한 미해결 여부 감사
+- `data/processed/nightlife_poi_v1/nightlife_poi_walk400_detail.csv`: POI별 내부 여부·직선거리·카카오 보행거리·판정
+- `data/processed/nightlife_poi_v1/official_area_nightlife_poi_features_786.csv`: 상권별 도보 400m 호프·요리주점/유흥주점 개수
 
 ## 재현
 
 ```bash
+python3 scripts/collect_kakao_nightlife_pois.py --output data/external/kakao_nightlife_pois_20260930.csv
+python3 scripts/build_nightlife_poi_scope.py --places data/external/kakao_nightlife_pois_20260930.csv
+python3 scripts/enrich_nightlife_walk_access.py
 python3 scripts/build_leisure_culture_v1.py
-python3 -m pytest tests/test_build_leisure_culture_v1.py -q
+python3 -m pytest -q
 ```
 
 ## 다음 보강 대상
 
-1. 상권 외곽 POI의 400m 직선거리 대신 카카오 보행 경로 기반 접근성 결합
-2. 사용자 출발지·출발 시각별 실제 30분 도달 후보만 다시 필터링
+1. 사용자 출발지·출발 시각별 실제 30분 도달 후보만 다시 필터링
+2. 카카오 키워드 검색의 정기 스냅샷과 폐업·업종 변경 검증

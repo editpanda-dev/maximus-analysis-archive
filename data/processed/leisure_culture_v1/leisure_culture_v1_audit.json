@@ -10,12 +10,15 @@
   "nightlife_industries_in_source": [
     "호프-간이주점"
   ],
-  "nightlife_unavailable_categories": [
+  "official_2025_categories_not_separately_available": [
     "요리주점",
     "유흥주점"
   ],
-  "raw_score_vs_area_km2_pearson": 0.4660491178713961,
-  "raw_score_vs_total_stores_pearson": 0.37513784117728916,
-  "adjusted_score_vs_area_km2_pearson": -0.0174188694361164,
-  "adjusted_score_vs_total_stores_pearson": -0.08862505194925116
+  "current_night_food_feature": "night_food_walk400_count",
+  "adult_nightlife_used_in_score": false,
+  "raw_top10_overlap_with_vs_without_current_night_food": 8,
+  "raw_score_vs_area_km2_pearson": 0.4652417315927754,
+  "raw_score_vs_total_stores_pearson": 0.374050743938314,
+  "adjusted_score_vs_area_km2_pearson": -0.016989791295282462,
+  "adjusted_score_vs_total_stores_pearson": -0.08846308529845452
 }

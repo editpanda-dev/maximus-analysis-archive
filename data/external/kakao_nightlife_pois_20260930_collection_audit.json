@@ -1,0 +1,12 @@
+{
+  "query_classes": {
+    "night_food": "요리주점",
+    "adult_nightlife": "유흥주점"
+  },
+  "base_tile_count": 16,
+  "max_subdivision_depth": 2,
+  "tile_requests": 32,
+  "unresolved_truncated_tile_count": 0,
+  "unresolved_truncated_tiles": [],
+  "unique_poi_count": 1229
+}

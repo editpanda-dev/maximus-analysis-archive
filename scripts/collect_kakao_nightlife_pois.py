@@ -8,6 +8,7 @@ table, not evidence that every returned venue is suitable for recommendation.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import time
 from datetime import date
@@ -37,9 +38,10 @@ def load_api_key(env_path: Path) -> str:
     raise RuntimeError("KAKAO_REST_API_KEY is not configured")
 
 
-def fetch_tile(client: httpx.Client, api_key: str, venue_class: str, rect: tuple[float, float, float, float], sleep_seconds: float) -> list[dict]:
+def fetch_tile(client: httpx.Client, api_key: str, venue_class: str, rect: tuple[float, float, float, float], sleep_seconds: float) -> tuple[list[dict], dict]:
     items: list[dict] = []
     rect_text = ",".join(f"{value:.7f}" for value in rect)
+    final_is_end = True
     for page in range(1, 4):  # Kakao Local returns at most 45 items per keyword search.
         response = client.get(
             KAKAO_URL,
@@ -57,10 +59,33 @@ def fetch_tile(client: httpx.Client, api_key: str, venue_class: str, rect: tuple
                 "longitude": float(doc["x"]), "latitude": float(doc["y"]),
                 "place_url": doc.get("place_url", ""),
             })
-        if payload.get("meta", {}).get("is_end", True):
+        final_is_end = bool(payload.get("meta", {}).get("is_end", True))
+        if final_is_end:
             break
         time.sleep(sleep_seconds)
-    return items
+    return items, {"rect": rect_text, "document_count": len(items), "truncated": not final_is_end}
+
+
+def _split_rect(rect: tuple[float, float, float, float]) -> list[tuple[float, float, float, float]]:
+    min_x, min_y, max_x, max_y = rect
+    mid_x, mid_y = (min_x + max_x) / 2, (min_y + max_y) / 2
+    return [
+        (min_x, min_y, mid_x, mid_y), (mid_x, min_y, max_x, mid_y),
+        (min_x, mid_y, mid_x, max_y), (mid_x, mid_y, max_x, max_y),
+    ]
+
+
+def collect_rect(client, api_key: str, venue_class: str, rect, sleep_seconds: float, depth: int = 0, max_depth: int = 2):
+    items, audit = fetch_tile(client, api_key, venue_class, rect, sleep_seconds)
+    audit.update({"venue_class": venue_class, "depth": depth})
+    if audit["truncated"] and depth < max_depth:
+        child_items, child_audits = [], [audit]
+        for child in _split_rect(rect):
+            collected, audits = collect_rect(client, api_key, venue_class, child, sleep_seconds, depth + 1, max_depth)
+            child_items.extend(collected)
+            child_audits.extend(audits)
+        return child_items, child_audits
+    return items, [audit]
 
 
 def main() -> None:
@@ -71,14 +96,21 @@ def main() -> None:
     parser.add_argument("--columns", type=int, default=4)
     parser.add_argument("--rows", type=int, default=4)
     parser.add_argument("--sleep", type=float, default=0.08)
+    parser.add_argument("--max-subdivision-depth", type=int, default=2)
+    parser.add_argument("--audit-output", default=None)
     args = parser.parse_args()
     areas = gpd.read_file(args.areas).to_crs("EPSG:4326")
     tiles = build_tiles(tuple(float(value) for value in areas.total_bounds), columns=args.columns, rows=args.rows)
-    records = []
+    records, audits = [], []
     with httpx.Client(timeout=30) as client:
         for venue_class in QUERY_CLASSES:
             for index, rect in enumerate(tiles, start=1):
-                records.extend(fetch_tile(client, load_api_key(Path(args.env)), venue_class, rect, args.sleep))
+                collected, tile_audits = collect_rect(
+                    client, load_api_key(Path(args.env)), venue_class, rect, args.sleep,
+                    max_depth=args.max_subdivision_depth,
+                )
+                records.extend(collected)
+                audits.extend(tile_audits)
                 print(f"[{venue_class}] tile {index}/{len(tiles)} complete")
     frame = pd.DataFrame(records).drop_duplicates("place_id").sort_values(["venue_class", "place_id"])
     frame["snapshot_date"] = date.today().isoformat()
@@ -86,6 +118,17 @@ def main() -> None:
     output = Path(args.output or f"data/external/kakao_nightlife_pois_{date.today():%Y%m%d}.csv")
     output.parent.mkdir(parents=True, exist_ok=True)
     frame.to_csv(output, index=False, encoding="utf-8-sig")
+    audit_output = Path(args.audit_output or output.with_name(f"{output.stem}_collection_audit.json"))
+    unresolved = [row for row in audits if row["truncated"] and row["depth"] == args.max_subdivision_depth]
+    audit_output.write_text(json.dumps({
+        "query_classes": QUERY_CLASSES,
+        "base_tile_count": len(tiles),
+        "max_subdivision_depth": args.max_subdivision_depth,
+        "tile_requests": len(audits),
+        "unresolved_truncated_tile_count": len(unresolved),
+        "unresolved_truncated_tiles": unresolved,
+        "unique_poi_count": int(len(frame)),
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"wrote {len(frame):,} unique POIs to {output}")
 
 

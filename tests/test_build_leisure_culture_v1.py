@@ -104,18 +104,20 @@ def test_current_night_food_pois_raise_current_score_but_adult_pois_only_remain_
     current = pd.DataFrame({
         "area_code": ["1", "2", "3"],
         "area_name": ["일반 상권", "관광특구", "조용한 상권"],
-        "night_food_inside_count": [3, 0, 0],
-        "adult_nightlife_inside_count": [0, 99, 0],
+        "night_food_walk400_count": [3, 0, 0],
+        "adult_nightlife_walk400_count": [0, 99, 0],
     })
-    result, _ = build_leisure_v1(base, poi, nightlife, area, current_nightlife_poi=current)
+    result, audit = build_leisure_v1(base, poi, nightlife, area, current_nightlife_poi=current)
 
     first = result.loc[result.area_code == "1"].iloc[0]
     adult = result.loc[result.area_code == "2"].iloc[0]
     assert first.area_name == "일반 상권"
-    assert first.night_food_inside_count == 3
+    assert first.night_food_walk400_count == 3
     assert first.current_night_food_score > 50
-    assert adult.adult_nightlife_inside_count == 99
+    assert adult.adult_nightlife_walk400_count == 99
     assert adult.adult_nightlife_recommendation_eligible == False
+    assert audit["current_night_food_feature"] == "night_food_walk400_count"
+    assert audit["adult_nightlife_used_in_score"] is False
 
 
 def test_leisure_v1_script_can_be_invoked_directly_from_repository_root():

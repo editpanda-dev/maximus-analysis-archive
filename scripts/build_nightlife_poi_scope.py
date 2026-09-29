@@ -27,16 +27,20 @@ def scope_nightlife_pois(places: pd.DataFrame, areas: gpd.GeoDataFrame) -> tuple
     points = gpd.GeoDataFrame(
         places.copy(), geometry=gpd.points_from_xy(places.longitude, places.latitude), crs="EPSG:4326"
     )
+    area_metric = area.to_crs("EPSG:5186").reset_index(drop=True)
+    points_metric = points.to_crs("EPSG:5186")
     matches = []
-    for row in points.itertuples():
+    for position, row in enumerate(points.itertuples()):
         hit = area[area.geometry.covers(row.geometry)]
         if hit.empty:
-            matches.append((None, None, "OUTSIDE_SELECTED_AREA"))
+            distances = area_metric.geometry.distance(points_metric.geometry.iloc[position])
+            nearest = area_metric.iloc[int(distances.argmin())]
+            matches.append((None, None, "OUTSIDE_SELECTED_AREA", str(nearest.area_code), nearest.area_name, float(distances.min())))
         else:
             first = hit.iloc[0]
-            matches.append((str(first.area_code), first.area_name, "INSIDE_OFFICIAL_AREA"))
+            matches.append((str(first.area_code), first.area_name, "INSIDE_OFFICIAL_AREA", str(first.area_code), first.area_name, 0.0))
     detail = places.copy()
-    detail[["area_code", "area_name", "scope_status"]] = pd.DataFrame(matches, index=detail.index)
+    detail[["area_code", "area_name", "scope_status", "nearest_area_code", "nearest_area_name", "euclidean_distance_m"]] = pd.DataFrame(matches, index=detail.index)
     inside = detail[detail.scope_status.eq("INSIDE_OFFICIAL_AREA")]
     counts = inside.pivot_table(index="area_code", columns="venue_class", values="place_id", aggfunc="nunique", fill_value=0)
     counts = counts.rename(columns={"night_food": "night_food_inside_count", "adult_nightlife": "adult_nightlife_inside_count"})

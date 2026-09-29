@@ -8,8 +8,8 @@ The score keeps two time layers separate:
   used to claim historical prediction performance.
 
 `호프-간이주점` is moved out of the food interpretation and added as a
-night-leisure signal.  The 100-industry source does not separately expose
-``요리주점`` or ``유흥주점``; that limitation is recorded in the audit.
+night-leisure signal. Current Kakao POIs supplement the official 2025 source;
+adult-nightlife POIs remain an explicit non-scoring tag.
 """
 
 from __future__ import annotations
@@ -71,6 +71,15 @@ def _require(frame: pd.DataFrame, required: set[str], name: str) -> None:
         raise ValueError(f"{name}: missing required columns: {', '.join(missing)}")
 
 
+def _safe_corr(left: pd.Series, right: pd.Series) -> float | None:
+    left = pd.to_numeric(left, errors="coerce")
+    right = pd.to_numeric(right, errors="coerce")
+    valid = left.notna() & right.notna()
+    if valid.sum() < 2 or left[valid].nunique() < 2 or right[valid].nunique() < 2:
+        return None
+    return float(left[valid].corr(right[valid]))
+
+
 def _recommendation_reason(row: pd.Series) -> str:
     """Create a concise, feature-grounded explanation for a candidate."""
     reasons: list[str] = []
@@ -78,6 +87,8 @@ def _recommendation_reason(row: pd.Series) -> str:
         reasons.append(f"상권 내부 문화 POI {int(row['culture_inside_count'])}개")
     elif row["poi_nearby_only_count"] > 0:
         reasons.append(f"400m 내 문화 POI {int(row['poi_nearby_only_count'])}개")
+    if row["night_food_walk400_count"] > 0:
+        reasons.append(f"도보 400m 내 요리주점 {int(row['night_food_walk400_count'])}개")
     if row["nightlife_store_count"] > 0 and row["nightlife_prime_time_share"] > 0:
         reasons.append("저녁·심야 여가 소비 신호")
     if not reasons:
@@ -154,10 +165,10 @@ def build_leisure_v1(
     if current_nightlife_poi is None:
         current_nightlife_poi = pd.DataFrame({
             "area_code": out["area_code"].astype(str),
-            "night_food_inside_count": 0,
-            "adult_nightlife_inside_count": 0,
+            "night_food_walk400_count": 0,
+            "adult_nightlife_walk400_count": 0,
         })
-    _require(current_nightlife_poi, {"area_code", "night_food_inside_count", "adult_nightlife_inside_count"}, "current_nightlife_poi")
+    _require(current_nightlife_poi, {"area_code", "night_food_walk400_count", "adult_nightlife_walk400_count"}, "current_nightlife_poi")
     _validate_unique(current_nightlife_poi, "current_nightlife_poi")
     current_nightlife_poi = current_nightlife_poi.copy()
     current_nightlife_poi["area_code"] = current_nightlife_poi["area_code"].astype(str)
@@ -167,7 +178,7 @@ def build_leisure_v1(
         "culture_inside_count", "culture_buffer400_count", "culture_inside_diversity",
         "culture_buffer400_diversity", "nightlife_store_count", "nightlife_sales_amount",
         "nightlife_evening_sales_amount", "nightlife_late_sales_amount", "area_km2", "store_count_total",
-        "night_food_inside_count", "adult_nightlife_inside_count",
+        "night_food_walk400_count", "adult_nightlife_walk400_count",
     ]
     out[numeric] = out[numeric].apply(pd.to_numeric, errors="coerce").fillna(0.0)
     out["poi_nearby_only_count"] = (out["culture_buffer400_count"] - out["culture_inside_count"]).clip(lower=0)
@@ -184,7 +195,7 @@ def build_leisure_v1(
     out["current_poi_density_per_km2"] = out["culture_inside_count"] / safe_area
     out["current_poi_density_score"] = _percentile(np.log1p(out["current_poi_density_per_km2"]))
     out["current_poi_diversity_score"] = _percentile(out["culture_inside_diversity"])
-    out["current_night_food_density_per_km2"] = out["night_food_inside_count"] / safe_area
+    out["current_night_food_density_per_km2"] = out["night_food_walk400_count"] / safe_area
     out["current_night_food_score"] = _percentile(np.log1p(out["current_night_food_density_per_km2"]))
     out["adult_nightlife_recommendation_eligible"] = False
     out["current_poi_explanation_score"] = (
@@ -192,7 +203,13 @@ def build_leisure_v1(
         + 0.25 * out["current_poi_diversity_score"]
         + 0.20 * out["current_night_food_score"]
     )
+    out["current_poi_explanation_without_night_food"] = (
+        0.6875 * out["current_poi_density_score"] + 0.3125 * out["current_poi_diversity_score"]
+    )
     out["current_exploration_score_raw"] = 0.70 * out["historical_leisure_context_score"] + 0.30 * out["current_poi_explanation_score"]
+    out["current_exploration_without_night_food"] = (
+        0.70 * out["historical_leisure_context_score"] + 0.30 * out["current_poi_explanation_without_night_food"]
+    )
 
     # Residualise the current score against area and total store scale.  This is
     # an audit/alternative ranking, not a claim that size has causal effect.
@@ -210,10 +227,13 @@ def build_leisure_v1(
     out["recommendation_reason"] = out.apply(_recommendation_reason, axis=1)
     out["leisure_rank_eligible"] = out["leisure_size_adjusted_score"].where(out["recommendation_eligible"]).rank(method="min", ascending=False)
     out = out.sort_values(["recommendation_eligible", "leisure_rank_eligible", "area_code"], ascending=[False, True, True]).reset_index(drop=True)
-    raw_area_corr = out["current_exploration_score_raw"].corr(out["area_km2"])
-    raw_store_corr = out["current_exploration_score_raw"].corr(out["store_count_total"])
-    adjusted_area_corr = out["leisure_size_adjusted_score"].corr(out["area_km2"])
-    adjusted_store_corr = out["leisure_size_adjusted_score"].corr(out["store_count_total"])
+    raw_area_corr = _safe_corr(out["current_exploration_score_raw"], out["area_km2"])
+    raw_store_corr = _safe_corr(out["current_exploration_score_raw"], out["store_count_total"])
+    adjusted_area_corr = _safe_corr(out["leisure_size_adjusted_score"], out["area_km2"])
+    adjusted_store_corr = _safe_corr(out["leisure_size_adjusted_score"], out["store_count_total"])
+    eligible_mask = out["recommendation_eligible"]
+    top_with = set(out.loc[eligible_mask].nlargest(10, "current_exploration_score_raw")["area_code"])
+    top_without = set(out.loc[eligible_mask].nlargest(10, "current_exploration_without_night_food")["area_code"])
     audit = {
         "area_count": int(len(out)),
         "unique_area_count": int(out["area_code"].nunique()),
@@ -222,11 +242,14 @@ def build_leisure_v1(
         "poi_snapshot_dates": sorted(out["feature_snapshot_date"].dropna().astype(str).unique().tolist()),
         "historical_2025_use_allowed_for_current_poi": bool(out["current_poi_historical_use_allowed"].all()),
         "nightlife_industries_in_source": sorted(NIGHTLIFE_INDUSTRIES),
-        "nightlife_unavailable_categories": ["요리주점", "유흥주점"],
-        "raw_score_vs_area_km2_pearson": float(raw_area_corr) if pd.notna(raw_area_corr) else None,
-        "raw_score_vs_total_stores_pearson": float(raw_store_corr) if pd.notna(raw_store_corr) else None,
-        "adjusted_score_vs_area_km2_pearson": float(adjusted_area_corr) if pd.notna(adjusted_area_corr) else None,
-        "adjusted_score_vs_total_stores_pearson": float(adjusted_store_corr) if pd.notna(adjusted_store_corr) else None,
+        "official_2025_categories_not_separately_available": ["요리주점", "유흥주점"],
+        "current_night_food_feature": "night_food_walk400_count",
+        "adult_nightlife_used_in_score": False,
+        "raw_top10_overlap_with_vs_without_current_night_food": len(top_with & top_without),
+        "raw_score_vs_area_km2_pearson": raw_area_corr,
+        "raw_score_vs_total_stores_pearson": raw_store_corr,
+        "adjusted_score_vs_area_km2_pearson": adjusted_area_corr,
+        "adjusted_score_vs_total_stores_pearson": adjusted_store_corr,
     }
     return out, audit
 
