@@ -126,6 +126,7 @@ def build_leisure_v1(
     poi: pd.DataFrame,
     nightlife: pd.DataFrame,
     area: pd.DataFrame,
+    current_nightlife_poi: pd.DataFrame | None = None,
 ) -> tuple[pd.DataFrame, dict[str, object]]:
     """Combine 2025 context and current POI evidence without hiding time mismatch."""
     _require(base, REQUIRED_BASE, "base")
@@ -150,10 +151,23 @@ def build_leisure_v1(
     out = base.merge(poi_features, on="area_code", how="left", validate="one_to_one")
     out = out.merge(nightlife, on="area_code", how="left", validate="one_to_one")
     out = out.merge(area, on="area_code", how="left", validate="one_to_one")
+    if current_nightlife_poi is None:
+        current_nightlife_poi = pd.DataFrame({
+            "area_code": out["area_code"].astype(str),
+            "night_food_inside_count": 0,
+            "adult_nightlife_inside_count": 0,
+        })
+    _require(current_nightlife_poi, {"area_code", "night_food_inside_count", "adult_nightlife_inside_count"}, "current_nightlife_poi")
+    _validate_unique(current_nightlife_poi, "current_nightlife_poi")
+    current_nightlife_poi = current_nightlife_poi.copy()
+    current_nightlife_poi["area_code"] = current_nightlife_poi["area_code"].astype(str)
+    current_nightlife_poi = current_nightlife_poi.drop(columns=["area_name"], errors="ignore")
+    out = out.merge(current_nightlife_poi, on="area_code", how="left", validate="one_to_one")
     numeric = [
         "culture_inside_count", "culture_buffer400_count", "culture_inside_diversity",
         "culture_buffer400_diversity", "nightlife_store_count", "nightlife_sales_amount",
         "nightlife_evening_sales_amount", "nightlife_late_sales_amount", "area_km2", "store_count_total",
+        "night_food_inside_count", "adult_nightlife_inside_count",
     ]
     out[numeric] = out[numeric].apply(pd.to_numeric, errors="coerce").fillna(0.0)
     out["poi_nearby_only_count"] = (out["culture_buffer400_count"] - out["culture_inside_count"]).clip(lower=0)
@@ -170,7 +184,14 @@ def build_leisure_v1(
     out["current_poi_density_per_km2"] = out["culture_inside_count"] / safe_area
     out["current_poi_density_score"] = _percentile(np.log1p(out["current_poi_density_per_km2"]))
     out["current_poi_diversity_score"] = _percentile(out["culture_inside_diversity"])
-    out["current_poi_explanation_score"] = 0.70 * out["current_poi_density_score"] + 0.30 * out["current_poi_diversity_score"]
+    out["current_night_food_density_per_km2"] = out["night_food_inside_count"] / safe_area
+    out["current_night_food_score"] = _percentile(np.log1p(out["current_night_food_density_per_km2"]))
+    out["adult_nightlife_recommendation_eligible"] = False
+    out["current_poi_explanation_score"] = (
+        0.55 * out["current_poi_density_score"]
+        + 0.25 * out["current_poi_diversity_score"]
+        + 0.20 * out["current_night_food_score"]
+    )
     out["current_exploration_score_raw"] = 0.70 * out["historical_leisure_context_score"] + 0.30 * out["current_poi_explanation_score"]
 
     # Residualise the current score against area and total store scale.  This is
@@ -218,6 +239,7 @@ def main() -> None:
     parser.add_argument("--sales", default="data/raw/commercial_area/commercial_sales_2025.zip")
     parser.add_argument("--candidates", default="data/processed/commercial_area_accessibility/commercial_area_candidates_25pct.csv")
     parser.add_argument("--areas", default="data/processed/commercial_area_accessibility/commercial_area_candidates_25pct.geojson")
+    parser.add_argument("--current-nightlife-poi", default="data/processed/nightlife_poi_v1/official_area_nightlife_poi_features_786.csv")
     parser.add_argument("--output-dir", default="data/processed/leisure_culture_v1")
     args = parser.parse_args()
 
@@ -226,7 +248,10 @@ def main() -> None:
     candidates = pd.read_csv(args.candidates, dtype={"area_code": str})
     nightlife = build_nightlife_features(read_zip_csv(Path(args.stores)), read_zip_csv(Path(args.sales)), int(base["quarter"].max()))
     area = area_measurements_from_geojson(Path(args.areas), candidates)
-    result, audit = build_leisure_v1(base, pd.read_csv(args.poi, dtype={"area_code": str}), nightlife, area)
+    result, audit = build_leisure_v1(
+        base, pd.read_csv(args.poi, dtype={"area_code": str}), nightlife, area,
+        current_nightlife_poi=pd.read_csv(args.current_nightlife_poi, dtype={"area_code": str}),
+    )
     output = Path(args.output_dir)
     output.mkdir(parents=True, exist_ok=True)
     result.to_csv(output / "official_area_leisure_culture_v1_786.csv", index=False, encoding="utf-8-sig")

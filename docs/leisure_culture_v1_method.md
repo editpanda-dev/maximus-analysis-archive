@@ -17,8 +17,12 @@
 | 기존 여가 맥락 | 서울시 상권분석서비스 2025 점포·추정매출 | 영화·오락·스포츠·숙박 등 기존 여가문화 분류 | `path_v0_score` |
 | 야간 여가 | 서울시 상권분석서비스 2025 점포·추정매출 | `호프-간이주점` | 저녁·심야 공급 및 소비 신호 |
 | 문화·시설 | 2026-09-16 POI 스냅샷 | 박물관, 전시, 공연, 영화, 문화센터, 공원, 스포츠시설 | 현재 설명 신호 |
+| 요리주점·호프 POI | 카카오 로컬 2026-09-30 키워드 스냅샷 | 카카오 분류 `음식점 > 술집 > 호프,요리주점` | 현재 야간 식사·여가 보조 신호 |
+| 유흥주점 POI | 카카오 로컬 2026-09-30 키워드 스냅샷 | 카카오 분류 `가정,생활 > 유흥시설 > 유흥주점` | 성인 전용 태그; 일반 추천 점수 미반영 |
 
-`호프-간이주점`은 식사 해석에서 빼고 야간 여가에 추가했다. 원천 100대 업종에는 `요리주점`, `유흥주점`이라는 별도 코드가 없으므로, 이 둘은 0으로 추정하거나 임의로 대입하지 않는다. 별도 POI 원천을 확보한 뒤 보강 대상이다.
+`호프-간이주점`은 식사 해석에서 빼고 야간 여가에 추가했다. 원천 100대 업종에는 `요리주점`, `유흥주점`이라는 별도 코드가 없으므로 2025년 매출·점포 시계열에는 임의로 대입하지 않는다. 최신 현황은 아래 카카오 POI 보조 신호로만 보강한다.
+
+2026-09-30 카카오 스냅샷에서는 중복 제거 후 1,229개 POI를 수집했고, 786개 공식 상권 내부에 `호프,요리주점` 387개와 유흥주점 352개가 매핑됐다. 유흥주점 수는 `adult_nightlife_inside_count`로만 보존하며, `adult_nightlife_recommendation_eligible=False`를 고정한다.
 
 ## 점수 구조
 
@@ -32,8 +36,9 @@ historical_leisure_context_score
   + 0.30 × nightlife_2025_score
 
 current_poi_explanation_score
-  = 0.70 × 상권 내부 문화 POI 밀도 백분위
-  + 0.30 × 상권 내부 문화 POI 유형 다양성 백분위
+  = 0.55 × 상권 내부 문화 POI 밀도 백분위
+  + 0.25 × 상권 내부 문화 POI 유형 다양성 백분위
+  + 0.20 × 상권 내부 호프·요리주점 POI 밀도 백분위
 
 current_exploration_score_raw
   = 0.70 × historical_leisure_context_score
@@ -54,6 +59,8 @@ current_exploration_score_raw
 - `data/processed/leisure_culture_v1/leisure_culture_v1_raw_top10.csv`: 크기 보정 전 현재 탐색 Top 10
 - `data/processed/leisure_culture_v1/leisure_culture_v1_size_adjusted_top10.csv`: 크기 보정 후 추천 가능 Top 10
 - `data/processed/leisure_culture_v1/leisure_culture_v1_audit.json`: 행 수·관광특구 수·크기 상관 감사
+- `data/external/kakao_nightlife_pois_20260930.csv`: 키워드·카테고리·좌표·카카오 place ID가 보존된 최신 POI 원천
+- `data/processed/nightlife_poi_v1/official_area_nightlife_poi_features_786.csv`: 상권 내부 호프·요리주점/유흥주점 개수
 
 ## 재현
 
@@ -64,6 +71,5 @@ python3 -m pytest tests/test_build_leisure_culture_v1.py -q
 
 ## 다음 보강 대상
 
-1. 요리주점·유흥주점 별도 POI 원천 확보 및 공간 결합
-2. POI의 400m 직선거리 대신 카카오 보행 경로 기반 접근성 결합
-3. 사용자 출발지·출발 시각별 실제 30분 도달 후보만 다시 필터링
+1. 상권 외곽 POI의 400m 직선거리 대신 카카오 보행 경로 기반 접근성 결합
+2. 사용자 출발지·출발 시각별 실제 30분 도달 후보만 다시 필터링

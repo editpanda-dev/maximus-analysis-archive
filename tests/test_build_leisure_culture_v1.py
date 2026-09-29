@@ -97,6 +97,27 @@ def test_build_leisure_v1_rejects_duplicate_codes_and_noncurrent_purpose_rows():
         raise AssertionError("non-leisure base rows must fail")
 
 
+def test_current_night_food_pois_raise_current_score_but_adult_pois_only_remain_a_tag():
+    from scripts.build_leisure_culture_v1 import build_leisure_v1
+
+    base, poi, nightlife, area = _base_inputs()
+    current = pd.DataFrame({
+        "area_code": ["1", "2", "3"],
+        "area_name": ["일반 상권", "관광특구", "조용한 상권"],
+        "night_food_inside_count": [3, 0, 0],
+        "adult_nightlife_inside_count": [0, 99, 0],
+    })
+    result, _ = build_leisure_v1(base, poi, nightlife, area, current_nightlife_poi=current)
+
+    first = result.loc[result.area_code == "1"].iloc[0]
+    adult = result.loc[result.area_code == "2"].iloc[0]
+    assert first.area_name == "일반 상권"
+    assert first.night_food_inside_count == 3
+    assert first.current_night_food_score > 50
+    assert adult.adult_nightlife_inside_count == 99
+    assert adult.adult_nightlife_recommendation_eligible == False
+
+
 def test_leisure_v1_script_can_be_invoked_directly_from_repository_root():
     result = subprocess.run(
         [sys.executable, "scripts/build_leisure_culture_v1.py", "--help"],

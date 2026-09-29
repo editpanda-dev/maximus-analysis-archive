@@ -14,8 +14,8 @@
     "요리주점",
     "유흥주점"
   ],
-  "raw_score_vs_area_km2_pearson": 0.47048541850960673,
-  "raw_score_vs_total_stores_pearson": 0.3743744307089454,
-  "adjusted_score_vs_area_km2_pearson": -0.01458229998017304,
-  "adjusted_score_vs_total_stores_pearson": -0.09112580624081756
+  "raw_score_vs_area_km2_pearson": 0.4660491178713961,
+  "raw_score_vs_total_stores_pearson": 0.37513784117728916,
+  "adjusted_score_vs_area_km2_pearson": -0.0174188694361164,
+  "adjusted_score_vs_total_stores_pearson": -0.08862505194925116
 }
