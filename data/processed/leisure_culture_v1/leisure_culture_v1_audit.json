@@ -1,0 +1,21 @@
+{
+  "area_count": 786,
+  "unique_area_count": 786,
+  "tourism_special_zone_count": 6,
+  "eligible_area_count": 780,
+  "poi_snapshot_dates": [
+    "2026-09-16"
+  ],
+  "historical_2025_use_allowed_for_current_poi": false,
+  "nightlife_industries_in_source": [
+    "호프-간이주점"
+  ],
+  "nightlife_unavailable_categories": [
+    "요리주점",
+    "유흥주점"
+  ],
+  "raw_score_vs_area_km2_pearson": 0.47048541850960673,
+  "raw_score_vs_total_stores_pearson": 0.3743744307089454,
+  "adjusted_score_vs_area_km2_pearson": -0.01458229998017304,
+  "adjusted_score_vs_total_stores_pearson": -0.09112580624081756
+}
