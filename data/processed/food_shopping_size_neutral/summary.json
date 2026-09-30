@@ -1,0 +1,10 @@
+{
+  "area_count": 786,
+  "sales_quarter": 20254,
+  "buffer_m": 400,
+  "wholesale_flag_count": 14,
+  "food_meal_score_v1_spearman_log_polygon_km2": 0.205,
+  "shopping_destination_score_v1_spearman_log_polygon_km2": 0.193,
+  "food_meal_sales_signal_missing_count": 145,
+  "shopping_destination_sales_signal_missing_count": 433
+}
