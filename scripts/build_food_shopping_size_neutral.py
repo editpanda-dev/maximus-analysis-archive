@@ -24,19 +24,21 @@ import pandas as pd
 
 SNAPSHOT_DATE = "2026-06-30"
 
-# Draft groups for the 9/29 taxonomy. Cafes (non-alcoholic drinks) belong to
-# the cafe owner; bars are kept as their own group until the leisure boundary
-# is agreed.
+# Groups follow docs/food_shopping_taxonomy_draft.md. Cafes and bakery/dessert
+# belong to the cafe owner, bars to leisure (kept here only as a label), and
+# staff canteens are not open to the public.
+BAKERY_DESSERT_AND_CANTEEN = {"빵/도넛", "떡/한과", "아이스크림/빙수", "구내식당"}
 POINT_GROUPS = {
-    "food_meal": {"major": {"음식"}, "exclude_middle": {"비알코올", "주점"}},
+    "food_meal": {"major": {"음식"}, "exclude_middle": {"비알코올", "주점"}, "exclude_minor": BAKERY_DESSERT_AND_CANTEEN},
     "food_bar": {"major": {"음식"}, "middle": {"주점"}},
     "shopping_destination": {
         "middle": {
             "섬유·의복·신발 소매", "가전·통신 소매", "시계·귀금속 소매", "안경·정밀기기 소매", "가구 소매",
+            "식물 소매",
         },
         "minor": {
             "화장품 소매업", "운동용품 소매업", "장난감 소매업", "음반/비디오물 소매업", "자전거 소매업",
-            "예술품 소매업", "기념품점", "주방/가정용품 소매업", "악기 소매업",
+            "예술품 소매업", "기념품점", "주방/가정용품 소매업", "악기 소매업", "전기용품/조명장치 소매업",
         },
     },
     "shopping_daily": {
@@ -48,11 +50,15 @@ POINT_GROUPS = {
 # Official-area service codes used for sales productivity.
 AREA_SALES_INDUSTRIES = {
     "food_meal": {
-        "한식음식점", "중식음식점", "일식음식점", "양식음식점", "분식전문점", "치킨전문점", "패스트푸드점", "제과점",
+        "한식음식점", "중식음식점", "일식음식점", "양식음식점", "분식전문점", "치킨전문점", "패스트푸드점",
     },
+    # SH1 fashion/beauty, SH2 digital, SH3 home/living, SH4 hobby. Daily grocery
+    # (SH5) is reported separately and kept out of the shopping score.
     "shopping_destination": {
-        "일반의류", "화장품", "신발", "가방", "시계및귀금속", "안경", "가전제품", "가구", "운동/경기용품", "완구",
-        "유아의류", "한복점", "악기", "예술품", "컴퓨터및주변장치판매", "핸드폰",
+        "일반의류", "신발", "가방", "화장품", "안경", "시계및귀금속", "한복점", "유아의류",
+        "가전제품", "핸드폰", "컴퓨터및주변장치판매",
+        "가구", "인테리어", "조명용품", "섬유제품",
+        "완구", "악기", "예술품", "화초", "운동/경기용품",
     },
 }
 
@@ -80,7 +86,7 @@ def assign_point_group(major: str, middle: str, minor: str) -> str | None:
     for group, rule in POINT_GROUPS.items():
         if "major" in rule and major not in rule["major"]:
             continue
-        if middle in rule.get("exclude_middle", set()):
+        if middle in rule.get("exclude_middle", set()) or minor in rule.get("exclude_minor", set()):
             continue
         if "middle" in rule or "minor" in rule:
             if middle in rule.get("middle", set()) or minor in rule.get("minor", set()):

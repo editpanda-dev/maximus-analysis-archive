@@ -18,9 +18,14 @@ def test_assign_point_group_separates_meals_bars_cafes_and_daily_shopping():
     assert MODULE.assign_point_group("음식", "한식", "백반/한정식") == "food_meal"
     assert MODULE.assign_point_group("음식", "주점", "요리 주점") == "food_bar"
     assert MODULE.assign_point_group("음식", "비알코올 ", "카페") is None
+    assert MODULE.assign_point_group("음식", "기타 간이", "빵/도넛") is None
+    assert MODULE.assign_point_group("음식", "구내식당·뷔페", "구내식당") is None
+    assert MODULE.assign_point_group("음식", "구내식당·뷔페", "뷔페") == "food_meal"
     assert MODULE.assign_point_group("소매", "종합 소매", "편의점") == "shopping_daily"
     assert MODULE.assign_point_group("소매", "섬유·의복·신발 소매", "남성 의류 소매업") == "shopping_destination"
     assert MODULE.assign_point_group("소매", "의약·화장품 소매", "화장품 소매업") == "shopping_destination"
+    assert MODULE.assign_point_group("소매", "의약·화장품 소매", "약국") == "shopping_daily"
+    assert "제과점" not in MODULE.AREA_SALES_INDUSTRIES["food_meal"]
     assert MODULE.assign_point_group("부동산", "부동산 서비스", "부동산 중개/대리업") is None
 
 
