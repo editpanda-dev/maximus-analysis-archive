@@ -1,0 +1,124 @@
+{"kind":"deck","id":"pr/p29nal","name":"Deck"}
+{"kind":"layout","layoutId":"a536e26b-818d-4fda-a546-2fbff07775d2","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"ce20191c-04cb-4f0e-98fe-9134331a98a1","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/k100cl","slide":1,"title":"TEAM MAXIMUS · DAT OT","textShapes":5}
+{"kind":"shape","id":"sh/bq9kri9c","slide":1,"name":"accent","bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/cr210nax","slide":1,"name":"eyebrow","text":"TEAM MAXIMUS · DAT OT","textPreview":"TEAM MAXIMUS · DAT OT","textChars":21,"textLines":1,"bbox":[62,48,320,24]}
+{"kind":"textbox","id":"sh/dsb2tsri","slide":1,"name":"hero","text":"목적지는\n유명세가 아니라\n선택으로 증명된다","textPreview":"목적지는 | 유명세가 아니라 | 선택으로 증명된다","textChars":23,"textLines":3,"bbox":[62,132,560,246]}
+{"kind":"textbox","id":"sh/ydkj2xs3","slide":1,"name":"sub","text":"동대문구 출발 50분 생활권에서\n목적별 상권 선택확률과 순위를 모델링합니다.","textPreview":"동대문구 출발 50분 생활권에서 | 목적별 상권 선택확률과 순위를 모델링합니다.","textChars":42,"textLines":2,"bbox":[66,425,510,78]}
+{"kind":"shape","id":"sh/0f214na9","slide":1,"name":"formula-band","bbox":[620,474,570,72]}
+{"kind":"textbox","id":"sh/lgb2xsru","slide":1,"name":"formula","text":"P(destination | origin, purpose, time)","textPreview":"P(destination | origin, purpose, time)","textChars":38,"textLines":1,"bbox":[648,488,514,40]}
+{"kind":"textbox","id":"sh/ehgjqtsz","slide":1,"name":"members","text":"장한별  ·  지우진  ·  최시현","textPreview":"장한별  ·  지우진  ·  최시현","textChars":19,"textLines":1,"bbox":[66,644,420,24]}
+{"kind":"image","id":"im/epo3eh43","slide":1,"name":"","alt":"Nano Banana로 생성한 상권 추천 3D 아이콘 시트","bbox":[620,112,570,320]}
+{"kind":"notes","id":"nt/k100cl","slide":1,"text":"저희는 유명 상권을 나열하는 앱보다 목적지 선택모델 설계에 집중합니다. 출발지와 목적, 시간 제약이 주어졌을 때 어떤 동네가 선택되는지를 확률과 순위로 학습합니다.\n\n[Sources]\n- Team Maximus Week 3 final report\n- 3D asset: Google Gemini Nano Banana, generated 2026-08-31"}
+{"kind":"slide","id":"sl/02nksq","slide":2,"title":"02","textShapes":12}
+{"kind":"textbox","id":"sh/9sfu5wzi","slide":2,"name":"n-2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[58,34,40,20]}
+{"kind":"textbox","id":"sh/mp4bu1g7","slide":2,"name":"k-2","text":"PROBLEM SIGNAL","textPreview":"PROBLEM SIGNAL","textChars":14,"textLines":1,"bbox":[108,34,420,20]}
+{"kind":"textbox","id":"sh/7qdc3mhc","slide":2,"name":"brand-2","text":"MAXIMUS · DAT","textPreview":"MAXIMUS · DAT","textChars":13,"textLines":1,"bbox":[1030,34,190,20]}
+{"kind":"shape","id":"sh/wv6t0by9","slide":2,"name":"rule-2","bbox":[58,67,1164,2]}
+{"kind":"textbox","id":"sh/hwfu9gzu","slide":2,"name":"title","text":"사람이 많아도 돈을 쓰는 것은 아니다","textPreview":"사람이 많아도 돈을 쓰는 것은 아니다","textChars":20,"textLines":1,"bbox":[58,102,780,62]}
+{"kind":"textbox","id":"sh/utoby1g3","slide":2,"name":"desc","text":"유동인구와 카드매출의 차이를 모델이 설명해야 할 신호로 남깁니다.","textPreview":"유동인구와 카드매출의 차이를 모델이 설명해야 할 신호로 남깁니다.","textChars":36,"textLines":1,"bbox":[60,172,750,34]}
+{"kind":"textbox","id":"sh/4jqt4by5","slide":2,"name":"gap","text":"Gap","textPreview":"Gap","textChars":3,"textLines":1,"bbox":[650,244,300,54]}
+{"kind":"textbox","id":"sh/5kzudgfq","slide":2,"name":"eq","text":"실제 매출 − 기대 매출","textPreview":"실제 매출 − 기대 매출","textChars":13,"textLines":1,"bbox":[650,304,470,52]}
+{"kind":"shape","id":"sh/x8vax87e","slide":2,"name":"sep","bbox":[650,382,500,2]}
+{"kind":"textbox","id":"sh/cnmto3qt","slide":2,"name":"plus","text":"Gap > 0","textPreview":"Gap > 0","textChars":7,"textLines":1,"bbox":[650,418,140,34]}
+{"kind":"textbox","id":"sh/bmdsvypo","slide":2,"name":"plus-desc","text":"목적 소비형 · 규모보다 소비가 강한 상권","textPreview":"목적 소비형 · 규모보다 소비가 강한 상권","textChars":23,"textLines":1,"bbox":[810,418,370,34]}
+{"kind":"textbox","id":"sh/al4bmd83","slide":2,"name":"minus","text":"Gap < 0","textPreview":"Gap < 0","textChars":7,"textLines":1,"bbox":[650,478,140,34]}
+{"kind":"textbox","id":"sh/lcva1s7q","slide":2,"name":"minus-desc","text":"통과형 · 유입이 소비로 전환되지 않는 상권","textPreview":"통과형 · 유입이 소비로 전환되지 않는 상권","textChars":24,"textLines":1,"bbox":[810,478,370,34]}
+{"kind":"shape","id":"sh/kbmtsnq5","slide":2,"name":"condition","bbox":[650,558,500,58]}
+{"kind":"textbox","id":"sh/zadszipk","slide":2,"name":"condition-text","text":"미래 분기에서 3회 이상 지속되는 잔차만 채택","textPreview":"미래 분기에서 3회 이상 지속되는 잔차만 채택","textChars":25,"textLines":1,"bbox":[674,569,452,36]}
+{"kind":"image","id":"im/mhc3q5wn","slide":2,"name":"","alt":"유동과 매출 괴리를 표현한 Nano Banana 3D 아이콘","bbox":[62,260,480,330]}
+{"kind":"notes","id":"nt/02nksq","slide":2,"text":"유입과 소비가 완전히 같이 움직이지 않는다는 점이 출발점입니다. 기대매출을 먼저 추정한 뒤 실제 매출과의 차이를 잔차로 남기고, 미래 분기에서도 반복되는 양의 잔차와 음의 잔차를 목적소비형과 통과형으로 구분합니다.\n\n[Sources]\n- Team-provided Spearman EDA\n- Week 3 final report section 2.1\n- 3D asset: Google Gemini Nano Banana"}
+{"kind":"slide","id":"sl/fs01f1","slide":3,"title":"03","textShapes":18}
+{"kind":"textbox","id":"sh/h07idsva","slide":3,"name":"n-3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[58,34,40,20]}
+{"kind":"textbox","id":"sh/uxgjidwj","slide":3,"name":"k-3","text":"MODEL PIPELINE","textPreview":"MODEL PIPELINE","textChars":14,"textLines":1,"bbox":[108,34,420,20]}
+{"kind":"textbox","id":"sh/vyp0bid4","slide":3,"name":"brand-3","text":"MAXIMUS · DAT","textPreview":"MAXIMUS · DAT","textChars":13,"textLines":1,"bbox":[1030,34,190,20]}
+{"kind":"shape","id":"sh/8behgned","slide":3,"name":"rule-3","bbox":[58,67,1164,2]}
+{"kind":"textbox","id":"sh/tc7i98vy","slide":3,"name":"title","text":"추천은 세 번의 판단을 거친다","textPreview":"추천은 세 번의 판단을 거친다","textChars":16,"textLines":1,"bbox":[58,102,760,62]}
+{"kind":"textbox","id":"sh/69wzedwn","slide":3,"name":"desc","text":"선택 가능성 → 상권 신호 → 후보 내부 순위","textPreview":"선택 가능성 → 상권 신호 → 후보 내부 순위","textChars":25,"textLines":1,"bbox":[60,172,650,34]}
+{"kind":"textbox","id":"sh/s7i1s7ux","slide":3,"name":"num-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[60,466,50,30]}
+{"kind":"textbox","id":"sh/dsrilcvi","slide":3,"name":"head-0","text":"REACH","textPreview":"REACH","textChars":5,"textLines":1,"bbox":[116,462,220,38]}
+{"kind":"textbox","id":"sh/9sru9or6","slide":3,"name":"ko-0","text":"50분 후보군","textPreview":"50분 후보군","textChars":7,"textLines":1,"bbox":[116,506,250,30]}
+{"kind":"textbox","id":"sh/oritgjal","slide":3,"name":"body-0","text":"B078 이동시간과 대중교통 시간으로\n선택 불가능한 목적지를 먼저 제외","textPreview":"B078 이동시간과 대중교통 시간으로 | 선택 불가능한 목적지를 먼저 제외","textChars":39,"textLines":2,"bbox":[116,548,270,72]}
+{"kind":"textbox","id":"sh/mp0be9sf","slide":3,"name":"num-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[450,466,50,30]}
+{"kind":"textbox","id":"sh/1ora54bu","slide":3,"name":"head-1","text":"SIGNAL","textPreview":"SIGNAL","textChars":6,"textLines":1,"bbox":[506,462,220,38]}
+{"kind":"textbox","id":"sh/0nitczap","slide":3,"name":"ko-1","text":"상권 특징량","textPreview":"상권 특징량","textChars":6,"textLines":1,"bbox":[506,506,250,30]}
+{"kind":"textbox","id":"sh/z2ps3ut4","slide":3,"name":"body-1","text":"접근성·흡인력·전환력과\nPOI·업종다양성·Gap을 결합","textPreview":"접근성·흡인력·전환력과 | POI·업종다양성·Gap을 결합","textChars":30,"textLines":2,"bbox":[506,548,270,72]}
+{"kind":"textbox","id":"sh/lkbuh8re","slide":3,"name":"num-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[840,466,50,30]}
+{"kind":"textbox","id":"sh/kj2to3at","slide":3,"name":"head-2","text":"RANK","textPreview":"RANK","textChars":4,"textLines":1,"bbox":[896,462,220,38]}
+{"kind":"textbox","id":"sh/4fu50bm1","slide":3,"name":"ko-2","text":"목적지 순위","textPreview":"목적지 순위","textChars":6,"textLines":1,"bbox":[896,506,250,30]}
+{"kind":"textbox","id":"sh/503m9w3m","slide":3,"name":"body-2","text":"조건부로짓·PPML과\nLightGBM LambdaRank를 비교","textPreview":"조건부로짓·PPML과 | LightGBM LambdaRank를 비교","textChars":35,"textLines":2,"bbox":[896,548,270,72]}
+{"kind":"shape","id":"sh/idcny14b","slide":3,"name":"bottom-rule","bbox":[60,650,1120,2]}
+{"kind":"textbox","id":"sh/3el476lg","slide":3,"name":"label","text":"학습 라벨  목적지별 이동량(count) 또는 후보군 내 선택 점유율","textPreview":"학습 라벨  목적지별 이동량(count) 또는 후보군 내 선택 점유율","textChars":38,"textLines":1,"bbox":[60,660,1120,28]}
+{"kind":"image","id":"im/q9cfmlk7","slide":3,"name":"","alt":"REACH를 표현한 Nano Banana 3D 아이콘","bbox":[50,232,340,220]}
+{"kind":"image","id":"im/8vypcf2h","slide":3,"name":"","alt":"SIGNAL를 표현한 Nano Banana 3D 아이콘","bbox":[440,232,340,220]}
+{"kind":"image","id":"im/lsnq10jq","slide":3,"name":"","alt":"RANK를 표현한 Nano Banana 3D 아이콘","bbox":[830,232,340,220]}
+{"kind":"notes","id":"nt/fs01f1","slide":3,"text":"파이프라인은 세 단계입니다. 실제로 갈 수 없는 곳을 제거하고, 이동·상권·소비 데이터를 특징량으로 합친 뒤, 같은 출발지와 목적, 시간대의 후보들 안에서 순위를 학습합니다.\n\n[Sources]\n- B078/B079 sample schemas\n- Huff 1963\n- Arentze et al. 2005\n- 3D assets: Google Gemini Nano Banana"}
+{"kind":"slide","id":"sl/cpv4x7","slide":4,"title":"04","textShapes":15}
+{"kind":"textbox","id":"sh/axkjadwv","slide":4,"name":"n-4","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[58,34,40,20]}
+{"kind":"textbox","id":"sh/x0b2lsfm","slide":4,"name":"k-4","text":"MODEL SELECTION","textPreview":"MODEL SELECTION","textChars":15,"textLines":1,"bbox":[108,34,420,20]}
+{"kind":"textbox","id":"sh/wz21cne1","slide":4,"name":"brand-4","text":"MAXIMUS · DAT","textPreview":"MAXIMUS · DAT","textChars":13,"textLines":1,"bbox":[1030,34,190,20]}
+{"kind":"shape","id":"sh/nut0fyx4","slide":4,"name":"rule-4","bbox":[58,67,1164,2]}
+{"kind":"textbox","id":"sh/mt0j6twz","slide":4,"name":"title","text":"복잡도보다 검증 순서가 중요하다","textPreview":"복잡도보다 검증 순서가 중요하다","textChars":17,"textLines":1,"bbox":[58,102,760,62]}
+{"kind":"textbox","id":"sh/9wbih8fa","slide":4,"name":"desc","text":"모든 모델을 같은 미래 시점·미관측 지역에서 경쟁시킵니다.","textPreview":"모든 모델을 같은 미래 시점·미관측 지역에서 경쟁시킵니다.","textChars":32,"textLines":1,"bbox":[60,172,760,34]}
+{"kind":"textbox","id":"sh/7qdkr2xo","slide":4,"name":"mn-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,244,54,34]}
+{"kind":"textbox","id":"sh/6p4jixw3","slide":4,"name":"mh-0","text":"Huff · PPML","textPreview":"Huff · PPML","textChars":11,"textLines":1,"bbox":[134,240,420,42]}
+{"kind":"textbox","id":"sh/c36lonyt","slide":4,"name":"mb-0","text":"거리저항과 계수를 해석하는 기준선","textPreview":"거리저항과 계수를 해석하는 기준선","textChars":18,"textLines":1,"bbox":[134,284,480,30]}
+{"kind":"shape","id":"sh/x4f2xsze","slide":4,"name":"ml-0","bbox":[134,332,470,2]}
+{"kind":"textbox","id":"sh/a1o3mdgn","slide":4,"name":"mn-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,370,54,34]}
+{"kind":"textbox","id":"sh/b2xkvih8","slide":4,"name":"mh-1","text":"GAM · CatBoost","textPreview":"GAM · CatBoost","textChars":14,"textLines":1,"bbox":[134,366,420,42]}
+{"kind":"textbox","id":"sh/oz6lk3yx","slide":4,"name":"mb-1","text":"포화·곡률·변수 상호작용 탐색","textPreview":"포화·곡률·변수 상호작용 탐색","textChars":16,"textLines":1,"bbox":[134,410,480,30]}
+{"kind":"shape","id":"sh/p0f2t8z2","slide":4,"name":"ml-1","bbox":[134,458,470,2]}
+{"kind":"textbox","id":"sh/2do3idgr","slide":4,"name":"mn-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,496,54,34]}
+{"kind":"textbox","id":"sh/nyxkrihc","slide":4,"name":"mh-2","text":"LightGBM Ranker","textPreview":"LightGBM Ranker","textChars":15,"textLines":1,"bbox":[134,492,420,42]}
+{"kind":"textbox","id":"sh/0bmlg3il","slide":4,"name":"mb-2","text":"후보 내부 NDCG@5 직접 최적화","textPreview":"후보 내부 NDCG@5 직접 최적화","textChars":19,"textLines":1,"bbox":[134,536,480,30]}
+{"kind":"shape","id":"sh/1cv2p8z6","slide":4,"name":"ml-2","bbox":[134,584,470,2]}
+{"kind":"shape","id":"sh/hgnax0ny","slide":4,"name":"verify","bbox":[60,608,1120,62]}
+{"kind":"textbox","id":"sh/wvu94v6d","slide":4,"name":"verify-text","text":"시간순 CV  ·  지역 홀드아웃  ·  Poisson deviance  ·  NDCG@5  ·  SHAP 안정성","textPreview":"시간순 CV  ·  지역 홀드아웃  ·  Poisson deviance  ·  NDCG@5  ·  SHAP 안정성","textChars":63,"textLines":1,"bbox":[88,620,1064,38]}
+{"kind":"image","id":"im/lwvqdof6","slide":4,"name":"","alt":"추천 순위를 표현한 Nano Banana 3D 아이콘","bbox":[720,222,470,300]}
+{"kind":"notes","id":"nt/cpv4x7","slide":4,"text":"Huff와 PPML을 기준선으로 두고 GAM과 CatBoost로 비선형성을 확인한 뒤 LambdaRank로 순위를 직접 최적화합니다. 랜덤 분할은 사용하지 않고 미래 분기와 미관측 지역에서 성능이 유지되는지 검증합니다.\n\n[Sources]\n- Huff 1963\n- Alam et al. 2025\n- 3D asset: Google Gemini Nano Banana"}
+{"kind":"slide","id":"sl/ci56ug","slide":5,"title":"05","textShapes":14}
+{"kind":"textbox","id":"sh/ridgbipk","slide":5,"name":"n-5","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[58,34,40,20]}
+{"kind":"textbox","id":"sh/sjmh4nq5","slide":5,"name":"k-5","text":"FINE-TUNING","textPreview":"FINE-TUNING","textChars":11,"textLines":1,"bbox":[108,34,420,20]}
+{"kind":"textbox","id":"sh/dkvyds7q","slide":5,"name":"brand-5","text":"MAXIMUS · DAT","textPreview":"MAXIMUS · DAT","textChars":13,"textLines":1,"bbox":[1030,34,190,20]}
+{"kind":"shape","id":"sh/el4z6d8b","slide":5,"name":"rule-5","bbox":[58,67,1164,2]}
+{"kind":"textbox","id":"sh/fmxgfipw","slide":5,"name":"title","text":"파인튜닝은 시작점이 아니라\n데이터가 쌓인 뒤의 실험이다","textPreview":"파인튜닝은 시작점이 아니라 | 데이터가 쌓인 뒤의 실험이다","textChars":30,"textLines":2,"bbox":[58,102,660,112]}
+{"kind":"textbox","id":"sh/1ofyhs7m","slide":5,"name":"rt-0","text":"NOW","textPreview":"NOW","textChars":3,"textLines":1,"bbox":[64,320,90,28]}
+{"kind":"textbox","id":"sh/upkfut8r","slide":5,"name":"rh-0","text":"Frozen SBERT","textPreview":"Frozen SBERT","textChars":12,"textLines":1,"bbox":[170,314,340,38]}
+{"kind":"textbox","id":"sh/vqtg3ypc","slide":5,"name":"rb-0","text":"사용자 목적 문장과 점포 텍스트 유사도를 랭킹 피처로 사용","textPreview":"사용자 목적 문장과 점포 텍스트 유사도를 랭킹 피처로 사용","textChars":32,"textLines":1,"bbox":[170,354,920,30]}
+{"kind":"shape","id":"sh/729crqxk","slide":5,"name":"rl-0","bbox":[170,394,930,2]}
+{"kind":"textbox","id":"sh/610vylgz","slide":5,"name":"rt-1","text":"NEXT","textPreview":"NEXT","textChars":4,"textLines":1,"bbox":[64,412,90,28]}
+{"kind":"textbox","id":"sh/t4rutgfq","slide":5,"name":"rh-1","text":"Weak supervision","textPreview":"Weak supervision","textChars":16,"textLines":1,"bbox":[170,406,340,38]}
+{"kind":"textbox","id":"sh/83id0vy5","slide":5,"name":"rb-1","text":"목적–업종 규칙으로 positive·hard negative 쌍 생성","textPreview":"목적–업종 규칙으로 positive·hard negative 쌍 생성","textChars":38,"textLines":1,"bbox":[170,446,920,30]}
+{"kind":"shape","id":"sh/jy9cn6x8","slide":5,"name":"rl-1","bbox":[170,486,930,2]}
+{"kind":"textbox","id":"sh/yxgvu1g3","slide":5,"name":"rt-2","text":"LATER","textPreview":"LATER","textChars":5,"textLines":1,"bbox":[64,504,90,28]}
+{"kind":"textbox","id":"sh/l0rupgfe","slide":5,"name":"rh-2","text":"Contrastive FT","textPreview":"Contrastive FT","textChars":14,"textLines":1,"bbox":[170,498,340,38]}
+{"kind":"textbox","id":"sh/kzidwbyt","slide":5,"name":"rb-2","text":"실제 선택 로그가 충분할 때 InfoNCE·triplet loss 비교","textPreview":"실제 선택 로그가 충분할 때 InfoNCE·triplet loss 비교","textChars":39,"textLines":1,"bbox":[170,538,920,30]}
+{"kind":"shape","id":"sh/bapcj6xc","slide":5,"name":"rl-2","bbox":[170,578,930,2]}
+{"kind":"shape","id":"sh/a9gbq1gr","slide":5,"name":"adopt","bbox":[60,610,1120,62]}
+{"kind":"textbox","id":"sh/e5wv210j","slide":5,"name":"adopt-text","text":"채택 조건  Frozen 대비 Recall@K·NDCG 상승 + 지역 홀드아웃 성능 유지","textPreview":"채택 조건  Frozen 대비 Recall@K·NDCG 상승 + 지역 홀드아웃 성능 유지","textChars":49,"textLines":1,"bbox":[92,622,1056,38]}
+{"kind":"image","id":"im/lw7et0fe","slide":5,"name":"","alt":"파인튜닝 발전을 표현한 Nano Banana 3D 두뇌 아이콘","bbox":[670,112,510,300]}
+{"kind":"notes","id":"nt/ci56ug","slide":5,"text":"초기에는 파인튜닝보다 후보군과 라벨, 랭킹 피처 품질이 중요합니다. 사전학습 SBERT를 고정해 텍스트 유사도를 하나의 피처로 쓰고, 충분한 선택 로그가 확보된 뒤에만 대조학습을 실험합니다.\n\n[Sources]\n- Week 3 final report section 2.3\n- 3D asset: Google Gemini Nano Banana"}
+{"kind":"slide","id":"sl/njndq2","slide":6,"title":"06","textShapes":18}
+{"kind":"textbox","id":"sh/18jmtkvm","slide":6,"name":"n-6","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[58,34,40,20]}
+{"kind":"textbox","id":"sh/e5s3i5cv","slide":6,"name":"k-6","text":"SEMESTER OUTCOME","textPreview":"SEMESTER OUTCOME","textChars":16,"textLines":1,"bbox":[108,34,420,20]}
+{"kind":"textbox","id":"sh/f614radg","slide":6,"name":"brand-6","text":"MAXIMUS · DAT","textPreview":"MAXIMUS · DAT","textChars":13,"textLines":1,"bbox":[1030,34,190,20]}
+{"kind":"shape","id":"sh/s3qlgfu5","slide":6,"name":"rule-6","bbox":[58,67,1164,2]}
+{"kind":"textbox","id":"sh/t4zmpkvq","slide":6,"name":"title","text":"한 학기 동안 ‘추천 이유’를 검증한다","textPreview":"한 학기 동안 ‘추천 이유’를 검증한다","textChars":21,"textLines":1,"bbox":[58,102,820,62]}
+{"kind":"textbox","id":"sh/6h83e5cz","slide":6,"name":"desc","text":"모델이 낸 답보다, 그 답이 새 시점과 새 지역에서도 유지되는지를 봅니다.","textPreview":"모델이 낸 답보다, 그 답이 새 시점과 새 지역에서도 유지되는지를 봅니다.","textChars":41,"textLines":1,"bbox":[60,172,870,34]}
+{"kind":"textbox","id":"sh/czu5szu9","slide":6,"name":"in-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[682,240,50,28]}
+{"kind":"textbox","id":"sh/d03m14vu","slide":6,"name":"ih-0","text":"DATA","textPreview":"DATA","textChars":4,"textLines":1,"bbox":[682,274,220,34]}
+{"kind":"textbox","id":"sh/9kry10vm","slide":6,"name":"ib-0","text":"B078·B079 정합성\n50분 후보군","textPreview":"B078·B079 정합성 | 50분 후보군","textChars":21,"textLines":2,"bbox":[682,318,220,52]}
+{"kind":"textbox","id":"sh/ojix8vu1","slide":6,"name":"in-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[942,240,50,28]}
+{"kind":"textbox","id":"sh/ni9gzqdg","slide":6,"name":"ih-1","text":"GAP","textPreview":"GAP","textChars":3,"textLines":1,"bbox":[942,274,220,34]}
+{"kind":"textbox","id":"sh/mh0f6lcv","slide":6,"name":"ib-1","text":"미래 시점 잔차\n통과형·목적소비형","textPreview":"미래 시점 잔차 | 통과형·목적소비형","textChars":18,"textLines":2,"bbox":[942,318,220,52]}
+{"kind":"textbox","id":"sh/1g7yx0va","slide":6,"name":"in-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[682,396,50,28]}
+{"kind":"textbox","id":"sh/0fyx4vup","slide":6,"name":"ih-2","text":"RANK","textPreview":"RANK","textChars":4,"textLines":1,"bbox":[682,430,220,34]}
+{"kind":"textbox","id":"sh/zepgvqd4","slide":6,"name":"ib-2","text":"목적별 Top-K\nNDCG@5·Recall@K","textPreview":"목적별 Top-K | NDCG@5·Recall@K","textChars":25,"textLines":2,"bbox":[682,474,220,52]}
+{"kind":"textbox","id":"sh/edgf2lcz","slide":6,"name":"in-3","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[942,396,50,28]}
+{"kind":"textbox","id":"sh/lcby9kve","slide":6,"name":"ih-3","text":"EXPLAIN","textPreview":"EXPLAIN","textChars":7,"textLines":1,"bbox":[942,430,220,34]}
+{"kind":"textbox","id":"sh/kb2hgfu9","slide":6,"name":"ib-3","text":"SHAP·계수·반례\n추천 근거 점검","textPreview":"SHAP·계수·반례 | 추천 근거 점검","textChars":19,"textLines":2,"bbox":[942,474,220,52]}
+{"kind":"shape","id":"sh/4va1c325","slide":6,"name":"final","bbox":[58,602,1164,72]}
+{"kind":"textbox","id":"sh/5gji5ojq","slide":6,"name":"final-text","text":"최종 산출물  목적별 후보 생성기 + 유동–매출 괴리모형 + 설명 가능한 목적지 랭커","textPreview":"최종 산출물  목적별 후보 생성기 + 유동–매출 괴리모형 + 설명 가능한 목적지 랭커","textChars":47,"textLines":1,"bbox":[88,616,1104,44]}
+{"kind":"image","id":"im/65sr6xoz","slide":6,"name":"","alt":"Nano Banana 3D 모델 로드맵 에셋 시트","bbox":[58,232,560,314]}
+{"kind":"notes","id":"nt/njndq2","slide":6,"text":"최종 산출물은 목적별 후보 생성기, 유동–매출 괴리모형, 설명 가능한 목적지 랭커입니다. 복잡한 모델을 보여주는 데서 끝내지 않고 새 시점과 새 지역에서 추천 이유가 유지되는지까지 검증합니다.\n\n[Sources]\n- Week 3 final report section 4\n- 3D assets: Google Gemini Nano Banana"}

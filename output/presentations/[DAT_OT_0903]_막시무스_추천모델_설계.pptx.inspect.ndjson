@@ -1,0 +1,145 @@
+{"kind":"deck","id":"pr/w5dulm","name":"Deck"}
+{"kind":"layout","layoutId":"8da248af-55b7-416e-91de-c613dd3c349e","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"59bbee93-241a-40d4-bb64-96886cbc58eb","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/us6ntf","slide":1,"title":"TEAM MAXIMUS","textShapes":6}
+{"kind":"textbox","id":"sh/43up8fa1","slide":1,"name":"team","text":"TEAM MAXIMUS","textPreview":"TEAM MAXIMUS","textChars":12,"textLines":1,"bbox":[76,58,260,28]}
+{"kind":"textbox","id":"sh/j2loza9g","slide":1,"name":"hero","text":"목적지 선택을\n어떻게 모델링할 것인가","textPreview":"목적지 선택을 | 어떻게 모델링할 것인가","textChars":20,"textLines":2,"bbox":[76,170,830,152]}
+{"kind":"textbox","id":"sh/i1c76psv","slide":1,"name":"sub","text":"동대문구 출발 50분 생활권 · 목적별 상권 추천","textPreview":"동대문구 출발 50분 생활권 · 목적별 상권 추천","textChars":27,"textLines":1,"bbox":[80,354,720,44]}
+{"kind":"shape","id":"sh/tsnq54ri","slide":1,"name":"target","bbox":[940,142,236,236]}
+{"kind":"textbox","id":"sh/srepczqx","slide":1,"name":"prob","text":"P(j | o,p,t)","textPreview":"P(j | o,p,t)","textChars":12,"textLines":1,"bbox":[952,188,212,76]}
+{"kind":"textbox","id":"sh/rq583u9c","slide":1,"name":"prob-label","text":"목적지 j의\n선택확률","textPreview":"목적지 j의 | 선택확률","textChars":11,"textLines":2,"bbox":[952,276,212,64]}
+{"kind":"textbox","id":"sh/6pc7aps7","slide":1,"name":"members","text":"장한별 · 지우진 · 최시현","textPreview":"장한별 · 지우진 · 최시현","textChars":15,"textLines":1,"bbox":[80,635,430,28]}
+{"kind":"notes","id":"nt/us6ntf","slide":1,"text":"저희가 만들려는 것은 앱 자체가 아니라 목적지 선택 확률을 추정하고 순위를 만드는 추천모델입니다. 출발지, 목적, 가용시간이 주어졌을 때 어떤 행정동이 선택될지를 모델링합니다.\n\n[Sources]\n- Team Maximus Week 3 final report, 2026-08-24"}
+{"kind":"slide","id":"sl/sbdh70","slide":2,"title":"02","textShapes":15}
+{"kind":"textbox","id":"sh/k7u1ob6x","slide":2,"name":"page-2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[72,40,54,24]}
+{"kind":"textbox","id":"sh/j61kv65c","slide":2,"name":"title-2","text":"먼저 ‘선택 가능한 목적지’부터 정확히 정의한다","textPreview":"먼저 ‘선택 가능한 목적지’부터 정확히 정의한다","textChars":26,"textLines":1,"bbox":[72,75,1136,56]}
+{"kind":"textbox","id":"sh/y5sjm1o7","slide":2,"name":"subtitle-2","text":"학습단위: 출발지 o × 후보 목적지 j × 목적 p × 시간대 t","textPreview":"학습단위: 출발지 o × 후보 목적지 j × 목적 p × 시간대 t","textChars":37,"textLines":1,"bbox":[74,132,1090,32]}
+{"kind":"shape","id":"sh/x4j2tw7m","slide":2,"name":"accent-2","bbox":[1160,40,56,12]}
+{"kind":"textbox","id":"sh/w3a1kr61","slide":2,"name":"footer-2","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[72,680,230,18]}
+{"kind":"shape","id":"sh/b21krmpg","slide":2,"name":"a1","bbox":[300,352,148,0]}
+{"kind":"shape","id":"sh/a1sjihov","slide":2,"name":"a2","bbox":[742,352,148,0]}
+{"kind":"shape","id":"sh/90jipc7a","slide":2,"name":"candidate-01","bbox":[72,220,300,274]}
+{"kind":"textbox","id":"sh/oza1gr6p","slide":2,"name":"num-01","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[96,240,50,28]}
+{"kind":"textbox","id":"sh/2dk3e5w7","slide":2,"name":"head-01","text":"출발지 집합","textPreview":"출발지 집합","textChars":6,"textLines":1,"bbox":[96,290,252,50]}
+{"kind":"textbox","id":"sh/3et4naxs","slide":2,"name":"body-01","text":"동대문구 B078 격자\n또는 행정동 중심점","textPreview":"동대문구 B078 격자 | 또는 행정동 중심점","textChars":23,"textLines":2,"bbox":[100,365,244,80]}
+{"kind":"shape","id":"sh/of2lgfed","slide":2,"name":"candidate-02","bbox":[448,220,300,274]}
+{"kind":"textbox","id":"sh/p0bmp0fi","slide":2,"name":"num-02","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[472,240,50,28]}
+{"kind":"textbox","id":"sh/e903alwv","slide":2,"name":"head-02","text":"50분 후보군","textPreview":"50분 후보군","textChars":7,"textLines":1,"bbox":[472,290,252,50]}
+{"kind":"textbox","id":"sh/fat4jqxg","slide":2,"name":"body-02","text":"카카오 대중교통 시간\nMOVE_TIME 교차검증","textPreview":"카카오 대중교통 시간 | MOVE_TIME 교차검증","textChars":26,"textLines":2,"bbox":[476,365,244,80]}
+{"kind":"shape","id":"sh/gb2lcve1","slide":2,"name":"candidate-03","bbox":[890,220,300,274]}
+{"kind":"textbox","id":"sh/1cbml0fm","slide":2,"name":"num-03","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[914,240,50,28]}
+{"kind":"textbox","id":"sh/65036lwz","slide":2,"name":"head-03","text":"Long Table","textPreview":"Long Table","textChars":10,"textLines":1,"bbox":[914,290,252,50]}
+{"kind":"textbox","id":"sh/r694fqxk","slide":2,"name":"body-03","text":"o-j-p-t별 1행\n선택/이동량을 label로","textPreview":"o-j-p-t별 1행 | 선택/이동량을 label로","textChars":26,"textLines":2,"bbox":[918,365,244,80]}
+{"kind":"textbox","id":"sh/vap07mdc","slide":2,"name":"candidate-note","text":"후보군 밖의 지역은 음성 샘플이 아니라 ‘선택 불가능’으로 제외","textPreview":"후보군 밖의 지역은 음성 샘플이 아니라 ‘선택 불가능’으로 제외","textChars":35,"textLines":1,"bbox":[270,550,740,38]}
+{"kind":"textbox","id":"sh/upwjehcr","slide":2,"name":"sensitivity","text":"민감도: 30·40·50·60분에서 후보군과 순위 안정성 비교","textPreview":"민감도: 30·40·50·60분에서 후보군과 순위 안정성 비교","textChars":34,"textLines":1,"bbox":[300,600,680,28]}
+{"kind":"notes","id":"nt/sbdh70","slide":2,"text":"추천모델에서 가장 먼저 해야 할 일은 후보군을 정확히 정의하는 것입니다. 동대문구의 출발 격자별로 실제 50분 안에 갈 수 있는 행정동만 남기고, 출발지와 후보 목적지, 목적과 시간대를 한 행으로 만드는 Long Table을 구성합니다.\n\n[Sources]\n- B078 sample schema\n- Week 3 final report sections 2.2 and 3.2"}
+{"kind":"slide","id":"sl/emhihl","slide":3,"title":"03","textShapes":13}
+{"kind":"textbox","id":"sh/l0v2xcn2","slide":3,"name":"page-3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[72,40,54,24]}
+{"kind":"textbox","id":"sh/yxkj2hob","slide":3,"name":"title-3","text":"모델 입력은 ‘접근성·흡인력·전환력’ 세 축으로 만든다","textPreview":"모델 입력은 ‘접근성·흡인력·전환력’ 세 축으로 만든다","textChars":30,"textLines":1,"bbox":[72,75,1136,56]}
+{"kind":"shape","id":"sh/zytkvm5w","slide":3,"name":"accent-3","bbox":[1160,40,56,12]}
+{"kind":"textbox","id":"sh/8nml8r6t","slide":3,"name":"footer-3","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[72,680,230,18]}
+{"kind":"shape","id":"sh/9ov21wny","slide":3,"name":"feature-ACCESS","bbox":[80,196,350,300]}
+{"kind":"textbox","id":"sh/ml436hon","slide":3,"name":"tag-ACCESS","text":"ACCESS","textPreview":"ACCESS","textChars":6,"textLines":1,"bbox":[108,220,294,28]}
+{"kind":"textbox","id":"sh/7mdkzm58","slide":3,"name":"fh-ACCESS","text":"접근성","textPreview":"접근성","textChars":3,"textLines":1,"bbox":[108,270,294,48]}
+{"kind":"textbox","id":"sh/wr6lcrmp","slide":3,"name":"fb-ACCESS","text":"이동시간 · 환승\n거리감쇠 · 50분 여유","textPreview":"이동시간 · 환승 | 거리감쇠 · 50분 여유","textChars":23,"textLines":2,"bbox":[110,350,290,86]}
+{"kind":"shape","id":"sh/hsf25wna","slide":3,"name":"feature-ATTRACTION","bbox":[440,196,350,300]}
+{"kind":"textbox","id":"sh/d07itkfm","slide":3,"name":"tag-ATTRACTION","text":"ATTRACTION","textPreview":"ATTRACTION","textChars":10,"textLines":1,"bbox":[468,220,294,28]}
+{"kind":"textbox","id":"sh/czyh0fy1","slide":3,"name":"fh-ATTRACTION","text":"상권 흡인력","textPreview":"상권 흡인력","textChars":6,"textLines":1,"bbox":[468,270,294,48]}
+{"kind":"textbox","id":"sh/byp0raxg","slide":3,"name":"fb-ATTRACTION","text":"목적 POI · 점포 수\nShannon Entropy · HHI · LQ","textPreview":"목적 POI · 점포 수 | Shannon Entropy · HHI · LQ","textChars":40,"textLines":2,"bbox":[470,350,290,86]}
+{"kind":"shape","id":"sh/qxgzy5gb","slide":3,"name":"feature-CONVERSION","bbox":[850,196,350,300]}
+{"kind":"textbox","id":"sh/l4rixkfy","slide":3,"name":"tag-CONVERSION","text":"CONVERSION","textPreview":"CONVERSION","textChars":10,"textLines":1,"bbox":[878,220,294,28]}
+{"kind":"textbox","id":"sh/03ih4fed","slide":3,"name":"fh-CONVERSION","text":"소비 전환력","textPreview":"소비 전환력","textChars":6,"textLines":1,"bbox":[878,270,294,48]}
+{"kind":"textbox","id":"sh/z290vuxs","slide":3,"name":"fb-CONVERSION","text":"유입량 · 카드건수·금액\n건당금액 · 잔차 안정성","textPreview":"유입량 · 카드건수·금액 | 건당금액 · 잔차 안정성","textChars":27,"textLines":2,"bbox":[880,350,290,86]}
+{"kind":"shape","id":"sh/y10z2pg7","slide":3,"name":"label-band","bbox":[180,548,920,72]}
+{"kind":"textbox","id":"sh/18nyl0fe","slide":3,"name":"label-text","text":"Label: 목적지별 이동량(count) 또는 선택 점유율 → 회귀와 랭킹을 함께 비교","textPreview":"Label: 목적지별 이동량(count) 또는 선택 점유율 → 회귀와 랭킹을 함께 비교","textChars":48,"textLines":1,"bbox":[210,563,860,42]}
+{"kind":"notes","id":"nt/emhihl","slide":3,"text":"변수는 세 축으로 정리합니다. 접근성은 이동비용, 흡인력은 목적 관련 시설과 업종구조, 전환력은 유입이 소비로 이어지는 정도입니다. 종속변수는 목적지별 이동량 또는 후보군 안에서의 선택 점유율로 두고 회귀와 랭킹 문제를 비교합니다.\n\n[Sources]\n- B078/B079 sample schemas\n- Huff 1963\n- Arentze et al. 2005\n- Week 3 final report section 2"}
+{"kind":"slide","id":"sl/i22ny1","slide":4,"title":"04","textShapes":13}
+{"kind":"textbox","id":"sh/9grmdgb6","slide":4,"name":"page-4","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[72,40,54,24]}
+{"kind":"textbox","id":"sh/md0321cv","slide":4,"name":"title-4","text":"유동–매출 괴리는 ‘미래 시점 잔차’로 정의한다","textPreview":"유동–매출 괴리는 ‘미래 시점 잔차’로 정의한다","textChars":26,"textLines":1,"bbox":[72,75,1136,56]}
+{"kind":"shape","id":"sh/ne94b6tg","slide":4,"name":"accent-4","bbox":[1160,40,56,12]}
+{"kind":"textbox","id":"sh/0ryl0rup","slide":4,"name":"footer-4","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[72,680,230,18]}
+{"kind":"shape","id":"sh/lsrm9wba","slide":4,"name":"formula","bbox":[78,184,1124,112]}
+{"kind":"textbox","id":"sh/ypg3y1cj","slide":4,"name":"eq1","text":"ŷ = f[log(1+유동), log(1+점포), 면적, 상권유형, 업종구성]","textPreview":"ŷ = f[log(1+유동), log(1+점포), 면적, 상권유형, 업종구성]","textChars":43,"textLines":1,"bbox":[106,202,1068,44]}
+{"kind":"textbox","id":"sh/zqp476t4","slide":4,"name":"eq2","text":"Gap = log(1+실제매출) − log(1+ŷ)","textPreview":"Gap = log(1+실제매출) − log(1+ŷ)","textChars":28,"textLines":1,"bbox":[106,250,1068,30]}
+{"kind":"shape","id":"sh/kn25cvu9","slide":4,"name":"g1","bbox":[352,430,112,0]}
+{"kind":"shape","id":"sh/5obml0be","slide":4,"name":"g2","bbox":[816,430,112,0]}
+{"kind":"shape","id":"sh/pg3atsz6","slide":4,"name":"gap-72","bbox":[72,350,280,166]}
+{"kind":"textbox","id":"sh/4futknil","slide":4,"name":"gh-72","text":"OLS / PPML","textPreview":"OLS / PPML","textChars":10,"textLines":1,"bbox":[92,372,240,48]}
+{"kind":"textbox","id":"sh/3elsri10","slide":4,"name":"gb-72","text":"선형 기준선\n계수 해석","textPreview":"선형 기준선 | 계수 해석","textChars":12,"textLines":2,"bbox":[92,432,240,54]}
+{"kind":"shape","id":"sh/2dcrid0f","slide":4,"name":"gap-464","bbox":[464,350,280,166]}
+{"kind":"textbox","id":"sh/hcjap8ju","slide":4,"name":"gh-464","text":"GAM","textPreview":"GAM","textChars":3,"textLines":1,"bbox":[484,372,240,48]}
+{"kind":"textbox","id":"sh/gba9w3ip","slide":4,"name":"gb-464","text":"Spline으로 포화·곡률\n비선형성 검정","textPreview":"Spline으로 포화·곡률 | 비선형성 검정","textChars":22,"textLines":2,"bbox":[484,432,240,54]}
+{"kind":"shape","id":"sh/fq1sny14","slide":4,"name":"gap-928","bbox":[928,350,280,166]}
+{"kind":"textbox","id":"sh/upsrut0j","slide":4,"name":"gh-928","text":"Tree Ensemble","textPreview":"Tree Ensemble","textChars":13,"textLines":1,"bbox":[948,372,240,48]}
+{"kind":"textbox","id":"sh/l8na1cze","slide":4,"name":"gb-928","text":"LightGBM·CatBoost\n상호작용 탐색","textPreview":"LightGBM·CatBoost | 상호작용 탐색","textChars":25,"textLines":2,"bbox":[948,432,240,54]}
+{"kind":"textbox","id":"sh/07ets7it","slide":4,"name":"gap-class","text":"분류: Gap≈0 일반형 · Gap>0 목적소비형 · Gap<0 통과형","textPreview":"분류: Gap≈0 일반형 · Gap>0 목적소비형 · Gap<0 통과형","textChars":39,"textLines":1,"bbox":[180,554,920,36]}
+{"kind":"textbox","id":"sh/k36lkvu1","slide":4,"name":"leak-warning","text":"Random split 금지 → 과거 분기 학습, 미래 분기 예측, 3개 분기 이상 잔차 지속성 확인","textPreview":"Random split 금지 → 과거 분기 학습, 미래 분기 예측, 3개 분기 이상 잔차 지속성 확인","textChars":56,"textLines":1,"bbox":[150,606,980,30]}
+{"kind":"notes","id":"nt/i22ny1","slide":4,"text":"비선형 지역을 먼저 제거하지 않습니다. 전체 지역으로 기대매출을 학습한 뒤 미래 분기에서 잔차를 계산합니다. OLS나 PPML을 기준선으로 두고, GAM의 스플라인과 트리 모델을 비교해 포화와 상호작용을 확인합니다.\n\n[Sources]\n- Team-provided Spearman EDA\n- Week 3 final report section 2.1"}
+{"kind":"slide","id":"sl/651gj7","slide":5,"title":"05","textShapes":13}
+{"kind":"textbox","id":"sh/0ry1c7qp","slide":5,"name":"page-5","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[72,40,54,24]}
+{"kind":"textbox","id":"sh/zqpk3294","slide":5,"name":"title-5","text":"최종 추천은 예측값이 아니라 ‘후보 내부 순위’를 학습한다","textPreview":"최종 추천은 예측값이 아니라 ‘후보 내부 순위’를 학습한다","textChars":32,"textLines":1,"bbox":[72,75,1136,56]}
+{"kind":"shape","id":"sh/epgjax8z","slide":5,"name":"accent-5","bbox":[1160,40,56,12]}
+{"kind":"textbox","id":"sh/d4721cre","slide":5,"name":"footer-5","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[72,680,230,18]}
+{"kind":"shape","id":"sh/s3y187qt","slide":5,"name":"utility","bbox":[72,188,490,348]}
+{"kind":"textbox","id":"sh/r2pkz298","slide":5,"name":"utility-tag","text":"선택모형","textPreview":"선택모형","textChars":4,"textLines":1,"bbox":[102,216,430,36]}
+{"kind":"textbox","id":"sh/q1gj6x8n","slide":5,"name":"utility-eq","text":"Uᵢⱼ = β₁Timeᵢⱼ + β₂POIⱼ\n+ β₃Diversityⱼ + β₄Gapⱼ","textPreview":"Uᵢⱼ = β₁Timeᵢⱼ + β₂POIⱼ | + β₃Diversityⱼ + β₄Gapⱼ","textChars":47,"textLines":2,"bbox":[102,276,430,104]}
+{"kind":"textbox","id":"sh/50nixsr2","slide":5,"name":"utility-models","text":"Huff → 조건부로짓 / PPML","textPreview":"Huff → 조건부로짓 / PPML","textChars":19,"textLines":1,"bbox":[107,414,420,44]}
+{"kind":"textbox","id":"sh/4ze14nqh","slide":5,"name":"utility-explain","text":"계수와 거리저항을 해석","textPreview":"계수와 거리저항을 해석","textChars":12,"textLines":1,"bbox":[107,470,420,30]}
+{"kind":"textbox","id":"sh/ad07ixcf","slide":5,"name":"vs","text":"VS","textPreview":"VS","textChars":2,"textLines":1,"bbox":[590,330,80,50]}
+{"kind":"shape","id":"sh/be98b2dk","slide":5,"name":"ranker","bbox":[700,188,508,348]}
+{"kind":"textbox","id":"sh/wf2pk7u5","slide":5,"name":"rank-tag","text":"Learning to Rank","textPreview":"Learning to Rank","textChars":16,"textLines":1,"bbox":[730,216,448,36]}
+{"kind":"textbox","id":"sh/xgbqdsvq","slide":5,"name":"rank-model","text":"LightGBM Ranker\nobjective = lambdarank","textPreview":"LightGBM Ranker | objective = lambdarank","textChars":38,"textLines":2,"bbox":[730,274,448,96]}
+{"kind":"textbox","id":"sh/m907edc3","slide":5,"name":"rank-group","text":"group = 출발지×목적×시간대","textPreview":"group = 출발지×목적×시간대","textChars":18,"textLines":1,"bbox":[735,397,438,36]}
+{"kind":"textbox","id":"sh/na987ido","slide":5,"name":"rank-loss","text":"loss와 NDCG@5를 직접 최적화","textPreview":"loss와 NDCG@5를 직접 최적화","textChars":20,"textLines":1,"bbox":[735,458,438,30]}
+{"kind":"shape","id":"sh/obipgnu9","slide":5,"name":"compare-band","bbox":[166,574,948,56]}
+{"kind":"textbox","id":"sh/9crq9svu","slide":5,"name":"compare-text","text":"해석 가능한 선택모형과 예측력이 높은 랭커를 Out-of-time NDCG@5로 비교","textPreview":"해석 가능한 선택모형과 예측력이 높은 랭커를 Out-of-time NDCG@5로 비교","textChars":47,"textLines":1,"bbox":[190,585,900,34]}
+{"kind":"notes","id":"nt/651gj7","slide":5,"text":"최종 목적은 이동량의 정확한 숫자보다 후보 안의 순위입니다. 조건부로짓이나 PPML로 선택요인을 해석하고, LightGBM Ranker의 LambdaRank로 출발지·목적·시간대별 그룹 안의 NDCG를 직접 최적화합니다.\n\n[Sources]\n- Huff 1963\n- Alam et al. 2025\n- Week 3 final report sections 2.2 and 4"}
+{"kind":"slide","id":"sl/a44iqm","slide":6,"title":"06","textShapes":14}
+{"kind":"textbox","id":"sh/ulc7u10b","slide":6,"name":"page-6","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[72,40,54,24]}
+{"kind":"textbox","id":"sh/h8365gzm","slide":6,"name":"title-6","text":"파인튜닝은 1단계가 아니라 ‘라벨이 쌓인 뒤’의 실험이다","textPreview":"파인튜닝은 1단계가 아니라 ‘라벨이 쌓인 뒤’의 실험이다","textChars":31,"textLines":1,"bbox":[72,75,1136,56]}
+{"kind":"shape","id":"sh/gnupwbih","slide":6,"name":"accent-6","bbox":[1160,40,56,12]}
+{"kind":"textbox","id":"sh/3alo76hs","slide":6,"name":"footer-6","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[72,680,230,18]}
+{"kind":"shape","id":"sh/i9c7yl07","slide":6,"name":"f1","bbox":[358,368,98,0]}
+{"kind":"shape","id":"sh/5cn69gzy","slide":6,"name":"f2","bbox":[824,368,98,0]}
+{"kind":"shape","id":"sh/4bep0bid","slide":6,"name":"ft-STAGE 1","bbox":[66,208,300,328]}
+{"kind":"textbox","id":"sh/re5obqh4","slide":6,"name":"ft-tag-STAGE 1","text":"STAGE 1","textPreview":"STAGE 1","textChars":7,"textLines":1,"bbox":[90,230,252,28]}
+{"kind":"textbox","id":"sh/qdw72l0j","slide":6,"name":"ft-head-STAGE 1","text":"Frozen Encoder","textPreview":"Frozen Encoder","textChars":14,"textLines":1,"bbox":[90,284,252,54]}
+{"kind":"textbox","id":"sh/orulwfe9","slide":6,"name":"ft-body-STAGE 1","text":"사전학습 SBERT\n사용자 문장–점포 텍스트\ncosine similarity","textPreview":"사전학습 SBERT | 사용자 문장–점포 텍스트 | cosine similarity","textChars":42,"textLines":3,"bbox":[92,372,248,104]}
+{"kind":"shape","id":"sh/ps3m5kfe","slide":6,"name":"ft-STAGE 2","bbox":[456,208,300,328]}
+{"kind":"textbox","id":"sh/2pc3u5w3","slide":6,"name":"ft-tag-STAGE 2","text":"STAGE 2","textPreview":"STAGE 2","textChars":7,"textLines":1,"bbox":[480,230,252,28]}
+{"kind":"textbox","id":"sh/3ql43axo","slide":6,"name":"ft-head-STAGE 2","text":"Weak Supervision","textPreview":"Weak Supervision","textChars":16,"textLines":1,"bbox":[480,284,252,54]}
+{"kind":"textbox","id":"sh/cfel0fe5","slide":6,"name":"ft-body-STAGE 2","text":"목적·업종·POI 규칙으로\npositive / hard negative\n쌍 생성","textPreview":"목적·업종·POI 규칙으로 | positive / hard negative | 쌍 생성","textChars":44,"textLines":3,"bbox":[482,372,248,104]}
+{"kind":"shape","id":"sh/dgnm9kfq","slide":6,"name":"ft-STAGE 3","bbox":[922,208,300,328]}
+{"kind":"textbox","id":"sh/qtw3ypwz","slide":6,"name":"ft-tag-STAGE 3","text":"STAGE 3","textPreview":"STAGE 3","textChars":7,"textLines":1,"bbox":[946,230,252,28]}
+{"kind":"textbox","id":"sh/be547uxk","slide":6,"name":"ft-head-STAGE 3","text":"Contrastive FT","textPreview":"Contrastive FT","textChars":14,"textLines":1,"bbox":[946,284,252,54]}
+{"kind":"textbox","id":"sh/kje54ze1","slide":6,"name":"ft-body-STAGE 3","text":"충분한 선택 로그 이후\ntriplet / InfoNCE loss\n검증 후 채택","textPreview":"충분한 선택 로그 이후 | triplet / InfoNCE loss | 검증 후 채택","textChars":43,"textLines":3,"bbox":[948,372,248,104]}
+{"kind":"textbox","id":"sh/lknmd4fm","slide":6,"name":"ft-criteria","text":"채택 기준: Frozen 대비 Recall@K·NDCG 상승 + 지역 홀드아웃에서도 성능 유지","textPreview":"채택 기준: Frozen 대비 Recall@K·NDCG 상승 + 지역 홀드아웃에서도 성능 유지","textChars":52,"textLines":1,"bbox":[180,580,920,36]}
+{"kind":"textbox","id":"sh/9oju103u","slide":6,"name":"ft-verdict","text":"초기 데이터가 적으면 파인튜닝보다 랭킹 피처와 라벨 품질이 우선","textPreview":"초기 데이터가 적으면 파인튜닝보다 랭킹 피처와 라벨 품질이 우선","textChars":35,"textLines":1,"bbox":[250,624,780,28]}
+{"kind":"notes","id":"nt/a44iqm","slide":6,"text":"파인튜닝은 현재 꼭 필요한 단계가 아닙니다. 우선 사전학습 SBERT 임베딩을 고정해 유사도를 계산합니다. 목적과 업종 규칙으로 약한 라벨을 만들 수 있지만, 실제 선택 로그와 hard negative가 충분히 쌓였을 때만 대조학습을 실험하고 frozen baseline보다 좋아질 때 채택합니다.\n\n[Sources]\n- Week 3 final report section 2.3\n- Team modeling decision: frozen-encoder baseline before fine-tuning"}
+{"kind":"slide","id":"sl/l5uss6","slide":7,"title":"07","textShapes":18}
+{"kind":"textbox","id":"sh/sn6ds72p","slide":7,"name":"page-7","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[72,40,54,24]}
+{"kind":"textbox","id":"sh/rmxwj2l4","slide":7,"name":"title-7","text":"한 학기 동안 모델을 단계별로 반증한다","textPreview":"한 학기 동안 모델을 단계별로 반증한다","textChars":21,"textLines":1,"bbox":[72,75,1136,56]}
+{"kind":"shape","id":"sh/6lovqxkz","slide":7,"name":"accent-7","bbox":[1160,40,56,12]}
+{"kind":"textbox","id":"sh/5kfehs3e","slide":7,"name":"footer-7","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[72,680,230,18]}
+{"kind":"shape","id":"sh/4j6don2t","slide":7,"name":"timeline","bbox":[190,285,900,0]}
+{"kind":"shape","id":"sh/jixcfil8","slide":7,"name":"mile-01","bbox":[144,261,48,48]}
+{"kind":"textbox","id":"sh/ih4vmd4n","slide":7,"name":"mile-num-01","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[144,269,48,28]}
+{"kind":"textbox","id":"sh/hgvud832","slide":7,"name":"mile-h-01","text":"DATA","textPreview":"DATA","textChars":4,"textLines":1,"bbox":[72,340,192,34]}
+{"kind":"textbox","id":"sh/wvmdknmh","slide":7,"name":"mile-b-01","text":"정식 원본·코드북\n공간·시간 단위 통일","textPreview":"정식 원본·코드북 | 공간·시간 단위 통일","textChars":21,"textLines":2,"bbox":[72,395,192,72]}
+{"kind":"shape","id":"sh/mtsj2loj","slide":7,"name":"mile-02","bbox":[422,261,48,48]}
+{"kind":"textbox","id":"sh/nu1kvq54","slide":7,"name":"mile-num-02","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[422,269,48,28]}
+{"kind":"textbox","id":"sh/oval4b6p","slide":7,"name":"mile-h-02","text":"BASELINE","textPreview":"BASELINE","textChars":8,"textLines":1,"bbox":[350,340,192,34]}
+{"kind":"textbox","id":"sh/9gj2xgna","slide":7,"name":"mile-b-02","text":"Huff·PPML·GAM\n미래 분기 잔차","textPreview":"Huff·PPML·GAM | 미래 분기 잔차","textChars":22,"textLines":2,"bbox":[350,395,192,72]}
+{"kind":"shape","id":"sh/ep8jy1on","slide":7,"name":"mile-03","bbox":[700,261,48,48]}
+{"kind":"textbox","id":"sh/zqhkr658","slide":7,"name":"mile-num-03","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[700,269,48,28]}
+{"kind":"textbox","id":"sh/0rq10b6t","slide":7,"name":"mile-h-03","text":"RANK","textPreview":"RANK","textChars":4,"textLines":1,"bbox":[628,340,192,34]}
+{"kind":"textbox","id":"sh/1sj2tgny","slide":7,"name":"mile-b-03","text":"LambdaRank\nNDCG@5·SHAP","textPreview":"LambdaRank | NDCG@5·SHAP","textChars":22,"textLines":2,"bbox":[628,395,192,72]}
+{"kind":"shape","id":"sh/ql8ju1ob","slide":7,"name":"mile-04","bbox":[978,261,48,48]}
+{"kind":"textbox","id":"sh/rmhkn65w","slide":7,"name":"mile-num-04","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[978,269,48,28]}
+{"kind":"textbox","id":"sh/fqdgv2lo","slide":7,"name":"mile-h-04","text":"TEXT","textPreview":"TEXT","textChars":4,"textLines":1,"bbox":[906,340,192,34]}
+{"kind":"textbox","id":"sh/u54z2x43","slide":7,"name":"mile-b-04","text":"Frozen SBERT\n파인튜닝 비교","textPreview":"Frozen SBERT | 파인튜닝 비교","textChars":20,"textLines":2,"bbox":[906,395,192,72]}
+{"kind":"shape","id":"sh/hsvixs3u","slide":7,"name":"metrics","bbox":[130,522,1020,96]}
+{"kind":"textbox","id":"sh/grmh47m9","slide":7,"name":"metric-tag","text":"검증","textPreview":"검증","textChars":2,"textLines":1,"bbox":[160,548,120,32]}
+{"kind":"textbox","id":"sh/3ux0z2l0","slide":7,"name":"metric-list","text":"시간순 CV · 지역 홀드아웃 · Poisson deviance · NDCG@5 · Recall@K · SHAP 안정성","textPreview":"시간순 CV · 지역 홀드아웃 · Poisson deviance · NDCG@5 · Recall@K · SHAP 안정성","textChars":66,"textLines":1,"bbox":[282,540,830,44]}
+{"kind":"textbox","id":"sh/2toz6x4f","slide":7,"name":"final-output","text":"최종 산출물: 목적별 후보 생성기 + 괴리모형 + 설명 가능한 상권 랭커","textPreview":"최종 산출물: 목적별 후보 생성기 + 괴리모형 + 설명 가능한 상권 랭커","textChars":40,"textLines":1,"bbox":[210,640,860,30]}
+{"kind":"notes","id":"nt/l5uss6","slide":7,"text":"학기 목표는 모델을 한 번에 복잡하게 만드는 것이 아니라 단계별로 반증하는 것입니다. 데이터 정합성, 통계 기준선, 랭커, 텍스트 모델 순으로 진행하고, 시간순 검증과 지역 홀드아웃을 통과한 모델만 다음 단계로 올립니다.\n\n[Sources]\n- Week 3 final report section 4\n- Local semester roadmap"}

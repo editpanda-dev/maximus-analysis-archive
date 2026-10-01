@@ -32,9 +32,10 @@ LIMITATIONS = (
 WALKING_METERS_PER_MINUTE = 80
 EARTH_RADIUS_METERS = 6_371_000
 TRAVEL_TIME_WINDOW_MINUTES = 10
-SEARCH_RING_SAMPLE_COUNT = 8
+SEARCH_RING_SAMPLE_COUNT = 16
 SEARCH_RING_METERS_PER_MINUTE = 250
 EXPANDED_SEARCH_PLACES_PER_CENTER = 3
+SEARCH_RING_OFFSETS_FROM_WINDOW_START_MINUTES = (-5, 0)
 
 
 class KakaoTransitRecommendationService:
@@ -175,19 +176,24 @@ class KakaoTransitRecommendationService:
     def _travel_time_ring_centers(
         request: LiveRecommendationRequest,
     ) -> list[tuple[float, float]]:
-        target_minutes = request.max_travel_time_minutes - TRAVEL_TIME_WINDOW_MINUTES / 2
-        radius_radians = (
-            target_minutes * SEARCH_RING_METERS_PER_MINUTE / EARTH_RADIUS_METERS
-        )
         origin_latitude = math.radians(request.origin_latitude)
         centers = []
-        for index in range(SEARCH_RING_SAMPLE_COUNT):
-            bearing = 2 * math.pi * index / SEARCH_RING_SAMPLE_COUNT
-            latitude = origin_latitude + radius_radians * math.cos(bearing)
-            longitude = math.radians(request.origin_longitude) + (
-                radius_radians * math.sin(bearing) / math.cos(origin_latitude)
+        window_start_minutes = max(
+            0, request.max_travel_time_minutes - TRAVEL_TIME_WINDOW_MINUTES
+        )
+        for offset_minutes in SEARCH_RING_OFFSETS_FROM_WINDOW_START_MINUTES:
+            radius_radians = (
+                (window_start_minutes + offset_minutes)
+                * SEARCH_RING_METERS_PER_MINUTE
+                / EARTH_RADIUS_METERS
             )
-            centers.append((math.degrees(longitude), math.degrees(latitude)))
+            for index in range(SEARCH_RING_SAMPLE_COUNT):
+                bearing = 2 * math.pi * index / SEARCH_RING_SAMPLE_COUNT
+                latitude = origin_latitude + radius_radians * math.cos(bearing)
+                longitude = math.radians(request.origin_longitude) + (
+                    radius_radians * math.sin(bearing) / math.cos(origin_latitude)
+                )
+                centers.append((math.degrees(longitude), math.degrees(latitude)))
         return centers
 
     @staticmethod

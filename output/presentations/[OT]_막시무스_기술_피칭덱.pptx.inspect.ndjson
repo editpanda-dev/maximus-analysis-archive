@@ -1,0 +1,161 @@
+{"kind":"deck","id":"pr/h5epjx","name":"Deck"}
+{"kind":"layout","layoutId":"21d14686-6487-495d-b7a3-043be584257b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"541c0f9e-25f2-4fa6-8dfa-516076d11d49","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/bu16kb","slide":1,"title":"TEAM MAXIMUS","textShapes":6}
+{"kind":"textbox","id":"sh/36dgnmp8","slide":1,"name":"team-name","text":"TEAM MAXIMUS","textPreview":"TEAM MAXIMUS","textChars":12,"textLines":1,"bbox":[72,58,280,30]}
+{"kind":"textbox","id":"sh/47mhw7qt","slide":1,"name":"hero-title","text":"사람은 많은데,\n왜 매출은 다를까?","textPreview":"사람은 많은데, | 왜 매출은 다를까?","textChars":19,"textLines":2,"bbox":[72,166,820,180]}
+{"kind":"textbox","id":"sh/p8vypc7e","slide":1,"name":"hero-subtitle","text":"동대문구 출발 50분 생활권의\n목적별 상권 추천 모델","textPreview":"동대문구 출발 50분 생활권의 | 목적별 상권 추천 모델","textChars":29,"textLines":2,"bbox":[76,376,650,86]}
+{"kind":"shape","id":"sh/uhkfqx8r","slide":1,"name":"hero-square","bbox":[950,136,210,210]}
+{"kind":"textbox","id":"sh/fitgj2pc","slide":1,"name":"hero-number","text":"50","textPreview":"50","textChars":2,"textLines":1,"bbox":[950,160,210,100]}
+{"kind":"textbox","id":"sh/gj2xs7qh","slide":1,"name":"hero-min","text":"MIN","textPreview":"MIN","textChars":3,"textLines":1,"bbox":[950,250,210,52]}
+{"kind":"textbox","id":"sh/hkbylc72","slide":1,"name":"members","text":"장한별 · 지우진 · 최시현","textPreview":"장한별 · 지우진 · 최시현","textChars":15,"textLines":1,"bbox":[76,632,430,28]}
+{"kind":"notes","id":"nt/bu16kb","slide":1,"text":"첫 질문은 단순합니다. 사람이 많은 지역이면 정말 좋은 상권일까요? 저희는 동대문구에서 50분 안에 갈 수 있는 지역 가운데, 방문과 소비의 차이를 데이터로 설명하고 목적별로 추천하려고 합니다.\n\n[Sources]\n- Team Maximus Week 3 final report, 2026-08-24"}
+{"kind":"slide","id":"sl/fl0dfs","slide":2,"title":"02","textShapes":9}
+{"kind":"textbox","id":"sh/t4fep032","slide":2,"name":"page-2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,38,60,26]}
+{"kind":"textbox","id":"sh/6hovu54b","slide":2,"name":"title-2","text":"유동인구만으로는 ‘목적 있는 방문’을 설명할 수 없다","textPreview":"유동인구만으로는 ‘목적 있는 방문’을 설명할 수 없다","textChars":29,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"shape","id":"sh/7ixwnqlw","slide":2,"name":"yellow-rule-2","bbox":[1162,39,54,12]}
+{"kind":"textbox","id":"sh/kf6dsvml","slide":2,"name":"flow-label","text":"유동인구","textPreview":"유동인구","textChars":4,"textLines":1,"bbox":[96,230,250,50]}
+{"kind":"textbox","id":"sh/5gfel03q","slide":2,"name":"sales-label","text":"카드매출","textPreview":"카드매출","textChars":4,"textLines":1,"bbox":[934,230,250,50]}
+{"kind":"shape","id":"sh/id4vql4f","slide":2,"name":"flow-to-gap","bbox":[344,255,214,0]}
+{"kind":"shape","id":"sh/jexwjql0","slide":2,"name":"gap-to-sales","bbox":[722,255,210,0]}
+{"kind":"shape","id":"sh/obqx4fmp","slide":2,"name":"gap-node","bbox":[514,188,252,132]}
+{"kind":"textbox","id":"sh/pczexk3a","slide":2,"name":"gap-label","text":"괴리","textPreview":"괴리","textChars":2,"textLines":1,"bbox":[514,202,252,68]}
+{"kind":"textbox","id":"sh/lgbatkzi","slide":2,"name":"gap-question","text":"왜 같이 움직이지 않는가?","textPreview":"왜 같이 움직이지 않는가?","textChars":14,"textLines":1,"bbox":[514,265,252,36]}
+{"kind":"shape","id":"sh/kf290fyx","slide":2,"name":"claim-band","bbox":[100,410,1080,145]}
+{"kind":"textbox","id":"sh/ze9srahc","slide":2,"name":"core-claim","text":"‘많이 지나가는 곳’과 ‘찾아가서 소비하는 곳’을 분리한다","textPreview":"‘많이 지나가는 곳’과 ‘찾아가서 소비하는 곳’을 분리한다","textChars":32,"textLines":1,"bbox":[150,435,980,58]}
+{"kind":"textbox","id":"sh/yd0ry5gr","slide":2,"name":"method-claim","text":"선형에 가까운 지역을 삭제하지 않고, 기대매출 대비 잔차가 반복되는 행정동을 찾는다","textPreview":"선형에 가까운 지역을 삭제하지 않고, 기대매출 대비 잔차가 반복되는 행정동을 찾는다","textChars":46,"textLines":1,"bbox":[150,496,980,34]}
+{"kind":"textbox","id":"sh/xcrapkz6","slide":2,"name":"footer-2","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[64,680,240,18]}
+{"kind":"notes","id":"nt/fl0dfs","slide":2,"text":"저희의 분석 대상은 단순히 유동이 많은 지역이 아닙니다. 유동과 매출의 일반적인 관계를 먼저 학습하고, 그 관계에서 지속적으로 벗어나는 지역을 찾습니다. 양의 잔차는 목적소비형, 음의 잔차는 통과형 가능성을 의미합니다.\n\n[Sources]\n- Team-provided 423-dong EDA summary\n- Week 3 final report section 2.1"}
+{"kind":"slide","id":"sl/ybrc05","slide":3,"title":"03","textShapes":15}
+{"kind":"textbox","id":"sh/jixw7u9s","slide":3,"name":"page-3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,38,60,26]}
+{"kind":"textbox","id":"sh/4j6dgzad","slide":3,"name":"title-3","text":"네 종류의 데이터를 같은 시공간 단위로 맞춘다","textPreview":"네 종류의 데이터를 같은 시공간 단위로 맞춘다","textChars":25,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/5kfe94ry","slide":3,"name":"subtitle-3","text":"개인을 억지로 연결하지 않고 기간×행정동×집단 수준에서 결합","textPreview":"개인을 억지로 연결하지 않고 기간×행정동×집단 수준에서 결합","textChars":33,"textLines":1,"bbox":[66,130,1110,34]}
+{"kind":"shape","id":"sh/6lovi9sj","slide":3,"name":"yellow-rule-3","bbox":[1162,39,54,12]}
+{"kind":"shape","id":"sh/rmxwbe94","slide":3,"name":"c1","bbox":[280,300,230,0]}
+{"kind":"shape","id":"sh/sn6dkjap","slide":3,"name":"c2","bbox":[280,420,230,55]}
+{"kind":"shape","id":"sh/tozed4ra","slide":3,"name":"c3","bbox":[770,300,230,0]}
+{"kind":"shape","id":"sh/ep8vm9sf","slide":3,"name":"c4","bbox":[770,420,230,55]}
+{"kind":"shape","id":"sh/fqhwfe90","slide":3,"name":"B078-node","bbox":[72,210,250,126]}
+{"kind":"textbox","id":"sh/vuts3u1k","slide":3,"name":"B078-head","text":"B078","textPreview":"B078","textChars":4,"textLines":1,"bbox":[90,226,214,34]}
+{"kind":"textbox","id":"sh/utkbapkf","slide":3,"name":"B078-body","text":"이동시간 · 목적코드\n성·연령별 이동량","textPreview":"이동시간 · 목적코드 | 성·연령별 이동량","textChars":21,"textLines":2,"bbox":[90,264,214,56]}
+{"kind":"shape","id":"sh/hwba54jq","slide":3,"name":"B079-node","bbox":[72,400,250,126]}
+{"kind":"textbox","id":"sh/wv2tcz25","slide":3,"name":"B079-head","text":"B079","textPreview":"B079","textChars":4,"textLines":1,"bbox":[90,416,214,34]}
+{"kind":"textbox","id":"sh/7q9szu1o","slide":3,"name":"B079-body","text":"업종별 건수 · 금액\n고객거주지–가맹점동","textPreview":"업종별 건수 · 금액 | 고객거주지–가맹점동","textChars":22,"textLines":2,"bbox":[90,454,214,56]}
+{"kind":"shape","id":"sh/m50b6pk3","slide":3,"name":"상권·POI-node","bbox":[958,210,250,126]}
+{"kind":"textbox","id":"sh/9sra1kju","slide":3,"name":"상권·POI-head","text":"상권·POI","textPreview":"상권·POI","textChars":6,"textLines":1,"bbox":[976,226,214,34]}
+{"kind":"textbox","id":"sh/8rit8z29","slide":3,"name":"상권·POI-body","text":"점포 · 업종다양성\n도서관 · 공원 · 문화시설","textPreview":"점포 · 업종다양성 | 도서관 · 공원 · 문화시설","textChars":26,"textLines":2,"bbox":[976,264,214,56]}
+{"kind":"shape","id":"sh/rmdsbe1s","slide":3,"name":"Kakao API-node","bbox":[958,400,250,126]}
+{"kind":"textbox","id":"sh/6l4bi9k7","slide":3,"name":"Kakao API-head","text":"Kakao API","textPreview":"Kakao API","textChars":9,"textLines":1,"bbox":[976,416,214,34]}
+{"kind":"textbox","id":"sh/2t8nqh8r","slide":3,"name":"Kakao API-body","text":"출발지별 대중교통\n50분 접근시간","textPreview":"출발지별 대중교통 | 50분 접근시간","textChars":18,"textLines":2,"bbox":[976,454,214,56]}
+{"kind":"shape","id":"sh/nuh4zmpc","slide":3,"name":"feature-store","bbox":[492,244,296,246]}
+{"kind":"textbox","id":"sh/ovq5srqx","slide":3,"name":"feature-title","text":"Feature Store","textPreview":"Feature Store","textChars":13,"textLines":1,"bbox":[520,270,240,42]}
+{"kind":"textbox","id":"sh/pwzm1c7i","slide":3,"name":"feature-body","text":"분기 × 행정동 × 목적\n\n접근성 · 유입 · 소비전환\n업종집적 · 목적시설","textPreview":"분기 × 행정동 × 목적 |  | 접근성 · 유입 · 소비전환 | 업종집적 · 목적시설","textChars":42,"textLines":4,"bbox":[520,326,240,130]}
+{"kind":"textbox","id":"sh/axsnuh83","slide":3,"name":"join-warning","text":"주의: B078 방문자와 B079 결제자를 동일 개인으로 해석하지 않음","textPreview":"주의: B078 방문자와 B079 결제자를 동일 개인으로 해석하지 않음","textChars":39,"textLines":1,"bbox":[370,580,540,32]}
+{"kind":"textbox","id":"sh/by143mpo","slide":3,"name":"footer-3","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[64,680,240,18]}
+{"kind":"notes","id":"nt/ybrc05","slide":3,"text":"B078은 이동, B079는 소비 결과, 상권·POI는 목적지 속성, 카카오 API는 실제 대중교통 접근성을 담당합니다. 네 자료는 동일 개인을 추적하는 방식이 아니라 공통 기간과 행정동, 집단 수준의 특징으로 맞춥니다.\n\n[Sources]\n- B078_PURPOSE_250M_202403_sample.csv\n- B079_personal_card_inflow_dong_sample.csv\n- Week 3 final report sections 1.1 and 3.1"}
+{"kind":"slide","id":"sl/qhik1w","slide":4,"title":"04","textShapes":8}
+{"kind":"textbox","id":"sh/p0vydsju","slide":4,"name":"page-4","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[64,38,60,26]}
+{"kind":"textbox","id":"sh/2x4fidk3","slide":4,"name":"title-4","text":"매출은 유동보다 ‘상권 구조’와 더 강하게 움직였다","textPreview":"매출은 유동보다 ‘상권 구조’와 더 강하게 움직였다","textChars":28,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/3ydwbi1o","slide":4,"name":"subtitle-4","text":"Spearman 상관계수 · 팀원 제공 EDA 수치","textPreview":"Spearman 상관계수 · 팀원 제공 EDA 수치","textChars":28,"textLines":1,"bbox":[66,130,1110,34]}
+{"kind":"shape","id":"sh/cn6xon25","slide":4,"name":"yellow-rule-4","bbox":[1162,39,54,12]}
+{"kind":"shape","id":"sh/a14fmxkf","slide":4,"name":"eda-meaning","bbox":[866,214,320,300]}
+{"kind":"textbox","id":"sh/b2xgf210","slide":4,"name":"eda-number","text":"0.555","textPreview":"0.555","textChars":5,"textLines":1,"bbox":[890,245,272,86]}
+{"kind":"textbox","id":"sh/kr6xs72h","slide":4,"name":"eda-claim","text":"유동만으로는\n매출을 충분히 설명하지 못한다","textPreview":"유동만으로는 | 매출을 충분히 설명하지 못한다","textChars":23,"textLines":2,"bbox":[900,342,252,92]}
+{"kind":"textbox","id":"sh/lsfylcj2","slide":4,"name":"eda-caveat","text":"상관 ≠ 인과\n규모효과를 통제한 잔차 분석 필요","textPreview":"상관 ≠ 인과 | 규모효과를 통제한 잔차 분석 필요","textChars":26,"textLines":2,"bbox":[905,447,242,50]}
+{"kind":"textbox","id":"sh/dsn65832","slide":4,"name":"eda-source-note","text":"※ 423개 행정동 원자료가 현재 작업공간에 없어 팀원 제공 수치로 표시","textPreview":"※ 423개 행정동 원자료가 현재 작업공간에 없어 팀원 제공 수치로 표시","textChars":40,"textLines":1,"bbox":[90,613,800,24]}
+{"kind":"textbox","id":"sh/cru5cn2h","slide":4,"name":"footer-4","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[64,680,240,18]}
+{"kind":"chart","id":"ch/1wz65w3q","slide":4,"name":"","chartType":"bar","bbox":[90,190,740,390]}
+{"kind":"notes","id":"nt/qhik1w","slide":4,"text":"EDA에서 유동과 매출의 상관은 0.555였습니다. 반면 점포 수와 업종 집적, 음식지출은 0.9 안팎이었습니다. 이 수치가 곧 인과관계를 뜻하지는 않지만, 유동 하나로 추천하면 환승·통과 지역을 과대평가할 수 있다는 출발점은 분명합니다.\n\n[Sources]\n- Team-provided 423-dong EDA: Spearman 0.555, 0.899, 0.904, 0.911\n- Week 3 final report page 1"}
+{"kind":"slide","id":"sl/nhyo5o","slide":5,"title":"05","textShapes":15}
+{"kind":"textbox","id":"sh/wri14rmh","slide":5,"name":"page-5","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[64,38,60,26]}
+{"kind":"textbox","id":"sh/vq9kbmlw","slide":5,"name":"title-5","text":"‘비선형 지역’은 모델 잔차와 지속성으로 찾는다","textPreview":"‘비선형 지역’은 모델 잔차와 지속성으로 찾는다","textChars":26,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"shape","id":"sh/ap0j2h4b","slide":5,"name":"yellow-rule-5","bbox":[1162,39,54,12]}
+{"kind":"shape","id":"sh/9or29c36","slide":5,"name":"formula-band","bbox":[78,186,1124,108]}
+{"kind":"textbox","id":"sh/8ni107ml","slide":5,"name":"formula-main","text":"기대매출 ŷ = f(유동, 점포, 면적, 상권유형, 업종구성)","textPreview":"기대매출 ŷ = f(유동, 점포, 면적, 상권유형, 업종구성)","textChars":34,"textLines":1,"bbox":[110,205,1060,40]}
+{"kind":"textbox","id":"sh/nm9k72l0","slide":5,"name":"formula-gap","text":"Gap = log(1 + 실제매출) − log(1 + 기대매출)","textPreview":"Gap = log(1 + 실제매출) − log(1 + 기대매출)","textChars":35,"textLines":1,"bbox":[110,250,1060,28]}
+{"kind":"shape","id":"sh/m1gjyh4f","slide":5,"name":"m1","bbox":[302,432,146,0]}
+{"kind":"shape","id":"sh/l0725c3u","slide":5,"name":"m2","bbox":[632,432,146,0]}
+{"kind":"shape","id":"sh/0zy1w7m9","slide":5,"name":"model-01","bbox":[78,350,300,166]}
+{"kind":"textbox","id":"sh/elsf25k3","slide":5,"name":"num-01","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[96,365,50,28]}
+{"kind":"textbox","id":"sh/zm1wvalo","slide":5,"name":"head-01","text":"다중회귀","textPreview":"다중회귀","textChars":4,"textLines":1,"bbox":[102,397,252,58]}
+{"kind":"textbox","id":"sh/07ax4f29","slide":5,"name":"body-01","text":"설명 가능한 기준선","textPreview":"설명 가능한 기준선","textChars":10,"textLines":1,"bbox":[98,462,260,30]}
+{"kind":"shape","id":"sh/183yx03e","slide":5,"name":"model-02","bbox":[448,350,300,166]}
+{"kind":"textbox","id":"sh/qhsfylkr","slide":5,"name":"num-02","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[466,365,50,28]}
+{"kind":"textbox","id":"sh/ri1wrqlc","slide":5,"name":"head-02","text":"GAM","textPreview":"GAM","textChars":3,"textLines":1,"bbox":[472,397,252,58]}
+{"kind":"textbox","id":"sh/cjax0v2x","slide":5,"name":"body-02","text":"포화·곡률 포착","textPreview":"포화·곡률 포착","textChars":8,"textLines":1,"bbox":[468,462,260,30]}
+{"kind":"shape","id":"sh/dkjet03i","slide":5,"name":"model-03","bbox":[818,350,300,166]}
+{"kind":"textbox","id":"sh/2d8fulkv","slide":5,"name":"num-03","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[836,365,50,28]}
+{"kind":"textbox","id":"sh/3ehwnqlg","slide":5,"name":"head-03","text":"LightGBM\nCatBoost","textPreview":"LightGBM | CatBoost","textChars":17,"textLines":2,"bbox":[842,397,252,58]}
+{"kind":"textbox","id":"sh/7ixcvm18","slide":5,"name":"body-03","text":"복잡한 상호작용","textPreview":"복잡한 상호작용","textChars":8,"textLines":1,"bbox":[838,462,260,30]}
+{"kind":"textbox","id":"sh/6xob2h0n","slide":5,"name":"gap-explain","text":"잔차 상·하위 행정동 → SHAP · 부분의존도 · 목적/연령/시간대 · POI 대조 → 원인 가설 검증","textPreview":"잔차 상·하위 행정동 → SHAP · 부분의존도 · 목적/연령/시간대 · POI 대조 → 원인 가설 검증","textChars":58,"textLines":1,"bbox":[112,562,1056,42]}
+{"kind":"textbox","id":"sh/tkfuxwjy","slide":5,"name":"footer-5","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[64,680,240,18]}
+{"kind":"notes","id":"nt/nhyo5o","slide":5,"text":"선형관계 지역을 먼저 빼지 않습니다. 전체 지역으로 기대매출을 학습한 뒤, 잔차가 작으면 일반형으로 두고 잔차가 반복되는 지역만 원인을 분석합니다. GAM은 포화와 곡률을, 트리 모델은 복잡한 상호작용을 포착하며 SHAP으로 설명합니다.\n\n[Sources]\n- Week 3 final report section 2.1\n- Local EDA methodology notes"}
+{"kind":"slide","id":"sl/6hqu15","slide":6,"title":"06","textShapes":13}
+{"kind":"textbox","id":"sh/0vutkr69","slide":6,"name":"page-6","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[64,38,60,26]}
+{"kind":"textbox","id":"sh/zalcrm5o","slide":6,"name":"title-6","text":"방문 목적은 이동과 소비의 ‘집단 패턴’으로 추론한다","textPreview":"방문 목적은 이동과 소비의 ‘집단 패턴’으로 추론한다","textChars":29,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"shape","id":"sh/e9cbiho3","slide":6,"name":"yellow-rule-6","bbox":[1162,39,54,12]}
+{"kind":"textbox","id":"sh/d8japcni","slide":6,"name":"b078-head","text":"B078","textPreview":"B078","textChars":4,"textLines":1,"bbox":[84,205,260,42]}
+{"kind":"textbox","id":"sh/c7atg76d","slide":6,"name":"b078-body","text":"목적코드 · 이동시간\n성별 · 연령 · 시간대","textPreview":"목적코드 · 이동시간 | 성별 · 연령 · 시간대","textChars":25,"textLines":2,"bbox":[84,254,300,90]}
+{"kind":"textbox","id":"sh/r61sn25s","slide":6,"name":"plus","text":"+","textPreview":"+","textChars":1,"textLines":1,"bbox":[395,248,60,60]}
+{"kind":"textbox","id":"sh/q5sbexo7","slide":6,"name":"b079-head","text":"B079","textPreview":"B079","textChars":4,"textLines":1,"bbox":[480,205,260,42]}
+{"kind":"textbox","id":"sh/p4jalsnm","slide":6,"name":"b079-body","text":"업종별 건수 · 금액\n건당금액 · 고객거주지","textPreview":"업종별 건수 · 금액 | 건당금액 · 고객거주지","textChars":24,"textLines":2,"bbox":[480,254,310,90]}
+{"kind":"shape","id":"sh/43atc761","slide":6,"name":"purpose-arrow","bbox":[790,290,110,0]}
+{"kind":"shape","id":"sh/ex0behs3","slide":6,"name":"purpose-vector","bbox":[902,190,300,176]}
+{"kind":"textbox","id":"sh/fy9snmt8","slide":6,"name":"purpose-title","text":"Purpose Vector","textPreview":"Purpose Vector","textChars":14,"textLines":1,"bbox":[925,214,254,40]}
+{"kind":"textbox","id":"sh/gzitgrat","slide":6,"name":"purpose-list","text":"식사 · 카페 · 공부\n여가 · 쇼핑 · 문화","textPreview":"식사 · 카페 · 공부 | 여가 · 쇼핑 · 문화","textChars":25,"textLines":2,"bbox":[925,270,254,70]}
+{"kind":"shape","id":"sh/10rapwbe","slide":6,"name":"purpose-rule","bbox":[84,430,1118,126]}
+{"kind":"textbox","id":"sh/69gbahsr","slide":6,"name":"purpose-claim","text":"같은 50분 후보군이어도 목적에 따라 최종 순위는 달라진다","textPreview":"같은 50분 후보군이어도 목적에 따라 최종 순위는 달라진다","textChars":32,"textLines":1,"bbox":[126,451,1034,44]}
+{"kind":"textbox","id":"sh/ra9sjmtc","slide":6,"name":"purpose-detail","text":"POI · 업종다양성 · 시간대 유입 · 소비전환의 가중치를 목적별로 다르게 적용","textPreview":"POI · 업종다양성 · 시간대 유입 · 소비전환의 가중치를 목적별로 다르게 적용","textChars":45,"textLines":1,"bbox":[130,504,1026,30]}
+{"kind":"textbox","id":"sh/sbitcrax","slide":6,"name":"purpose-warning","text":"개인 단위 인과 추적이 아니라 행정동·집단 수준의 확률적 추론","textPreview":"개인 단위 인과 추적이 아니라 행정동·집단 수준의 확률적 추론","textChars":34,"textLines":1,"bbox":[310,595,660,28]}
+{"kind":"textbox","id":"sh/twralcbi","slide":6,"name":"footer-6","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[64,680,240,18]}
+{"kind":"notes","id":"nt/6hqu15","slide":6,"text":"B078과 B079를 같은 사람의 기록처럼 붙이지 않습니다. 대신 특정 행정동에 어떤 목적과 연령, 시간대의 유입이 있었는지와 어떤 업종에서 소비가 발생했는지를 집단 수준에서 비교해 목적 벡터를 만듭니다.\n\n[Sources]\n- B078 and B079 sample schemas\n- Week 3 final report sections 1.1, 2.3"}
+{"kind":"slide","id":"sl/hqq9i0","slide":7,"title":"07","textShapes":15}
+{"kind":"textbox","id":"sh/25k3exgv","slide":7,"name":"page-7","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[64,38,60,26]}
+{"kind":"textbox","id":"sh/p8v2pcfm","slide":7,"name":"title-7","text":"추천은 규칙기반에서 설명가능한 점포 재정렬로 고도화한다","textPreview":"추천은 규칙기반에서 설명가능한 점포 재정렬로 고도화한다","textChars":30,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"shape","id":"sh/o7mlg7y1","slide":7,"name":"yellow-rule-7","bbox":[1162,39,54,12]}
+{"kind":"shape","id":"sh/f2tkjixk","slide":7,"name":"r0-x1","bbox":[365,372,93,0]}
+{"kind":"shape","id":"sh/ehk3adgz","slide":7,"name":"x1-p2","bbox":[825,372,93,0]}
+{"kind":"shape","id":"sh/14b2lsfq","slide":7,"name":"stack-R0","bbox":[70,220,292,318]}
+{"kind":"textbox","id":"sh/g32lcny5","slide":7,"name":"tag-R0","text":"R0","textPreview":"R0","textChars":2,"textLines":1,"bbox":[94,240,64,34]}
+{"kind":"textbox","id":"sh/retkfix8","slide":7,"name":"stack-head-R0","text":"Accessible Relevance","textPreview":"Accessible Relevance","textChars":20,"textLines":1,"bbox":[94,288,244,68]}
+{"kind":"textbox","id":"sh/6d036dg3","slide":7,"name":"stack-body-R0","text":"50분 접근성\n목적별 규칙점수\nHuff 기준선","textPreview":"50분 접근성 | 목적별 규칙점수 | Huff 기준선","textChars":25,"textLines":3,"bbox":[100,380,232,112]}
+{"kind":"shape","id":"sh/crut4jy9","slide":7,"name":"stack-X1","bbox":[458,220,292,318]}
+{"kind":"textbox","id":"sh/xs3ud4fu","slide":7,"name":"tag-X1","text":"X1","textPreview":"X1","textChars":2,"textLines":1,"bbox":[482,240,64,34]}
+{"kind":"textbox","id":"sh/apcb29g3","slide":7,"name":"stack-head-X1","text":"Explainable Ranker","textPreview":"Explainable Ranker","textChars":18,"textLines":1,"bbox":[482,288,244,68]}
+{"kind":"textbox","id":"sh/bqlcbexo","slide":7,"name":"stack-body-X1","text":"PPML · 로짓\nLightGBM/CatBoost\nSHAP 근거","textPreview":"PPML · 로짓 | LightGBM/CatBoost | SHAP 근거","textChars":35,"textLines":3,"bbox":[488,380,232,112]}
+{"kind":"shape","id":"sh/onut0zyx","slide":7,"name":"stack-P2","bbox":[918,220,292,318]}
+{"kind":"textbox","id":"sh/po3u94fi","slide":7,"name":"tag-P2","text":"P2","textPreview":"P2","textChars":2,"textLines":1,"bbox":[942,240,64,34]}
+{"kind":"textbox","id":"sh/21cbypg7","slide":7,"name":"stack-head-P2","text":"Point-of-Interest Reranker","textPreview":"Point-of-Interest Reranker","textChars":26,"textLines":1,"bbox":[942,288,244,68]}
+{"kind":"textbox","id":"sh/nmlc7uxs","slide":7,"name":"stack-body-P2","text":"KoRoBERTa/SBERT\n점포·메뉴·후기 텍스트\nMLP 개인화","textPreview":"KoRoBERTa/SBERT | 점포·메뉴·후기 텍스트 | MLP 개인화","textChars":36,"textLines":3,"bbox":[948,380,232,112]}
+{"kind":"textbox","id":"sh/8jedc3yh","slide":7,"name":"district-output","text":"상권 추천","textPreview":"상권 추천","textChars":5,"textLines":1,"bbox":[120,571,190,34]}
+{"kind":"textbox","id":"sh/9k7ulof2","slide":7,"name":"rank-output","text":"근거가 있는 순위","textPreview":"근거가 있는 순위","textChars":9,"textLines":1,"bbox":[508,571,190,34]}
+{"kind":"textbox","id":"sh/hg3u5o76","slide":7,"name":"store-output","text":"상권 내부 점포 추천","textPreview":"상권 내부 점포 추천","textChars":11,"textLines":1,"bbox":[958,571,210,34]}
+{"kind":"textbox","id":"sh/gfutwjql","slide":7,"name":"footer-7","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[64,680,240,18]}
+{"kind":"notes","id":"nt/hqq9i0","slide":7,"text":"R0는 데이터가 적어도 작동하는 베이스라인입니다. X1은 실제 이동과 소비 결과로 가중치를 교정하고 SHAP으로 근거를 제시합니다. P2에서는 KoRoBERTa나 Sentence-BERT로 추천 상권 안의 점포 텍스트를 사용자 요구와 비교해 재정렬합니다.\n\n[Sources]\n- Week 3 final report sections 2.3 and 4.2"}
+{"kind":"slide","id":"sl/h0q195","slide":8,"title":"08","textShapes":18}
+{"kind":"textbox","id":"sh/y9wbq9kz","slide":8,"name":"page-8","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[64,38,60,26]}
+{"kind":"textbox","id":"sh/lcna1ojq","slide":8,"name":"title-8","text":"이번 학기의 결과물은 ‘설명 가능한 추천모델’이다","textPreview":"이번 학기의 결과물은 ‘설명 가능한 추천모델’이다","textChars":27,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"shape","id":"sh/0betsj25","slide":8,"name":"yellow-rule-8","bbox":[1162,39,54,12]}
+{"kind":"shape","id":"sh/nyps3y1w","slide":8,"name":"road-line","bbox":[180,300,850,0]}
+{"kind":"shape","id":"sh/mxgbutkb","slide":8,"name":"dot-01","bbox":[150,276,48,48]}
+{"kind":"textbox","id":"sh/907u58jm","slide":8,"name":"road-num-01","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[150,283,48,30]}
+{"kind":"textbox","id":"sh/8zytw32h","slide":8,"name":"road-head-01","text":"DATA","textPreview":"DATA","textChars":4,"textLines":1,"bbox":[76,348,196,34]}
+{"kind":"textbox","id":"sh/v2pc7y1s","slide":8,"name":"road-body-01","text":"정식 B078·B079\n코드북·POI·접근시간","textPreview":"정식 B078·B079 | 코드북·POI·접근시간","textChars":25,"textLines":2,"bbox":[76,392,196,72]}
+{"kind":"shape","id":"sh/a1gbytk7","slide":8,"name":"dot-02","bbox":[424,276,48,48]}
+{"kind":"textbox","id":"sh/srq58ryd","slide":8,"name":"road-num-02","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[424,283,48,30]}
+{"kind":"textbox","id":"sh/tszmhwzi","slide":8,"name":"road-head-02","text":"BASELINE","textPreview":"BASELINE","textChars":8,"textLines":1,"bbox":[350,348,196,34]}
+{"kind":"textbox","id":"sh/6pon6hg7","slide":8,"name":"road-body-02","text":"50분 후보군\n거리·인기·Huff","textPreview":"50분 후보군 | 거리·인기·Huff","textChars":18,"textLines":2,"bbox":[350,392,196,72]}
+{"kind":"shape","id":"sh/rqh4fmhs","slide":8,"name":"dot-03","bbox":[698,276,48,48]}
+{"kind":"textbox","id":"sh/gvq5cry9","slide":8,"name":"road-num-03","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[698,283,48,30]}
+{"kind":"textbox","id":"sh/1wzmlwzu","slide":8,"name":"road-head-03","text":"GAP","textPreview":"GAP","textChars":3,"textLines":1,"bbox":[624,348,196,34]}
+{"kind":"textbox","id":"sh/et8nahg3","slide":8,"name":"road-body-03","text":"GAM·트리모델\n잔차 안정성","textPreview":"GAM·트리모델 | 잔차 안정성","textChars":15,"textLines":2,"bbox":[624,392,196,72]}
+{"kind":"shape","id":"sh/fuh4jmho","slide":8,"name":"dot-04","bbox":[972,276,48,48]}
+{"kind":"textbox","id":"sh/oja5gby5","slide":8,"name":"road-num-04","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[972,283,48,30]}
+{"kind":"textbox","id":"sh/pkj6pgfq","slide":8,"name":"road-head-04","text":"RANK","textPreview":"RANK","textChars":4,"textLines":1,"bbox":[898,348,196,34]}
+{"kind":"textbox","id":"sh/xgfm9w7u","slide":8,"name":"road-body-04","text":"PPML·SHAP\n목적별 Top 5","textPreview":"PPML·SHAP | 목적별 Top 5","textChars":19,"textLines":2,"bbox":[898,392,196,72]}
+{"kind":"shape","id":"sh/cf650bqp","slide":8,"name":"success-band","bbox":[130,510,1020,100]}
+{"kind":"textbox","id":"sh/bex476p4","slide":8,"name":"metric-title","text":"검증 지표","textPreview":"검증 지표","textChars":5,"textLines":1,"bbox":[160,530,150,30]}
+{"kind":"textbox","id":"sh/adony18j","slide":8,"name":"metric-list","text":"시간순 예측 · 잔차 지속성 · NDCG@5 · Hit Rate@5 · 중저인기 노출률","textPreview":"시간순 예측 · 잔차 지속성 · NDCG@5 · Hit Rate@5 · 중저인기 노출률","textChars":48,"textLines":1,"bbox":[310,526,805,42]}
+{"kind":"textbox","id":"sh/l4zmdg76","slide":8,"name":"closing-line","text":"“사람이 많은 곳”이 아니라 “목적 있게 선택되는 곳”을 추천한다","textPreview":"“사람이 많은 곳”이 아니라 “목적 있게 선택되는 곳”을 추천한다","textChars":36,"textLines":1,"bbox":[230,624,820,34]}
+{"kind":"textbox","id":"sh/k3654bql","slide":8,"name":"footer-8","text":"TEAM MAXIMUS · DAT","textPreview":"TEAM MAXIMUS · DAT","textChars":18,"textLines":1,"bbox":[64,680,240,18]}
+{"kind":"notes","id":"nt/h0q195","slide":8,"text":"학기 안에 반드시 완성할 결과물은 설명 가능한 상권 추천모델입니다. 정식 데이터 확보, 50분 후보군, 괴리모형, 목적별 순위와 검증까지가 핵심 범위입니다. 마지막에는 사람이 많은 곳이 아니라 목적 있게 선택되는 곳을 추천하는 모델로 답을 내리겠습니다.\n\n[Sources]\n- Week 3 final report section 4\n- Local project roadmap"}

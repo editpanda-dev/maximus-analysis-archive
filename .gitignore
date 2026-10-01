@@ -1,0 +1,44 @@
+# Data artifacts: keep directory structure only
+data/raw/*
+data/external/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/external/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Python / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local builds and duplicate workspace checkouts
+node_modules/
+.build/
+.chart-data-*/
+.codex-finalizer-progress/
+github/maximus-analysis-archive/
+.worktrees/
+*.xcuserstate
+apps/eodigaji-prototype/dist/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Generated reports/models
+reports/figures/*
+reports/tables/*
+!reports/figures/.gitkeep
+!reports/tables/.gitkeep
+models/
+tmp/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

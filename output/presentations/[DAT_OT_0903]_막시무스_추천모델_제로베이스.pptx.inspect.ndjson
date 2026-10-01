@@ -1,0 +1,159 @@
+{"kind":"deck","id":"pr/byyr7u","name":"Deck"}
+{"kind":"layout","layoutId":"c411f431-cf27-4b51-94d3-47170990f6d1","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"db6645ca-f8fc-4e30-aa3f-34749d409b3f","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/372x81","slide":1,"title":"TEAM MAXIMUS","textShapes":7}
+{"kind":"textbox","id":"sh/3y5cvih4","slide":1,"name":"team","text":"TEAM MAXIMUS","textPreview":"TEAM MAXIMUS","textChars":12,"textLines":1,"bbox":[54,38,260,24]}
+{"kind":"textbox","id":"sh/4zeto3ip","slide":1,"name":"hero","text":"사람이 많은 동네가\n좋은 목적지는 아니다","textPreview":"사람이 많은 동네가 | 좋은 목적지는 아니다","textChars":22,"textLines":2,"bbox":[54,132,820,170]}
+{"kind":"textbox","id":"sh/50nux8za","slide":1,"name":"sub","text":"우리는 ‘어디가 유명한가’가 아니라\n‘왜 이 조건에서 선택되는가’를 모델링한다.","textPreview":"우리는 ‘어디가 유명한가’가 아니라 | ‘왜 이 조건에서 선택되는가’를 모델링한다.","textChars":44,"textLines":2,"bbox":[58,350,660,90]}
+{"kind":"shape","id":"sh/utwbit0n","slide":1,"name":"trace-base","bbox":[800,170,388,1]}
+{"kind":"shape","id":"sh/vu5sryh8","slide":1,"name":"trace-0","bbox":[812,182,48,8]}
+{"kind":"shape","id":"sh/gvetk3id","slide":1,"name":"trace-1","bbox":[860,182,48,23]}
+{"kind":"shape","id":"sh/hwnut8zy","slide":1,"name":"trace-2","bbox":[908,168,48,37]}
+{"kind":"shape","id":"sh/65cbet0b","slide":1,"name":"trace-3","bbox":[956,168,48,16]}
+{"kind":"shape","id":"sh/76lsnyhw","slide":1,"name":"trace-4","bbox":[1004,116,48,68]}
+{"kind":"shape","id":"sh/rm90jqhc","slide":1,"name":"trace-5","bbox":[1052,116,48,78]}
+{"kind":"shape","id":"sh/6l0zql0r","slide":1,"name":"trace-6","bbox":[1100,178,48,16]}
+{"kind":"shape","id":"sh/toril0z2","slide":1,"name":"trace-7","bbox":[1148,178,38,10]}
+{"kind":"shape","id":"sh/snihsvih","slide":1,"name":"anomaly","bbox":[1042,106,20,20]}
+{"kind":"textbox","id":"sh/fqt0nah8","slide":1,"name":"anomaly-label","text":"ANOMALY","textPreview":"ANOMALY","textChars":7,"textLines":1,"bbox":[1005,78,100,24]}
+{"kind":"shape","id":"sh/ep0zu50n","slide":1,"name":"question","bbox":[800,278,390,188]}
+{"kind":"textbox","id":"sh/1cbip0ze","slide":1,"name":"prob","text":"P(destination j | origin, purpose, time)","textPreview":"P(destination j | origin, purpose, time)","textChars":40,"textLines":1,"bbox":[828,315,334,54]}
+{"kind":"textbox","id":"sh/gr2hwfit","slide":1,"name":"prob-sub","text":"목적지 선택확률 → 후보 내부 순위","textPreview":"목적지 선택확률 → 후보 내부 순위","textChars":19,"textLines":1,"bbox":[828,390,334,34]}
+{"kind":"textbox","id":"sh/vupgb6h4","slide":1,"name":"members","text":"장한별  ·  지우진  ·  최시현","textPreview":"장한별  ·  지우진  ·  최시현","textChars":19,"textLines":1,"bbox":[58,640,440,28]}
+{"kind":"notes","id":"nt/372x81","slide":1,"text":"저희의 출발점은 단순합니다. 사람이 많이 다니는 곳이 반드시 실제 목적지가 되는 것은 아닙니다. 그래서 유명 상권을 나열하는 대신, 출발지와 목적, 시간 제약이 주어졌을 때 어떤 동네가 선택되는지를 확률과 순위로 모델링합니다.\n\n[Sources]\n- Team Maximus Week 3 final report, 2026-08-24"}
+{"kind":"slide","id":"sl/e5qhuw","slide":2,"title":"CASE 02","textShapes":12}
+{"kind":"textbox","id":"sh/zm1grups","slide":2,"name":"case-2","text":"CASE 02","textPreview":"CASE 02","textChars":7,"textLines":1,"bbox":[52,30,110,22]}
+{"kind":"textbox","id":"sh/knaxkzqd","slide":2,"name":"label-2","text":"THE GAP","textPreview":"THE GAP","textChars":7,"textLines":1,"bbox":[170,30,500,22]}
+{"kind":"textbox","id":"sh/lojyt47y","slide":2,"name":"date-2","text":"MAXIMUS / DAT / 2026.09.03","textPreview":"MAXIMUS / DAT / 2026.09.03","textChars":26,"textLines":1,"bbox":[930,30,296,22]}
+{"kind":"shape","id":"sh/ax8fep8b","slide":2,"name":"top-rule-2","bbox":[52,62,1176,1]}
+{"kind":"textbox","id":"sh/bihwnupg","slide":2,"name":"page-2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1185,669,40,18]}
+{"kind":"textbox","id":"sh/cjqxgfq1","slide":2,"name":"title","text":"유입과 소비 사이의\n‘괴리’가 단서다","textPreview":"유입과 소비 사이의 | ‘괴리’가 단서다","textChars":20,"textLines":2,"bbox":[52,92,540,118]}
+{"kind":"textbox","id":"sh/xkjypk7m","slide":2,"name":"desc","text":"같은 유동인구라도 매출은 다르게 움직인다.\n그 차이를 잔차로 남겨 상권의 역할을 구분한다.","textPreview":"같은 유동인구라도 매출은 다르게 움직인다. | 그 차이를 잔차로 남겨 상권의 역할을 구분한다.","textChars":50,"textLines":2,"bbox":[56,230,500,72]}
+{"kind":"shape","id":"sh/utcfq9of","slide":2,"name":"x-axis","bbox":[655,596,535,1]}
+{"kind":"shape","id":"sh/velgzep0","slide":2,"name":"y-axis","bbox":[655,120,1,476]}
+{"kind":"textbox","id":"sh/zipwb29s","slide":2,"name":"x-label","text":"유동인구 →","textPreview":"유동인구 →","textChars":6,"textLines":1,"bbox":[1000,612,190,26]}
+{"kind":"textbox","id":"sh/yhgv2x87","slide":2,"name":"y-label","text":"매출","textPreview":"매출","textChars":2,"textLines":1,"bbox":[612,92,70,24]}
+{"kind":"shape","id":"sh/lkredcry","slide":2,"name":"trend","bbox":[690,172,460,378]}
+{"kind":"shape","id":"sh/0jyd47qd","slide":2,"name":"normal-0","bbox":[709,520,12,12]}
+{"kind":"shape","id":"sh/nm9wfm94","slide":2,"name":"normal-1","bbox":[754,492,12,12]}
+{"kind":"shape","id":"sh/ml0f6h8j","slide":2,"name":"normal-2","bbox":[802,462,12,12]}
+{"kind":"shape","id":"sh/9orehcru","slide":2,"name":"normal-3","bbox":[844,419,12,12]}
+{"kind":"shape","id":"sh/8nix8rqp","slide":2,"name":"normal-4","bbox":[890,391,12,12]}
+{"kind":"shape","id":"sh/vq9wjm90","slide":2,"name":"normal-5","bbox":[939,344,12,12]}
+{"kind":"shape","id":"sh/ap0fah8f","slide":2,"name":"normal-6","bbox":[986,314,12,12]}
+{"kind":"shape","id":"sh/6l4z2lsn","slide":2,"name":"normal-7","bbox":[1036,275,12,12]}
+{"kind":"shape","id":"sh/r6dgbqt8","slide":2,"name":"normal-8","bbox":[1094,219,12,12]}
+{"kind":"shape","id":"sh/s7mh4vat","slide":2,"name":"normal-9","bbox":[1134,190,12,12]}
+{"kind":"shape","id":"sh/t8vid0be","slide":2,"name":"purpose","bbox":[847,227,22,22]}
+{"kind":"shape","id":"sh/ihkzylsr","slide":2,"name":"purpose-gap","bbox":[858,238,1,182]}
+{"kind":"textbox","id":"sh/jitg7qtc","slide":2,"name":"purpose-label","text":"목적 소비형","textPreview":"목적 소비형","textChars":6,"textLines":1,"bbox":[760,198,160,28]}
+{"kind":"shape","id":"sh/4jmh0bax","slide":2,"name":"pass","bbox":[1029,459,22,22]}
+{"kind":"shape","id":"sh/5kvy9gb2","slide":2,"name":"pass-gap","bbox":[1040,282,1,188]}
+{"kind":"textbox","id":"sh/2doza5sv","slide":2,"name":"pass-label","text":"통과형","textPreview":"통과형","textChars":3,"textLines":1,"bbox":[1000,488,110,28]}
+{"kind":"shape","id":"sh/3ex0jatg","slide":2,"name":"gap-box","bbox":[54,380,490,184]}
+{"kind":"textbox","id":"sh/d8z294vi","slide":2,"name":"gap-eq","text":"Gap = 실제 매출 − 기대 매출","textPreview":"Gap = 실제 매출 − 기대 매출","textChars":19,"textLines":1,"bbox":[82,407,434,42]}
+{"kind":"textbox","id":"sh/c7q1gzud","slide":2,"name":"gap-meaning","text":"양(+)의 잔차  목적소비형\n음(−)의 잔차  통과형\n3개 분기 지속  구조적 신호","textPreview":"양(+)의 잔차  목적소비형 | 음(−)의 잔차  통과형 | 3개 분기 지속  구조적 신호","textChars":46,"textLines":3,"bbox":[84,468,420,74]}
+{"kind":"notes","id":"nt/e5qhuw","slide":2,"text":"핵심 데이터 신호는 유동과 소비 사이의 괴리입니다. 유동인구와 점포 구조로 기대매출을 예측한 뒤 실제 매출과의 잔차를 봅니다. 기대보다 계속 높은 곳은 목적 소비형, 낮은 곳은 통과형으로 해석하고 최소 3개 분기 지속성을 확인합니다.\n\n[Sources]\n- Team-provided Spearman EDA\n- Week 3 final report section 2.1"}
+{"kind":"slide","id":"sl/ycf4gt","slide":3,"title":"CASE 03","textShapes":21}
+{"kind":"textbox","id":"sh/tk32hk7y","slide":3,"name":"case-3","text":"CASE 03","textPreview":"CASE 03","textChars":7,"textLines":1,"bbox":[52,30,110,22]}
+{"kind":"textbox","id":"sh/6xs3658n","slide":3,"name":"label-3","text":"MODEL PIPELINE","textPreview":"MODEL PIPELINE","textChars":14,"textLines":1,"bbox":[170,30,500,22]}
+{"kind":"textbox","id":"sh/ri1kfap8","slide":3,"name":"date-3","text":"MAXIMUS / DAT / 2026.09.03","textPreview":"MAXIMUS / DAT / 2026.09.03","textChars":26,"textLines":1,"bbox":[930,30,296,22]}
+{"kind":"shape","id":"sh/4val4fqh","slide":3,"name":"top-rule-3","bbox":[52,62,1176,1]}
+{"kind":"textbox","id":"sh/5wj2dk72","slide":3,"name":"page-3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1185,669,40,18]}
+{"kind":"textbox","id":"sh/its3258b","slide":3,"name":"title","text":"추천은 세 번의 필터를 통과한다","textPreview":"추천은 세 번의 필터를 통과한다","textChars":17,"textLines":1,"bbox":[52,92,830,62]}
+{"kind":"textbox","id":"sh/ju1kbapw","slide":3,"name":"desc","text":"선택 불가능한 곳을 먼저 제거하고, 의미 있는 특징을 만든 뒤, 후보 내부 순위를 학습한다.","textPreview":"선택 불가능한 곳을 먼저 제거하고, 의미 있는 특징을 만든 뒤, 후보 내부 순위를 학습한다.","textChars":51,"textLines":1,"bbox":[56,162,900,34]}
+{"kind":"textbox","id":"sh/wrql0vql","slide":3,"name":"n-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[72,252,80,40]}
+{"kind":"shape","id":"sh/hsz29076","slide":3,"name":"r-0","bbox":[72,305,286,1]}
+{"kind":"textbox","id":"sh/xwny5kz6","slide":3,"name":"h-0","text":"REACH","textPreview":"REACH","textChars":5,"textLines":1,"bbox":[72,328,286,38]}
+{"kind":"textbox","id":"sh/wvexcfyl","slide":3,"name":"ko-0","text":"50분 후보군","textPreview":"50분 후보군","textChars":7,"textLines":1,"bbox":[72,372,286,32]}
+{"kind":"textbox","id":"sh/va5w3uh0","slide":3,"name":"b-0","text":"B078 이동시간 +\n카카오 대중교통 시간\n\n30·40·50·60분 민감도","textPreview":"B078 이동시간 + | 카카오 대중교통 시간 |  | 30·40·50·60분 민감도","textChars":41,"textLines":4,"bbox":[72,428,300,144]}
+{"kind":"textbox","id":"sh/a9wfapgf","slide":3,"name":"n-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[426,252,80,40]}
+{"kind":"shape","id":"sh/98ne1kza","slide":3,"name":"r-1","bbox":[426,305,286,1]}
+{"kind":"textbox","id":"sh/87ex8fyp","slide":3,"name":"h-1","text":"SIGNAL","textPreview":"SIGNAL","textChars":6,"textLines":1,"bbox":[426,328,286,38]}
+{"kind":"textbox","id":"sh/n6lwzah4","slide":3,"name":"ko-1","text":"상권 특징량","textPreview":"상권 특징량","textChars":6,"textLines":1,"bbox":[426,372,286,32]}
+{"kind":"textbox","id":"sh/m5cf65gj","slide":3,"name":"b-1","text":"접근성 · 흡인력 · 전환력\nPOI · 업종다양성 · Gap\n\n시점 이전 정보만 사용","textPreview":"접근성 · 흡인력 · 전환력 | POI · 업종다양성 · Gap |  | 시점 이전 정보만 사용","textChars":47,"textLines":4,"bbox":[426,428,300,144]}
+{"kind":"textbox","id":"sh/l43ex0zy","slide":3,"name":"n-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[780,252,80,40]}
+{"kind":"shape","id":"sh/03ux4vid","slide":3,"name":"r-2","bbox":[780,305,286,1]}
+{"kind":"textbox","id":"sh/cnyxkfq9","slide":3,"name":"h-2","text":"RANK","textPreview":"RANK","textChars":4,"textLines":1,"bbox":[780,328,286,38]}
+{"kind":"textbox","id":"sh/do7yd07u","slide":3,"name":"ko-2","text":"목적지 순위","textPreview":"목적지 순위","textChars":6,"textLines":1,"bbox":[780,372,286,32]}
+{"kind":"textbox","id":"sh/qlgfi583","slide":3,"name":"b-2","text":"조건부로짓 / PPML\nLightGBM LambdaRank\n\ngroup = 출발×목적×시간","textPreview":"조건부로짓 / PPML | LightGBM LambdaRank |  | group = 출발×목적×시간","textChars":50,"textLines":4,"bbox":[780,428,300,144]}
+{"kind":"textbox","id":"sh/rmpgbapo","slide":3,"name":"arr1","text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[372,318,40,50]}
+{"kind":"textbox","id":"sh/4jexgvqd","slide":3,"name":"arr2","text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[726,318,40,50]}
+{"kind":"shape","id":"sh/pkne907y","slide":3,"name":"label-band","bbox":[72,620,1062,42]}
+{"kind":"textbox","id":"sh/2hwfel87","slide":3,"name":"label","text":"학습 라벨  목적지별 이동량(count) 또는 후보군 내 선택 점유율","textPreview":"학습 라벨  목적지별 이동량(count) 또는 후보군 내 선택 점유율","textChars":38,"textLines":1,"bbox":[92,625,1020,30]}
+{"kind":"notes","id":"nt/ycf4gt","slide":3,"text":"모델 파이프라인은 세 단계입니다. 첫째 실제 50분 생활권으로 후보를 제한합니다. 둘째 접근성, 목적 관련 시설, 업종 다양성, 소비 전환력을 특징으로 만듭니다. 셋째 같은 출발지·목적·시간대의 후보끼리 비교하도록 조건부 선택모형과 LambdaRank를 학습합니다.\n\n[Sources]\n- B078/B079 sample schemas\n- Huff 1963\n- Arentze et al. 2005"}
+{"kind":"slide","id":"sl/fteidk","slide":4,"title":"CASE 04","textShapes":18}
+{"kind":"textbox","id":"sh/tovy5kza","slide":4,"name":"case-4","text":"CASE 04","textPreview":"CASE 04","textChars":7,"textLines":1,"bbox":[52,30,110,22]}
+{"kind":"textbox","id":"sh/6l4za5gj","slide":4,"name":"label-4","text":"MODEL SELECTION","textPreview":"MODEL SELECTION","textChars":15,"textLines":1,"bbox":[170,30,500,22]}
+{"kind":"textbox","id":"sh/7mdg3ah4","slide":4,"name":"date-4","text":"MAXIMUS / DAT / 2026.09.03","textPreview":"MAXIMUS / DAT / 2026.09.03","textChars":26,"textLines":1,"bbox":[930,30,296,22]}
+{"kind":"shape","id":"sh/kj2x8vyt","slide":4,"name":"top-rule-4","bbox":[52,62,1176,1]}
+{"kind":"textbox","id":"sh/5kvy10zy","slide":4,"name":"page-4","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1185,669,40,18]}
+{"kind":"textbox","id":"sh/yhkf6lgn","slide":4,"name":"title","text":"복잡한 모델보다\n반증 가능한 모델부터","textPreview":"복잡한 모델보다 | 반증 가능한 모델부터","textChars":20,"textLines":2,"bbox":[52,92,520,108]}
+{"kind":"textbox","id":"sh/jitgzqh8","slide":4,"name":"desc","text":"같은 시계열·지역 홀드아웃에서\n해석력과 순위 성능을 동시에 비교한다.","textPreview":"같은 시계열·지역 홀드아웃에서 | 해석력과 순위 성능을 동시에 비교한다.","textChars":38,"textLines":2,"bbox":[56,222,470,68]}
+{"kind":"shape","id":"sh/4f6hkzyx","slide":4,"name":"rowline-0","bbox":[640,220,550,1]}
+{"kind":"textbox","id":"sh/pgfyd4zi","slide":4,"name":"tag-0","text":"BASELINE","textPreview":"BASELINE","textChars":8,"textLines":1,"bbox":[640,120,120,26]}
+{"kind":"textbox","id":"sh/5sna1wza","slide":4,"name":"model-0","text":"Huff · PPML","textPreview":"Huff · PPML","textChars":11,"textLines":1,"bbox":[640,152,420,42]}
+{"kind":"textbox","id":"sh/4rutsrip","slide":4,"name":"meaning-0","text":"거리저항과 계수 해석","textPreview":"거리저항과 계수 해석","textChars":11,"textLines":1,"bbox":[640,194,450,28]}
+{"kind":"shape","id":"sh/3qlszmh4","slide":4,"name":"rowline-1","bbox":[700,374,490,1]}
+{"kind":"textbox","id":"sh/ipcbqh0z","slide":4,"name":"tag-1","text":"NONLINEAR","textPreview":"NONLINEAR","textChars":9,"textLines":1,"bbox":[700,274,120,26]}
+{"kind":"textbox","id":"sh/ho3axcze","slide":4,"name":"model-1","text":"GAM · CatBoost","textPreview":"GAM · CatBoost","textChars":14,"textLines":1,"bbox":[700,306,420,42]}
+{"kind":"textbox","id":"sh/gnuto7it","slide":4,"name":"meaning-1","text":"포화·곡률·상호작용 탐색","textPreview":"포화·곡률·상호작용 탐색","textChars":13,"textLines":1,"bbox":[700,348,450,28]}
+{"kind":"shape","id":"sh/vmlsvmh8","slide":4,"name":"rowline-2","bbox":[760,528,430,1]}
+{"kind":"textbox","id":"sh/ulcrmh0n","slide":4,"name":"tag-2","text":"RANKING","textPreview":"RANKING","textChars":7,"textLines":1,"bbox":[760,428,120,26]}
+{"kind":"textbox","id":"sh/1k7u9gzi","slide":4,"name":"model-2","text":"LightGBM Ranker","textPreview":"LightGBM Ranker","textChars":15,"textLines":1,"bbox":[760,460,420,42]}
+{"kind":"textbox","id":"sh/0jyt0byx","slide":4,"name":"meaning-2","text":"NDCG@5 직접 최적화","textPreview":"NDCG@5 직접 최적화","textChars":13,"textLines":1,"bbox":[760,502,450,28]}
+{"kind":"shape","id":"sh/0n6dcf69","slide":4,"name":"validation","bbox":[54,394,500,192]}
+{"kind":"textbox","id":"sh/lofu5k7u","slide":4,"name":"v-tag","text":"검증 규칙","textPreview":"검증 규칙","textChars":5,"textLines":1,"bbox":[82,418,160,32]}
+{"kind":"textbox","id":"sh/yl4va5o3","slide":4,"name":"v-list","text":"Random split 금지\n과거 분기 → 미래 분기\n서울 일부 지역 → 미관측 지역\nNDCG@5 · Poisson deviance · SHAP 안정성","textPreview":"Random split 금지 | 과거 분기 → 미래 분기 | 서울 일부 지역 → 미관측 지역 | NDCG@5 · Poisson deviance · SHAP 안정성","textChars":84,"textLines":4,"bbox":[82,466,430,100]}
+{"kind":"textbox","id":"sh/zmdc3apo","slide":4,"name":"verdict","text":"가장 복잡한 모델이 아니라,\n새 시점·새 지역에서도 유지되는 모델을 채택한다.","textPreview":"가장 복잡한 모델이 아니라, | 새 시점·새 지역에서도 유지되는 모델을 채택한다.","textChars":43,"textLines":2,"bbox":[645,610,550,50]}
+{"kind":"notes","id":"nt/fteidk","slide":4,"text":"모델은 복잡도 순서로 경쟁시킵니다. Huff와 PPML로 거리저항을 해석하고, GAM과 트리 모델로 비선형성을 확인한 다음, LambdaRank로 순위를 직접 최적화합니다. 랜덤 분할은 쓰지 않고 미래 분기와 미관측 지역에서 살아남는 모델만 채택합니다.\n\n[Sources]\n- Huff 1963\n- Alam et al. 2025\n- Week 3 final report sections 2.2 and 4"}
+{"kind":"slide","id":"sl/z4si0n","slide":5,"title":"CASE 05","textShapes":17}
+{"kind":"textbox","id":"sh/m1obyhoj","slide":5,"name":"case-5","text":"CASE 05","textPreview":"CASE 05","textChars":7,"textLines":1,"bbox":[52,30,110,22]}
+{"kind":"textbox","id":"sh/9ofutwna","slide":5,"name":"label-5","text":"FINE-TUNING DECISION","textPreview":"FINE-TUNING DECISION","textChars":20,"textLines":1,"bbox":[170,30,500,22]}
+{"kind":"textbox","id":"sh/o36t0r6p","slide":5,"name":"date-5","text":"MAXIMUS / DAT / 2026.09.03","textPreview":"MAXIMUS / DAT / 2026.09.03","textChars":26,"textLines":1,"bbox":[930,30,296,22]}
+{"kind":"shape","id":"sh/bqhcvm50","slide":5,"name":"top-rule-5","bbox":[52,62,1176,1]}
+{"kind":"textbox","id":"sh/ap8b2hov","slide":5,"name":"page-5","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1185,669,40,18]}
+{"kind":"textbox","id":"sh/xszuxwn6","slide":5,"name":"title","text":"파인튜닝?\n지금은 아니다.","textPreview":"파인튜닝? | 지금은 아니다.","textChars":14,"textLines":2,"bbox":[52,100,530,130]}
+{"kind":"textbox","id":"sh/wrqt4r6l","slide":5,"name":"desc","text":"데이터가 적은 초기에는 텍스트 모델보다\n후보군·라벨·랭킹 피처의 품질이 성능을 좌우한다.","textPreview":"데이터가 적은 초기에는 텍스트 모델보다 | 후보군·라벨·랭킹 피처의 품질이 성능을 좌우한다.","textChars":49,"textLines":2,"bbox":[56,248,520,72]}
+{"kind":"textbox","id":"sh/rudsj25w","slide":5,"name":"st-0","text":"NOW","textPreview":"NOW","textChars":3,"textLines":1,"bbox":[686,118,110,28]}
+{"kind":"textbox","id":"sh/qt4bqxob","slide":5,"name":"sh-0","text":"Frozen SBERT","textPreview":"Frozen SBERT","textChars":12,"textLines":1,"bbox":[808,112,370,42]}
+{"kind":"textbox","id":"sh/sz6dw7up","slide":5,"name":"sb-0","text":"사용자 목적 문장 ↔ 점포 텍스트\n임베딩 유사도를 하나의 피처로 사용","textPreview":"사용자 목적 문장 ↔ 점포 텍스트 | 임베딩 유사도를 하나의 피처로 사용","textChars":38,"textLines":2,"bbox":[808,162,370,54]}
+{"kind":"shape","id":"sh/t0fepcba","slide":5,"name":"sep-0","bbox":[686,236,504,1]}
+{"kind":"textbox","id":"sh/6x4vuxcj","slide":5,"name":"st-1","text":"NEXT","textPreview":"NEXT","textChars":4,"textLines":1,"bbox":[686,282,110,28]}
+{"kind":"textbox","id":"sh/7ydwn2d4","slide":5,"name":"sh-1","text":"Weak labels","textPreview":"Weak labels","textChars":11,"textLines":1,"bbox":[808,276,370,42]}
+{"kind":"textbox","id":"sh/gn6xkrul","slide":5,"name":"sb-1","text":"목적–업종 규칙으로 positive와\nhard negative 쌍을 만들고 검증","textPreview":"목적–업종 규칙으로 positive와 | hard negative 쌍을 만들고 검증","textChars":44,"textLines":2,"bbox":[808,326,370,54]}
+{"kind":"shape","id":"sh/hofetwb6","slide":5,"name":"sep-1","bbox":[686,400,504,1]}
+{"kind":"textbox","id":"sh/u1ovihcv","slide":5,"name":"st-2","text":"LATER","textPreview":"LATER","textChars":5,"textLines":1,"bbox":[686,446,110,28]}
+{"kind":"textbox","id":"sh/f2xwrmtg","slide":5,"name":"sh-2","text":"Contrastive FT","textPreview":"Contrastive FT","textChars":14,"textLines":1,"bbox":[808,440,370,42]}
+{"kind":"textbox","id":"sh/wr2donuh","slide":5,"name":"sb-2","text":"충분한 선택 로그가 쌓이면\nInfoNCE / triplet loss 실험","textPreview":"충분한 선택 로그가 쌓이면 | InfoNCE / triplet loss 실험","textChars":40,"textLines":2,"bbox":[808,490,370,54]}
+{"kind":"shape","id":"sh/xsvehsv2","slide":5,"name":"rule-box","bbox":[54,514,520,118]}
+{"kind":"textbox","id":"sh/xonulonq","slide":5,"name":"rule-tag","text":"채택 조건","textPreview":"채택 조건","textChars":5,"textLines":1,"bbox":[82,535,130,28]}
+{"kind":"textbox","id":"sh/cnutcjm5","slide":5,"name":"rule-text","text":"Frozen 대비 Recall@K·NDCG 상승\n+ 지역 홀드아웃에서도 성능 유지","textPreview":"Frozen 대비 Recall@K·NDCG 상승 | + 지역 홀드아웃에서도 성능 유지","textChars":45,"textLines":2,"bbox":[82,568,460,48]}
+{"kind":"notes","id":"nt/z4si0n","slide":5,"text":"파인튜닝은 현재 핵심 과제가 아닙니다. 초기에는 사전학습 SBERT를 고정하고 사용자 목적 문장과 점포 텍스트의 유사도를 랭킹 피처로만 씁니다. 실제 선택 로그와 어려운 음성 예시가 충분히 쌓였을 때 대조학습을 실험하고, frozen baseline보다 검증 성능이 좋아질 때만 채택합니다.\n\n[Sources]\n- Team modeling decision: frozen-encoder baseline before fine-tuning\n- Week 3 final report section 2.3"}
+{"kind":"slide","id":"sl/d3h396","slide":6,"title":"CASE 06","textShapes":19}
+{"kind":"textbox","id":"sh/jihs7i9w","slide":6,"name":"case-6","text":"CASE 06","textPreview":"CASE 06","textChars":7,"textLines":1,"bbox":[52,30,110,22]}
+{"kind":"textbox","id":"sh/4jqt0nah","slide":6,"name":"label-6","text":"SEMESTER OUTCOME","textPreview":"SEMESTER OUTCOME","textChars":16,"textLines":1,"bbox":[170,30,500,22]}
+{"kind":"textbox","id":"sh/5kza98r2","slide":6,"name":"date-6","text":"MAXIMUS / DAT / 2026.09.03","textPreview":"MAXIMUS / DAT / 2026.09.03","textChars":26,"textLines":1,"bbox":[930,30,296,22]}
+{"kind":"shape","id":"sh/utorutsf","slide":6,"name":"top-rule-6","bbox":[52,62,1176,1]}
+{"kind":"textbox","id":"sh/vuxs3yt0","slide":6,"name":"page-6","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1185,669,40,18]}
+{"kind":"textbox","id":"sh/wv69w3al","slide":6,"name":"title","text":"한 학기 뒤, 우리는\n‘추천 이유’까지 검증한다","textPreview":"한 학기 뒤, 우리는 | ‘추천 이유’까지 검증한다","textChars":26,"textLines":2,"bbox":[52,92,690,116]}
+{"kind":"textbox","id":"sh/hgza58rq","slide":6,"name":"num-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[60,276,70,36]}
+{"kind":"shape","id":"sh/mporqts3","slide":6,"name":"step-line-0","bbox":[60,325,238,1]}
+{"kind":"textbox","id":"sh/7qxszyto","slide":6,"name":"head-0","text":"DATA","textPreview":"DATA","textChars":4,"textLines":1,"bbox":[60,348,238,34]}
+{"kind":"textbox","id":"sh/nmlofuhw","slide":6,"name":"body-0","text":"B078·B079 정합성\n50분 후보군","textPreview":"B078·B079 정합성 | 50분 후보군","textChars":21,"textLines":2,"bbox":[60,402,250,66]}
+{"kind":"textbox","id":"sh/m1cnmp0b","slide":6,"name":"num-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[360,276,70,36]}
+{"kind":"shape","id":"sh/9on6hkz2","slide":6,"name":"step-line-1","bbox":[360,325,238,1]}
+{"kind":"textbox","id":"sh/onu5ofih","slide":6,"name":"head-1","text":"GAP","textPreview":"GAP","textChars":3,"textLines":1,"bbox":[360,348,238,34]}
+{"kind":"textbox","id":"sh/bq5ojuh8","slide":6,"name":"body-1","text":"미래 시점 잔차\n통과형·목적소비형","textPreview":"미래 시점 잔차 | 통과형·목적소비형","textChars":18,"textLines":2,"bbox":[360,402,250,66]}
+{"kind":"textbox","id":"sh/apw7qp0n","slide":6,"name":"num-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[660,276,70,36]}
+{"kind":"shape","id":"sh/xsn6l4zy","slide":6,"name":"step-line-2","bbox":[660,325,238,1]}
+{"kind":"textbox","id":"sh/wrepszyt","slide":6,"name":"head-2","text":"RANK","textPreview":"RANK","textChars":4,"textLines":1,"bbox":[660,348,238,34]}
+{"kind":"textbox","id":"sh/ru1o7aho","slide":6,"name":"body-2","text":"목적별 Top-K\nNDCG@5·Recall@K","textPreview":"목적별 Top-K | NDCG@5·Recall@K","textChars":25,"textLines":2,"bbox":[660,402,250,66]}
+{"kind":"textbox","id":"sh/qtsne50j","slide":6,"name":"num-3","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[960,276,70,36]}
+{"kind":"shape","id":"sh/e1kz2xo3","slide":6,"name":"step-line-3","bbox":[960,325,238,1]}
+{"kind":"textbox","id":"sh/f2t0b25o","slide":6,"name":"head-3","text":"EXPLAIN","textPreview":"EXPLAIN","textChars":7,"textLines":1,"bbox":[960,348,238,34]}
+{"kind":"textbox","id":"sh/gn2h4769","slide":6,"name":"body-3","text":"SHAP·계수·반례\n추천 근거 점검","textPreview":"SHAP·계수·반례 | 추천 근거 점검","textChars":19,"textLines":2,"bbox":[960,402,250,66]}
+{"kind":"shape","id":"sh/1obidcnu","slide":6,"name":"final","bbox":[58,540,1160,92]}
+{"kind":"textbox","id":"sh/6x0zyxo7","slide":6,"name":"final-text","text":"최종 산출물  목적별 후보 생성기 + 유동–매출 괴리모형 + 설명 가능한 목적지 랭커","textPreview":"최종 산출물  목적별 후보 생성기 + 유동–매출 괴리모형 + 설명 가능한 목적지 랭커","textChars":47,"textLines":1,"bbox":[86,558,1104,54]}
+{"kind":"textbox","id":"sh/7y90725s","slide":6,"name":"close","text":"좋은 추천은 답을 말하는 모델이 아니라, 선택 근거가 데이터로 반증되는 모델이다.","textPreview":"좋은 추천은 답을 말하는 모델이 아니라, 선택 근거가 데이터로 반증되는 모델이다.","textChars":45,"textLines":1,"bbox":[250,654,780,28]}
+{"kind":"notes","id":"nt/d3h396","slide":6,"text":"한 학기 동안 데이터 정합성, 괴리모형, 목적별 랭킹, 설명력 검증을 순서대로 완성합니다. 최종 결과는 앱 화면이 아니라 목적별 후보 생성기와 괴리모형, 그리고 추천 이유를 설명하고 반증할 수 있는 목적지 랭커입니다.\n\n[Sources]\n- Week 3 final report section 4\n- Local semester roadmap"}

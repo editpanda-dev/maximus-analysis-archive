@@ -496,7 +496,17 @@ def test_expands_place_search_when_nearby_candidates_miss_the_selected_time_wind
         "longitude": 127.267,
         "latitude": 37.334,
     }
-    assert len(client.searches) == 9
+    assert len(client.searches) == 33
+
+
+def test_expanded_search_covers_multiple_distance_rings_for_the_selected_window():
+    service = KakaoTransitRecommendationService(StubKakaoClient())
+    request = valid_request(max_travel_time_minutes=30)
+
+    centers = service._travel_time_ring_centers(request)
+
+    assert len(centers) == 32
+    assert centers[0][1] - request.origin_latitude < 0.04
 
 
 def test_nearby_walking_route_below_selected_time_window_is_excluded():

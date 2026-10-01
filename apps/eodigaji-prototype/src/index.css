@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-family-sans: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+  --color-navy: #0F172A;
+  --color-navy-mid: #1E293B;
+  --color-navy-soft: #334155;
+  --color-cobalt: #3B5BDB;
+  --color-cobalt-dim: #4C6EF5;
+  --color-cobalt-light: #EEF2FF;
+  --color-cobalt-pale: #F5F7FF;
+  --color-emerald: #059669;
+  --color-emerald-light: #ECFDF5;
+  --color-slate: #64748B;
+  --color-slate-light: #94A3B8;
+  --color-border: #E2E8F0;
+  --color-page: #F7F8FA;
+}
+
+html, body {
+  background-color: #F7F8FA;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
