@@ -7,6 +7,7 @@ route_length_at_least_euclidean,True,walk>=straight,PASS
 assumed_connector_not_certified,True,all assumed routes unknown in certified flags,PASS
 kakao_nearest_340,True,340 nearest-area routes,PASS
 meal_score_786,True,786 exploratory meal scores,PASS
+latest_cafe_matches_786_statuses,True,224 observed scores,PASS
 s4_final_null,True,all 786 NA,PASS
 three_purpose_final_null,True,all 786 NA,PASS
 exploratory_top20_common_observed,True,20,PASS

@@ -8,10 +8,11 @@
 | --- | --- | --- |
 | [Geofabrik 대한민국 OSM 추출](https://download.geofabrik.de/asia/south-korea-261002.osm.pbf) | 2026-10-02 PBF, SHA-256 `114f36be9bc6f698c36388cbd78d8ab0a1f95ee466cfaad53fe9722a822f275b` | `scripts/extract_maximus_osm_walk_graph.py`로 상권 주변 보행 가능 **후보** 링크 557,912개·노드 496,135개 추출. OSM 기여자 표기와 [ODbL](https://www.openstreetmap.org/copyright) 조건 적용. 그래프 원본/추출 파일은 큰 임시 입력이며 저장소에 포함하지 않음 |
 | 팀 카카오 보행거리 | `codex/kakao-walk-feature@f2846ce`, `c_stay_s4_review_queue_786_kakao_walk.csv` 340건 | **선택된 가장 가까운 상권 하나**와 카페 후보의 경계 출발점 경로. 238건 내부 0m, 외부 102건 경로 응답. 모든 상권·모든 시설의 보행거리 표가 아님 |
+| 카페 면적 보정 초안 | `codex/hanbyeol/cafe-study-followup@6c591a7`, `cafe_size_adjusted_score_draft_786.csv` 786행 | 기존 카페 공급·소비 점수와 구별하여 잔차 보정 카페 점수를 병렬 비교. 아직 최종 채택 점수가 아님 |
 | 김건우님 식사·쇼핑 | `codex/gunwoo/food-shopping-subtypes@d0b6734`, `official_area_food_shopping_size_neutral.csv` 786행 | `food_meal_score_v1`와 매출 공개 비율 결합. 2025Q4 매출과 2026-06 상가 좌표를 섞은 **현재 설명용** 신호. 공식 2025년 예측검증 입력으로 사용 금지. 직선거리 400m 공급 성분 포함 |
 | 다른 식사 v1 대조 | `codex/geonwoo/meal-shopping-v1@1e01203`, 786×2행 | 제과점 제외·주점 여가 이관의 코드 정합 확인. 김건우님 자료가 지적한 크기 보정·결측 정의 차이가 있어 이 브랜치의 점수를 3목적 조합에는 사용하지 않음 |
 
-위 팀 파일 세 개는 `data/external/team_branch_snapshots/`에 커밋 해시를 붙여 읽기 전용 스냅샷으로 보존했다. 두 식사 구현의 점수를 섞지 않았다.
+위 팀 파일 네 개는 `data/external/team_branch_snapshots/`에 커밋 해시를 붙여 읽기 전용 스냅샷으로 보존했다. 두 식사 구현의 점수를 섞지 않았다. 원래 통합 실행에는 최신 카페 면적 보정 초안이 빠져 있었고, Git 브랜치 재대조 후 별도 비교로 추가했다. 로컬 카페 입력 CSV는 해당 브랜치의 `cafe_study_score_draft_20260929_input.csv`와 `area_code`별 값이 일치하지만 파일 바이트는 일치하지 않는다.
 
 ## 1. 실제 OSM 보행망 계산의 범위와 품질
 
@@ -42,9 +43,11 @@
 
 탐색 Top 10은 종각역, 대학로(혜화역), 인사동, 건대입구역(건대), 을지로3가역, 홍대입구역(홍대), 을지로입구역, 숙대입구, 뚝섬역, 종로3가역 순이다. **이것은 10월 6일 최종 3목적 추천 Top 10이 아니다.** 식사 공급의 일부는 2026년 직선거리 좌표 기반, 공부는 S4 25% 미반영·보행 진입 가정·운영 미확인, 카페는 완전관측 224개 집단만 포함한다. 따라서 `meal_cafe_study_final_score`도 786행 전부 NA로 남겼다.
 
+최신 카페 브랜치의 면적 보정 초안을 같은 모집단에 넣은 별도 탐색 Top 10/20도 생성했다. 추천 가능하고 카페 매출을 완전 관측한 218개에서 기존 카페 점수와 보정 초안의 Top 10은 **8개 일치**했다. 식사 매출 공개 비율 조건까지 통과한 208개에서 두 카페 버전의 3목적 **부분 점수** Top 10은 **10개 일치**했다. 이 수치는 해당 모집단과 미완성 공부 신호에 한정된다. 면적 보정 초안을 기존 카페 점수로 대체하지 않고 두 점수·순위를 나란히 남겼다.
+
 ## 4. 자체 검수와 다음 입력
 
-`integration_qa.csv`는 **PASS 13건**, `BLOCKED_ROUTE` 1건, `BLOCKED_EVIDENCE` 1건, `BLOCKED_FINAL_SCORE` 1건이다. 786행·고유 키, 18×786 민감도 행, 상권–시설 중복 0, 400≤500≤600 포함 관계, 보행거리≥직선거리, 잠정 진입을 확정 접근으로 승격하지 않음, 카카오 340건 범위, 식사 786행, 최종 점수 NA, 탐색 Top 20의 동일 모집단, 지도 786개를 확인했다. 보행 경계·무경로 및 잠정 진입 분리 단위검사 등 **5개 테스트 통과**.
+`integration_qa.csv`는 **PASS 14건**, `BLOCKED_ROUTE` 1건, `BLOCKED_EVIDENCE` 1건, `BLOCKED_FINAL_SCORE` 1건이다. 786행·고유 키, 18×786 민감도 행, 상권–시설 중복 0, 400≤500≤600 포함 관계, 보행거리≥직선거리, 잠정 진입을 확정 접근으로 승격하지 않음, 카카오 340건 범위, 식사 786행, 최신 카페 초안의 상태 일치, 최종 점수 NA, 탐색 Top 20의 동일 모집단, 지도 786개를 확인했다. 보행 경계·무경로 및 잠정 진입 분리 단위검사 등 **5개 테스트 통과**.
 
 최종 점수에 필요한 입력은 (1) 시설 실제 출입구와 보행 허용 링크의 연결 확인 및 도로/횡단 규칙 검수, (2) C_stay/S4 시설별 근거 URL·짧은 인용·검토자·검토일과 운영 확인, (3) 김건우님 식사 점수의 직선거리 공급 성분과 카페·공부 보행거리 정의를 통일한 공통 버전이다. 이 작업 후 동일 모집단의 최종 목적 백분위를 다시 계산해야 한다.
 
@@ -56,6 +59,7 @@
 - `.../oct06_integration/cafe_study_meal_integrated_786.csv`: 식사·카페·공부 부분 신호와 최종 미산출 상태를 합친 표.
 - `.../oct06_integration/study_walk_radius_weight_variants_786x18.csv`, `study_walk_radius_weight_top10_sensitivity.csv`: 반경·가중치 민감도.
 - `.../oct06_integration/meal_cafe_study_top10_exploratory.csv`, `meal_cafe_study_exploratory_map_786.geojson`: **탐색용** 조합과 지도.
+- `.../oct06_integration/meal_cafe_adjusted_study_top10_exploratory.csv`, `meal_cafe_adjusted_study_top20_exploratory.csv`, `latest_cafe_branch_rank_comparison.csv`: 최신 카페 면적 보정 초안과의 동일 모집단 비교. 지도에는 두 탐색 순위를 별도 속성으로 기록.
 - `.../oct06_integration/kakao_vs_osm_nearest_area_340.csv`, `integration_qa.csv`: 원천 간 비교와 QA.
 
 재현: `python -m scripts.extract_maximus_osm_walk_graph --pbf <2026-10-02_PBF> --out <임시_graph>`, `python -m scripts.build_hanbyeol_osm_walk_access --nodes <임시_graph>/nodes.csv --edges <임시_graph>/edges.csv`, `python -m scripts.build_hanbyeol_20261006_integration`. OSM 단계에는 `osmium`, `shapely`, `pyproj`, `networkx`, `pandas`가 필요하다. 스냅샷 팀 파일을 함께 제공하며, API 키나 검증되지 않은 S4 양성판정은 생성하지 않았다.

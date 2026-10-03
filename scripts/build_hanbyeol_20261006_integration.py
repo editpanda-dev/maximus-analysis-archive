@@ -44,16 +44,23 @@ def build()->None:
     base=pd.read_csv(BASE/"cafe_study_v1_handoff_786.csv",dtype={"area_code":str})
     raw=pd.read_csv(ROOT/"data/processed/cafe_study_taxonomy/cafe_study_score_draft_786.csv",dtype={"area_code":str})
     meal=pd.read_csv(SNAP/"food_shopping_size_neutral_786_d0b6734.csv",dtype={"area_code":str})
+    latest_cafe=pd.read_csv(SNAP/"cafe_size_adjusted_786_6c591a7.csv",dtype={"area_code":str})
     routes=pd.read_csv(WALK/"walk_network_area_poi_access.csv",dtype={"area_code":str,"place_id":str})
     public=pd.read_csv(ROOT/"data/external/study_public_facility_poi.csv",dtype={"place_id":str})
     kakao=pd.read_csv(ROOT/"data/external/kakao_study_stay_pois_20260918.csv",dtype={"place_id":str})
     kakao_routes=pd.read_csv(SNAP/"kakao_walk_c_stay_340_f2846ce.csv",
                              dtype={"place_id":str,"nearest_area_code":str})
-    assert len(base)==len(meal)==len(raw)==786
-    assert base.area_code.is_unique and set(base.area_code)==set(meal.area_code)==set(raw.area_code)
+    assert len(base)==len(meal)==len(raw)==len(latest_cafe)==786
+    assert base.area_code.is_unique and set(base.area_code)==set(meal.area_code)==set(raw.area_code)==set(latest_cafe.area_code)
     assert not routes.duplicated(["area_code","place_id"]).any()
     areas=base.area_code.tolist()
     frame=base.merge(raw[["area_code","access_percentile"]],on="area_code",validate="one_to_one")
+    assert frame.set_index("area_code").score_status.sort_index().equals(
+        latest_cafe.set_index("area_code").score_status.sort_index())
+    frame=frame.merge(latest_cafe[["area_code","cafe_size_adjusted_full_score",
+                                  "cafe_size_adjusted_supply_only_score",
+                                  "cafe_size_adjustment_method"]],on="area_code",validate="one_to_one")
+    frame["latest_cafe_source_branch"]="codex/hanbyeol/cafe-study-followup@6c591a7"
     frame=frame.merge(meal[["area_code","food_meal_score_v1","food_meal_supply_v1",
                             "food_meal_sales_coverage","food_meal_sales_signal_missing",
                             "historical_2025_use_allowed"]],on="area_code",validate="one_to_one")
@@ -141,6 +148,34 @@ def build()->None:
                OUT/"meal_cafe_study_top20_exploratory.csv",index=False,encoding="utf-8-sig")
     ranked.head(10).to_csv(OUT/"meal_cafe_study_top10_exploratory.csv",index=False,encoding="utf-8-sig")
 
+    # Latest uploaded cafe branch is a separate residual-based draft. Keep both
+    # versions visible and recompute the same 208-area combination for comparison.
+    comparison["cafe_size_adjusted_percentile_common"]=(
+        comparison.cafe_size_adjusted_full_score.rank(method="average",pct=True)*100)
+    comparison["meal_cafe_adjusted_study_exploratory_score"]=(
+        comparison.cafe_size_adjusted_percentile_common+
+        comparison.food_meal_score_v1_percentile_common+
+        comparison.study_partial_75pct_proxy_percentile_common)/3
+    adjusted=comparison.sort_values(["meal_cafe_adjusted_study_exploratory_score","area_code"],
+                                    ascending=[False,True]).head(20).copy()
+    adjusted.insert(0,"rank",range(1,len(adjusted)+1))
+    adjusted["status"]="latest_cafe_residual_draft_and_partial_study_exploratory"
+    adjusted[["rank","area_code","area_name","meal_cafe_adjusted_study_exploratory_score",
+              "cafe_size_adjusted_percentile_common","food_meal_score_v1_percentile_common",
+              "study_partial_75pct_proxy_percentile_common","status"]].to_csv(
+                  OUT/"meal_cafe_adjusted_study_top20_exploratory.csv",index=False,encoding="utf-8-sig")
+    adjusted.head(10).to_csv(OUT/"meal_cafe_adjusted_study_top10_exploratory.csv",index=False,encoding="utf-8-sig")
+    cafe_common=frame.loc[frame.recommendation_eligible&frame.score_status.eq("complete")]
+    old_cafe=set(top_codes(cafe_common,"cafe_full_score"))
+    new_cafe=set(top_codes(cafe_common,"cafe_size_adjusted_full_score"))
+    old_combo=set(ranked.head(10).area_code)
+    new_combo=set(adjusted.head(10).area_code)
+    pd.DataFrame([{"comparison":"cafe_raw_vs_latest_size_adjusted","common_area_count":len(cafe_common),
+                   "top10_overlap_count":len(old_cafe&new_cafe),"top10_overlap_rate":len(old_cafe&new_cafe)/10},
+                  {"comparison":"three_purpose_exploratory_raw_vs_latest_cafe","common_area_count":len(comparison),
+                   "top10_overlap_count":len(old_combo&new_combo),"top10_overlap_rate":len(old_combo&new_combo)/10}]).to_csv(
+                       OUT/"latest_cafe_branch_rank_comparison.csv",index=False,encoding="utf-8-sig")
+
     summaries=[]
     for method in ("certified","proxy"):
         sample=full.loc[full.method.eq(method)]
@@ -155,9 +190,11 @@ def build()->None:
 
     layer=json.loads((BASE/"cafe_study_preview_map_786.geojson").read_text(encoding="utf-8"))
     rankmap=dict(zip(ranked.area_code,ranked["rank"]))
+    adjusted_rankmap=dict(zip(adjusted.area_code,adjusted["rank"]))
     for feature in layer["features"]:
         code=str(feature["properties"]["area_code"])
         feature["properties"]["meal_cafe_study_exploratory_rank"]=rankmap.get(code)
+        feature["properties"]["meal_cafe_adjusted_study_exploratory_rank"]=adjusted_rankmap.get(code)
         feature["properties"]["map_status"]="exploratory_partial_study_OSM_entrance_proxy"
     (OUT/"meal_cafe_study_exploratory_map_786.geojson").write_text(json.dumps(layer,ensure_ascii=False),encoding="utf-8")
 
@@ -173,6 +210,8 @@ def build()->None:
                     ["walk_access_400","walk_access_500","walk_access_600"]].isna().all().all(),"all assumed routes unknown in certified flags"),
       ("kakao_nearest_340",len(compared)==340 and compared.prefixed_id.is_unique,"340 nearest-area routes"),
       ("meal_score_786",frame.food_meal_score_v1.notna().all(),"786 exploratory meal scores"),
+      ("latest_cafe_matches_786_statuses",frame.cafe_size_adjusted_full_score.notna().sum()==224 and
+                                     frame.loc[frame.score_status.ne("complete"),"cafe_size_adjusted_full_score"].isna().all(),"224 observed scores"),
       ("s4_final_null",frame.study_v1_final_score.isna().all(),"all 786 NA"),
       ("three_purpose_final_null",frame.meal_cafe_study_final_score.isna().all(),"all 786 NA"),
       ("exploratory_top20_common_observed",len(ranked)==20 and ranked.area_code.is_unique,"20"),
