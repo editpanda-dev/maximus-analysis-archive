@@ -1,0 +1,17 @@
+﻿check,passed,expected,status
+area_codes_unique,True,786,PASS
+variants_18_each_786,True,14148,PASS
+route_area_poi_unique,True,unique,PASS
+radius_nesting_certified,True,400<=500<=600,PASS
+route_length_at_least_euclidean,True,walk>=straight,PASS
+assumed_connector_not_certified,True,all assumed routes unknown in certified flags,PASS
+kakao_nearest_340,True,340 nearest-area routes,PASS
+meal_score_786,True,786 exploratory meal scores,PASS
+s4_final_null,True,all 786 NA,PASS
+three_purpose_final_null,True,all 786 NA,PASS
+exploratory_top20_common_observed,True,20,PASS
+map_786,True,786,PASS
+review_427_unknown,True,427 unknown,PASS
+facility_entrance_connector_coverage,False,verified entrance links for 7165 proxy and 2046 unresolved pairs,BLOCKED_ROUTE
+S4_verified_cafe_evidence,False,"per-place source, quote, reviewer; 427 remain unknown",BLOCKED_EVIDENCE
+final_study_and_three_purpose_top10,False,verified S4 and complete walking coverage,BLOCKED_FINAL_SCORE
