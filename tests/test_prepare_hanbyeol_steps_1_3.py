@@ -5,6 +5,7 @@ from scripts.prepare_hanbyeol_steps_1_3 import classify_v1, validate_review
 
 def test_bakery_transfer_does_not_change_other_industries():
     assert classify_v1("CS100005", "식사") == "카페"
+    assert classify_v1("CS100009", "식사") == "여가문화"
     assert classify_v1("CS100010", "카페") == "카페"
     assert classify_v1("CS200038", "공부") == "공부"
 

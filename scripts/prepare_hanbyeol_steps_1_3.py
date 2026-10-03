@@ -18,11 +18,16 @@ OUT = ROOT / "data/processed/cafe_study_taxonomy/steps_1_3"
 BAKERY = "CS100005"
 COFFEE = "CS100010"
 STUDY_ROOM = "CS200038"
+BAR = "CS100009"
 
 
 def classify_v1(code: str, legacy_purpose: str | None) -> str | None:
-    """Move one exact official code; leave all other legacy mappings untouched."""
-    return "카페" if code == BAKERY else legacy_purpose
+    """Apply the cross-team 2026-09-30 primary-purpose boundary by code."""
+    if code == BAKERY:
+        return "카페"
+    if code == BAR:
+        return "여가문화"
+    return legacy_purpose
 
 
 def validate_review(frame: pd.DataFrame) -> pd.DataFrame:
@@ -77,6 +82,8 @@ def build() -> None:
     sales_q = sales.loc[sales["기준_년분기_코드"].eq(20254)].copy()
     assert (store_q.loc[store_q.svc_induty_cd.eq(BAKERY), "svc_induty_cd_nm"] == "제과점").all()
     assert (sales_q.loc[sales_q["서비스_업종_코드"].eq(BAKERY), "서비스_업종_코드_명"] == "제과점").all()
+    assert (store_q.loc[store_q.svc_induty_cd.eq(BAR), "svc_induty_cd_nm"] == "호프-간이주점").all()
+    assert (sales_q.loc[sales_q["서비스_업종_코드"].eq(BAR), "서비스_업종_코드_명"] == "호프-간이주점").all()
     assert not store_q.duplicated(["trdar_cd", "svc_induty_cd"]).any()
     assert not sales_q.duplicated(["상권_코드", "서비스_업종_코드"]).any()
 
@@ -91,9 +98,12 @@ def build() -> None:
     assert len(mapping.loc[mapping.industry_code.eq(BAKERY)]) == 1
     assert mapping.loc[mapping.industry_code.eq(BAKERY), "path_v0_purpose"].item() == "식사"
     assert mapping.loc[mapping.industry_code.eq(BAKERY), "cafe_study_v1_purpose"].item() == "카페"
-    assert (mapping.loc[mapping.industry_code.ne(BAKERY), "path_v0_purpose"].fillna("") ==
-            mapping.loc[mapping.industry_code.ne(BAKERY), "cafe_study_v1_purpose"].fillna("")).all()
-    mapping["source"] = "Seoul commercial_store_2025.zip / 2025Q4; purpose map in scripts/build_purpose_features.py"
+    assert mapping.loc[mapping.industry_code.eq(BAR), "path_v0_purpose"].item() == "식사"
+    assert mapping.loc[mapping.industry_code.eq(BAR), "cafe_study_v1_purpose"].item() == "여가문화"
+    assert (mapping.loc[~mapping.industry_code.isin([BAKERY, BAR]), "path_v0_purpose"].fillna("") ==
+            mapping.loc[~mapping.industry_code.isin([BAKERY, BAR]), "cafe_study_v1_purpose"].fillna("")).all()
+    mapping["source"] = ("Seoul commercial_store_2025.zip / 2025Q4; PATH-v0 mapping in "
+                         "scripts/build_purpose_features.py; Kim Geonwoo meal_shopping_taxonomy_20260930.md")
     mapping.to_csv(OUT / "industry_transfer_mapping_v1.csv", index=False, encoding="utf-8-sig")
 
     def aggregate(df: pd.DataFrame, area_col: str, code_col: str, value_col: str, prefix: str) -> pd.DataFrame:
@@ -103,26 +113,30 @@ def build() -> None:
         old = active.pivot_table(index=area_col, columns="path_v0_purpose", values=value_col, aggfunc="sum")
         new = active.pivot_table(index=area_col, columns="cafe_study_v1_purpose", values=value_col, aggfunc="sum")
         bakery = active.loc[active[code_col].eq(BAKERY)].set_index(area_col)[value_col]
+        bar = active.loc[active[code_col].eq(BAR)].set_index(area_col)[value_col]
         result = areas[["area_code"]].set_index("area_code")
-        for purpose in ["식사", "카페"]:
+        for purpose in ["식사", "카페", "여가문화"]:
             result[f"path_v0_{purpose}_{prefix}"] = old.get(purpose, pd.Series(dtype=float))
             result[f"v1_{purpose}_{prefix}"] = new.get(purpose, pd.Series(dtype=float))
         result[f"bakery_{prefix}"] = bakery
         result[f"bakery_{prefix}_source_row_observed"] = result.index.isin(bakery.index)
+        result[f"bar_{prefix}"] = bar
+        result[f"bar_{prefix}_source_row_observed"] = result.index.isin(bar.index)
         return result
 
     store_audit = aggregate(store_q, "trdar_cd", "svc_induty_cd", "stor_co", "stores")
     sales_audit = aggregate(sales_q, "상권_코드", "서비스_업종_코드", "당월_매출_금액", "sales")
     audit = areas.set_index("area_code").join(store_audit).join(sales_audit).reset_index()
     for suffix in ("stores", "sales"):
-        subset = audit.loc[audit[f"bakery_{suffix}_source_row_observed"]]
-        assert np.allclose(subset[f"path_v0_식사_{suffix}"].fillna(0) - subset[f"v1_식사_{suffix}"].fillna(0),
-                           subset[f"bakery_{suffix}"])
-        assert np.allclose(subset[f"v1_카페_{suffix}"].fillna(0) - subset[f"path_v0_카페_{suffix}"].fillna(0),
-                           subset[f"bakery_{suffix}"])
-    audit["definition_version"] = "cafe_study_v1_transfer_proposal_2026-10-03"
+        assert np.allclose(audit[f"path_v0_식사_{suffix}"].fillna(0) - audit[f"v1_식사_{suffix}"].fillna(0),
+                           audit[f"bakery_{suffix}"].fillna(0) + audit[f"bar_{suffix}"].fillna(0))
+        assert np.allclose(audit[f"v1_카페_{suffix}"].fillna(0) - audit[f"path_v0_카페_{suffix}"].fillna(0),
+                           audit[f"bakery_{suffix}"].fillna(0))
+        assert np.allclose(audit[f"v1_여가문화_{suffix}"].fillna(0) - audit[f"path_v0_여가문화_{suffix}"].fillna(0),
+                           audit[f"bar_{suffix}"].fillna(0))
+    audit["definition_version"] = "meal_cafe_leisure_v1_cross_taxonomy_2026-10-03"
     audit["sales_missing_rule"] = "missing_source_row_is_unknown_not_zero"
-    audit.to_csv(OUT / "bakery_transfer_area_audit_786.csv", index=False, encoding="utf-8-sig")
+    audit.to_csv(OUT / "cross_purpose_transfer_area_audit_786.csv", index=False, encoding="utf-8-sig")
 
     comparison = pd.read_csv(ROOT / "data/processed/cafe_study_taxonomy/s3a_s3b_proxy_comparison_786.csv",
                              dtype={"area_code": str})
@@ -156,6 +170,8 @@ def build() -> None:
         "area_rows": len(audit), "unique_area_codes": audit.area_code.nunique(),
         "bakery_store_rows_2025q4_in_786": int(audit.bakery_stores_source_row_observed.sum()),
         "bakery_sales_rows_2025q4_in_786": int(audit.bakery_sales_source_row_observed.sum()),
+        "bar_store_rows_2025q4_in_786": int(audit.bar_stores_source_row_observed.sum()),
+        "bar_sales_rows_2025q4_in_786": int(audit.bar_sales_source_row_observed.sum()),
         "s3a_s3b_area_rows": len(comparison),
         "review_queue_rows": len(queue), "reviewed_evidence_rows": int(queue.validation_status.eq("reviewed").sum()),
         "unknown_review_rows": int(queue.decision.eq("unknown").sum()),
