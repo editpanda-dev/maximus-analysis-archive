@@ -1,0 +1,787 @@
+﻿area_code,area_name,path_v0_식사_stores,v1_식사_stores,path_v0_카페_stores,v1_카페_stores,bakery_stores,bakery_stores_source_row_observed,path_v0_식사_sales,v1_식사_sales,path_v0_카페_sales,v1_카페_sales,bakery_sales,bakery_sales_source_row_observed,definition_version,sales_missing_rule
+3130094,청량리청과물시장,56.0,55.0,9.0,10.0,1.0,True,5148551175.0,5148551175.0,144282938.0,144282938.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130090,청량리종합시장,18.0,17.0,2.0,3.0,1.0,True,885816464.0,885816464.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130093,동서시장,,,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130088,경동시장,54.0,48.0,3.0,9.0,6.0,True,872403759.0,872403759.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130092,청량리농수산물시장,33.0,33.0,0.0,0.0,,False,532476753.0,532476753.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130087,경동광성상가(경동시장),10.0,10.0,1.0,1.0,,False,49683074.0,49683074.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130086,서울약령시장,53.0,51.0,11.0,13.0,2.0,True,1496725227.0,1496725227.0,9000000.0,9000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120063,청량리역(청량리),178.0,168.0,24.0,34.0,10.0,True,8392136533.0,8116180366.0,486974224.0,762930391.0,275956167.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130089,청량리수산시장,7.0,7.0,,,,False,1086859.0,1086859.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120069,상봉역,149.0,146.0,12.0,15.0,3.0,True,24461388979.0,22795852111.0,1411291285.0,3076828153.0,1665536868.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130067,왕십리도선동상점가,143.0,143.0,15.0,15.0,0.0,True,8828534883.0,8828534883.0,248038874.0,248038874.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130072,성동용답상가시장,104.0,102.0,11.0,13.0,2.0,True,6636904937.0,6146482823.0,319969630.0,810391744.0,490422114.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130091,청량종합도매시장,28.0,27.0,2.0,3.0,1.0,True,153687475.0,153687475.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130095,청량리전통시장,95.0,94.0,3.0,4.0,1.0,True,6421144833.0,6421144833.0,49647563.0,49647563.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110249,중화역 1번,32.0,29.0,9.0,12.0,3.0,True,722406057.0,722406057.0,29414921.0,29414921.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130106,중랑동부시장,84.0,83.0,5.0,6.0,1.0,True,2645360467.0,2645360467.0,411625872.0,411625872.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130159,공릉동 도깨비시장,52.0,46.0,13.0,19.0,6.0,True,1640341648.0,1460448446.0,19212435.0,199105637.0,179893202.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120086,태릉입구역,53.0,50.0,14.0,17.0,3.0,True,5794034164.0,5654451884.0,463281430.0,602863710.0,139582280.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110262,상봉역 3번,130.0,127.0,6.0,9.0,3.0,True,8523935925.0,8523935925.0,70333107.0,70333107.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110429,공릉동 국수거리,97.0,89.0,14.0,22.0,8.0,True,2920368677.0,2920368677.0,82359578.0,82359578.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110241,먹골역 5번,73.0,70.0,6.0,9.0,3.0,True,1802006424.0,1789367521.0,131492965.0,144131868.0,12638903.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110187,제기동역 6번,57.0,57.0,7.0,7.0,0.0,True,3366265927.0,3366265927.0,76581924.0,76581924.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110237,메가박스 상봉,104.0,104.0,12.0,12.0,,False,4127953507.0,4127953507.0,161800456.0,161800456.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110204,간데메공원,43.0,41.0,9.0,11.0,2.0,True,685693191.0,685693191.0,315279622.0,315279622.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110244,중화역 4번,47.0,45.0,4.0,6.0,2.0,True,2238663734.0,2238663734.0,28090037.0,28090037.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110255,상봉역 4번,78.0,78.0,11.0,11.0,,False,2568420410.0,2568420410.0,24719426.0,24719426.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130097,답십리 건축자재시장,8.0,5.0,2.0,5.0,3.0,True,147884454.0,147884454.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110122,마장역 2번,22.0,22.0,4.0,4.0,0.0,True,3640480911.0,3640480911.0,142792398.0,142792398.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110218,답십리사거리,43.0,36.0,5.0,12.0,7.0,True,5066123479.0,4940616237.0,52957053.0,178464295.0,125507242.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110256,면목2동체육관,43.0,42.0,8.0,9.0,1.0,True,1286563853.0,1286563853.0,11863580.0,11863580.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110252,장안제일시장,43.0,41.0,10.0,12.0,2.0,True,1716135367.0,1716135367.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110195,동대문구청,54.0,51.0,8.0,11.0,3.0,True,2328347091.0,2261258269.0,88569192.0,155658014.0,67088822.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110240,태릉시장 특화거리,52.0,51.0,4.0,5.0,1.0,True,2225102687.0,2225102687.0,50551306.0,50551306.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130068,마장축산물시장,73.0,73.0,3.0,3.0,0.0,True,3281732275.0,3281732275.0,76249923.0,76249923.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130100,답십리시장,31.0,29.0,2.0,4.0,2.0,True,1059852061.0,829534914.0,31022640.0,261339787.0,230317147.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110260,면목역 3번,34.0,33.0,2.0,3.0,1.0,True,1175096160.0,1175096160.0,70847610.0,70847610.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110189,제기동역 1번,3.0,2.0,1.0,2.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130099,전농로터리시장,28.0,27.0,4.0,5.0,1.0,True,684011631.0,684011631.0,125365794.0,125365794.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110233,중랑역 1번,25.0,24.0,1.0,2.0,1.0,True,1220484520.0,1220484520.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110265,망우역 1번,33.0,32.0,7.0,8.0,1.0,True,1509024429.0,1509024429.0,2897292.0,2897292.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110212,답십리초등학교,45.0,43.0,11.0,13.0,2.0,True,1351732948.0,1351732948.0,379662047.0,379662047.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110216,전농중학교,35.0,35.0,6.0,6.0,0.0,True,988897262.0,988897262.0,17096226.0,17096226.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110199,홍릉시장,39.0,38.0,3.0,4.0,1.0,True,671775319.0,671775319.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110211,전곡마을마당공원,48.0,48.0,5.0,5.0,0.0,True,799478418.0,799478418.0,1787209.0,1787209.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110236,신묵초등학교,56.0,54.0,8.0,10.0,2.0,True,1465892502.0,1465892502.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130109,묵1동도깨비시장,32.0,31.0,2.0,3.0,1.0,True,1914802988.0,1914802988.0,31420438.0,31420438.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110192,동의보감타워,24.0,24.0,1.0,1.0,,False,1560186076.0,1560186076.0,96081037.0,96081037.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110123,마장역 3번,18.0,17.0,2.0,3.0,1.0,True,1693801055.0,1693801055.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110263,면목역 1번,18.0,16.0,3.0,5.0,2.0,True,56191052.0,56191052.0,90911568.0,90911568.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130105,장미제일시장(중화동제일시장),20.0,19.0,6.0,7.0,1.0,True,197841656.0,197841656.0,9830581.0,9830581.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110234,중랑역 4번,16.0,15.0,3.0,4.0,1.0,True,956918115.0,956918115.0,10110462.0,10110462.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110206,텃골근린공원,20.0,16.0,9.0,13.0,4.0,True,135355595.0,135355595.0,45977372.0,45977372.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110251,장안중학교,19.0,18.0,5.0,6.0,1.0,True,560493058.0,560493058.0,6942803.0,6942803.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110246,월드순복음교회,32.0,32.0,5.0,5.0,,False,564837144.0,564837144.0,124463884.0,124463884.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110245,KB국민은행 중화동지점,8.0,8.0,1.0,1.0,,False,401514848.0,401514848.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110250,화랑대역 7번,7.0,7.0,1.0,1.0,,False,749356074.0,749356074.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110239,중랑역 2번,15.0,15.0,2.0,2.0,,False,847547940.0,847547940.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110133,서울교통공사,11.0,10.0,3.0,4.0,1.0,True,591478693.0,591478693.0,29111771.0,29111771.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110257,상봉역 7번,27.0,24.0,5.0,8.0,3.0,True,98632166.0,98632166.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130107,중랑동부시장(중랑교종합상가),7.0,7.0,,,,False,15387748.0,15387748.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110434,태릉입구역 4번,22.0,20.0,9.0,11.0,2.0,True,276413069.0,276413069.0,10986315.0,10986315.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110130,답십리역 6번,8.0,8.0,2.0,2.0,,False,434526378.0,434526378.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110202,전농1동주민센터(전농시장),8.0,7.0,,1.0,1.0,True,59424747.0,59424747.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110238,배꽃어린이공원,2.0,2.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110201,전농119안전센터,6.0,6.0,2.0,2.0,,False,239544964.0,239544964.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130108,태능엔터피아(태릉시장),6.0,6.0,1.0,1.0,,False,182087339.0,182087339.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110198,동대문중앙새마을금고본점,14.0,14.0,,,,False,189992536.0,189992536.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110209,답십리 장령당공원,3.0,3.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110119,마장지하차도,6.0,6.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110235,세화어린이공원,6.0,6.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3001493,동대문패션타운 관광특구,284.0,274.0,77.0,87.0,10.0,True,20447376644.0,20063093625.0,2291665708.0,2675948727.0,384283019.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130111,"동원전통종합시장(동원시장, 동원전통시장 상점가)",123.0,120.0,3.0,6.0,3.0,True,9997582908.0,9593995650.0,147041950.0,550629208.0,403587258.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130066,행당시장상점가,108.0,104.0,6.0,10.0,4.0,True,9103721566.0,9103721566.0,400364724.0,400364724.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120065,회기역,82.0,78.0,13.0,17.0,4.0,True,5533651790.0,5027834752.0,438265876.0,944082914.0,505817038.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110219,삼육보건대학교,61.0,60.0,16.0,17.0,1.0,True,1066499926.0,1066499926.0,128114935.0,128114935.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110264,면목역 2번,68.0,64.0,9.0,13.0,4.0,True,2951206942.0,2951206942.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110243,중랑노인종합복지관,77.0,74.0,6.0,9.0,3.0,True,1939414866.0,1703062651.0,11124470.0,247476685.0,236352215.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130065,무학봉상점가,43.0,38.0,10.0,15.0,5.0,True,1756480652.0,1460355658.0,11876057.0,308001051.0,296124994.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110227,답십리공원,13.0,12.0,3.0,4.0,1.0,True,134188111.0,134188111.0,79940747.0,79940747.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110224,외대앞역 2번,24.0,22.0,3.0,5.0,2.0,True,503530526.0,472374209.0,12000000.0,43156317.0,31156317.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110125,사근동살곶이상점가,36.0,34.0,12.0,14.0,2.0,True,1066609780.0,1052004216.0,281274237.0,295879801.0,14605564.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130101,답십리현대시장,25.0,25.0,1.0,1.0,,False,632107337.0,632107337.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110258,면동초등학교,25.0,24.0,5.0,6.0,1.0,True,642837864.0,642837864.0,19987758.0,19987758.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110055,황학동벼룩시장,13.0,13.0,1.0,1.0,,False,276628212.0,276628212.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130096,동부시장,7.0,7.0,,0.0,0.0,True,642086323.0,642086323.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110222,회기역 2번,6.0,6.0,,,,False,33000000.0,33000000.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130103,이경시장,2.0,2.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3001494,종로·청계 관광특구,777.0,763.0,112.0,126.0,14.0,True,82366154345.0,82266624109.0,7576428476.0,7675958712.0,99530236.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120066,장한평역(장한평),219.0,215.0,30.0,34.0,4.0,True,18726238558.0,18451123424.0,793155435.0,1068270569.0,275115134.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120062,신설동역,208.0,204.0,23.0,27.0,4.0,True,16078662866.0,15562030403.0,816767541.0,1333400004.0,516632463.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110226,장안1동주민센터,146.0,141.0,18.0,23.0,5.0,True,4388159258.0,4114586778.0,177225697.0,450798177.0,273572480.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110228,장안근린공원,76.0,74.0,7.0,9.0,2.0,True,2925366208.0,2925366208.0,18344941.0,18344941.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110247,먹골역 1번,25.0,23.0,6.0,8.0,2.0,True,1146279506.0,760475466.0,78255566.0,464059606.0,385804040.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110194,홍파초등학교,10.0,10.0,2.0,2.0,,False,12932144.0,12932144.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110035,동묘앞역 2번,24.0,24.0,5.0,5.0,0.0,True,425213597.0,425213597.0,65747172.0,65747172.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110037,신설동역 12번,26.0,26.0,4.0,4.0,,False,230866364.0,230866364.0,4136381.0,4136381.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110181,신설동역 9번,16.0,16.0,3.0,3.0,,False,375810860.0,375810860.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110200,동대문경찰서,8.0,8.0,1.0,1.0,,False,654063608.0,654063608.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110184,용두사거리,8.0,8.0,2.0,2.0,,False,447225094.0,447225094.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110183,한국의류시험연구원,24.0,23.0,8.0,9.0,1.0,True,395709924.0,395709924.0,17833631.0,17833631.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110217,자동차부품상가,8.0,8.0,1.0,1.0,,False,62747714.0,62747714.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110036,동묘앞역 3번,6.0,6.0,2.0,2.0,,False,118495662.0,118495662.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110185,용두초등학교,9.0,9.0,0.0,0.0,,False,235120225.0,235120225.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130021,신설종합시장,,,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120037,동대문역사문화공원역,223.0,216.0,38.0,45.0,7.0,True,22055973951.0,21236513949.0,2349284761.0,3168744763.0,819460002.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120068,사가정역,53.0,52.0,10.0,11.0,1.0,True,5367833092.0,4420452008.0,596079419.0,1543460503.0,947381084.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130327,"평화시장(남평화시장, 제일평화시장, 신평화패션타운)",8.0,8.0,5.0,5.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130112,사가정시장,83.0,79.0,6.0,10.0,4.0,True,1685179388.0,1612871872.0,45674225.0,117981741.0,72307516.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130110,면목골목시장(면목시장),75.0,71.0,2.0,6.0,4.0,True,3238316533.0,3206640848.0,143385376.0,175061061.0,31675685.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110220,외대앞역 1번,124.0,121.0,8.0,11.0,3.0,True,5882876304.0,5882876304.0,1539104250.0,1539104250.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110259,사가정역 1번,69.0,66.0,9.0,12.0,3.0,True,3290087033.0,3290087033.0,15240294.0,15240294.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110254,오거리공원,60.0,57.0,5.0,8.0,3.0,True,613338373.0,613338373.0,141160539.0,141160539.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130054,황학동주방가구거리상점가,15.0,14.0,3.0,4.0,1.0,True,317526097.0,317526097.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110188,용두동신동아아파트,30.0,30.0,5.0,5.0,0.0,True,400641818.0,400641818.0,31152176.0,31152176.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110210,서울시립대,38.0,36.0,10.0,12.0,2.0,True,1189471391.0,1189471391.0,320283960.0,320283960.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110261,사가정역 4번,26.0,24.0,7.0,9.0,2.0,True,396630033.0,396630033.0,123708387.0,123708387.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110190,고대앞사거리,25.0,24.0,9.0,10.0,1.0,True,672004894.0,672004894.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110266,면목동우체국,40.0,38.0,4.0,6.0,2.0,True,413795952.0,413795952.0,74587546.0,74587546.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130050,청평화시장,1.0,1.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110106,금북초등학교,9.0,7.0,1.0,3.0,2.0,True,28632732.0,28632732.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110117,성동구보건소,18.0,18.0,1.0,1.0,,False,585905203.0,585905203.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110207,시립대앞사거리,29.0,29.0,3.0,3.0,,False,594798288.0,594798288.0,124728758.0,124728758.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110215,회기역 1번,10.0,10.0,4.0,4.0,,False,251067535.0,251067535.0,53966073.0,53966073.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110108,성동구립금호도서관,4.0,4.0,,,,False,431465024.0,431465024.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110116,청계천박물관,3.0,3.0,1.0,1.0,,False,105436193.0,105436193.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130038,"평화시장(통일상가, 동화상가)",64.0,59.0,26.0,31.0,5.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130019,동대문상가D동,,,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120067,장안동사거리,189.0,185.0,19.0,23.0,4.0,True,14479452345.0,13933883672.0,994807796.0,1540376469.0,545568673.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120039,신당역,209.0,206.0,32.0,35.0,3.0,True,14267170039.0,13976200087.0,576091435.0,867061387.0,290969952.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130052,서울중앙시장(신중앙시장),137.0,137.0,7.0,7.0,0.0,True,6419311515.0,6419311515.0,32863251.0,32863251.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120049,왕십리역(왕십리),150.0,142.0,28.0,36.0,8.0,True,8611657186.0,8533082096.0,551960710.0,630535800.0,78575090.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130053,백학시장,92.0,89.0,2.0,5.0,3.0,True,5127615133.0,4873353359.0,,254261774.0,254261774.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120016,동대문역,64.0,63.0,7.0,8.0,1.0,True,4919030651.0,4919030651.0,126724898.0,126724898.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110158,중곡3동주민센터,67.0,65.0,6.0,8.0,2.0,True,1228333275.0,1228333275.0,86153338.0,86153338.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110056,신당역 3번,58.0,57.0,12.0,13.0,1.0,True,2006818862.0,2006818862.0,115887838.0,115887838.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130055,"황학시장(서울중앙시장, 신중앙시장)",48.0,45.0,3.0,6.0,3.0,True,1665296284.0,1665296284.0,58040428.0,58040428.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110112,행당역 2번,26.0,25.0,4.0,5.0,1.0,True,1811952800.0,1811952800.0,73950618.0,73950618.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110161,중곡역 3번,52.0,47.0,7.0,12.0,5.0,True,1896055486.0,1251958633.0,102689349.0,746786202.0,644096853.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130051,동화동 골목형상점가,47.0,44.0,7.0,10.0,3.0,True,1313302202.0,1313302202.0,67853125.0,67853125.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110053,청구역 1번,34.0,31.0,6.0,9.0,3.0,True,947516615.0,844673128.0,,102843487.0,102843487.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130020,동묘시장(동묘벼룩시장),23.0,23.0,2.0,2.0,0.0,True,1702242563.0,1702242563.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110114,왕십리파출소,8.0,8.0,2.0,2.0,,False,1326967937.0,1326967937.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110253,중곡초등학교,36.0,35.0,5.0,6.0,1.0,True,740195341.0,740195341.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130098,회기시장,38.0,34.0,10.0,14.0,4.0,True,1134431776.0,1134431776.0,112483216.0,112483216.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110248,먹골파출소,7.0,6.0,2.0,3.0,1.0,True,104665447.0,104665447.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130049,신당 미래유산 먹거리 골목형상점가,19.0,18.0,0.0,1.0,1.0,True,2239440947.0,2239440947.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110051,한양공고앞 교차로,14.0,13.0,3.0,4.0,1.0,True,229067200.0,229067200.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110182,용두희망어린이공원,6.0,4.0,3.0,5.0,2.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110309,대광초등학교,3.0,1.0,6.0,8.0,2.0,True,,,68104222.0,68104222.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110213,청량초등학교,8.0,8.0,7.0,7.0,,False,,,32198450.0,32198450.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130035,방산종합시장(방산시장),76.0,76.0,25.0,25.0,,False,6310842881.0,6310842881.0,421270581.0,421270581.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110137,성수초등학교,85.0,79.0,41.0,47.0,6.0,True,4457747947.0,4457747947.0,1704441587.0,1704441587.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130018,동대문문구완구거리(동대문문구완구시장),28.0,27.0,4.0,5.0,1.0,True,965664975.0,965664975.0,2491377.0,2491377.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120017,동묘앞역(동묘),54.0,52.0,7.0,9.0,2.0,True,4570930815.0,4316968894.0,477153908.0,731115829.0,253961921.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130046,team204(팀204),,,1.0,1.0,,False,,,57000000.0,57000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110136,경수초등학교,115.0,101.0,48.0,62.0,14.0,True,5587617690.0,5587617690.0,338780582.0,338780582.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110052,장충초등학교,31.0,30.0,3.0,4.0,1.0,True,1653216231.0,1653216231.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130015,창신골목시장,66.0,65.0,3.0,4.0,1.0,True,3204158277.0,3204158277.0,48607483.0,48607483.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110054,청구역 3번,25.0,25.0,7.0,7.0,,False,797992875.0,797992875.0,238679024.0,238679024.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110049,장충단 고개,36.0,33.0,11.0,14.0,3.0,True,2014260145.0,2014260145.0,47050012.0,47050012.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110048,장충동주민센터,9.0,8.0,4.0,5.0,1.0,True,256413009.0,256413009.0,10556433.0,10556433.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130104,전곡시장,16.0,15.0,1.0,2.0,1.0,True,616364076.0,616364076.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130063,신금호역 골목형상점가,38.0,38.0,2.0,2.0,,False,1980493181.0,1980493181.0,52328506.0,52328506.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110267,망우역 2번,32.0,31.0,10.0,11.0,1.0,True,325735468.0,325735468.0,81478342.0,81478342.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110029,동대문역 1번,25.0,23.0,8.0,10.0,2.0,True,505446936.0,505446936.0,508259.0,508259.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130128,돌곶이시장(석관황금시장),29.0,27.0,0.0,2.0,2.0,True,366887649.0,366887649.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110225,촬영소사거리,22.0,21.0,3.0,4.0,1.0,True,1020392898.0,1020392898.0,150570318.0,150570318.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110334,석관중앙교회,25.0,25.0,2.0,2.0,,False,623283524.0,623283524.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110104,신금호역 4번,15.0,14.0,1.0,2.0,1.0,True,471642587.0,471642587.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110030,동대문역 3번,18.0,18.0,,,,False,1673755366.0,1673755366.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110242,면목5동주민센터,24.0,24.0,3.0,3.0,,False,387345995.0,387345995.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110033,창신역 4번,16.0,16.0,1.0,1.0,,False,652658533.0,652658533.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110203,떡전교사거리,20.0,19.0,4.0,5.0,1.0,True,350593507.0,350593507.0,45546752.0,45546752.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110336,석관고등학교,19.0,19.0,3.0,3.0,,False,286771758.0,286771758.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110034,창신1동주민센터,12.0,12.0,1.0,1.0,,False,114611342.0,114611342.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110032,수족관거리,6.0,6.0,2.0,2.0,,False,70943028.0,70943028.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130017,동대문상가C동,0.0,0.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120053,건대입구역(건대),465.0,451.0,88.0,102.0,14.0,True,37003687080.0,36142082484.0,7650408649.0,8512013245.0,861604596.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130010,종로신진시장,101.0,99.0,11.0,13.0,2.0,True,6022032374.0,6022032374.0,175215120.0,175215120.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130048,동평화시장,8.0,8.0,4.0,4.0,0.0,True,396410690.0,396410690.0,383955302.0,383955302.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110140,건대입구역 6번,126.0,123.0,14.0,17.0,3.0,True,5370868601.0,5370868601.0,83144777.0,83144777.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110115,상왕십리역 3번,32.0,27.0,9.0,14.0,5.0,True,2899104364.0,2893736545.0,82656274.0,88024093.0,5367819.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110141,건대입구역 1번,48.0,45.0,7.0,10.0,3.0,True,2095171744.0,2095171744.0,52007439.0,52007439.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130047,테크노상가(엘리시움),3.0,3.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130078,화양제일골목시장,34.0,33.0,2.0,3.0,1.0,True,1109167956.0,1109167956.0,18625187.0,18625187.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110057,황학코아루아파트,9.0,9.0,3.0,3.0,,False,1897838854.0,1897838854.0,376085646.0,376085646.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130012,"동대문종합시장(동대문종합시장 신관, 동대문종합시장D동상가)",12.0,11.0,13.0,14.0,1.0,True,217704067.0,217704067.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130079,한아름시장,7.0,7.0,1.0,1.0,,False,250499369.0,250499369.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130077,조양시장,4.0,4.0,0.0,0.0,0.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120052,성수역,248.0,238.0,56.0,66.0,10.0,True,25154705874.0,24505327276.0,3517833204.0,4167211802.0,649378598.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110131,성수동카페거리,162.0,149.0,40.0,53.0,13.0,True,8606916287.0,8479236953.0,1518480285.0,1646159619.0,127679334.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120051,뚝섬역,240.0,218.0,60.0,82.0,22.0,True,17042508782.0,16614725095.0,3488504569.0,3916288256.0,427783687.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110335,석계역 7번,108.0,106.0,5.0,7.0,2.0,True,12126715719.0,11990999532.0,507591690.0,643307877.0,135716187.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110421,석계역 1번,62.0,60.0,4.0,6.0,2.0,True,4081460823.0,4081460823.0,276287447.0,276287447.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110205,경희대삼거리,85.0,78.0,24.0,31.0,7.0,True,3737172136.0,3725771832.0,155970282.0,167370586.0,11400304.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110333,돌곶이역 5번,26.0,25.0,6.0,7.0,1.0,True,1786122007.0,1786122007.0,39247273.0,39247273.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110423,석계역 2번,44.0,43.0,4.0,5.0,1.0,True,1319839696.0,1319839696.0,21177327.0,21177327.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110110,상왕십리역 6번,12.0,10.0,1.0,3.0,2.0,True,716062030.0,716062030.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110132,성수2가3동주민센터,25.0,21.0,18.0,22.0,4.0,True,316831814.0,315721114.0,334163699.0,335274399.0,1110700.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130127,석관시장,2.0,2.0,1.0,1.0,,False,487967883.0,487967883.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110208,시조사삼거리,3.0,3.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130071,성수역 골목형상점가,11.0,11.0,1.0,1.0,,False,93000000.0,93000000.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130085,용두시장,3.0,3.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130036,중부시장(신중부시장),47.0,47.0,12.0,12.0,,False,2083038690.0,2083038690.0,388611808.0,388611808.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130007,광장시장(광장전통시장),95.0,92.0,7.0,10.0,3.0,True,7787449675.0,7787449675.0,353473744.0,353473744.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120011,종로4가,35.0,35.0,8.0,8.0,,False,1928863548.0,1928863548.0,517010898.0,517010898.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130014,동문시장,8.0,8.0,,,,False,216563037.0,216563037.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130016,동대문상가B동,1.0,1.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120036,장충동족발거리(남소영길),50.0,46.0,7.0,11.0,4.0,True,6692284775.0,5974352581.0,1705667584.0,2423599778.0,717932194.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110045,동대문역사문화공원역 5번,52.0,50.0,6.0,8.0,2.0,True,3214270476.0,3214270476.0,3442287.0,3442287.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130013,동대문상가A동,0.0,0.0,0.0,0.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110331,돌곶이역 8번,37.0,36.0,13.0,14.0,1.0,True,1646420754.0,1646420754.0,209307301.0,209307301.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110332,돌곶이역 3번,10.0,10.0,2.0,2.0,,False,1042906437.0,1042906437.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110221,의릉,14.0,14.0,3.0,3.0,,False,776476738.0,776476738.0,62269397.0,62269397.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110433,공릉역 2번,49.0,46.0,24.0,27.0,3.0,True,186941393.0,186941393.0,176637709.0,176637709.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120009,종로3가역,725.0,706.0,119.0,138.0,19.0,True,68386590353.0,67573814045.0,6998791178.0,7811567486.0,812776308.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120031,을지로3가역,375.0,364.0,73.0,84.0,11.0,True,39005815501.0,38522734964.0,5684019169.0,6167099706.0,483080537.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120033,을지로4가역,36.0,35.0,13.0,14.0,1.0,True,730696673.0,730696673.0,94252708.0,94252708.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110232,동대부고,34.0,32.0,9.0,11.0,2.0,True,1014037792.0,735987987.0,103462022.0,381511827.0,278049805.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130033,대림상가(청계상가),7.0,7.0,8.0,8.0,,False,,,78000000.0,78000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120035,퇴계로5가,13.0,13.0,10.0,10.0,,False,945015662.0,945015662.0,140388322.0,140388322.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130005,세운상가가동,,,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110418,광운대학교 남단,21.0,21.0,3.0,3.0,,False,278824293.0,278824293.0,71406193.0,71406193.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110044,관성묘,5.0,5.0,,,,False,357915226.0,357915226.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110111,대현산장미원,1.0,1.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110231,장안교,1.0,1.0,0.0,0.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120064,경희대학교(경희대),188.0,179.0,31.0,40.0,9.0,True,9179849885.0,8575996724.0,2471344647.0,3075197808.0,603853161.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130069,"한양대앞상점가(한양시장, 왕십리맛골목)",121.0,119.0,10.0,12.0,2.0,True,7705949440.0,7705949440.0,329294556.0,329294556.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120015,종로6가,37.0,36.0,11.0,12.0,1.0,True,1891238712.0,1891238712.0,325393832.0,325393832.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110118,왕십리역 9번,22.0,21.0,3.0,4.0,1.0,True,857729378.0,857729378.0,209391408.0,209391408.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110330,돌곶이역 1번,19.0,18.0,3.0,4.0,1.0,True,992740756.0,992740756.0,14038072.0,14038072.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130102,이문제일시장,8.0,8.0,,0.0,0.0,True,358154210.0,358154210.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110196,홍릉근린공원,5.0,5.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130070,뚝섬역상점가,63.0,58.0,19.0,24.0,5.0,True,4805848582.0,4650913954.0,582068861.0,737003489.0,154934628.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120038,약수역,120.0,113.0,21.0,28.0,7.0,True,11813719125.0,10306490960.0,369643317.0,1876871482.0,1507228165.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110028,이화달팽이길,37.0,32.0,16.0,21.0,5.0,True,494162811.0,479908890.0,97718159.0,111972080.0,14253921.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110124,뚝섬역교차로,32.0,27.0,10.0,15.0,5.0,True,506359696.0,506359696.0,503237827.0,503237827.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110129,성원어린이공원,20.0,17.0,13.0,16.0,3.0,True,925220680.0,925220680.0,24000000.0,24000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110126,서울숲역 1번,24.0,23.0,8.0,9.0,1.0,True,105344411.0,105344411.0,129000000.0,129000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110105,금동어린이공원,29.0,27.0,5.0,7.0,2.0,True,498873124.0,498873124.0,54185334.0,54185334.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130083,"중곡제일시장(중곡제일골목시장, 광성시장)",66.0,63.0,5.0,8.0,3.0,True,3040294284.0,2939766123.0,24347058.0,124875219.0,100528161.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110165,국립정신건강센터,32.0,32.0,5.0,5.0,,False,1491809051.0,1491809051.0,85960221.0,85960221.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110191,고려대역 6번,60.0,59.0,17.0,18.0,1.0,True,3003456160.0,3003456160.0,242135833.0,242135833.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110168,대원고등학교,12.0,11.0,4.0,5.0,1.0,True,390202167.0,390202167.0,8516480.0,8516480.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120014,종로5가역,144.0,142.0,30.0,32.0,2.0,True,11349332710.0,11349332710.0,1584564350.0,1584564350.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120084,공릉역,91.0,87.0,9.0,13.0,4.0,True,9672280405.0,9557103587.0,1943288760.0,2058465578.0,115176818.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120048,금호역,80.0,77.0,8.0,11.0,3.0,True,3054464620.0,2983779630.0,36784636.0,107469626.0,70684990.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110438,경춘선숲길 우측,86.0,82.0,10.0,14.0,4.0,True,5528840619.0,5528840619.0,176739642.0,176739642.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110214,경희대후문,29.0,26.0,15.0,18.0,3.0,True,1117262600.0,852436016.0,819824945.0,1084651529.0,264826584.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110223,군자초등학교,4.0,4.0,1.0,1.0,,False,107506312.0,107506312.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120032,충무로역,332.0,327.0,64.0,69.0,5.0,True,24588226814.0,24170931674.0,3150885547.0,3568180687.0,417295140.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130042,약수시장,36.0,35.0,5.0,6.0,1.0,True,2776326602.0,2776326602.0,95150313.0,95150313.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110142,화양사거리,94.0,93.0,18.0,19.0,1.0,True,2335489027.0,2335489027.0,116720557.0,116720557.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120034,중구청(퇴계로4가),28.0,27.0,13.0,14.0,1.0,True,990033144.0,990033144.0,83635145.0,83635145.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110050,약수역 7번,14.0,13.0,2.0,3.0,1.0,True,1316686827.0,1316686827.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110047,다산성곽길,1.0,1.0,9.0,9.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110046,버티고개,1.0,1.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110229,장평중학교,58.0,55.0,10.0,13.0,3.0,True,1409259540.0,1409259540.0,42465529.0,42465529.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130032,인현시장,75.0,75.0,8.0,8.0,,False,5299146988.0,5299146988.0,29646500.0,29646500.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130031,청계천공구상가,23.0,23.0,2.0,2.0,,False,1831908766.0,1831908766.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110026,종로5가역 4번,2.0,2.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120055,군자역,254.0,240.0,28.0,42.0,14.0,True,24238197190.0,23390765457.0,1021803169.0,1869234902.0,847431733.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110147,능동우편취급국,46.0,45.0,10.0,11.0,1.0,True,2037264776.0,2037264776.0,51522869.0,51522869.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110156,군자역 5번,25.0,23.0,9.0,11.0,2.0,True,1368706344.0,1368706344.0,16792739.0,16792739.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110150,중곡1동 마을마당,57.0,55.0,15.0,17.0,2.0,True,1075033071.0,1075033071.0,48436905.0,48436905.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110162,군자역 4번,24.0,21.0,5.0,8.0,3.0,True,304432605.0,253942702.0,42846506.0,93336409.0,50489903.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110329,우리은행체육관,21.0,21.0,0.0,0.0,,False,591744113.0,591744113.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110121,한양대역 4번,20.0,19.0,3.0,4.0,1.0,True,833799405.0,833799405.0,14223139.0,14223139.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110153,중곡1동주민센터,12.0,10.0,5.0,7.0,2.0,True,225411936.0,225411936.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120006,종각역,552.0,535.0,95.0,112.0,17.0,True,76041608428.0,74696207242.0,6520338710.0,7865739896.0,1345401186.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120008,인사동,253.0,240.0,73.0,86.0,13.0,True,21588334726.0,19854418641.0,3570347318.0,5304263403.0,1733916085.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130004,낙원시장(낙원지하시장(대일상가)),8.0,8.0,1.0,1.0,,False,723531978.0,723531978.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110019,창덕궁,46.0,43.0,20.0,23.0,3.0,True,462513905.0,462513905.0,810627610.0,810627610.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110120,서울숲카페거리,56.0,43.0,35.0,48.0,13.0,True,58120541.0,58120541.0,33000000.0,33000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130011,충신시장,1.0,1.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3001492,명동 남대문 북창동 다동 무교동 관광특구,1150.0,1089.0,230.0,291.0,61.0,True,172942349648.0,167604096947.0,23547174262.0,28885426963.0,5338252701.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120026,을지로입구역,188.0,180.0,45.0,53.0,8.0,True,31500166066.0,29690430677.0,4967628879.0,6777364268.0,1809735389.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110435,서울과학기술대,35.0,35.0,3.0,3.0,,False,1599291268.0,1599291268.0,210103419.0,210103419.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110109,금호삼성래미안아파트,24.0,23.0,11.0,12.0,1.0,True,455239558.0,455239558.0,28432951.0,28432951.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110155,광진구청,33.0,32.0,10.0,11.0,1.0,True,695588786.0,695588786.0,113093661.0,113093661.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120030,중부경찰서(영화인의거리),140.0,135.0,34.0,39.0,5.0,True,7274811512.0,7157219353.0,1781757628.0,1899349787.0,117592159.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120029,을지로2가,43.0,41.0,10.0,12.0,2.0,True,3916519670.0,3848259379.0,297871781.0,366132072.0,68260291.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110043,충무초등학교,31.0,28.0,9.0,12.0,3.0,True,534844463.0,534589845.0,157795750.0,158050368.0,254618.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130009,마전교지하쇼핑센터(구 한일상가),,,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110025,충신시장옆,6.0,6.0,4.0,4.0,,False,412513532.0,412513532.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110031,창신역 1번,4.0,4.0,2.0,2.0,0.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120023,서울시청,104.0,100.0,18.0,22.0,4.0,True,28387597722.0,26882017218.0,1847504429.0,3353084933.0,1505580504.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120028,명동(명동거리),391.0,371.0,60.0,80.0,20.0,True,41442732322.0,40284279822.0,10024115942.0,11182568442.0,1158452500.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120022,북창동(시청역_6번),164.0,160.0,26.0,30.0,4.0,True,56215781926.0,55829388661.0,2397124533.0,2783517798.0,386393265.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120025,롯데백화점(시청광장 지하쇼핑센터),76.0,61.0,18.0,33.0,15.0,True,3558131636.0,3304361248.0,314625793.0,568396181.0,253770388.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120054,어린이대공원역,202.0,200.0,22.0,24.0,2.0,True,12659885534.0,12293918552.0,659072856.0,1025039838.0,365966982.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110167,용마초등학교,45.0,43.0,10.0,12.0,2.0,True,1717855362.0,1264128181.0,29732544.0,483459725.0,453727181.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110186,종암초등학교,6.0,6.0,3.0,3.0,,False,710161928.0,710161928.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110148,어린이대공원역 3번,44.0,44.0,9.0,9.0,,False,1676818821.0,1676818821.0,159737165.0,159737165.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110144,어린이대공원역 4번,21.0,18.0,6.0,9.0,3.0,True,522967653.0,522967653.0,15815228.0,15815228.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110193,고려대역 4번,20.0,19.0,4.0,5.0,1.0,True,266739572.0,266739572.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110149,세종대학교,7.0,7.0,3.0,3.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120083,등나무근린공원,48.0,46.0,5.0,7.0,2.0,True,4819425824.0,3963055122.0,1112509454.0,1968880156.0,856370702.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110327,상월곡역 2번,27.0,27.0,6.0,6.0,,False,1000823897.0,1000823897.0,95521329.0,95521329.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130125,장위전통시장,20.0,18.0,,2.0,2.0,True,230308286.0,230308286.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110432,대진고등학교,30.0,29.0,9.0,10.0,1.0,True,866080096.0,866080096.0,7169056.0,7169056.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110197,세종대왕기념관교차로,7.0,7.0,1.0,1.0,,False,115533168.0,115533168.0,9318054.0,9318054.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110427,노원 을지대학교병원,4.0,3.0,1.0,2.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110420,광운대역 1번,46.0,46.0,8.0,8.0,0.0,True,1566333089.0,1566333089.0,414984843.0,414984843.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110305,보문역 5번,31.0,31.0,17.0,17.0,,False,1327123027.0,1327123027.0,63855108.0,63855108.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130126,새석관시장,1.0,1.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110313,안암역 3번,118.0,117.0,14.0,15.0,1.0,True,8152122099.0,8152122099.0,698055927.0,698055927.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110230,장안현대홈타운1차아파트,29.0,29.0,4.0,4.0,,False,1721253775.0,1721253775.0,22951661.0,22951661.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130076,능동로골목시장,32.0,30.0,4.0,6.0,2.0,True,1611699210.0,1611699210.0,17692780.0,17692780.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110145,장안초등학교,10.0,6.0,2.0,6.0,4.0,True,,,21720355.0,21720355.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120010,원남동사거리,40.0,39.0,15.0,16.0,1.0,True,1227781711.0,1227781711.0,740947651.0,740947651.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120013,이화사거리,44.0,39.0,20.0,25.0,5.0,True,4540284602.0,4318058812.0,1084770710.0,1306996500.0,222225790.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130064,금남시장,54.0,54.0,1.0,1.0,,False,1948272836.0,1948272836.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110302,보문역 8번,19.0,17.0,6.0,8.0,2.0,True,1164929145.0,1000013189.0,91168857.0,256084813.0,164915956.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130074,영동교골목시장,10.0,10.0,,,,False,197801105.0,197801105.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120056,구의역,199.0,196.0,21.0,24.0,3.0,True,16041279370.0,15700822263.0,637288308.0,977745415.0,340457107.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120059,구삼강변맛길,79.0,77.0,11.0,13.0,2.0,True,7109538465.0,7109538465.0,533753864.0,533753864.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110159,구의역 4번,68.0,65.0,13.0,16.0,3.0,True,2398743838.0,2398743838.0,137918392.0,137918392.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110166,구의1동주민센터,92.0,87.0,18.0,23.0,5.0,True,4713441071.0,4635345187.0,163480184.0,241576068.0,78095884.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110170,동대부여고,35.0,31.0,6.0,10.0,4.0,True,896598730.0,896598730.0,93384217.0,93384217.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110173,구남초등학교,9.0,9.0,4.0,4.0,,False,342847548.0,342847548.0,112088514.0,112088514.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110175,푸른동산공원,18.0,16.0,12.0,14.0,2.0,True,313843998.0,313843998.0,12091855.0,12091855.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130082,면곡골목시장,10.0,10.0,,,,False,238334019.0,238334019.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120003,광화문역,464.0,446.0,102.0,120.0,18.0,True,48994673627.0,48275259588.0,7864619596.0,8584033635.0,719414039.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120004,종로구청,93.0,91.0,22.0,24.0,2.0,True,15118658490.0,15118658490.0,1758291458.0,1758291458.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110304,보문역 4번,23.0,18.0,10.0,15.0,5.0,True,386259220.0,385612427.0,123842859.0,124489652.0,646793.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110164,아차산역 5번,5.0,4.0,3.0,4.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110127,성수1가1동주민센터,21.0,20.0,8.0,9.0,1.0,True,234501429.0,234501429.0,184219542.0,184219542.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120071,성북구청,66.0,65.0,12.0,13.0,1.0,True,4458186545.0,4458186545.0,183371944.0,183371944.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110300,삼선동주민센터,62.0,58.0,22.0,26.0,4.0,True,2234920045.0,2234920045.0,872027057.0,872027057.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110297,경동고등학교,38.0,35.0,15.0,18.0,3.0,True,1079722069.0,1079722069.0,22218255.0,22218255.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120057,아차산역,116.0,109.0,14.0,21.0,7.0,True,9959106322.0,9417371687.0,1290652436.0,1832387071.0,541734635.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120074,안암역,59.0,56.0,10.0,13.0,3.0,True,3775956148.0,3595319599.0,980145119.0,1160781668.0,180636549.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110312,안암역 2번,69.0,67.0,12.0,14.0,2.0,True,4176755635.0,4176755635.0,1262131394.0,1262131394.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110174,아차산역 1번,54.0,48.0,7.0,13.0,6.0,True,1458957668.0,1428871009.0,91279061.0,121365720.0,30086659.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110172,광진초등학교,22.0,20.0,7.0,9.0,2.0,True,285724861.0,285724861.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110152,중곡어린이공원,10.0,10.0,3.0,3.0,,False,1199973031.0,1199973031.0,887620.0,887620.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110177,동의초등학교,10.0,10.0,5.0,5.0,,False,134989156.0,134989156.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120082,상계백병원,22.0,22.0,4.0,4.0,0.0,True,990102218.0,990102218.0,53366555.0,53366555.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110096,한남힐사이드아파트,6.0,6.0,9.0,9.0,,False,,,286153440.0,286153440.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130156,시영2단지 무지개종합상가(중계 무지개2단지아파트상가),11.0,11.0,1.0,1.0,0.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130155,시영B상가(중계 그린아파트 B 상가),11.0,10.0,3.0,4.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120021,시청역_8번,73.0,69.0,26.0,30.0,4.0,True,13784945831.0,13232519125.0,12261207348.0,12813634054.0,552426706.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120020,시청역_1번,55.0,52.0,14.0,17.0,3.0,True,11613269197.0,10714908004.0,1641683166.0,2540044359.0,898361193.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110317,종암중학교,23.0,23.0,7.0,7.0,0.0,True,1546668731.0,1546668731.0,350467702.0,350467702.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3001491,이태원 관광특구,579.0,552.0,92.0,119.0,27.0,True,55162026986.0,53984794410.0,3771413614.0,4948646190.0,1177232576.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120046,이태원(이태원역),564.0,543.0,68.0,89.0,21.0,True,54061127651.0,52990702961.0,1648922022.0,2719346712.0,1070424690.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110095,한강진역 3번,75.0,63.0,30.0,42.0,12.0,True,2980077697.0,2932077697.0,380015996.0,428015996.0,48000000.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110085,경리단길남측,96.0,89.0,32.0,39.0,7.0,True,5622220797.0,5495359790.0,707808078.0,834669085.0,126861007.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110091,리움미술관,19.0,19.0,8.0,8.0,0.0,True,770264846.0,770264846.0,175236358.0,175236358.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110097,한남초등학교,,,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120075,월곡역,84.0,79.0,14.0,19.0,5.0,True,5971797510.0,5551424142.0,532706699.0,953080067.0,420373368.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110323,상월곡역 1번,55.0,49.0,8.0,14.0,6.0,True,1446495692.0,1444715195.0,211671612.0,213452109.0,1780497.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110042,남산골공원옆,10.0,8.0,4.0,6.0,2.0,True,336209078.0,336209078.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130034,필동 골목형상점가,2.0,2.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110324,월곡역 4번,3.0,3.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130024,남대문시장(자유상가),125.0,121.0,35.0,39.0,4.0,True,8895806233.0,8739745869.0,2908972304.0,3065032668.0,156060364.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120043,서울역,197.0,179.0,35.0,53.0,18.0,True,28530363070.0,27729785842.0,4994832439.0,5795409667.0,800577228.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110328,상월곡역 3번,7.0,7.0,4.0,4.0,0.0,True,250592907.0,250592907.0,37917398.0,37917398.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120012,대학로(혜화역),401.0,383.0,84.0,102.0,18.0,True,38283779184.0,37668152882.0,7464812908.0,8080439210.0,615626302.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110139,자양4동주민센터,54.0,53.0,22.0,23.0,1.0,True,1010910543.0,1010910543.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110146,신자초등학교,27.0,26.0,13.0,14.0,1.0,True,1671948902.0,1671948902.0,21818590.0,21818590.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110024,혜회동주민센터,16.0,16.0,13.0,13.0,,False,1694165856.0,1694165856.0,131536342.0,131536342.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110021,성균관대학교,58.0,56.0,13.0,15.0,2.0,True,1348462091.0,1348462091.0,271354806.0,271354806.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110143,뚝섬유원지역 1번,4.0,4.0,2.0,2.0,,False,236059287.0,236059287.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110023,서울대병원,13.0,13.0,3.0,3.0,,False,446315886.0,446315886.0,504342274.0,504342274.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110027,혜화역 1번,16.0,14.0,9.0,11.0,2.0,True,187824074.0,187824074.0,145630444.0,145630444.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120060,강변역(테크노마트),68.0,64.0,12.0,16.0,4.0,True,4364805638.0,3743943325.0,1119603460.0,1740465773.0,620862313.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110169,성동초등학교,18.0,15.0,4.0,7.0,3.0,True,232112906.0,225584001.0,114188502.0,120717407.0,6528905.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110320,KB국민은행 종암동지점,12.0,12.0,1.0,1.0,,False,331174141.0,331174141.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110417,월계역 3번,15.0,13.0,4.0,6.0,2.0,True,499335180.0,499335180.0,8119799.0,8119799.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120007,북촌(안국역),182.0,161.0,80.0,101.0,21.0,True,25243409708.0,22275854743.0,7293913408.0,10261468373.0,2967554965.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120027,명동역(명동재미로),104.0,102.0,28.0,30.0,2.0,True,6470233569.0,6029826935.0,831400563.0,1271807197.0,440406634.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110103,옥수터널,3.0,3.0,0.0,0.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110180,광진정보도서관,33.0,33.0,13.0,13.0,,False,1758239560.0,1758239560.0,265739940.0,265739940.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110179,광나루역 1번,26.0,25.0,9.0,10.0,1.0,True,1826981576.0,1799996466.0,1447620307.0,1474605417.0,26985110.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110178,장로회신학대학교,12.0,11.0,8.0,9.0,1.0,True,300594050.0,300594050.0,41246677.0,41246677.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120018,중림동,98.0,93.0,22.0,27.0,5.0,True,8435716937.0,8421624130.0,787695481.0,801788288.0,14092807.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130081,자양골목전통시장(자양골목시장),43.0,41.0,3.0,5.0,2.0,True,1236211983.0,1236211983.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110093,우사단길,57.0,55.0,12.0,14.0,2.0,True,2777753798.0,2777753798.0,237832108.0,237832108.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110041,남산케이블카,27.0,26.0,15.0,16.0,1.0,True,5653046591.0,5653046591.0,225616705.0,225616705.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110082,용산구청,71.0,66.0,17.0,22.0,5.0,True,3489245461.0,3453207727.0,1087046138.0,1123083872.0,36037734.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130061,이태원시장,18.0,16.0,1.0,3.0,2.0,True,1172715583.0,1172715583.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110102,옥수역 6번,38.0,37.0,6.0,7.0,1.0,True,1449459241.0,1414148948.0,146609021.0,181919314.0,35310293.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110087,이태원엔틱가구거리,17.0,16.0,6.0,7.0,1.0,True,56019197.0,56019197.0,429884837.0,429884837.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110086,이태원역 북측,6.0,5.0,5.0,6.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130022,숭례문수입상가(남대문시장),,,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110326,장위동성당,1.0,1.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130115,우림골목시장,95.0,90.0,5.0,10.0,5.0,True,4861642382.0,4829527435.0,91297747.0,123412694.0,32114947.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110318,KT월곡지사,19.0,16.0,3.0,6.0,3.0,True,938463492.0,938463492.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120050,서울숲역,48.0,42.0,13.0,19.0,6.0,True,978622358.0,978622358.0,159656026.0,159656026.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110271,신내역 1번,8.0,8.0,2.0,2.0,,False,669478713.0,669478713.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120081,노원역,472.0,447.0,57.0,82.0,25.0,True,47545342657.0,45993997817.0,5122501669.0,6673846509.0,1551344840.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110268,망우3동주민센터,9.0,8.0,3.0,4.0,1.0,True,623779253.0,623779253.0,27000000.0,27000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130025,삼익패션타운(남대문시장),2.0,2.0,2.0,2.0,,False,,,40755717.0,40755717.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120019,경찰청앞교차로,9.0,8.0,9.0,10.0,1.0,True,577647479.0,577647479.0,1742764295.0,1742764295.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130084,신성시장(신성골목시장),20.0,20.0,0.0,0.0,,False,876918359.0,876918359.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110319,종암동주민센터,52.0,49.0,6.0,9.0,3.0,True,2120370740.0,1520557266.0,21000000.0,620813474.0,599813474.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110291,한성대입구역 3번,54.0,51.0,13.0,16.0,3.0,True,1363796332.0,1357796332.0,56415114.0,62415114.0,6000000.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110176,해오름공원,32.0,30.0,7.0,9.0,2.0,True,823556706.0,823556706.0,109966842.0,109966842.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120005,삼청동,113.0,103.0,50.0,60.0,10.0,True,10225154241.0,9405292629.0,3589542048.0,4409403660.0,819861612.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120024,회현역,70.0,67.0,20.0,23.0,3.0,True,6020606676.0,6020606676.0,1021035174.0,1021035174.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110012,성곡미술관,36.0,33.0,12.0,15.0,3.0,True,3582719558.0,3582719558.0,458530668.0,458530668.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110315,종암아이파크2차,28.0,22.0,7.0,13.0,6.0,True,632940318.0,611603460.0,83566221.0,104903079.0,21336858.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120070,한성대입구역,76.0,72.0,15.0,19.0,4.0,True,6310323566.0,6310323566.0,803274996.0,803274996.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110293,삼선중학교,30.0,30.0,9.0,9.0,0.0,True,748720220.0,748720220.0,103045755.0,103045755.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110286,한성대입구역 5번,29.0,25.0,18.0,22.0,4.0,True,593002434.0,593002434.0,227620408.0,227620408.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110288,동구여중,17.0,13.0,13.0,17.0,4.0,True,2580876076.0,2580876076.0,41182823.0,41182823.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110079,후암동주민센터,76.0,71.0,36.0,41.0,5.0,True,4129893972.0,4129893972.0,440836481.0,440836481.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110274,서일대학교,42.0,38.0,14.0,18.0,4.0,True,1478550669.0,974706756.0,163672769.0,667516682.0,503843913.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110040,중구회현체육센터(정화예술대남산캠퍼스),12.0,12.0,5.0,5.0,,False,454795728.0,454795728.0,169242662.0,169242662.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110039,회현역 1번,8.0,7.0,1.0,2.0,1.0,True,256672859.0,256672859.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110022,경신고등학교,15.0,13.0,5.0,7.0,2.0,True,127929212.0,127929212.0,51292196.0,51292196.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120002,서촌(경복궁역),190.0,169.0,77.0,98.0,21.0,True,13646209283.0,12767948792.0,5154910547.0,6033171038.0,878260491.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130075,노룬산시장(노룬산골목시장),11.0,11.0,,0.0,0.0,True,336984829.0,336984829.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110099,유엔빌리지길,8.0,8.0,2.0,2.0,,False,274286725.0,274286725.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110101,옥정중학교,7.0,7.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110018,중앙고등학교,13.0,13.0,18.0,18.0,,False,1024260937.0,1024260937.0,255664404.0,255664404.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110270,혜원여고,16.0,16.0,2.0,2.0,,False,940726196.0,940726196.0,45975901.0,45975901.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110321,동덕여대,1.0,1.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110316,숭곡초등학교,76.0,75.0,11.0,12.0,1.0,True,1642029075.0,1642029075.0,357125553.0,357125553.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120209,"강남구청(청담역_8번, 강남세무서)",62.0,55.0,19.0,26.0,7.0,True,4936989716.0,4493380313.0,404670018.0,848279421.0,443609403.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120061,올림픽대교북단,15.0,14.0,2.0,3.0,1.0,True,3041300657.0,1979185458.0,155250667.0,1217365866.0,1062115199.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120214,영동대교남단교차로,31.0,28.0,12.0,15.0,3.0,True,2965771554.0,2965771554.0,167082447.0,167082447.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120216,경기고교사거리(경기고교앞사거리),31.0,30.0,2.0,3.0,1.0,True,1686951021.0,1686951021.0,47883615.0,47883615.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110988,청담역 3번,5.0,4.0,2.0,3.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110985,청담근린공원,6.0,6.0,3.0,3.0,,False,,,30052431.0,30052431.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110990,청담역 12번,2.0,2.0,2.0,2.0,,False,,,38474933.0,38474933.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120072,성신여대,360.0,346.0,76.0,90.0,14.0,True,24738176641.0,24173910542.0,6906177414.0,7470443513.0,564266099.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130120,돈암시장(돈암제일시장),62.0,60.0,3.0,5.0,2.0,True,2543614431.0,2543614431.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120058,구의사거리,39.0,39.0,8.0,8.0,,False,1723571889.0,1723571889.0,18855831.0,18855831.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110074,서울역 12번,94.0,90.0,8.0,12.0,4.0,True,7008615960.0,7008615960.0,1046570357.0,1046570357.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110066,서울역 15번,64.0,60.0,12.0,16.0,4.0,True,2748994756.0,2748994756.0,300654983.0,300654983.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110285,홍대부중,17.0,13.0,9.0,13.0,4.0,True,580472594.0,234421615.0,120492354.0,466543333.0,346050979.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110269,용마문화복지센터,23.0,23.0,1.0,1.0,,False,1191576885.0,1191576885.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110171,중곡4동주민센터,2.0,2.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120243,천호역,225.0,201.0,28.0,52.0,24.0,True,16941936787.0,16522191432.0,1488865190.0,1908610545.0,419745355.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130318,로데오거리상점가,130.0,127.0,11.0,14.0,3.0,True,19505647447.0,19025045368.0,583899171.0,1064501250.0,480602079.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111059,강동역 4번(강풀만화거리),121.0,112.0,28.0,37.0,9.0,True,5343028762.0,5325364656.0,321877181.0,339541287.0,17664106.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110314,종암경찰서,53.0,50.0,5.0,8.0,3.0,True,3709149154.0,3469293915.0,332088611.0,571943850.0,239855239.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130314,풍납시장,39.0,36.0,5.0,8.0,3.0,True,1715242201.0,1467261747.0,7602678.0,255583132.0,247980454.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111051,천호역 6번,53.0,51.0,19.0,21.0,2.0,True,1231024574.0,1231024574.0,101381680.0,101381680.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111049,천호지구대(천호동자전거거리),30.0,26.0,5.0,9.0,4.0,True,1506433237.0,1506433237.0,82581938.0,82581938.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111056,천호태영아파트,10.0,7.0,1.0,4.0,3.0,True,1260436216.0,1260436216.0,24881671.0,24881671.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111048,천호역 1번(천호문구완구거리),26.0,24.0,4.0,6.0,2.0,True,1087162196.0,1087162196.0,112933109.0,112933109.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120227,잠실역,372.0,344.0,87.0,115.0,28.0,True,41155358677.0,33624838401.0,8388800842.0,15919321118.0,7530520276.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120190,강남을지병원,212.0,206.0,56.0,62.0,6.0,True,14920356093.0,14721054247.0,830517497.0,1029819343.0,199301846.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110296,성신여대입구역 4번,20.0,18.0,10.0,12.0,2.0,True,426942596.0,426942596.0,1530286003.0,1530286003.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110301,성신여대입구역 7번,24.0,21.0,4.0,7.0,3.0,True,956627041.0,956627041.0,13878191.0,13878191.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110303,성신여대입구역 1번,25.0,22.0,13.0,16.0,3.0,True,819812977.0,816997782.0,36209089.0,39024284.0,2815195.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120001,서대문역,152.0,152.0,24.0,24.0,0.0,True,13130712424.0,12836655646.0,655097530.0,949154308.0,294056778.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110539,미근동,52.0,50.0,12.0,14.0,2.0,True,3700793166.0,3700793166.0,151505778.0,151505778.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110038,경향신문사,17.0,16.0,5.0,6.0,1.0,True,2707004388.0,2707004388.0,563452080.0,563452080.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110537,충정로현대아파트,32.0,32.0,13.0,13.0,0.0,True,778308370.0,778308370.0,57310752.0,57310752.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110536,돈의문센트레빌아파트입구,7.0,7.0,1.0,1.0,,False,63684881.0,63684881.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110534,경기대학교,8.0,7.0,2.0,3.0,1.0,True,31373625.0,31373625.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111011,잠실나루역,13.0,12.0,2.0,3.0,1.0,True,131757497.0,131757497.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110107,금호사거리,18.0,18.0,5.0,5.0,,False,1479972351.0,1479972351.0,3864470.0,3864470.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120073,미아사거리,61.0,59.0,10.0,12.0,2.0,True,4911679641.0,4532509077.0,399540860.0,778711424.0,379170564.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130154,상계주공1단지(가)상가,8.0,8.0,1.0,1.0,,False,15080848.0,15080848.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110422,노원역 9번,12.0,10.0,2.0,4.0,2.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110138,송정체육공원,33.0,29.0,9.0,13.0,4.0,True,455249700.0,455249700.0,74681322.0,74681322.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130002,세종마을음식문화거리(금천교시장),113.0,109.0,7.0,11.0,4.0,True,14495806202.0,12990680347.0,355688628.0,1860814483.0,1505125855.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110008,배화여자대학교(박노수미술관),78.0,69.0,46.0,55.0,9.0,True,2803519476.0,2741972459.0,2059375263.0,2120922280.0,61547017.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110015,청와대사랑채,7.0,7.0,3.0,3.0,,False,625152033.0,625152033.0,256026172.0,256026172.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110013,체부동홍종문가옥,5.0,4.0,3.0,4.0,1.0,True,,,44280497.0,44280497.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130059,후암시장,29.0,27.0,2.0,4.0,2.0,True,1657508866.0,1345128180.0,63929171.0,376309857.0,312380686.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110067,배문고등학교,30.0,29.0,8.0,9.0,1.0,True,713082533.0,713082533.0,194455114.0,194455114.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110075,숙대입구역 1번,25.0,22.0,13.0,16.0,3.0,True,940532117.0,940532117.0,498400788.0,498400788.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110092,NH농협은행 보광동지점,15.0,15.0,,,,False,124656387.0,124656387.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120078,미아사거리역,125.0,119.0,7.0,13.0,6.0,True,12451074980.0,11937513860.0,1112496290.0,1626057410.0,513561120.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110424,상계초등학교,63.0,59.0,5.0,9.0,4.0,True,835278226.0,821713480.0,68711005.0,82275751.0,13564746.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120079,창동역,91.0,89.0,6.0,8.0,2.0,True,7140036732.0,6537513068.0,575224757.0,1177748421.0,602523664.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130153,창동역상점가,69.0,69.0,7.0,7.0,0.0,True,7388185312.0,7268434079.0,188757743.0,308508976.0,119751233.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110409,창동역 2번,54.0,49.0,8.0,13.0,5.0,True,1520983235.0,1475339724.0,432149705.0,477793216.0,45643511.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120193,도산공원교차로,131.0,126.0,12.0,17.0,5.0,True,18356044250.0,18226899441.0,335275510.0,464420319.0,129144809.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110325,장곡초등학교,36.0,33.0,3.0,6.0,3.0,True,1222488925.0,1222488925.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3001495,잠실 관광특구,645.0,613.0,112.0,144.0,32.0,True,83433864512.0,75978503540.0,9940176446.0,17395537418.0,7455360972.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120246,길동역,247.0,241.0,11.0,17.0,6.0,True,21603764337.0,20655082292.0,1531303229.0,2479985274.0,948682045.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111068,강동성심병원,5.0,5.0,0.0,0.0,0.0,True,631828539.0,631828539.0,498332182.0,498332182.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130319,성내전통시장,25.0,23.0,1.0,3.0,2.0,True,795988697.0,795988697.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110308,길음역 8번,24.0,20.0,9.0,13.0,4.0,True,659080044.0,399596006.0,55324024.0,314808062.0,259484038.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111067,강동구립성내도서관,54.0,47.0,10.0,17.0,7.0,True,1767681169.0,1532018731.0,31809679.0,267472117.0,235662438.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111063,강동구립 천호도서관,54.0,54.0,5.0,5.0,,False,591568747.0,591568747.0,32093912.0,32093912.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110310,길음역 10번,1.0,1.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110272,신내1동주민센터,112.0,109.0,16.0,19.0,3.0,True,6226190356.0,6089333120.0,951975854.0,1088833090.0,136857236.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110084,경리단길북측,115.0,110.0,21.0,26.0,5.0,True,6125856886.0,6118347200.0,264034386.0,271544072.0,7509686.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110299,정릉역 1번,52.0,50.0,7.0,9.0,2.0,True,1703728174.0,1703728174.0,66097596.0,66097596.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130121,길음시장,10.0,10.0,,,,False,171822351.0,171822351.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110306,미아초등학교,14.0,14.0,5.0,5.0,,False,229209290.0,229209290.0,51440201.0,51440201.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110307,길음역 7번,28.0,24.0,5.0,9.0,4.0,True,395610567.0,395610567.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110068,남영역 1번,66.0,63.0,17.0,20.0,3.0,True,3983280256.0,3983280256.0,621847723.0,621847723.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110591,충정로역 6번,16.0,15.0,4.0,5.0,1.0,True,1270113332.0,1270113332.0,15349958.0,15349958.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120097,충정로역,46.0,46.0,5.0,5.0,0.0,True,1803507837.0,1803507837.0,402977728.0,402977728.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130181,아현가구거리상점가,9.0,9.0,5.0,5.0,,False,545784704.0,545784704.0,5238753.0,5238753.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110538,충정로역 3번,26.0,25.0,5.0,6.0,1.0,True,1655270281.0,1396143126.0,63373424.0,322500579.0,259127155.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110533,충정로역 7번,1.0,,1.0,2.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110069,숙대입구,136.0,128.0,39.0,47.0,8.0,True,8340575784.0,7791070801.0,2153838249.0,2703343232.0,549504983.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130182,영천시장,38.0,34.0,1.0,5.0,4.0,True,1540882593.0,1434998300.0,,105884293.0,105884293.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110311,종암아이파크2차후문,,,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110414,장석교회,0.0,0.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120045,남영동 먹자골목,149.0,144.0,24.0,29.0,5.0,True,25768079950.0,25768079950.0,1398150016.0,1398150016.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120042,"숙대입구역(남영역, 남영동)",65.0,61.0,11.0,15.0,4.0,True,4510607553.0,4415028578.0,768716360.0,864295335.0,95578975.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110154,광진정말공원,41.0,39.0,10.0,12.0,2.0,True,2126535861.0,2126535861.0,99559167.0,99559167.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110163,성자초등학교,29.0,27.0,8.0,10.0,2.0,True,1147948849.0,1147948849.0,140380656.0,140380656.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110426,상계2동주민센터,69.0,66.0,9.0,12.0,3.0,True,1007707301.0,1007707301.0,37374108.0,37374108.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130114,유영시장,2.0,2.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120178,신사역,342.0,337.0,55.0,60.0,5.0,True,38764884006.0,38575980041.0,3244307762.0,3433211727.0,188903965.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120185,논현역,271.0,265.0,50.0,56.0,6.0,True,25127040785.0,24584462481.0,3618350589.0,4160928893.0,542578304.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120174,논현역 5번,8.0,8.0,2.0,2.0,,False,14088686.0,14088686.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110950,논현역 7번,1.0,1.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110160,광진경찰서,9.0,8.0,3.0,4.0,1.0,True,12209525.0,12209525.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110953,학동근린공원,7.0,7.0,4.0,4.0,0.0,True,,,35910754.0,35910754.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110279,신내역 2번,6.0,5.0,2.0,3.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110378,송중동주민센터,21.0,19.0,4.0,6.0,2.0,True,489726326.0,375342965.0,15098808.0,129482169.0,114383361.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130143,방천골목시장,24.0,23.0,1.0,2.0,1.0,True,586221320.0,586221320.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110377,미아사거리역 3번,34.0,34.0,3.0,3.0,,False,1176530192.0,1176530192.0,22362024.0,22362024.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120080,마들역,42.0,38.0,1.0,5.0,4.0,True,3945915443.0,2904080394.0,385393410.0,1427228459.0,1041835049.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110532,아현역 2번,31.0,29.0,4.0,6.0,2.0,True,969613471.0,827537897.0,6253923.0,148329497.0,142075574.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110020,서울국제고등학교,54.0,53.0,6.0,7.0,1.0,True,1131618217.0,1131618217.0,67398039.0,67398039.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110405,방학역 1번,93.0,88.0,4.0,9.0,5.0,True,2751825004.0,2701805585.0,13370544.0,63389963.0,50019419.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110410,방학역 2번,71.0,68.0,11.0,14.0,3.0,True,3294631986.0,3225730801.0,519193063.0,588094248.0,68901185.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110403,방학1동주민센터,80.0,76.0,6.0,10.0,4.0,True,2422469535.0,2403040665.0,128184161.0,147613031.0,19428870.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130151,신도봉시장,8.0,8.0,2.0,2.0,,False,213297720.0,213297720.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120200,학동사거리,363.0,350.0,41.0,54.0,13.0,True,30730513240.0,30635236266.0,2005927155.0,2101204129.0,95276974.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120196,서울세관,75.0,74.0,14.0,15.0,1.0,True,5862668105.0,5862668105.0,363552624.0,363552624.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130140,숭인시장,37.0,36.0,1.0,2.0,1.0,True,1543861741.0,1543861741.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120203,강남구청역,189.0,181.0,48.0,56.0,8.0,True,18529268270.0,17823208738.0,2993699968.0,3699759500.0,706059532.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110397,도봉산입구,87.0,86.0,11.0,12.0,1.0,True,3685627985.0,3527208977.0,101943627.0,260362635.0,158419008.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110966,논현2동주민센터,68.0,62.0,15.0,21.0,6.0,True,2175358918.0,2170940032.0,226923947.0,231342833.0,4418886.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110371,삼양입구사거리,52.0,51.0,5.0,6.0,1.0,True,1550839352.0,1550839352.0,9383128.0,9383128.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110973,강남구청역 4번,8.0,7.0,3.0,4.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110374,송중초등학교,40.0,40.0,3.0,3.0,,False,482841504.0,482841504.0,28846328.0,28846328.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110968,강남구청역 2번,6.0,4.0,3.0,5.0,2.0,True,592045664.0,592045664.0,11145438.0,11145438.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110368,송천초등학교,24.0,24.0,1.0,1.0,,False,213578671.0,213578671.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110276,신내IC북측,1.0,1.0,3.0,3.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110275,하나은행 망우동지점,33.0,32.0,6.0,7.0,1.0,True,2445715464.0,2445715464.0,34101602.0,34101602.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120208,청담사거리(청담동명품거리),251.0,242.0,36.0,45.0,9.0,True,28455403896.0,27409859518.0,1448069158.0,2493613536.0,1045544378.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120213,삼성중앙역,193.0,187.0,38.0,44.0,6.0,True,22266708562.0,22061386907.0,1566577300.0,1771898955.0,205321655.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110072,열정도,23.0,23.0,7.0,7.0,,False,2420499726.0,2420499726.0,16873420.0,16873420.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110982,강남구보훈회관,3.0,2.0,2.0,3.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110128,성원중학교,99.0,87.0,22.0,34.0,12.0,True,3411686280.0,3307525020.0,90283831.0,194445091.0,104161260.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110135,성동세무서,20.0,20.0,10.0,10.0,,False,961032620.0,961032620.0,8381402.0,8381402.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110535,영천시장입구,15.0,15.0,3.0,3.0,,False,158016684.0,158016684.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110273,장스여성병원,39.0,38.0,3.0,4.0,1.0,True,2414141965.0,2376996330.0,63252329.0,100397964.0,37145635.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110413,누원고등학교,16.0,16.0,3.0,3.0,0.0,True,845508988.0,845508988.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110113,응봉산,10.0,10.0,2.0,2.0,0.0,True,86472279.0,86472279.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130123,꿈의숲 장곡 골목형상점가,17.0,17.0,4.0,4.0,,False,1453320128.0,1453320128.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110322,장위1동주민센터,15.0,14.0,1.0,2.0,1.0,True,213277507.0,213277507.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130116,동성타워프라자,2.0,0.0,2.0,4.0,2.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130124,번동시장,1.0,1.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120195,성수대교남단,133.0,123.0,23.0,33.0,10.0,True,10248417792.0,10248417792.0,223013731.0,223013731.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120188,압구정역,238.0,214.0,40.0,64.0,24.0,True,22166161172.0,20460933687.0,2181203625.0,3886431110.0,1705227485.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120041,신용산역(용산역),414.0,380.0,105.0,139.0,34.0,True,32083915376.0,31840549532.0,3075361470.0,3318727314.0,243365844.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120044,삼각지역,183.0,170.0,37.0,50.0,13.0,True,10861300831.0,10861300831.0,407789622.0,407789622.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110407,도봉역 2번,79.0,77.0,14.0,16.0,2.0,True,2871305657.0,2776525126.0,113041724.0,207822255.0,94780531.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110959,신구중학교,12.0,12.0,2.0,2.0,,False,3476796334.0,3476796334.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110076,삼각지역 14번,13.0,13.0,2.0,2.0,,False,1543441778.0,1543441778.0,234013811.0,234013811.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110411,도봉역 3번,32.0,32.0,2.0,2.0,,False,723568970.0,723568970.0,6722972.0,6722972.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110073,삼각지역 3번,25.0,23.0,8.0,10.0,2.0,True,167895752.0,167895752.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130146,쌍문시장(쌍문역골목시장),75.0,72.0,7.0,10.0,3.0,True,4081512091.0,3696500333.0,194233179.0,579244937.0,385011758.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110396,쌍문역1번(쌍리단길),41.0,36.0,3.0,8.0,5.0,True,1614974844.0,1476898855.0,834288328.0,972364317.0,138075989.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130147,쌍문역동측상점가,48.0,45.0,5.0,8.0,3.0,True,6361599669.0,3714403224.0,52954717.0,2700151162.0,2647196445.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130113,신아타운,10.0,9.0,1.0,2.0,1.0,True,34933607.0,34933607.0,40849918.0,40849918.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110376,수송초등학교,76.0,75.0,13.0,14.0,1.0,True,1779816130.0,1779816130.0,77899546.0,77899546.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130145,쌍문역둘리상점가,30.0,27.0,1.0,4.0,3.0,True,2438871646.0,2438871646.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110388,도봉우체국,9.0,9.0,2.0,2.0,,False,428871376.0,428871376.0,47961362.0,47961362.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110002,독립문역 1번,8.0,7.0,2.0,3.0,1.0,True,952946508.0,597555346.0,60587754.0,415978916.0,355391162.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110004,대신고등학교,7.0,7.0,3.0,3.0,,False,694623336.0,694623336.0,10877658.0,10877658.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110370,도봉세무서,28.0,26.0,8.0,10.0,2.0,True,1091502814.0,1091502814.0,14428837.0,14428837.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110365,미아역 5번,26.0,24.0,4.0,6.0,2.0,True,921069536.0,921069536.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130141,강북북부골목시장,13.0,12.0,0.0,1.0,1.0,True,658346592.0,658346592.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120077,미아역,107.0,102.0,16.0,21.0,5.0,True,6374824805.0,5370929153.0,615496240.0,1619391892.0,1003895652.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110364,미아역 8번,32.0,32.0,2.0,2.0,0.0,True,1572570030.0,1572570030.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110373,수유역 2번,34.0,33.0,5.0,6.0,1.0,True,1239821337.0,1239821337.0,31320274.0,31320274.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120191,학동역,138.0,134.0,36.0,40.0,4.0,True,13927120269.0,13927120269.0,2132206222.0,2132206222.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111077,길동주민센터(강동도서관),102.0,98.0,21.0,25.0,4.0,True,4032420151.0,4028025678.0,26722252.0,31116725.0,4394473.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111078,굽은다리역 4번,92.0,89.0,15.0,18.0,3.0,True,2213799855.0,2038187384.0,78062290.0,253674761.0,175612471.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130324,길동복조리시장,31.0,30.0,2.0,3.0,1.0,True,1367378663.0,1367378663.0,17817384.0,17817384.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111072,굽은다리역 1번(십자성마을),27.0,26.0,8.0,9.0,1.0,True,1411161366.0,1411161366.0,124046148.0,124046148.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111071,천동초등학교,7.0,6.0,4.0,5.0,1.0,True,163547709.0,163547709.0,9132304.0,9132304.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110369,성신여대운정그린캠퍼스,71.0,71.0,11.0,11.0,,False,2905339418.0,2905339418.0,108262253.0,108262253.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110425,계상초등학교,51.0,48.0,9.0,12.0,3.0,True,865516519.0,865516519.0,110487660.0,110487660.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110442,화랑대철도공원,13.0,12.0,5.0,6.0,1.0,True,531597731.0,339540893.0,42773357.0,234830195.0,192056838.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110017,정독도서관,4.0,4.0,5.0,5.0,,False,,,86158558.0,86158558.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110007,사직공원(한국사회과학도서관),11.0,8.0,6.0,9.0,3.0,True,39000000.0,39000000.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120076,수유역,414.0,408.0,54.0,60.0,6.0,True,37741177312.0,37298693251.0,2472665393.0,2915149454.0,442484061.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130139,강북종합전통시장(강북종합골목시장),107.0,103.0,5.0,9.0,4.0,True,6551840531.0,6075019854.0,47451566.0,524272243.0,476820677.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110406,도봉산역 1번,74.0,73.0,4.0,5.0,1.0,True,4600779348.0,4600779348.0,369560572.0,369560572.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110367,강북구청,44.0,44.0,10.0,10.0,,False,2517372553.0,2517372553.0,56425410.0,56425410.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130135,수유중앙골목시장(수유중앙시장),36.0,34.0,2.0,4.0,2.0,True,767126194.0,767126194.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110359,수유시장옆,27.0,25.0,5.0,7.0,2.0,True,617640821.0,617640821.0,1185607.0,1185607.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110358,인수동 우편취급국,23.0,23.0,8.0,8.0,,False,212308872.0,212308872.0,6672939.0,6672939.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110957,언북중학교,25.0,23.0,14.0,16.0,2.0,True,1013808105.0,1013808105.0,274904975.0,274904975.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110283,성북초등학교앞,17.0,14.0,9.0,12.0,3.0,True,1820256065.0,1759191384.0,2607943.0,63672624.0,61064681.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110100,옥수동우편취급국,3.0,3.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120245,둔촌역,187.0,177.0,19.0,29.0,10.0,True,13290462893.0,11436834430.0,934220911.0,2787849374.0,1853628463.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130323,둔촌역전통시장,54.0,52.0,3.0,5.0,2.0,True,2481074455.0,2481074455.0,4830571.0,4830571.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110064,효창공원앞역 2번,21.0,14.0,12.0,19.0,7.0,True,1231943805.0,795527323.0,152118126.0,588534608.0,436416482.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111073,둔촌동역 1번(한산중학교),63.0,60.0,17.0,20.0,3.0,True,2568154841.0,2568154841.0,127211650.0,127211650.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111062,둔촌동역 3번(성내3동주민센터),43.0,39.0,21.0,25.0,4.0,True,1568468554.0,1568468554.0,219332162.0,219332162.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111064,둔촌동역 4번,28.0,24.0,3.0,7.0,4.0,True,495498561.0,407672023.0,,87826538.0,87826538.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110955,논현초등학교,41.0,40.0,32.0,33.0,1.0,True,1445198204.0,1445198204.0,80106255.0,80106255.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120194,언주역(차병원),184.0,180.0,40.0,44.0,4.0,True,10654900800.0,10375433038.0,1959236893.0,2238704655.0,279467762.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110584,아현역 4번,10.0,10.0,2.0,2.0,,False,83871428.0,83871428.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130001,통인시장,56.0,52.0,24.0,28.0,4.0,True,1387274667.0,1387274667.0,1317826713.0,1317826713.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110394,방학중학교,40.0,39.0,6.0,7.0,1.0,True,926698416.0,926698416.0,29437699.0,29437699.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130198,아현시장,54.0,53.0,2.0,3.0,1.0,True,1109030505.0,1109030505.0,47719589.0,47719589.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110961,언주역 3번,34.0,33.0,7.0,8.0,1.0,True,3126399615.0,3126399615.0,246746524.0,246746524.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110402,도봉구 정병원,47.0,43.0,6.0,10.0,4.0,True,1010581885.0,1010581885.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110589,애오개역 3번,4.0,4.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120040,용산전자상가(용산역),98.0,98.0,30.0,30.0,0.0,True,6975502112.0,6975502112.0,728242179.0,728242179.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110431,상계역,128.0,126.0,7.0,9.0,2.0,True,11183230052.0,10302138344.0,334991514.0,1216083222.0,881091708.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110430,중계초등학교,7.0,7.0,3.0,3.0,0.0,True,396420962.0,396420962.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130157,상계중앙시장,64.0,62.0,5.0,7.0,2.0,True,1286886955.0,1286886955.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110428,상계5동주민센터,85.0,77.0,9.0,17.0,8.0,True,2176214470.0,2109806295.0,168682027.0,235090202.0,66408175.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110586,서울서부지방법원,100.0,97.0,18.0,21.0,3.0,True,3957007633.0,3957007633.0,320268095.0,320268095.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110436,상계제일중학교,8.0,8.0,1.0,1.0,,False,1333688922.0,1333688922.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110366,광산사거리,35.0,35.0,5.0,5.0,,False,1171277987.0,1171277987.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110375,서울북부고용노동지청,13.0,12.0,2.0,3.0,1.0,True,630185669.0,630185669.0,42145662.0,42145662.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130158,상계역전종합상가,2.0,2.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110585,마포경찰서,8.0,7.0,2.0,3.0,1.0,True,158874769.0,158874769.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130142,강북북부시장,2.0,2.0,,0.0,0.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130152,오!도봉거리 상점가,15.0,15.0,3.0,3.0,,False,208247949.0,208247949.0,4294481.0,4294481.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110530,아현역 1번,15.0,12.0,1.0,4.0,3.0,True,1410429878.0,1410429878.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120229,방이동먹자골목,318.0,316.0,16.0,18.0,2.0,True,49271634320.0,49271634320.0,2058435537.0,2058435537.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110927,잠원역,14.0,13.0,3.0,4.0,1.0,True,291631913.0,291631913.0,142187700.0,142187700.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110063,효창공원앞역 5번,59.0,56.0,7.0,10.0,3.0,True,3366746995.0,3119631356.0,31425275.0,278540914.0,247115639.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130122,밤나무골시장,4.0,4.0,1.0,1.0,,False,13731959.0,13731959.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110372,강북중학교,40.0,39.0,6.0,7.0,1.0,True,942373660.0,942373660.0,45352374.0,45352374.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120207,선정릉역,136.0,129.0,41.0,48.0,7.0,True,9071900430.0,9071900430.0,993535899.0,993535899.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110976,언북초등학교,20.0,19.0,7.0,8.0,1.0,True,612500916.0,612500916.0,42436684.0,42436684.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110970,학동초등학교,8.0,7.0,1.0,2.0,1.0,True,214550790.0,214550790.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110974,언주중학교,1.0,1.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110065,남정초등학교,2.0,2.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130056,용산용문시장,82.0,79.0,3.0,6.0,3.0,True,5795170740.0,5749523578.0,137181537.0,182828699.0,45647162.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110060,효창공원앞역 6번,19.0,17.0,11.0,13.0,2.0,True,459578831.0,459578831.0,73319339.0,73319339.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110277,러스크서울병원,34.0,29.0,5.0,10.0,5.0,True,1095451660.0,1095451660.0,75345281.0,75345281.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110061,효창동주민센터,9.0,9.0,8.0,8.0,0.0,True,238721419.0,238721419.0,197860602.0,197860602.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110062,한강로동땡땡거리(은행나무길),134.0,131.0,41.0,44.0,3.0,True,12745117696.0,12745117696.0,530262410.0,530262410.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130132,삼양골목시장(삼양시장),30.0,28.0,4.0,6.0,2.0,True,1059966061.0,1059966061.0,116495787.0,116495787.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120186,가로수길,319.0,301.0,83.0,101.0,18.0,True,26616462672.0,25839375542.0,2396941353.0,3174028483.0,777087130.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110278,망우본동주민센터,50.0,45.0,12.0,17.0,5.0,True,2216025408.0,1951205129.0,153426752.0,418247031.0,264820279.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110389,한일병원,11.0,10.0,5.0,6.0,1.0,True,347519138.0,347519138.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110077,삼광초등학교,15.0,14.0,6.0,7.0,1.0,True,1025767784.0,1025767784.0,104283483.0,104283483.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130137,"수유전통시장(수유시장, 수유골목시장)",65.0,63.0,2.0,4.0,2.0,True,3152848569.0,3152848569.0,6375936.0,6375936.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130303,영동전통시장,118.0,117.0,5.0,6.0,1.0,True,9389505323.0,9389505323.0,35263030.0,35263030.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120176,논현역 4번,35.0,33.0,17.0,19.0,2.0,True,1056156289.0,1056156289.0,49974902.0,49974902.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110412,창동중학교,4.0,4.0,,,,False,498055721.0,498055721.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120225,잠실새내역(신천),406.0,384.0,46.0,68.0,22.0,True,42951224735.0,41312359065.0,4948747113.0,6587612783.0,1638865670.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130311,새마을시장,148.0,136.0,10.0,22.0,12.0,True,10740124543.0,10483543396.0,197635731.0,454216878.0,256581147.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120248,명일역,140.0,128.0,17.0,29.0,12.0,True,11408189055.0,10468097915.0,459129303.0,1399220443.0,940091140.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120095,홍제역,84.0,77.0,6.0,13.0,7.0,True,6537089776.0,6397852756.0,180298967.0,319535987.0,139237020.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120107,공덕역(공덕오거리),135.0,130.0,23.0,28.0,5.0,True,13464450909.0,11977383126.0,1457012606.0,2944080389.0,1487067783.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130195,도화동 상점가,233.0,228.0,21.0,26.0,5.0,True,24541472725.0,24401237428.0,1628222938.0,1768458235.0,140235297.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120106,마포역,121.0,119.0,23.0,25.0,2.0,True,7153505178.0,6933342274.0,518306523.0,738469427.0,220162904.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130197,마포시장,48.0,48.0,1.0,1.0,,False,5148763329.0,5148763329.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130196,공덕시장,35.0,34.0,0.0,1.0,1.0,True,2164904888.0,2164904888.0,71401852.0,71401852.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110581,염리초등학교,4.0,4.0,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120167,고속터미널(고속터미널역),205.0,182.0,28.0,51.0,23.0,True,8166600825.0,8038913640.0,778641787.0,906328972.0,127687185.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120170,삼호가든사거리,31.0,30.0,7.0,8.0,1.0,True,3484205402.0,3223205402.0,1178950301.0,1439950301.0,261000000.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110415,수락산역 4번,64.0,60.0,8.0,12.0,4.0,True,3786526032.0,3771999666.0,377976695.0,392503061.0,14526366.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110419,수락산디자인거리,103.0,98.0,17.0,22.0,5.0,True,8063982891.0,7879928645.0,277463747.0,461517993.0,184054246.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110098,서울독일학교,30.0,30.0,6.0,6.0,,False,3006591298.0,3006591298.0,189126401.0,189126401.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130302,강남시장(강남구 강남시장),26.0,24.0,0.0,2.0,2.0,True,1550804278.0,1550804278.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110949,한남IC,21.0,20.0,10.0,11.0,1.0,True,1432078070.0,1432078070.0,195776338.0,195776338.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110090,한국폴리텍대학서울정수캠퍼스,22.0,22.0,1.0,1.0,,False,1179775210.0,1179775210.0,36815906.0,36815906.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110088,오산고등학교,26.0,26.0,6.0,6.0,,False,534975897.0,534975897.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120247,굽은다리역,66.0,64.0,3.0,5.0,2.0,True,5120804809.0,4517075823.0,154035399.0,757764385.0,603728986.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130325,명일전통시장,11.0,10.0,2.0,3.0,1.0,True,96102875.0,96102875.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111080,굽은다리역 3번,36.0,33.0,18.0,21.0,3.0,True,1230288230.0,1230288230.0,836779028.0,836779028.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111075,굽은다리역 2번,16.0,16.0,2.0,2.0,,False,376498729.0,376498729.0,218282660.0,218282660.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111070,천호초등학교,11.0,11.0,,,,False,217649847.0,217649847.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111069,천호1동주민센터,22.0,22.0,6.0,6.0,,False,45604436.0,45604436.0,41345095.0,41345095.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120242,강동구청역,143.0,136.0,36.0,43.0,7.0,True,9557860152.0,9436026388.0,1135232751.0,1257066515.0,121833764.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111053,성내천어린이공원(하니사랑길),27.0,23.0,9.0,13.0,4.0,True,3201189006.0,2924074867.0,282984546.0,560098685.0,277114139.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111050,강동구청(강동구청역 2번),13.0,13.0,6.0,6.0,,False,75438435.0,75438435.0,64411672.0,64411672.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110576,대흥역 3번,83.0,80.0,21.0,24.0,3.0,True,5517654416.0,5360278860.0,415750288.0,573125844.0,157375556.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110081,해방촌 남동측,113.0,102.0,35.0,46.0,11.0,True,4040431271.0,4029937831.0,484044502.0,494537942.0,10493440.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120233,몽촌토성역,70.0,67.0,14.0,17.0,3.0,True,6048068016.0,5999471323.0,300747326.0,349344019.0,48596693.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120177,신논현역 1번,55.0,52.0,19.0,22.0,3.0,True,1659072308.0,1659072308.0,716340129.0,716340129.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110952,논현목련공원,12.0,12.0,2.0,2.0,,False,74445478.0,74445478.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110360,수유초등학교,56.0,56.0,5.0,5.0,,False,1698005546.0,1698005546.0,21165138.0,21165138.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120244,암사역,83.0,80.0,11.0,14.0,3.0,True,10505212343.0,9949140205.0,176237154.0,732309292.0,556072138.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130320,암사종합시장,46.0,45.0,0.0,1.0,1.0,True,3556702536.0,3556702536.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111060,암사역 2번(서울강동초등학교),112.0,109.0,15.0,18.0,3.0,True,4335920352.0,4335920352.0,210224004.0,210224004.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111052,암사역 3번(천호동자전거거리),50.0,45.0,18.0,23.0,5.0,True,2354863228.0,2354863228.0,20403665.0,20403665.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111061,암사역 1번,77.0,70.0,20.0,27.0,7.0,True,2430672301.0,2422437724.0,134158032.0,142392609.0,8234577.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111054,암사역 4번(삼성광나루아파트),3.0,3.0,1.0,1.0,,False,483794548.0,483794548.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111057,천호공원(해공체육문화센터),63.0,62.0,6.0,7.0,1.0,True,1599669754.0,1599669754.0,183312457.0,183312457.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120228,석촌역(석촌호수),142.0,130.0,46.0,58.0,12.0,True,11556276863.0,11085531641.0,2289350874.0,2760096096.0,470745222.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110151,자양한강도서관,58.0,58.0,7.0,7.0,0.0,True,2518118924.0,2518118924.0,142332047.0,142332047.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111058,성내중학교,10.0,8.0,2.0,4.0,2.0,True,15005627.0,15005627.0,30000000.0,30000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110587,공덕동주민센터,22.0,20.0,9.0,11.0,2.0,True,274553623.0,274553623.0,20997084.0,20997084.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111010,석촌역 7번,114.0,104.0,17.0,27.0,10.0,True,8108421948.0,8085248140.0,172262170.0,195435978.0,23173808.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110580,양원초등학교,10.0,10.0,4.0,4.0,,False,187044717.0,187044717.0,7161368.0,7161368.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110572,서강대역 1번,78.0,71.0,29.0,36.0,7.0,True,2724610357.0,2172261232.0,663976312.0,1216325437.0,552349125.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110157,자양동우체국,33.0,31.0,8.0,10.0,2.0,True,1336695800.0,1063663208.0,73846441.0,346879033.0,273032592.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111074,명일역 1번,12.0,12.0,3.0,3.0,,False,539315188.0,539315188.0,20843578.0,20843578.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120096,"이화여대(이대역, 이대)",115.0,106.0,32.0,41.0,9.0,True,3913309136.0,3609722188.0,975189079.0,1278776027.0,303586948.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130148,방학동도깨비시장,40.0,36.0,5.0,9.0,4.0,True,1594258612.0,1505566682.0,201473108.0,290165038.0,88691930.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130179,"이화여대 3,5,7길 상점가",112.0,107.0,35.0,40.0,5.0,True,6255821106.0,6139600002.0,1937588795.0,2053809899.0,116221104.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110582,이대역 5번,26.0,24.0,5.0,7.0,2.0,True,535840758.0,535840758.0,24509221.0,24509221.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110520,경의중앙 신촌역,24.0,24.0,5.0,5.0,,False,1510621857.0,1510621857.0,27395820.0,27395820.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110401,도봉구민회관,6.0,6.0,,0.0,0.0,True,1107512571.0,1107512571.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130178,이대 앞 스타트업 상점가,37.0,36.0,5.0,6.0,1.0,True,540350806.0,540350806.0,124199310.0,124199310.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110575,대흥동주민센터,12.0,12.0,4.0,4.0,,False,272091676.0,272091676.0,20213321.0,20213321.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110439,당고개역 5번,27.0,27.0,4.0,4.0,,False,170458590.0,170458590.0,318076822.0,318076822.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110437,당고개역 2번,34.0,34.0,5.0,5.0,,False,524604581.0,524604581.0,15506950.0,15506950.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110440,상계3동4동주민센터,2.0,2.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130177,인왕시장(홍제골목형상점가),56.0,56.0,0.0,0.0,,False,3800589071.0,3800589071.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130176,유진상가,7.0,6.0,1.0,2.0,1.0,True,374675490.0,374675490.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110416,노원초등학교,35.0,34.0,4.0,5.0,1.0,True,5561350583.0,5561350583.0,15362237.0,15362237.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110529,홍제3동주민센터,52.0,48.0,6.0,10.0,4.0,True,1747261899.0,1643933996.0,20125443.0,123453346.0,103327903.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110527,홍제역 2번,29.0,29.0,4.0,4.0,0.0,True,724796000.0,724796000.0,7600525.0,7600525.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110521,홍제역 4번,28.0,25.0,5.0,8.0,3.0,True,1656902244.0,1656902244.0,35176113.0,35176113.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110522,홍제역 3번,13.0,13.0,2.0,2.0,,False,13972567.0,13972567.0,5035435.0,5035435.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130080,자양종합시장(기능상실),1.0,1.0,,,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110134,성수119안전센터,70.0,65.0,18.0,23.0,5.0,True,1975759493.0,1975759493.0,130646179.0,130646179.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110578,대흥역 2번,85.0,75.0,18.0,28.0,10.0,True,2878814395.0,2494224526.0,266100508.0,650690377.0,384589869.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110399,창2동주민센터,32.0,27.0,7.0,12.0,5.0,True,1023440802.0,919459211.0,57039117.0,161020708.0,103981591.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110280,북정마을,2.0,1.0,4.0,5.0,1.0,True,,,48658361.0,48658361.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111014,송파나루역 2번,63.0,60.0,3.0,6.0,3.0,True,7595722802.0,7595722802.0,45251868.0,45251868.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111066,암사동성당(효정하나플러스아파트),39.0,39.0,7.0,7.0,,False,1224567251.0,1224567251.0,76979537.0,76979537.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130313,방이시장,87.0,84.0,10.0,13.0,3.0,True,4216530723.0,3801760912.0,687917330.0,1102687141.0,414769811.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110577,용강동주민센터,16.0,14.0,4.0,6.0,2.0,True,1151989797.0,1151989797.0,110388197.0,110388197.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111019,한성백제역 3번,41.0,35.0,10.0,16.0,6.0,True,1069677403.0,1069677403.0,213336658.0,213336658.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110962,도산공원북측,16.0,15.0,8.0,9.0,1.0,True,844203510.0,844203510.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111004,삼전역 1번,96.0,91.0,19.0,24.0,5.0,True,8162978145.0,7077621523.0,198937835.0,1284294457.0,1085356622.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110381,번동주공2단지,15.0,15.0,3.0,3.0,0.0,True,584750621.0,584750621.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130194,용강동 상점가,88.0,88.0,7.0,7.0,0.0,True,12124665989.0,12124665989.0,152029223.0,152029223.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120094,"신촌역(신촌역, 신촌로터리)",666.0,652.0,105.0,119.0,14.0,True,40762649985.0,40203828978.0,4863026857.0,5421847864.0,558821007.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110569,홍대땡땡거리,91.0,87.0,31.0,35.0,4.0,True,5573964572.0,5265583485.0,1013336508.0,1321717595.0,308381087.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130175,신촌 상인회(신촌상점가),6.0,6.0,2.0,2.0,,False,243361640.0,243361640.0,238382414.0,238382414.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110573,신촌역 6번,6.0,5.0,1.0,2.0,1.0,True,207157809.0,207157809.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3001496,강남 마이스 관광특구,149.0,129.0,24.0,44.0,20.0,True,32014605713.0,29425824914.0,7689464020.0,10278244819.0,2588780799.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120218,코엑스,75.0,69.0,14.0,20.0,6.0,True,13115297141.0,12229260659.0,1838561341.0,2724597823.0,886036482.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110583,공덕래미안3차아파트,12.0,11.0,1.0,2.0,1.0,True,460383834.0,460383834.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110579,마포역 4번,20.0,20.0,3.0,3.0,,False,256074712.0,256074712.0,31148532.0,31148532.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130062,보광시장,1.0,,1.0,2.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120187,신논현역,457.0,446.0,87.0,98.0,11.0,True,48804450919.0,48689302591.0,5291518006.0,5406666334.0,115148328.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120047,한남오거리,186.0,181.0,20.0,25.0,5.0,True,25415908439.0,25006221042.0,605379786.0,1015067183.0,409687397.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110361,삼양사거리역 1번,8.0,6.0,2.0,4.0,2.0,True,883815.0,883815.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110574,서강대학교,2.0,1.0,0.0,1.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110058,성심여자고등학교,30.0,27.0,6.0,9.0,3.0,True,615708791.0,615708791.0,223406450.0,223406450.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111021,방이역 4번,145.0,137.0,27.0,35.0,8.0,True,10489214528.0,10059560165.0,284210326.0,713864689.0,429654363.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111032,방이역 1번,39.0,34.0,2.0,7.0,5.0,True,4113632334.0,4112532305.0,25574361.0,26674390.0,1100029.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120238,방이역,38.0,38.0,9.0,9.0,0.0,True,2460944536.0,2460944536.0,1628592950.0,1628592950.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111020,방이동고분군(방산고등학교),24.0,22.0,11.0,13.0,2.0,True,903697153.0,903697153.0,132384248.0,132384248.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111030,방이역 2번,19.0,16.0,12.0,15.0,3.0,True,899231794.0,743833622.0,131968491.0,287366663.0,155398172.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110571,신수동주민센터,21.0,21.0,8.0,8.0,,False,210234304.0,210234304.0,31753716.0,31753716.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120222,삼성역,198.0,179.0,51.0,70.0,19.0,True,36196010735.0,34034554382.0,9616432745.0,11777889098.0,2161456353.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120215,포스코사거리,348.0,346.0,73.0,75.0,2.0,True,55641959888.0,55605998739.0,7637723748.0,7673684897.0,35961149.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120223,휘문고교사거리,13.0,13.0,11.0,11.0,0.0,True,403109032.0,403109032.0,280892294.0,280892294.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110295,정릉우체국,23.0,21.0,2.0,4.0,2.0,True,1122905882.0,1122905882.0,174482542.0,174482542.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110298,솔숲어린이공원,2.0,2.0,2.0,2.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130073,뚝도시장,90.0,89.0,6.0,7.0,1.0,True,4426187208.0,4426187208.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110525,홍은종합사회복지관,17.0,16.0,6.0,7.0,1.0,True,404301044.0,404301044.0,94434353.0,94434353.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111076,둔촌2동주민센터,35.0,34.0,7.0,8.0,1.0,True,1048978007.0,1048978007.0,270561499.0,270561499.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130136,수유재래시장,6.0,5.0,0.0,1.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110951,신사은행나무공원,20.0,17.0,7.0,10.0,3.0,True,401024379.0,401024379.0,18000000.0,18000000.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130058,이촌종합시장,49.0,48.0,3.0,4.0,1.0,True,3420523805.0,3420523805.0,22510503.0,22510503.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110071,한강미주맨션아파트,21.0,19.0,3.0,5.0,2.0,True,1049809959.0,1049809959.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120249,고덕역,66.0,61.0,13.0,18.0,5.0,True,15902374676.0,13579847397.0,1687057557.0,4009584836.0,2322527279.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111013,송파나루역 1번(송리단길),219.0,196.0,73.0,96.0,23.0,True,8714550688.0,8590032352.0,1107174624.0,1231692960.0,124518336.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111015,석촌역 3번,65.0,55.0,31.0,41.0,10.0,True,1889683890.0,1889683890.0,254280328.0,254280328.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111012,석촌역 6번,50.0,44.0,13.0,19.0,6.0,True,790714554.0,788256620.0,103614955.0,106072889.0,2457934.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130138,수유프라자,,,1.0,1.0,,False,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3130321,장신구 특화거리 상점가,10.0,6.0,5.0,9.0,4.0,True,108171830.0,108171830.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110398,쌍문2동우체국,54.0,54.0,6.0,6.0,,False,2909727360.0,2909727360.0,186905505.0,186905505.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110408,가인초등학교,13.0,13.0,6.0,6.0,0.0,True,955892877.0,955892877.0,88302349.0,88302349.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110400,도봉구보건소,64.0,60.0,8.0,12.0,4.0,True,1414238000.0,1414238000.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111018,풍납초등학교(풍납백제문화공원),5.0,4.0,2.0,3.0,1.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110514,서대문우체국,20.0,18.0,2.0,4.0,2.0,True,169952604.0,169952604.0,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120232,송파나루역,30.0,28.0,16.0,18.0,2.0,True,2293432001.0,2279936471.0,278855970.0,292351500.0,13495530.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110971,선정릉역 4번,17.0,16.0,11.0,12.0,1.0,True,1754614320.0,1754614320.0,189344961.0,189344961.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120103,홍대입구역(홍대),926.0,896.0,224.0,254.0,30.0,True,80095573756.0,78632664111.0,10784288686.0,12247198331.0,1462909645.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120230,송파사거리(송파역),90.0,84.0,10.0,16.0,6.0,True,4608020060.0,4487607664.0,226262943.0,346675339.0,120412396.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120239,오금역,114.0,111.0,22.0,25.0,3.0,True,5500670721.0,5500670721.0,556114281.0,556114281.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111029,오금역 4번,7.0,5.0,3.0,5.0,2.0,True,,,10882936.0,10882936.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111035,오금공원(오주중학교),18.0,18.0,8.0,8.0,,False,174064784.0,174064784.0,43892302.0,43892302.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3111022,석촌중학교(방이육교),8.0,8.0,2.0,2.0,0.0,True,,,,,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120153,노량진역(노량진),220.0,214.0,43.0,49.0,6.0,True,37057875766.0,36314891651.0,1807049490.0,2550033605.0,742984115.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3120102,서교동(홍대),161.0,154.0,75.0,82.0,7.0,True,13795821636.0,13795821636.0,2653226721.0,2653226721.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110566,경의선책거리,121.0,108.0,76.0,89.0,13.0,True,3480385956.0,3454807230.0,1835521525.0,1861100251.0,25578726.0,True,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
+3110832,노량진초등학교,17.0,16.0,4.0,5.0,1.0,True,945200461.0,945200461.0,91826619.0,91826619.0,,False,cafe_study_v1_transfer_proposal_2026-10-03,missing_source_row_is_unknown_not_zero
