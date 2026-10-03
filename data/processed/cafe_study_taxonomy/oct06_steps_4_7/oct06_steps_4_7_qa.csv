@@ -1,0 +1,15 @@
+﻿check,status,observed,expected
+area_rows_and_unique_code,PASS,786,786
+area_code_matches_source,PASS,786,786
+cafe_complete_only_observed,PASS,224,224 complete
+cafe_supply_only_rank_separate,PASS,232,232 supply_only
+cafe_full_score_range,PASS,224,0..100
+residual_variant_observed_only,PASS,184,"qualified observed only, 0..100"
+study_unverified_null,PASS,0,0
+s4_unverified_null,PASS,0,0
+broad_tourism_excluded_from_rank,PASS,6,6 reference polygons
+top20_complete_only,PASS,20,20
+map_786_features,PASS,786,786
+network_radius_400_500_600,BLOCKED_INPUT,0,real legal pedestrian graph and entrance connectors
+verified_c_stay_s4,BLOCKED_EVIDENCE,0,source quote plus reviewer for each accepted POI
+meal_cafe_study_top10,BLOCKED_INTEGRATION,0,team-common purpose v1 and study final score
