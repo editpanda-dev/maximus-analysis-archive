@@ -4,7 +4,7 @@ from .repository import get_fixture_candidates
 RANKING_BASIS = "F0-public-rule"
 LIMITATIONS = "데모 fixture이며 실제 관측값이 아닙니다. 실시간 대중교통 정보가 아니며, 개인화 추천이나 인과관계를 보장하지 않습니다."
 MAX_RECOMMENDATIONS = 5
-PURPOSE_LABELS = {"food": "식사", "cafe": "카페", "date": "데이트", "shopping": "쇼핑", "culture": "문화", "rest": "휴식"}
+PURPOSE_LABELS = {"food": "식사", "cafe": "카페", "date": "데이트", "shopping": "쇼핑", "culture": "문화", "rest": "휴식", "study": "공부"}
 PURPOSE_RANKINGS = {
     "food": ("food_mangwon", "cafe_bukchon", "date_seongsu", "culture_jongno", "rest_yongsan", "shopping_hongdae"),
     "cafe": ("cafe_bukchon", "rest_yongsan", "culture_jongno", "food_mangwon", "date_seongsu", "shopping_hongdae"),
@@ -12,6 +12,7 @@ PURPOSE_RANKINGS = {
     "shopping": ("shopping_hongdae", "cafe_bukchon", "food_mangwon", "date_seongsu", "culture_jongno", "rest_yongsan"),
     "culture": ("culture_jongno", "rest_yongsan", "cafe_bukchon", "date_seongsu", "food_mangwon", "shopping_hongdae"),
     "rest": ("rest_yongsan", "cafe_bukchon", "culture_jongno", "date_seongsu", "shopping_hongdae", "food_mangwon"),
+    "study": ("cafe_bukchon", "rest_yongsan", "culture_jongno", "food_mangwon", "date_seongsu", "shopping_hongdae"),
 }
 
 

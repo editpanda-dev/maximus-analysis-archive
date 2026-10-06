@@ -1,5 +1,8 @@
 import os
 from collections.abc import AsyncIterator
+from dotenv import load_dotenv
+
+load_dotenv()
 from contextlib import asynccontextmanager
 from typing import Literal
 

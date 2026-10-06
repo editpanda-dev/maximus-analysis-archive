@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field, model_validator
 from .korea_region import is_south_korea_coordinate
 
 
-Purpose = Literal["food", "cafe", "date", "shopping", "culture", "rest"]
+Purpose = Literal["food", "cafe", "date", "shopping", "culture", "rest", "study"]
 MaxTravelTime = Literal[20, 30, 40, 60]
 TransportMode = Literal["walking", "transit"]
 

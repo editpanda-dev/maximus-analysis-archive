@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 TransportMode = Literal["public_transit"]
 MaxTravelTime = Literal[20, 30, 40, 60]
 TimeSlot = Literal["morning", "lunch", "afternoon", "evening", "night"]
-Purpose = Literal["food", "cafe", "date", "shopping", "culture", "rest"]
+Purpose = Literal["food", "cafe", "date", "shopping", "culture", "rest", "study"]
 RouteStatus = Literal["available_verified", "no_route", "unverified"]
 CostStatus = Literal["available", "unavailable"]
 

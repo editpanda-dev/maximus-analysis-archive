@@ -23,6 +23,7 @@ PURPOSE_KEYWORDS = {
     "shopping": "쇼핑",
     "culture": "문화시설",
     "rest": "휴식",
+    "study": "스터디카페",
 }
 LIMITATIONS = (
     "카카오 대중교통 경로를 우선 사용합니다. 카카오가 경로를 제공하지 않는 가까운 장소는 "
