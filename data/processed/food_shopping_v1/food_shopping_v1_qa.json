@@ -1,0 +1,233 @@
+{
+  "area_count": 786,
+  "sales_quarter": 20254,
+  "buffer_m": 400,
+  "walk_distance_basis": {
+    "euclidean_400m_buffer": 786
+  },
+  "row_count": 786,
+  "row_count_is_786": true,
+  "area_code_unique": true,
+  "area_code_is_7_digit_string": true,
+  "score_missing": {
+    "M1_score": 0,
+    "M2_score": 0,
+    "M3_score": 0,
+    "M4_score": 0,
+    "M5_score": 0,
+    "M6_score": 0,
+    "SH1_score": 0,
+    "SH2_score": 0,
+    "SH3_score": 0,
+    "SH4_score": 0,
+    "SH5_score": 0,
+    "food_score": 0,
+    "shopping_score": 0
+  },
+  "score_min": 0.038,
+  "score_max": 99.885,
+  "score_within_0_100": true,
+  "supply_weights_sum": 1.0,
+  "score_weights_sum": 1.0,
+  "sales_status_missing_label": 0,
+  "sales_status_counts": {
+    "M1": {
+      "observed": 683,
+      "missing": 103
+    },
+    "M2": {
+      "missing": 578,
+      "observed": 208
+    },
+    "M3": {
+      "missing": 591,
+      "observed": 195
+    },
+    "M4": {
+      "missing": 586,
+      "observed": 200
+    },
+    "M5": {
+      "missing": 370,
+      "observed": 365,
+      "estimated": 51
+    },
+    "M6": {
+      "missing": 568,
+      "observed": 218
+    },
+    "SH1": {
+      "observed": 337,
+      "missing": 309,
+      "estimated": 140
+    },
+    "SH2": {
+      "missing": 659,
+      "observed": 80,
+      "estimated": 47
+    },
+    "SH3": {
+      "missing": 597,
+      "estimated": 111,
+      "observed": 78
+    },
+    "SH4": {
+      "missing": 607,
+      "estimated": 94,
+      "observed": 85
+    },
+    "SH5": {
+      "estimated": 275,
+      "missing": 269,
+      "observed": 242
+    },
+    "food": {
+      "observed": 571,
+      "estimated": 113,
+      "missing": 102
+    },
+    "shopping": {
+      "estimated": 334,
+      "missing": 319,
+      "observed": 133
+    }
+  },
+  "score_basis_counts": {
+    "M1": {
+      "full": 683,
+      "supply_only": 103
+    },
+    "M2": {
+      "supply_only": 578,
+      "full": 208
+    },
+    "M3": {
+      "supply_only": 591,
+      "full": 195
+    },
+    "M4": {
+      "supply_only": 586,
+      "full": 200
+    },
+    "M5": {
+      "full": 416,
+      "supply_only": 370
+    },
+    "M6": {
+      "supply_only": 568,
+      "full": 218
+    },
+    "SH1": {
+      "full": 477,
+      "supply_only": 309
+    },
+    "SH2": {
+      "supply_only": 659,
+      "full": 127
+    },
+    "SH3": {
+      "supply_only": 597,
+      "full": 189
+    },
+    "SH4": {
+      "supply_only": 607,
+      "full": 179
+    },
+    "SH5": {
+      "full": 517,
+      "supply_only": 269
+    },
+    "food": {
+      "full": 684,
+      "supply_only": 102
+    },
+    "shopping": {
+      "full": 467,
+      "supply_only": 319
+    }
+  },
+  "full_score_has_no_neutral_fill": true,
+  "sbiz_code_assigned_twice": 0,
+  "industry_assigned_twice": 0,
+  "other_purpose_codes_in_food_shopping": [],
+  "price_tier_counts": {
+    "M1": {
+      "중가": 344,
+      "고가": 174,
+      "저가": 158,
+      "정보없음": 110
+    },
+    "M2": {
+      "정보없음": 585,
+      "중가": 98,
+      "저가": 55,
+      "고가": 48
+    },
+    "M3": {
+      "정보없음": 616,
+      "중가": 82,
+      "고가": 51,
+      "저가": 37
+    },
+    "M4": {
+      "정보없음": 599,
+      "중가": 89,
+      "고가": 54,
+      "저가": 44
+    },
+    "M5": {
+      "정보없음": 382,
+      "중가": 199,
+      "고가": 114,
+      "저가": 91
+    },
+    "M6": {
+      "정보없음": 700,
+      "중가": 44,
+      "저가": 22,
+      "고가": 20
+    },
+    "food": {
+      "중가": 350,
+      "고가": 179,
+      "저가": 153,
+      "정보없음": 104
+    }
+  },
+  "flags": {
+    "is_tourism_zone": 6,
+    "inside_tourism_zone": 34,
+    "wholesale_auto_candidate": 14,
+    "wholesale_decision": {
+      "retail": 782,
+      "wholesale_apparel": 2,
+      "wholesale_food": 2
+    },
+    "wide_area": 27,
+    "small_area": 107
+  },
+  "spearman_score_vs_log_area": {
+    "food": 0.235,
+    "shopping": 0.185
+  },
+  "spearman_score_vs_official_store_count": {
+    "food": 0.506,
+    "shopping": 0.493
+  },
+  "delivery_sensitivity_food": {
+    "spearman_full_basis": 0.973,
+    "top20_kept": 14
+  },
+  "top_list_overlap_pairs": 0,
+  "top_list_small_areas_info": 25,
+  "combo_rows_below_floor": 0,
+  "zero_store_units_with_inside_percentile": 0,
+  "top_list_tourism_polygons": 0,
+  "top_list_apparel_wholesale_in_shopping": 0,
+  "weight_sensitivity_min_top10_kept": {
+    "food": 6,
+    "food+shopping": 5,
+    "shopping": 6
+  },
+  "passed": true
+}

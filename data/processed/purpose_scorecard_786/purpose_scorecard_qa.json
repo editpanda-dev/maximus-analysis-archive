@@ -1,0 +1,89 @@
+{
+  "rows": 786,
+  "area_code_unique": true,
+  "score_missing": {
+    "food_score": 0,
+    "cafe_score": 0,
+    "study_score": 0,
+    "shopping_score": 0,
+    "leisure_score": 0
+  },
+  "pct_range": [
+    0.127,
+    100.0
+  ],
+  "combo_ready_counts": {
+    "food": 678,
+    "cafe": 780,
+    "study": 780,
+    "shopping": 461,
+    "leisure": 780
+  },
+  "combo_lists": 20,
+  "combo_rows_below_floor": 0,
+  "combo_tourism_rows": 0,
+  "purpose_percentile_spearman": {
+    "food": {
+      "food": 1.0,
+      "cafe": 0.287,
+      "study": 0.429,
+      "shopping": 0.364,
+      "leisure": 0.265
+    },
+    "cafe": {
+      "food": 0.287,
+      "cafe": 1.0,
+      "study": 0.421,
+      "shopping": 0.038,
+      "leisure": 0.084
+    },
+    "study": {
+      "food": 0.429,
+      "cafe": 0.421,
+      "study": 1.0,
+      "shopping": 0.213,
+      "leisure": 0.174
+    },
+    "shopping": {
+      "food": 0.364,
+      "cafe": 0.038,
+      "study": 0.213,
+      "shopping": 1.0,
+      "leisure": -0.038
+    },
+    "leisure": {
+      "food": 0.265,
+      "cafe": 0.084,
+      "study": 0.174,
+      "shopping": -0.038,
+      "leisure": 1.0
+    }
+  },
+  "sources": {
+    "food": {
+      "version": "food_shopping_v1 (김건우, 2026-10-06, Purpose Score v2)",
+      "source_status": "official_v2",
+      "score": "food_score"
+    },
+    "cafe": {
+      "version": "cafe draft (장한별, 2026-09-29, 잔차 방식 공급점수)",
+      "source_status": "provisional",
+      "score": "cafe_size_adjusted_supply_only_score"
+    },
+    "study": {
+      "version": "study_stay_current (2주차 통합, 2026-09-22, PATH-v0 계열)",
+      "source_status": "provisional",
+      "score": "study_stay_current_score"
+    },
+    "shopping": {
+      "version": "food_shopping_v1 (김건우, 2026-10-06, Purpose Score v2)",
+      "source_status": "official_v2",
+      "score": "shopping_score"
+    },
+    "leisure": {
+      "version": "leisure_culture_v1 (지우진, 2026-09-30, 잔차 방식)",
+      "source_status": "provisional",
+      "score": "leisure_size_adjusted_score"
+    }
+  }
+}
