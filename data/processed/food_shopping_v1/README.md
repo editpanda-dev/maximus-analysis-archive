@@ -13,6 +13,7 @@
 | `food_shopping_v1_weight_sensitivity.csv` | 대상×가중치 | 공급·소비 50/70/80 × 접근률 0/10/20%에서 Top 10 유지 수와 순위상관 |
 | `food_shopping_v1_top10_stability.csv` | 기준 Top 10 | 9개 가중치 조합 중 Top 10에 남은 횟수, 안정/탐색 |
 | `food_shopping_v1_quarter_sensitivity.csv` | 대상×분기 | 2025년 1–3분기 점포·매출로 다시 계산했을 때 Top 10 유지 수와 순위상관 |
+| `food_shopping_v1_lunch_price_cells.csv` | 상권×식사 업종 | 점심 객단가, 업종 중앙값 대비 가격 지수, 저가·중가·고가·정보없음 (필터 속성, 점수 미반영) |
 | `food_shopping_v1_qa.json` | — | 786행·중복·결측·범위·업종 중복·플래그·크기 상관·배달 민감도 QA. `passed=true` |
 | `maps/food_shopping_v1_top_map.html` | — | 식사·쇼핑 Top 20, 식사+쇼핑, 식사+카페+쇼핑 Top 10 레이어 지도 |
 | `maps/food_shopping_v1_top_map_{seoul,central}.png` | — | 발표용 정적 지도 (서울 전체 / 도심 확대) |

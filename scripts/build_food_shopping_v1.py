@@ -100,6 +100,14 @@ OVERLAP_SHARE = 0.3
 TOURISM_TYPE = "관광특구"
 TOURISM_INNER_SHARE = 0.5
 TOP_N = 10
+# Lunch price tier (filter attribute, never a score input). Ticket = 11-14h card
+# sales / 11-14h transactions; dinner mixes group payments, so lunch is used.
+LUNCH_AMOUNT = "시간대_11~14_매출_금액"
+LUNCH_COUNT = "시간대_건수~14_매출_건수"
+PRICE_MIN_LUNCH_TX = 100
+PRICE_PRIOR_TX = 200
+PRICE_TIER_QUANTILES = (0.25, 0.75)
+PRICE_UNITS = ["M1", "M2", "M3", "M4", "M5", "M6", "food"]
 # Grid used by scripts/collect_food_shopping_walk_routes.py to group stores per route.
 WALK_CELL_M = 50
 # Reason sentences only name a supply strength at or above this percentile.
@@ -282,6 +290,54 @@ def score_unit(features: pd.DataFrame, unit: str, city_share: float) -> pd.DataF
     return out
 
 
+def lunch_price_cells(sales: pd.DataFrame) -> pd.DataFrame:
+    """Area x meal industry lunch ticket, relative to the Seoul median of that industry.
+
+    Tickets are clipped to the industry's 5-95% range and pulled toward the
+    industry median with PRICE_PRIOR_TX pseudo-transactions, so thin cells do
+    not swing to an extreme. Cells under PRICE_MIN_LUNCH_TX transactions get no tier.
+    """
+    meal = {name for s in PURPOSES["food"]["subtypes"] for name in SUBTYPES[s]["industries"]}
+    cells = sales[sales.industry.isin(meal) & (sales[LUNCH_COUNT] > 0)][["area_code", "industry", LUNCH_AMOUNT, LUNCH_COUNT]].copy()
+    cells = cells.rename(columns={LUNCH_AMOUNT: "lunch_amount", LUNCH_COUNT: "lunch_tx"})
+    ticket = cells.lunch_amount / cells.lunch_tx
+    by_ind = ticket.groupby(cells.industry)
+    ticket = ticket.clip(by_ind.transform(lambda t: t.quantile(0.05)), by_ind.transform(lambda t: t.quantile(0.95)))
+    median = ticket.groupby(cells.industry).transform("median")
+    cells["lunch_ticket"] = ticket
+    cells["lunch_ticket_shrunk"] = (cells.lunch_tx * ticket + PRICE_PRIOR_TX * median) / (cells.lunch_tx + PRICE_PRIOR_TX)
+    cells["lunch_price_index"] = cells.lunch_ticket_shrunk / median
+    cells["subtype"] = cells.industry.map(INDUSTRY_TO_SUBTYPE)
+    return cells
+
+
+def price_tier(index: pd.Series, enough: pd.Series) -> pd.Series:
+    lo, hi = index[enough].quantile(list(PRICE_TIER_QUANTILES))
+    tier = pd.Series(np.select([index <= lo, index >= hi], ["저가", "고가"], default="중가"), index=index.index)
+    tier[~enough | index.isna()] = "정보없음"
+    return tier
+
+
+def area_price_tiers(cells: pd.DataFrame, index: pd.Index) -> pd.DataFrame:
+    """Lunch-transaction-weighted price index and tier per area for each meal unit."""
+    out = pd.DataFrame(index=index)
+    for unit in PRICE_UNITS:
+        c = cells[cells.subtype.isin(unit_subtypes(unit))]
+        tx = c.groupby("area_code").lunch_tx.sum()
+        idx = (c.lunch_price_index * c.lunch_tx).groupby(c.area_code).sum() / tx
+        out[f"{unit}_lunch_price_index"] = idx.reindex(index)
+        out[f"{unit}_lunch_tx"] = tx.reindex(index).fillna(0)
+        # Tier cuts come from all Seoul areas with enough lunch transactions.
+        out[f"{unit}_price_tier"] = price_tier(idx, tx >= PRICE_MIN_LUNCH_TX).reindex(index).fillna("정보없음")
+    return out
+
+
+PRICE_SENTENCE = {
+    "저가": "점심 결제 1건 금액이 같은 업종 서울 평균보다 낮은 편이에요.",
+    "고가": "점심 결제 1건 금액이 같은 업종 서울 평균보다 높은 편이에요.",
+}
+
+
 def josa(word: str, with_batchim: str, without: str) -> str:
     """Pick a Korean particle from the last Hangul syllable of a name."""
     stem = re.sub(r"\s*\([^)]*\)\s*$", "", str(word)).strip()
@@ -330,6 +386,8 @@ def purpose_reason(row: pd.Series, purpose: str) -> str:
         sentences.append(SUPPLY_SENTENCE[purpose][driver])
     sentences.append(STATUS_SENTENCE[row[f"{purpose}_sales_status"]])
     sentences.append(access_sentence(row.minimum_period_ratio))
+    if purpose == "food" and row.get("food_price_tier") in PRICE_SENTENCE:
+        sentences.append(PRICE_SENTENCE[row.food_price_tier])
     if purpose == "shopping" and row.wholesale_decision == "wholesale_apparel":
         sentences.append("도매 거래 비중이 높아 일반 쇼핑 추천에서는 제외했어요.")
     return " ".join(sentences)
@@ -442,6 +500,7 @@ def build(
         sales[["area_code", "industry", "sales"]], on=["area_code", "industry"], how="left"
     )
     rows["subtype"] = rows.industry.map(INDUSTRY_TO_SUBTYPE)
+    price_cells = lunch_price_cells(sales)
 
     candidates = flag_wholesale_candidates(rows)
     wholesale = apply_wholesale_review(candidates[candidates.index.isin(features.index)], wholesale_review, strict_review)
@@ -494,6 +553,7 @@ def build(
         features[f"{purpose}_best_subtype"] = sub.apply(lambda r: r.idxmax() if r.notna().any() else "", axis=1)
         features[f"{purpose}_top_subtypes"] = best.map("|".join)
 
+    features = features.join(area_price_tiers(price_cells, features.index))
     features["access_percentile"] = percentile(features.minimum_period_ratio)
     # Small areas (<50 official stores) stay listable on purpose: a small but
     # dense alley is exactly what the size correction is meant to surface.
@@ -516,6 +576,15 @@ def build(
                "walk_distance_basis": features.walk_distance_basis.value_counts().to_dict()}
     if walk_routes is not None:
         summary["walk_route_coverage_median"] = round(float(features.walk_route_coverage.median()), 4)
+    candidate_cells = price_cells[price_cells.area_code.isin(features.index)].copy()
+    # Cell tiers use cuts within each industry across all Seoul areas.
+    enough = price_cells.lunch_tx >= PRICE_MIN_LUNCH_TX
+    cuts = price_cells[enough].groupby("industry").lunch_price_index.quantile(list(PRICE_TIER_QUANTILES)).unstack()
+    lo, hi = candidate_cells.industry.map(cuts.iloc[:, 0]), candidate_cells.industry.map(cuts.iloc[:, 1])
+    candidate_cells["price_tier"] = np.select(
+        [candidate_cells.lunch_tx < PRICE_MIN_LUNCH_TX, candidate_cells.lunch_price_index <= lo, candidate_cells.lunch_price_index >= hi],
+        ["정보없음", "저가", "고가"], default="중가")
+    summary["_price_cells"] = candidate_cells.round({"lunch_ticket": 0, "lunch_ticket_shrunk": 0, "lunch_price_index": 3})
     return features.reset_index(), summary
 
 
@@ -796,6 +865,7 @@ def qa_report(scorecard: pd.DataFrame, tables: dict[str, pd.DataFrame], sensitiv
         "sbiz_code_assigned_twice": len(sbiz_codes) - len(set(sbiz_codes)),
         "industry_assigned_twice": len(industries) - len(set(industries)),
         "other_purpose_codes_in_food_shopping": sorted((set(industries) & OTHER_PURPOSE_INDUSTRIES) | (set(sbiz_codes) & OTHER_PURPOSE_SBIZ)),
+        "price_tier_counts": {u: frame[f"{u}_price_tier"].value_counts().to_dict() for u in PRICE_UNITS},
         "flags": {
             "is_tourism_zone": int(frame.is_tourism_zone.sum()),
             "inside_tourism_zone": int(frame.inside_tourism_zone.sum()),
@@ -945,6 +1015,8 @@ def main() -> None:
     scorecard.drop(columns=[c for c in scorecard if c.startswith("food_no_delivery_")]).to_csv(
         out / f"official_area_{OUTPUT_PREFIX}_786.csv", index=False, encoding="utf-8-sig"
     )
+    summary.pop("_price_cells").drop(columns=["lunch_amount"]).to_csv(
+        out / f"{OUTPUT_PREFIX}_lunch_price_cells.csv", index=False, encoding="utf-8-sig")
     for name, table in tables.items():
         table.to_csv(out / f"{OUTPUT_PREFIX}_{name}.csv", index=False, encoding="utf-8-sig")
     (out / f"{OUTPUT_PREFIX}_qa.json").write_text(json.dumps({**summary, **qa}, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")

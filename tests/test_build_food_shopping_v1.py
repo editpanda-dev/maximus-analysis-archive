@@ -159,3 +159,17 @@ def test_count_points_uses_walk_routes_for_outside_stores():
     # inside + near walk route + unknown (straight-line fallback); the 650m detour is dropped
     assert counts.loc["a", "M1_walk_count"] == 3
     assert np.isclose(counts.loc["a", "walk_route_coverage"], 2 / 3)
+
+
+def test_lunch_price_tier_is_relative_to_industry_and_needs_volume():
+    sales = pd.DataFrame({
+        "area_code": [f"a{i}" for i in range(8)],
+        "industry": ["한식음식점"] * 4 + ["분식전문점"] * 4,
+        MODULE.LUNCH_AMOUNT: [1000 * 20000, 1000 * 25000, 1000 * 30000, 10 * 90000, 1000 * 5000, 1000 * 6000, 1000 * 7000, 1000 * 8000],
+        MODULE.LUNCH_COUNT: [1000, 1000, 1000, 10, 1000, 1000, 1000, 1000],
+    })
+    cells = MODULE.lunch_price_cells(sales).set_index("area_code")
+    # an 8,000-won snack bar is pricier than its peers, a 20,000-won Korean meal is cheaper than its peers
+    assert cells.loc["a7", "lunch_price_index"] > 1 > cells.loc["a0", "lunch_price_index"]
+    tiers = MODULE.price_tier(cells.lunch_price_index, cells.lunch_tx >= MODULE.PRICE_MIN_LUNCH_TX)
+    assert tiers["a3"] == "정보없음"  # 10 lunch transactions

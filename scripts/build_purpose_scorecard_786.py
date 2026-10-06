@@ -152,7 +152,7 @@ def main() -> None:
     base = fs[base_cols].copy()
     purposes = list(PURPOSE_LABELS)
     card = build(base, {p: load_purpose(p, args.root) for p in purposes})
-    subtypes = fs.set_index("area_code")[["food_best_subtype", "food_top_subtypes", "best_subtype_label", "top3_subtype_labels"]]
+    subtypes = fs.set_index("area_code")[["food_best_subtype", "food_top_subtypes", "best_subtype_label", "top3_subtype_labels", "food_price_tier"]]
     card = card.join(subtypes.rename(columns={"best_subtype_label": "food_shopping_best_subtype", "top3_subtype_labels": "food_shopping_top3_subtypes"}), on="area_code")
 
     areas = gpd.read_file(args.areas).to_crs(5181)
