@@ -76,8 +76,9 @@ def fetch_walk_route(session: requests.Session, api_key: str, row, timeout: int 
         params={"start_x": row.start_x, "start_y": row.start_y, "end_x": row.end_x, "end_y": row.end_y, "route_mode": "SHORTEST"},
         timeout=timeout,
     )
-    if response.status_code in STOP_STATUSES:
-        raise PermissionError(f"HTTP {response.status_code}")
+    if response.status_code in STOP_STATUSES or "limit" in response.text.lower():
+        # Kakao reports the daily quota as HTTP 400 "API limit has been exceeded."
+        raise PermissionError(f"HTTP {response.status_code} quota or permission")
     response.raise_for_status()
     payload = response.json()
     status = str(payload.get("status", "UNKNOWN_RESPONSE"))
@@ -90,9 +91,11 @@ def fetch_walk_route(session: requests.Session, api_key: str, row, timeout: int 
 
 
 def read_cache(path: Path) -> pd.DataFrame:
+    """Cached routes; request errors are dropped so they are retried."""
     if not path.exists():
         return pd.DataFrame(columns=CACHE_COLUMNS)
-    return pd.read_csv(path, dtype={"area_code": str, "cell_id": str})
+    cache = pd.read_csv(path, dtype={"area_code": str, "cell_id": str})
+    return cache[~cache.route_status.astype(str).str.startswith("REQUEST_ERROR")]
 
 
 def main() -> None:
@@ -104,6 +107,7 @@ def main() -> None:
     parser.add_argument("--max-calls", type=int, default=0, help="0이면 남은 전부")
     parser.add_argument("--sleep", type=float, default=0.1)
     parser.add_argument("--dry-run", action="store_true", help="호출 없이 대상 수만 출력")
+    parser.add_argument("--stratified", type=int, default=0, help="검증용: 직선 0-400m를 100m 구간 4개로 나눠 구간마다 같은 수를 무작위 추출")
     args = parser.parse_args()
 
     areas = gpd.read_file(args.areas).to_crs(5181)
@@ -118,8 +122,15 @@ def main() -> None:
     cache = read_cache(args.cache)
     done = set(zip(cache.area_code, cache.cell_id))
     todo = cells[[(a, c) not in done for a, c in zip(cells.area_code, cells.cell_id)]]
-    # Nearest cells first so a partial run already covers what matters most.
-    todo = todo.sort_values("euclidean_m")
+    if args.stratified:
+        # Validation sample: equal draws from each 100m straight-line band, so
+        # the hard cases near 400m are represented (nearest-first is not).
+        band = (todo.euclidean_m // 100).clip(upper=3)
+        per = args.stratified // 4
+        todo = todo.groupby(band, group_keys=False).apply(lambda g: g.sample(min(per, len(g)), random_state=20261007))
+    else:
+        # Nearest cells first so a partial run already covers what matters most.
+        todo = todo.sort_values("euclidean_m")
     print(f"cells {len(cells):,} / cached {len(done):,} / remaining {len(todo):,}", flush=True)
     if args.dry_run:
         return

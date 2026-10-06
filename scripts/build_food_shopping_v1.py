@@ -507,8 +507,9 @@ def build(
     if walk_routes is None:
         features["walk_distance_basis"] = f"euclidean_{int(buffer_m)}m_buffer"
     else:
+        source = "osm" if walk_routes.get("route_status", pd.Series(dtype=str)).astype(str).str.startswith("OSM").any() else "kakao"
         features["walk_distance_basis"] = np.where(
-            features.walk_route_coverage >= 1.0, f"kakao_walk_{int(buffer_m)}m", f"kakao_walk_{int(buffer_m)}m_partial_euclidean_fallback"
+            features.walk_route_coverage >= 1.0, f"{source}_walk_{int(buffer_m)}m", f"{source}_walk_{int(buffer_m)}m_partial_euclidean_fallback"
         )
     features["historical_2025_use_allowed"] = False
     summary = {"area_count": int(len(features)), "sales_quarter": quarter, "buffer_m": buffer_m,
