@@ -5,7 +5,7 @@
 | 파일 | 행 단위 | 내용 |
 |---|---|---|
 | `official_area_food_shopping_v1_786.csv` | 상권 786 | 식사·쇼핑 대분류와 하위분류 11개의 점포 수·밀도·특화도·백분위·매출 상태·점수. 최고 하위분류와 Top 3, 도매·관광특구·넓은/소규모 플래그, 추천 근거 문장(`food_reason`, `shopping_reason`), 임시 카페 점수 |
-| `food_shopping_v1_purpose_top.csv` | 목록×순위 | 식사·쇼핑 Top 20(`*_full`, 매출 관측)과 Top 10(`*_supply_only`, 매출 결측 상권 별도 정렬). 관광특구 폴리곤·소규모 상권 제외 |
+| `food_shopping_v1_purpose_top.csv` | 목록×순위 | 식사·쇼핑 Top 20(`*_full`, 매출 관측)과 Top 10(`*_supply_only`, 매출 결측 상권 별도 정렬). 관광특구 폴리곤 제외, 소규모 상권은 `small_area` 표시로 유지 |
 | `food_shopping_v1_subtype_top.csv` | 하위분류×순위 | M1–M6, SH1–SH5 Top 10 (점포 5개 이상, 소규모 상권 제외) |
 | `food_shopping_v1_combo_top.csv` | 조합×순위 | 식사+쇼핑, 식사+카페, 쇼핑+카페, 식사+카페+쇼핑 Top 10. `basis`는 `all_sales_observed`와 `includes_supply_only` 두 가지이고, 모든 목적이 백분위 50 이상인 상권만 올리며, 추천 근거 문장 포함 |
 | `food_shopping_v1_score_breakdown_top.csv` | 상위 상권×목적 | 상권 안 밀도·도보권 밀도·특화도·매출 생산성 지수 백분위와 점수 기여분(합계 = 점수), 하위분류 점수 |

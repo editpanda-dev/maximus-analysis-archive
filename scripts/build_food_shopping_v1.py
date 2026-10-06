@@ -469,10 +469,10 @@ def build(
         features[f"{purpose}_top_subtypes"] = best.map("|".join)
 
     features["access_percentile"] = percentile(features.minimum_period_ratio)
-    # Top lists skip small areas (<50 official stores): a few shops are not a destination.
-    listable = features.recommendation_eligible & ~features.small_area
-    features["shopping_eligible"] = listable & (features.wholesale_decision != "wholesale_apparel")
-    features["food_eligible"] = listable
+    # Small areas (<50 official stores) stay listable on purpose: a small but
+    # dense alley is exactly what the size correction is meant to surface.
+    features["shopping_eligible"] = features.recommendation_eligible & (features.wholesale_decision != "wholesale_apparel")
+    features["food_eligible"] = features.recommendation_eligible
     for purpose in PURPOSES:
         features[f"{purpose}_reason"] = features.apply(purpose_reason, axis=1, purpose=purpose)
 
@@ -647,7 +647,7 @@ def tourism_scenarios(scorecard: pd.DataFrame, geom: gpd.GeoSeries) -> pd.DataFr
         ("shopping", "shopping_score", (frame.shopping_score_basis == "full") & (frame.wholesale_decision != "wholesale_apparel")),
         ("food+shopping", "combo_food_shopping", (frame.food_score_basis == "full") & (frame.shopping_score_basis == "full") & (frame.wholesale_decision != "wholesale_apparel")),
     ]:
-        tops = {k: pick_top(frame[mask & extra & ~frame.small_area], col, geom) for k, mask in scenarios.items()}
+        tops = {k: pick_top(frame[mask & extra], col, geom) for k, mask in scenarios.items()}
         base = tops["C_drop_tourism_polygon_only"]
         for k, top in tops.items():
             common = set(top.index) & set(base.index)
@@ -778,7 +778,7 @@ def qa_report(scorecard: pd.DataFrame, tables: dict[str, pd.DataFrame], sensitiv
             "top20_kept": len(top20("food_score", nd.index) & top20("food_no_delivery_score", nd.index)),
         },
         "top_list_overlap_pairs": pair_overlaps,
-        "top_list_small_areas": int(frame.loc[pd.concat([tables["purpose_top"].area_code, tables["combo_top"].area_code])].small_area.sum()),
+        "top_list_small_areas_info": int(frame.loc[pd.concat([tables["purpose_top"].area_code, tables["combo_top"].area_code])].small_area.sum()),
         "combo_rows_below_floor": int(
             (tables["combo_top"][[c for c in tables["combo_top"] if c.startswith("pct_")]] < COMBO_MIN_PERCENTILE).any(axis=1).sum()
         ),
@@ -797,7 +797,7 @@ def qa_report(scorecard: pd.DataFrame, tables: dict[str, pd.DataFrame], sensitiv
         and checks["sbiz_code_assigned_twice"] == 0 and checks["industry_assigned_twice"] == 0
         and not checks["other_purpose_codes_in_food_shopping"] and checks["top_list_overlap_pairs"] == 0
         and checks["top_list_tourism_polygons"] == 0 and checks["top_list_apparel_wholesale_in_shopping"] == 0
-        and checks["full_score_has_no_neutral_fill"] and checks["top_list_small_areas"] == 0
+        and checks["full_score_has_no_neutral_fill"]
         and checks["combo_rows_below_floor"] == 0 and checks["zero_store_units_with_inside_percentile"] == 0
     )
     return checks
