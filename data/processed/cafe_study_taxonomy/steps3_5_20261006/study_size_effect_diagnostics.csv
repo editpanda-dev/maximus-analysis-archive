@@ -1,0 +1,4 @@
+﻿method,common_population,area_spearman,total_stores_spearman,top10_overlap_vs_count_v0,adoption_status
+count_based_v0,690,0.3223588348111632,0.37120150747004593,1.0,v0_current_count_baseline
+density_smoothed_0.05km2_diagnostic,690,-0.1403023320779922,0.019559077930702027,0.4,diagnostic_only_not_adopted
+OLS_log_count_residual_diagnostic,690,0.02105840812116815,0.02262096136149584,0.8,diagnostic_only_not_adopted
