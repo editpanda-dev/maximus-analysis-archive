@@ -1,0 +1,46 @@
+{
+  "version": "steps6_7_20261006",
+  "qa_pass": 25,
+  "populations": {
+    "cafe_complete": 218,
+    "cafe_supply_only": 184,
+    "study_v0": 690,
+    "cafe_study_inside_supply": 258,
+    "meal_cafe_study_inside_supply": 258
+  },
+  "zero_supply_cafe_removed_from_rank": 48,
+  "supply_top10_overlap_count": 9,
+  "display_only_geometry_repairs": 4,
+  "map_count": 5,
+  "map_rows_each": 786,
+  "cafe_explanation_rows": 786,
+  "study_explanation_rows": 786,
+  "score_definition_changed": false,
+  "ranking_guard_corrected": true,
+  "inputs": [
+    {
+      "path": "data/processed/cafe_study_taxonomy/steps3_5_20261006/cafe_observation_separated_786.csv",
+      "sha256": "8cafdc3c9ff0a4dc1e4f03896980b26131fb769cb240289a7c498fefa3af6fd7"
+    },
+    {
+      "path": "data/processed/cafe_study_taxonomy/steps3_5_20261006/study_facility_accessibility_v0_786.csv",
+      "sha256": "c5de0884ced2e970065ba9a2234e3e17a77fc197aefd3c80bba5661e931b6e6c"
+    },
+    {
+      "path": "data/processed/cafe_study_taxonomy/steps3_5_20261006/common_inside_supply_features_786.csv",
+      "sha256": "f8412ab5a7ebd3501300c0bc20cd3858aeaa673c4ee74f23aeed7f550810e58c"
+    },
+    {
+      "path": "data/external/team_branch_snapshots/cafe_size_adjusted_786_6c591a7.csv",
+      "sha256": "0d225a372df63b3cdca2fb952e5affb98f0d9b6f19b860f93517dbc20946c648"
+    },
+    {
+      "path": "data/processed/commercial_area_accessibility/commercial_area_candidates_25pct.geojson",
+      "sha256": "e82e1ec92810e08e4e320782c5eb8a253b6e5aa33f4f5cc2f5126852272d0ede"
+    },
+    {
+      "path": "data/processed/cafe_study_taxonomy/steps3_5_20261006/cafe_supply_only_top10.csv",
+      "sha256": "a12770343d702e9cfc4fcc5c9cb551216cd8e8bafe10c8a3848d8c277eddaad9"
+    }
+  ]
+}

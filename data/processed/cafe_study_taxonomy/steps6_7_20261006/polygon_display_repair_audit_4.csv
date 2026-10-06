@@ -1,0 +1,5 @@
+﻿area_code,area_name,source_validity_problem,method,original_projected_area_m2,repaired_projected_area_m2,area_change_m2,scores_and_counts_recomputed
+3110137,성수초등학교,Ring Self-intersection[127.062471453782 37.5441275995035],Shapely_make_valid_display_only,330982.76670961734,330982.7667096174,5.820766091346741e-11,False
+3110270,혜원여고,Ring Self-intersection[127.096901278491 37.5921630449385],Shapely_make_valid_display_only,35643.832793428905,35643.832793428905,0.0,False
+3110234,중랑역 4번,Ring Self-intersection[127.074959922852 37.5945318971667],Shapely_make_valid_display_only,58421.42686169777,58421.426861697786,1.4551915228366852e-11,False
+3110407,도봉역 2번,Ring Self-intersection[127.040455464654 37.6783990382712],Shapely_make_valid_display_only,454339.64802124695,454339.6480212474,4.656612873077393e-10,False
