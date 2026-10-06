@@ -100,6 +100,8 @@ OVERLAP_SHARE = 0.3
 TOURISM_TYPE = "관광특구"
 TOURISM_INNER_SHARE = 0.5
 TOP_N = 10
+# Grid used by scripts/collect_food_shopping_walk_routes.py to group stores per route.
+WALK_CELL_M = 50
 # Reason sentences only name a supply strength at or above this percentile.
 REASON_MIN_PERCENTILE = 70
 # Combo Top lists: every purpose must be at least median, so one strong purpose
@@ -214,16 +216,38 @@ def apply_wholesale_review(candidates: pd.DataFrame, review: pd.DataFrame, stric
     return out.rename(columns={"review_decision": "wholesale_decision", "review_note": "wholesale_note"})
 
 
-def count_points(points: gpd.GeoDataFrame, areas: gpd.GeoDataFrame, buffer_m: float) -> pd.DataFrame:
-    """Count subtype stores inside each polygon (boundary included) and inside polygon+buffer."""
+def count_points(
+    points: gpd.GeoDataFrame, areas: gpd.GeoDataFrame, buffer_m: float, walk_routes: pd.DataFrame | None = None
+) -> pd.DataFrame:
+    """Count subtype stores inside each polygon (boundary included) and within the walk area.
+
+    The walk area is the polygon plus every outside store whose Kakao walking
+    distance from the boundary is <= buffer_m (`walk_routes`, keyed by area and
+    50m cell). Pairs without a cached route fall back to the straight-line
+    buffer and are reported in `walk_route_coverage`.
+    """
     buffered = areas[["area_code", "geometry"]].copy()
     buffered["geometry"] = buffered.buffer(buffer_m)
     out = pd.DataFrame(index=pd.Index(areas.area_code, name="area_code"))
     out["polygon_km2"] = areas.area.values / 1e6
+    # Denominator stays the straight-line footprint so density only moves with reachable stores.
     out["footprint_km2"] = buffered.area.values / 1e6
+    inside_keys = None
     for label, polygons in [("inside", areas[["area_code", "geometry"]]), ("walk", buffered)]:
         # `intersects` keeps stores on the boundary that `within` used to drop.
-        joined = gpd.sjoin(points[["subtype", "geometry"]], polygons, predicate="intersects")
+        cols = ["subtype", "geometry"] + (["cell_id"] if "cell_id" in points else [])
+        joined = gpd.sjoin(points[cols], polygons, predicate="intersects")
+        if label == "inside":
+            inside_keys = pd.MultiIndex.from_arrays([joined.index, joined.area_code])
+        elif walk_routes is not None:
+            outside = pd.Series(~pd.MultiIndex.from_arrays([joined.index, joined.area_code]).isin(inside_keys), index=joined.index)
+            routes = walk_routes.set_index(["area_code", "cell_id"]).walk_distance_m
+            dist = pd.Series(pd.MultiIndex.from_arrays([joined.area_code, joined.cell_id]).map(routes), index=joined.index)
+            known = dist.notna() & outside
+            out["walk_route_coverage"] = (
+                known.groupby(joined.area_code).sum() / outside.groupby(joined.area_code).sum().replace(0, np.nan)
+            ).reindex(out.index).fillna(1.0)
+            joined = joined[~outside | dist.isna() | (dist <= buffer_m)]
         counts = joined.groupby(["area_code", "subtype"]).size().unstack(fill_value=0)
         for subtype in counts.columns:
             out[f"{subtype}_{label}_count"] = counts[subtype]
@@ -392,13 +416,15 @@ def build(
     quarter: int,
     buffer_m: float,
     strict_review: bool = True,
+    walk_routes: pd.DataFrame | None = None,
 ) -> tuple[pd.DataFrame, dict]:
     sbiz = sbiz.copy()
     sbiz["subtype"] = sbiz["상권업종소분류코드"].map(SBIZ_TO_SUBTYPE).fillna("other")
     points = gpd.GeoDataFrame(
         sbiz[["subtype"]], geometry=gpd.points_from_xy(sbiz["경도"], sbiz["위도"]), crs=4326
     ).to_crs(areas.crs)
-    features = count_points(points, areas, buffer_m)
+    points["cell_id"] = (points.geometry.x // WALK_CELL_M).astype(int).astype(str) + "_" + (points.geometry.y // WALK_CELL_M).astype(int).astype(str)
+    features = count_points(points, areas, buffer_m, walk_routes)
     for subtype in SUBTYPES:
         for label in ("inside", "walk"):
             if f"{subtype}_{label}_count" not in features:
@@ -478,9 +504,17 @@ def build(
 
     features["feature_snapshot_date"] = SNAPSHOT_DATE
     features["sales_quarter"] = quarter
-    features["walk_distance_basis"] = f"euclidean_{int(buffer_m)}m_buffer"
+    if walk_routes is None:
+        features["walk_distance_basis"] = f"euclidean_{int(buffer_m)}m_buffer"
+    else:
+        features["walk_distance_basis"] = np.where(
+            features.walk_route_coverage >= 1.0, f"kakao_walk_{int(buffer_m)}m", f"kakao_walk_{int(buffer_m)}m_partial_euclidean_fallback"
+        )
     features["historical_2025_use_allowed"] = False
-    summary = {"area_count": int(len(features)), "sales_quarter": quarter, "buffer_m": buffer_m}
+    summary = {"area_count": int(len(features)), "sales_quarter": quarter, "buffer_m": buffer_m,
+               "walk_distance_basis": features.walk_distance_basis.value_counts().to_dict()}
+    if walk_routes is not None:
+        summary["walk_route_coverage_median"] = round(float(features.walk_route_coverage.median()), 4)
     return features.reset_index(), summary
 
 
@@ -879,6 +913,7 @@ def main() -> None:
     parser.add_argument("--area-stores", type=Path, default=Path("data/raw/commercial_area/commercial_store_2025.zip"))
     parser.add_argument("--wholesale-review", type=Path, default=Path("data/reference/food_shopping/food_shopping_wholesale_review_2025q4.csv"))
     parser.add_argument("--cafe-scores", type=Path, default=Path("data/reference/food_shopping/cafe_size_adjusted_score_draft_20260929.csv"))
+    parser.add_argument("--walk-routes", type=Path, help="카카오 보행경로 캐시 CSV (collect_food_shopping_walk_routes.py, 저장소 밖)")
     parser.add_argument("--quarter", type=int, default=20254)
     parser.add_argument("--buffer-m", type=float, default=400)
     parser.add_argument("--output-dir", type=Path, default=Path("data/processed/food_shopping_v1"))
@@ -888,10 +923,14 @@ def main() -> None:
     areas["area_code"] = areas.area_code.astype(str).str.zfill(7)
     review = pd.read_csv(args.wholesale_review, dtype={"area_code": str})
     sbiz, sales, stores = read_sbiz_seoul(args.sbiz_zip), read_zip_csv(args.area_sales), read_zip_csv(args.area_stores)
-    scorecard, summary = build(sbiz, areas, sales, stores, review, args.quarter, args.buffer_m)
+    routes = None
+    if args.walk_routes and args.walk_routes.exists():
+        routes = pd.read_csv(args.walk_routes, dtype={"area_code": str, "cell_id": str})
+        routes = routes[routes.walk_distance_m.notna()].drop_duplicates(["area_code", "cell_id"], keep="last")
+    scorecard, summary = build(sbiz, areas, sales, stores, review, args.quarter, args.buffer_m, walk_routes=routes)
     scorecard = attach_cafe(scorecard, pd.read_csv(args.cafe_scores, dtype={"area_code": str}))
     other_quarters = sorted(set(sales["기준_년분기_코드"]) - {args.quarter})
-    others = {q: build(sbiz, areas, sales, stores, review, q, args.buffer_m, strict_review=False)[0] for q in other_quarters}
+    others = {q: build(sbiz, areas, sales, stores, review, q, args.buffer_m, strict_review=False, walk_routes=routes)[0] for q in other_quarters}
     geom = areas.set_index("area_code").geometry
     tables = ranking_tables(scorecard, geom)
     tables["score_breakdown_top"] = breakdown_table(scorecard, tables)

@@ -2,6 +2,9 @@
   "area_count": 786,
   "sales_quarter": 20254,
   "buffer_m": 400,
+  "walk_distance_basis": {
+    "euclidean_400m_buffer": 786
+  },
   "row_count": 786,
   "row_count_is_786": true,
   "area_code_unique": true,

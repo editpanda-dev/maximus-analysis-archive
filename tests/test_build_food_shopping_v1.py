@@ -145,3 +145,17 @@ def test_reason_names_supply_strength_only_when_high():
     strong = MODULE.purpose_reason(pd.Series({**base, "food_p_inside_density": 90.0}), "food")
     assert "촘촘히" not in weak
     assert "촘촘히" in strong
+
+
+def test_count_points_uses_walk_routes_for_outside_stores():
+    areas = gpd.GeoDataFrame({"area_code": ["a"]}, geometry=[box(0, 0, 100, 100)], crs=5181)
+    points = gpd.GeoDataFrame(
+        {"subtype": ["M1"] * 4, "cell_id": ["in", "near", "detour", "unknown"]},
+        geometry=[Point(50, 50), Point(150, 50), Point(300, 50), Point(350, 50)],
+        crs=5181,
+    )
+    routes = pd.DataFrame({"area_code": ["a", "a"], "cell_id": ["near", "detour"], "walk_distance_m": [60.0, 650.0]})
+    counts = MODULE.count_points(points, areas, buffer_m=400, walk_routes=routes)
+    # inside + near walk route + unknown (straight-line fallback); the 650m detour is dropped
+    assert counts.loc["a", "M1_walk_count"] == 3
+    assert np.isclose(counts.loc["a", "walk_route_coverage"], 2 / 3)
