@@ -55,12 +55,14 @@ def run(nodes: Path, edges: Path) -> None:
             finally:graph.remove_node(virtual)
         candidate_indices = point_tree.query(polygon.buffer(610))
         count_unresolved = 0
+        count_candidates_600 = 0
         for index in candidate_indices:
             i=int(index)
             poi=pois.iloc[i]
             point=locations[i]
             euclidean=polygon.distance(point)
             if euclidean>600:continue
+            count_candidates_600 += 1
             snap, snap_status=snaps[poi.place_id]
             gap=np.nan
             if snap is not None and len(snap)>3:gap=snap[3]
@@ -92,7 +94,7 @@ def run(nodes: Path, edges: Path) -> None:
                          "route_origin":"official_polygon_boundary_network_crossing",
                          "network_source":"Geofabrik OSM south-korea-261002.osm.pbf",
                          "network_snapshot_date":"2026-10-02"})
-        area_stats.append({"area_code":code,"candidate_pairs_euclidean_600":len(candidate_indices),
+        area_stats.append({"area_code":code,"candidate_pairs_euclidean_600":count_candidates_600,
                            "unresolved_candidate_pairs":count_unresolved,
                            "has_boundary_entry":bool(seeds)})
         if number%100==0:print("areas routed",number,flush=True)
@@ -115,9 +117,9 @@ def run(nodes: Path, edges: Path) -> None:
                       ("public_active_page_with_hours",public_active),
                       ("kakao_study_cafe_candidate",study_ids)]:
         relevant=detail.loc[detail.place_id.isin(ids)]
-        for method in ("verified_connector_le2m","proxy_connector_le30m"):
+        for method in ("osm_model_connector_le2m","proxy_connector_le30m"):
             scores={}
-            prefix="walk_access_" if method.startswith("verified") else "proxy_walk_access_"
+            prefix="walk_access_" if method.startswith("osm_model") else "proxy_walk_access_"
             for radius in (400,500,600):
                 accepted=relevant.loc[relevant[f"{prefix}{radius}"].eq(True)]
                 inside=accepted.loc[accepted.route_status.eq("inside_area")].groupby("area_code").place_id.nunique()
@@ -136,7 +138,7 @@ def run(nodes: Path, edges: Path) -> None:
                                 "status":"provisional_missing_entrance_or_network"})
     pd.DataFrame(summary).to_csv(OUT/"walk_radius_sensitivity.csv",index=False,encoding="utf-8-sig")
     print({"graph_nodes":graph.number_of_nodes(),"graph_edges":graph.number_of_edges(),
-           "candidate_pairs":len(detail),"certified":int(detail.route_status.isin(["routed","inside_area"]).sum()),
+           "candidate_pairs":len(detail),"model_supported":int(detail.route_status.isin(["routed","inside_area"]).sum()),
            "proxy_connector":int(detail.route_status.eq("assumed_straight_entrance_connector").sum()),
            "strict_public_source_ids":len(public_good),"public_active_ids":len(public_active),
            "study_cafe_source_ids":len(study_ids)})

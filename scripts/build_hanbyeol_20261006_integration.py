@@ -106,6 +106,9 @@ def build()->None:
     frame["cafe_study_final_score"]=np.nan
     frame["meal_cafe_study_final_score"]=np.nan
     frame["network_provenance"]="Geofabrik OSM south-korea-261002; 30m straight entrance connector provisional"
+    frame["walk_network_status"]="osm_candidate_accessibility_with_assumed_entrance_connectors"
+    frame["walk_verified_real_entrance"] = False
+    frame["study_target_definition"]="S4_excluded_facility_accessibility_baseline_v0_pending_score_redesign"
 
     # Compare the other branch's *nearest area only* Kakao result without
     # treating its 340 routes as full area-by-facility coverage.

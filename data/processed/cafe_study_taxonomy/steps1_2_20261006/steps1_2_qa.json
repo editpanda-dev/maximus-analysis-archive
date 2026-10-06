@@ -1,0 +1,15 @@
+{
+  "rows": 10132,
+  "areas": 786,
+  "inside": 813,
+  "osm_model_le2m": 108,
+  "assumed_connector": 7165,
+  "unknown_connection": 2046,
+  "legacy_candidate_total": 12813,
+  "corrected_candidate_total": 10132,
+  "legacy_overcount": 2681,
+  "distance_and_flags_unchanged": true,
+  "actual_entrances_not_verified": true,
+  "windows_environment_lock_status": "awaiting_user_successful_analysis_environment",
+  "study_decision": "S4_excluded_v0_approved_not_reweighted_in_steps1_2"
+}
