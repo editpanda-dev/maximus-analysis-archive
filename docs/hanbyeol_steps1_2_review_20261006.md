@@ -4,7 +4,7 @@
 
 ## 전달 결론
 
-1번 명칭·상태 수정과 발견된 커버리지 분모 오류 정정을 수행했다. 수정 후 테스트 6개와 통합 계산이 통과했다. 2번은 환경 기록·고정 절차를 마련했지만 **성공한 Windows 분석 환경의 패키지 버전 파일을 아직 받지 못했으므로 완료가 아니다**. 이 문서는 현재 수행분의 검토본이며, 1·2번 전체 최종 완료본으로 표시하지 않는다.
+1번 명칭·상태 수정과 커버리지 분모 오류 정정, 2번 사용자 분석 환경의 정확한 버전 고정 파일 수신·반영을 완료했다. 같은 26개 버전을 새 Linux 환경에 설치해 의존성 검사, 테스트 6개 및 통합 실행을 검수했다. 이 문서는 **1·2번 수정 범위의 최종안**이다. 전체 10/6 과제 완료본이나 최종 공부 추천 점수표는 아니다.
 
 팀 결정은 **S4 제외 공부 시설 접근성 기준선 v0**이다. 이번 단계에서는 그 결정을 기록했으며, S4 전수 검증을 v0 제출 조건에서 분리했다. 가중치 재정의와 점수 재산출은 후속 단계다. 기존 75% 부분 점수를 이미 확정된 v0이라고 이름만 바꾸지 않았다.
 
@@ -42,38 +42,36 @@
 
 ## 2. 실행 환경과 버전 고정
 
-### 확인된 실행 근거
+| 근거 | 확인 결과 | 범위 |
+|---|---|---|
+| 사용자 Windows Python | 3.12.10 | 사용자 실행 로그 |
+| 사용자 기존 분석 테스트 | 5개 통과 | 이전 제출 코드 |
+| 사용자 pip check | No broken requirements found. | 기존 Windows 환경 의존성 충돌 없음 |
+| 수신한 lock 파일 | 26개 패키지 모두 정확한 버전 지정 | 로컬 경로·직접 URL 없음 |
+| 독립 신규 환경 | Linux Python 3.12.14 | 사용자 Windows를 직접 조작한 결과 아님 |
+| 독립 신규 설치 버전 비교 | 26개 전부 lock과 일치 | Windows 전용 바이너리 설치 검증은 별도 |
+| 독립 pip check | No broken requirements found. | 신규 환경 의존성 충돌 없음 |
+| 수정 코드 회귀 테스트 | 6 passed in 1.64s | 기존 5개 + 근거 등급 1개 |
+| 통합 실행 | PASS 14, BLOCKED 3 | 기존 경로 입력으로 재계산 |
 
-- 사용자 Windows에서 Python **3.12.10** 설치 확인.
-- 독립 분석 `.venv`에서 기존 테스트 **5개 통과**, 통합 실행 **PASS 14 / 미완료 조건 3** 확인.
-- 수정 코드의 작성자 Linux 환경에서 기존 5개와 추가 근거 등급 검사 1개, **6개 통과**.
-- API 서버용 `.venv`는 별도 환경이다. API 설치 로그의 FastAPI 등 버전을 분석 환경 고정에 가져다 쓰지 않는다.
-- 위 결과는 성공한 기존 환경의 실행 근거이다. 정확한 버전 고정 파일로 새 Windows 환경을 재설치한 검증은 아직 없다.
+저장소 루트에 `requirements-windows-py312-lock.txt`를 추가했다. 사용자 첨부 내용과 패키지·버전은 동일하며 UTF-8 BOM/줄바꿈만 정리했다. 환경 검수 근거는 `data/processed/cafe_study_taxonomy/steps1_2_20261006/environment_validation_20261006.json`에 기록했다. API 서버용 가상환경의 패키지는 섞지 않았다.
 
-### 아직 필요한 입력
+`pip check`는 의존성 충돌 검사다. 경로 정확성·시설 근거·통계적 적합성을 검증하는 명령은 아니다. 새 환경 설치는 독립 Linux에서 수행했으며 **새 Windows 환경 재설치 검증은 아직 수행하지 않았다**. osmium 설치는 확인됐지만 OSM PBF 전체 재추출은 이번 검수에 포함하지 않았다.
 
-성공한 분석 환경에서 생성한 **`requirements-windows-py312-lock.txt`**를 첨부해야 한다. 기존 `requirements_delivery.txt`는 직접 패키지 이름만 있어서 정확한 버전을 알 수 없다. 작성자의 Linux 버전을 사용자의 검증된 Windows 버전으로 대체하지 않는다.
+### 팀원이 Windows에서 재현하는 순서
 
-가장 간단한 생성 명령(PowerShell):
+아래 명령은 이번 수정 코드와 고정 파일이 있는 저장소 루트에서 실행한다. 기존 ZIP 폴더에 수정 파일이 자동 반영되는 것은 아니다. 기존 `.venv`는 그대로 두고 별도 `.venv-repro`를 만든다.
 
 ```powershell
-cd C:\work_maximus\maximus_cafe_study_oct06_20261003
-.\.venv\Scripts\python.exe -m pip freeze | Out-File -Encoding utf8 requirements-windows-py312-lock.txt
-.\.venv\Scripts\python.exe -m pip check
+py -V:3.12 -m venv .venv-repro
+.\.venv-repro\Scripts\python.exe -m pip install -r requirements-windows-py312-lock.txt
+.\.venv-repro\Scripts\python.exe -m pip check
+.\.venv-repro\Scripts\python.exe -m scripts.audit_hanbyeol_steps1_2
+.\.venv-repro\Scripts\python.exe -m pytest -q tests/test_hanbyeol_walk_access.py tests/test_prepare_hanbyeol_steps_1_3.py tests/test_hanbyeol_oct06_integration.py tests/test_hanbyeol_route_evidence_labels.py
+.\.venv-repro\Scripts\python.exe -m scripts.build_hanbyeol_20261006_integration
 ```
 
-생성된 TXT 파일과 `pip check` 결과를 전달한다. `.env`, API 키, 가상환경 폴더를 첨부할 필요가 없다.
-
-추가 제공한 `scripts/capture_analysis_environment.py`를 분석 루트의 scripts에 넣어 실행하면 같은 잠금 파일과 `analysis-environment.json`에 Python·운영체제·아키텍처·패키지 버전을 함께 기록할 수 있다. 이 스크립트는 키나 환경변수를 읽지 않는다. 실행은 ` .\.venv\Scripts\python.exe -m scripts.capture_analysis_environment`이다.
-
-### 고정 파일을 받은 뒤 완료할 검수
-
-1. 패키지 명칭·정확한 버전·필수 의존성·Python/Windows 호환성과 직접 URL/로컬 경로 포함 여부 확인.
-2. 필요하면 통합 실행·테스트용과 대형 OSM PBF 재추출용 의존성을 분리. 현재 작성자 환경에는 osmium이 없어 PBF 재추출 검증을 새로 수행했다고 주장하지 않는다.
-3. 별도 검증 환경에 고정 파일로 설치하고 `pip check`, 6개 테스트, 통합 실행 확인. 새 Windows 환경 검증은 사용자 실행 결과도 확보.
-4. 환경 JSON·고정 파일·검증 로그를 Git 제출물과 함께 보존.
-
-확인 전에는 `environment_status=pending_windows_lock`이며 2번을 완료 처리하지 않는다.
+기대 결과는 의존성 충돌 없음, 테스트 6개 통과, 통합 QA PASS 14와 미완료 조건 3개다. 이 3개를 없애려고 근거가 없는 데이터를 정상으로 바꾸지 않는다.
 
 ## 3. 자체 검수 결과 및 실행 범위
 
@@ -87,7 +85,7 @@ cd C:\work_maximus\maximus_cafe_study_oct06_20261003
 | 상권별 정확한 후보쌍 분모 | 786행, 합계 10,132 |
 | 통합 실행 | PASS 14, 기존 미완료 조건 3 유지 |
 | 테스트 | 6개 통과 |
-| Windows 버전 고정 파일 | 미수신, 2번 완료 판단 보류 |
+| 버전 고정·독립 신규 설치 | 26개 정확한 버전 일치, pip check 통과 |
 
 재현 명령:
 
@@ -110,4 +108,14 @@ python -m pytest -q tests/test_hanbyeol_walk_access.py tests/test_prepare_hanbye
 
 원천 버전: 분석 입력 로컬 커밋 `9c80c6c673b9164a34510c6fa70a8ef7b7ad0439`, Geofabrik OSM 2026-10-02, 카페 `6c591a7`, 기존 식사 `d0b6734`, 카카오 경로 `f2846ce`. 공식 상권과 POI 출처·라이선스·좌표 처리 설명은 `hanbyeol_oct06_execution_20261003.md`, `study_poi_source_and_taxonomy.md` 및 taxonomy 문서에 있다. OSM 기여자와 ODbL 조건을 유지한다. 기존 source commit은 GitHub에서 조회되지 않는 로컬 커밋이며 원격 전달 완료로 표현하지 않는다.
 
-이번 문서와 수정 코드는 환경 입력과 후속 검수를 마친 뒤 표준 분석 브랜치로 공유할 대상이다. API 담당자의 `feature/api-env-study@b7b479ba` 작업과는 별개다. 키·.env·.venv와 무관한 교통 원천 ZIP 변경은 커밋 대상에서 제외한다.
+이번 문서와 수정 코드는 로컬 분석 브랜치에 커밋할 대상이며 원격 푸시·main 통합은 이번 단계에서 수행하지 않았다. API 담당자의 `feature/api-env-study@b7b479ba` 작업과는 별개다. 키·.env·.venv와 무관한 교통 원천 ZIP 변경은 커밋 대상에서 제외한다.
+
+## 5. 남은 과제와 공유 상태
+
+- S4를 제외한 공부 시설 접근성 기준선 v0 가중치 확정·재산출. 기존 75% 부분합을 최종 공부 점수로 쓰지 않는다.
+- 김건우님 식사 결과와 카페·공부의 접근성 정의·비교 모집단 통일 후 조합 재계산.
+- 카페 complete 224개와 supply_only·insufficient 순위를 구분. 224개 Top10을 786개 전체 순위로 표시하지 않는다.
+- 보행 출입구 연결 가정과 미해결 경로는 이번 환경 검수로 해결되지 않았다.
+- 공유 브랜치에 실제 푸시하고 팀원이 해당 커밋을 조회하도록 확인. 로컬 커밋은 원격 공유 완료와 다르다.
+
+1·2번 검수 범위에서 추가 발견된 오류는 없다. 자료의 미검증 부분과 위 후속 과제는 남아 있다.

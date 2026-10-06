@@ -10,6 +10,6 @@
   "legacy_overcount": 2681,
   "distance_and_flags_unchanged": true,
   "actual_entrances_not_verified": true,
-  "windows_environment_lock_status": "awaiting_user_successful_analysis_environment",
+  "windows_environment_lock_status": "received_exact_26_versions_windows_pip_check_passed_user_reported",
   "study_decision": "S4_excluded_v0_approved_not_reweighted_in_steps1_2"
 }

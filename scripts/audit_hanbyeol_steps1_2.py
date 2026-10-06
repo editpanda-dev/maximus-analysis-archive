@@ -76,7 +76,7 @@ def build():
             'legacy_candidate_total':int(comparison.candidate_pairs_euclidean_600_legacy.sum()),
             'corrected_candidate_total':10132,'legacy_overcount':int(comparison.overcount_in_legacy_search.sum()),
             'distance_and_flags_unchanged':True,'actual_entrances_not_verified':True,
-            'windows_environment_lock_status':'awaiting_user_successful_analysis_environment',
+            'windows_environment_lock_status':'received_exact_26_versions_windows_pip_check_passed_user_reported',
             'study_decision':'S4_excluded_v0_approved_not_reweighted_in_steps1_2'}
     (OUT/'steps1_2_qa.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False))

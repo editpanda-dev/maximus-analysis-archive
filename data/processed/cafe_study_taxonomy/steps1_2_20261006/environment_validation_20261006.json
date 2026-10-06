@@ -1,0 +1,25 @@
+{
+  "lock_packages": 26,
+  "lock_sha256": "5ad6c61ca4b3f67552009757bd149b69efdd22cbdbdaf1e0f4bfae190408dd14",
+  "windows_user_report": {
+    "python": "3.12.10",
+    "existing_tests_passed": 5,
+    "pip_check": "No broken requirements found.",
+    "fresh_reinstall_verified": false
+  },
+  "independent_environment": {
+    "system": "Linux",
+    "python": "3.12.14",
+    "exact_lock_matches": true,
+    "pip_check": "No broken requirements found.",
+    "tests_passed": 6,
+    "test_duration_seconds": 1.64,
+    "integration_qa": {
+      "PASS": 14,
+      "BLOCKED_ROUTE": 1,
+      "BLOCKED_EVIDENCE": 1,
+      "BLOCKED_FINAL_SCORE": 1
+    }
+  },
+  "scope": "Existing route input regression; not new entrance validation or OSM PBF re-extraction"
+}
