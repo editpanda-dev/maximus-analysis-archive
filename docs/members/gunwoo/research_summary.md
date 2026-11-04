@@ -1,6 +1,6 @@
 # 리서치 진행 로그 요약 (건우)
 
-기준: 2026-11-03 · 상세 기록: [`gunwoo_research_log.md`](gunwoo_research_log.md) · 브랜치는 `gunwoo/` 생략 표기
+기준: 2026-11-03 · 상세 기록: [`research_log.md`](research_log.md) · 입구: [`README.md`](README.md) · 브랜치는 `gunwoo/` 생략 표기
 
 ---
 
@@ -143,7 +143,7 @@ Phase 5  리뷰 수집 경로 조사 (11/3)
 ---
 
 ### Phase 3: 선행연구 검증 → SERP v1 재설계
-**문서**: `[serendipity] docs/serendipity/prior_research_notes.md`, `[serendipity] docs/serendipity/model_explained.md`, `docs/serendipity/followup_ideas.md` · 11/2~3
+**문서**: `[serendipity] docs/serendipity/prior_research_notes.md`, `[serendipity] docs/serendipity/model_explained.md`, [`service_ideas.md`](service_ideas.md) · 11/2~3
 
 **이유/판단**
 - 발표·심사에서 "이 논문이 근거"라고 말하려면 원문 확인이 필수
@@ -256,7 +256,7 @@ Phase 5  리뷰 수집 경로 조사 (11/3)
 ---
 
 ### Phase 5: 리뷰 수집 경로 조사
-**문서**: `gunwoo_research_log.md` 5장 · 11/3
+**문서**: [`research_log.md`](research_log.md) 5장 · 11/3
 
 **이유/판단**
 - Phase 4의 리뷰 항을 채울 경로 확보

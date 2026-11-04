@@ -1,6 +1,6 @@
 # 김건우 연구 기록 (막시무스 프로젝트)
 
-정리: 2026-11-03 · 브랜치 `gunwoo/research-log`
+정리: 2026-11-03 · 브랜치 `gunwoo/notes` · 입구: [`README.md`](README.md)
 
 막시무스 프로젝트를 바탕으로 김건우가 한 작업을 한곳에 모은 기록이다. 각 문서는 원래 브랜치에 그대로 있고, 여기에는 무엇을 했고 어디까지 왔는지만 적는다.
 
@@ -209,7 +209,7 @@ v1 서울캠 출발 식사 구간별 1위:
 
 **상태**: 노트·해설서·아이디어 메모 커밋 완료. 해설서를 v1 기준으로 다시 쓰는 계획(5단계)이 남았다.
 
-**문서**: `[serendipity] docs/serendipity/prior_research_notes.md`, `[serendipity] docs/serendipity/model_explained.md`, `docs/serendipity/followup_ideas.md`
+**문서**: `[serendipity] docs/serendipity/prior_research_notes.md`, `[serendipity] docs/serendipity/model_explained.md`, [`service_ideas.md`](service_ideas.md)
 
 ### 3.1 검증 노트에서 로직에 반영할 것 Top 5
 1. 관성 기준선 대비 정의를 Ge·Murakami의 primitive model 방식으로 명시한다.
@@ -230,7 +230,7 @@ v1 서울캠 출발 식사 구간별 1위:
 | 지식 그래프 | 연결은 있지만 분야가 다른 곳 찾기 | 참고 |
 | 밴딧 | 실제 운영 뒤 | 나중 |
 | 데이터 교체 | B078 OD, B079 카드소비, ODsay 실측, 인지도 설문 | 확보 시 교체 |
-| 니즈 시나리오로 목적 세분화 (11-04) | 카페 6·식사 6 시나리오(카공·데이트·야식 등)를 "거름 조건 + 선호 점수"로 표현. 상권 추정매출의 요일·시간대·연령·건당 결제액으로 카페 4개 프로필을 시험 계산해 서로 다른 상권을 잡는 것 확인(순위 상관 −0.59~0.32). 콘센트·소음 같은 조건은 데이터 없음. `[serendipity] docs/serendipity/followup_ideas.md` 5장 | 설문 확인 후 C1·C5·M5부터 |
+| 니즈 시나리오로 목적 세분화 (11-04) | 카페 6·식사 6 시나리오(카공·데이트·야식 등)를 "거름 조건 + 선호 점수"로 표현. 상권 추정매출의 요일·시간대·연령·건당 결제액으로 카페 4개 프로필을 시험 계산해 서로 다른 상권을 잡는 것 확인(순위 상관 −0.59~0.32). 콘센트·소음 같은 조건은 데이터 없음. [`service_ideas.md`](service_ideas.md) 5장 | 설문 확인 후 C1·C5·M5부터 |
 
 ---
 
@@ -469,9 +469,9 @@ v0 상위 목록에서 보인 문제 세 가지를 고쳤다.
 | `codex/gunwoo/campus-hidden-spots` | 1장 글캠·서울캠 (원본 레포에 있음) | 2026-10-31 |
 | `gunwoo/serendipity` | 2·3장 SERP v0·v1, 검증 노트, 해설서·후속 아이디어 | 2026-11-04 |
 | `gunwoo/store-level` | 4장 설계·v0·네이버 스크립트·v1 규칙 | 2026-11-04 |
-| `gunwoo/research-log` | 이 문서 | 2026-11-04 |
+| `gunwoo/notes` | 이 폴더(`docs/members/gunwoo/`: README, 기록, 아이디어, 로드맵) | 2026-11-04 |
 
-2026-11-04에 포크 브랜치를 위 3개로 합쳤다. 옛 이름 → 새 이름: `serendipity-ranking`·`serendipity-research-notes`·`serendipity-papers-explainer` → `gunwoo/serendipity`, `store-level-recommendation-options`·`store-level-v1-fixes` → `gunwoo/store-level`.
+2026-11-04에 포크 브랜치를 위 3개로 합쳤다. 옛 이름 → 새 이름: `serendipity-ranking`·`serendipity-research-notes`·`serendipity-papers-explainer` → `gunwoo/serendipity`, `store-level-recommendation-options`·`store-level-v1-fixes` → `gunwoo/store-level`, `research-log` → `gunwoo/notes`. 같은 날 기록 문서를 `docs/members/gunwoo/`로 옮기고 의외성 폴더의 후속 아이디어 메모를 `service_ideas.md`로 옮겼다.
 
 ## 10. 참고 링크 (5장)
 - mapjiri-datamining: https://github.com/MapJiri/mapjiri-datamining
