@@ -1,0 +1,12 @@
+﻿old_rank,area_code,area_name,corrected_rank,change
+4.0,3110007,사직공원(한국사회과학도서관),4.0,retained
+10.0,3110032,수족관거리,9.0,retained
+5.0,3110073,삼각지역 3번,5.0,retained
+1.0,3110321,동덕여대,1.0,retained
+9.0,3110585,마포경찰서,8.0,retained
+2.0,3110962,도산공원북측,2.0,retained
+8.0,3130062,보광시장,7.0,retained
+3.0,3130114,유영시장,3.0,retained
+6.0,3130124,번동시장,,removed_from_top10
+,3130127,,10.0,entered_top10
+7.0,3130321,장신구 특화거리 상점가,6.0,retained

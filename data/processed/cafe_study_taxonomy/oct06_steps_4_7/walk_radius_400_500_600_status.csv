@@ -1,0 +1,4 @@
+﻿radius_m,status,eligible_area_count,top10_overlap_vs_400,rank_spearman_vs_400,walk_network_source
+400,blocked_missing_pedestrian_network,,,,unavailable
+500,blocked_missing_pedestrian_network,,,,unavailable
+600,blocked_missing_pedestrian_network,,,,unavailable

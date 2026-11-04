@@ -1,0 +1,49 @@
+{
+  "version": "20261006_steps3_5",
+  "study_weights": {
+    "study_cafe": 0.6,
+    "public": 0.26666666666666666,
+    "transit": 0.13333333333333333
+  },
+  "S4_excluded": true,
+  "S3b_scored": false,
+  "public_source_eligible": 195,
+  "public_hours_page_source": 16,
+  "public_standard_listing_operation_unverified": 179,
+  "study_score_available": 696,
+  "study_recommendation_population": 690,
+  "cafe_analysis_status_counts": {
+    "insufficient": 330,
+    "supply_only": 232,
+    "complete": 224
+  },
+  "cafe_complete_recommendation_population": 218,
+  "cafe_supply_only_population": 232,
+  "three_purpose_inside_supply_population": 258,
+  "cafe_study_inside_supply_population": 258,
+  "network_combination_status": "BLOCKED_COMMON_NETWORK_INPUT",
+  "polygon_git_blob_both_inputs": "47861bb84c1190a6221e5baa22295f63b85a40c2",
+  "qa_pass": 21,
+  "inputs": [
+    {
+      "path": "data/external/team_branch_snapshots/cafe_size_adjusted_786_6c591a7.csv",
+      "sha256": "0d225a372df63b3cdca2fb952e5affb98f0d9b6f19b860f93517dbc20946c648"
+    },
+    {
+      "path": "data/external/team_branch_snapshots/food_shopping_v1_786_13e42d2.csv",
+      "sha256": "033e515c45237991a9eca1b0e2315d37f2c48cc2b84be3456789b55ee57d5e7b"
+    },
+    {
+      "path": "data/processed/cafe_study_taxonomy/steps1_2_20261006/walk_evidence_labels_10132.csv",
+      "sha256": "cc88f568b5ea9a63d08bb5c992c6c2c5af0f98a4c408ef0328e17c4cf48caf5c"
+    },
+    {
+      "path": "data/external/study_public_facility_poi.csv",
+      "sha256": "65000b1476f95ff914277a45163600b096c36eb24d81df5a0e3cbd6684f75395"
+    },
+    {
+      "path": "data/external/kakao_study_stay_pois_20260918.csv",
+      "sha256": "a812a9dc213a2832dbc02ce6e05a0a27821049ac01bc825f9b95800b84b050cc"
+    }
+  ]
+}

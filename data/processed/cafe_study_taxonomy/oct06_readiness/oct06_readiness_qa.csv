@@ -1,0 +1,11 @@
+﻿check,status,observed,expected_or_note
+area_rows,PASS,786,786
+unique_area_code,PASS,786,786
+candidate_code_set,PASS,786,786
+complete_cafe_sales,PASS,224,observed subset only
+noncomplete_full_score_null,PASS,0,0
+study_v1_unverified_null,PASS,0,0
+scores_in_0_100,PASS,224,all observed
+tourism_reference_only,PASS,6,exclude from preview ranks
+walk_routes,BLOCKED_INPUT,0,pedestrian graph and entrance links needed
+S4_verified,BLOCKED_EVIDENCE,0,verified study permission needed

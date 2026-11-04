@@ -1,0 +1,787 @@
+﻿area_code,area_name,candidate_pairs_euclidean_600,inside_polygon_count,osm_model_le2m_count,assumed_connector_count,unknown_connection_count,zero_candidates_means
+3130094,청량리청과물시장,6,0,0,4,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130090,청량리종합시장,5,0,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130093,동서시장,5,0,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130088,경동시장,4,1,0,2,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130092,청량리농수산물시장,5,0,0,2,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130087,경동광성상가(경동시장),4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130086,서울약령시장,6,0,0,6,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120063,청량리역(청량리),9,2,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130089,청량리수산시장,5,0,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120069,상봉역,17,4,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130067,왕십리도선동상점가,17,2,0,11,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130072,성동용답상가시장,7,0,0,2,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130091,청량종합도매시장,4,0,0,2,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130095,청량리전통시장,4,0,0,2,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110249,중화역 1번,8,0,1,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130106,중랑동부시장,6,1,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130159,공릉동 도깨비시장,22,0,1,19,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120086,태릉입구역,17,2,0,15,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110262,상봉역 3번,14,1,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110429,공릉동 국수거리,25,3,1,19,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110241,먹골역 5번,10,1,1,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110187,제기동역 6번,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110237,메가박스 상봉,5,1,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110204,간데메공원,13,0,0,7,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110244,중화역 4번,5,2,1,2,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110255,상봉역 4번,13,3,0,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130097,답십리 건축자재시장,9,0,0,6,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110122,마장역 2번,14,0,0,9,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110218,답십리사거리,11,2,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110256,면목2동체육관,12,0,0,9,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110252,장안제일시장,8,0,0,4,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110195,동대문구청,5,1,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110240,태릉시장 특화거리,9,0,1,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130068,마장축산물시장,13,0,0,7,6,zero_in_source_candidate_set_not_verified_no_facilities
+3130100,답십리시장,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110260,면목역 3번,10,1,0,6,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110189,제기동역 1번,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130099,전농로터리시장,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110233,중랑역 1번,9,0,1,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110265,망우역 1번,14,0,0,14,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110212,답십리초등학교,12,2,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110216,전농중학교,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110199,홍릉시장,5,0,0,2,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110211,전곡마을마당공원,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110236,신묵초등학교,10,0,1,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130109,묵1동도깨비시장,16,0,0,10,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110192,동의보감타워,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110123,마장역 3번,15,1,0,11,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110263,면목역 1번,15,0,0,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130105,장미제일시장(중화동제일시장),5,0,1,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110234,중랑역 4번,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110206,텃골근린공원,9,0,0,6,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110251,장안중학교,11,0,1,7,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110246,월드순복음교회,11,1,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110245,KB국민은행 중화동지점,13,0,1,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110250,화랑대역 7번,17,0,0,10,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110239,중랑역 2번,8,0,1,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110133,서울교통공사,7,0,0,2,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110257,상봉역 7번,15,0,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130107,중랑동부시장(중랑교종합상가),6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110434,태릉입구역 4번,21,0,0,18,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110130,답십리역 6번,8,0,0,2,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110202,전농1동주민센터(전농시장),6,0,0,2,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110238,배꽃어린이공원,6,0,1,2,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110201,전농119안전센터,6,0,0,4,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130108,태능엔터피아(태릉시장),5,0,1,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110198,동대문중앙새마을금고본점,4,0,0,2,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110209,답십리 장령당공원,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110119,마장지하차도,12,0,0,12,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110235,세화어린이공원,8,0,1,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3001493,동대문패션타운 관광특구,25,5,0,18,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130111,"동원전통종합시장(동원시장, 동원전통시장 상점가)",7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130066,행당시장상점가,20,0,0,18,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120065,회기역,21,2,2,15,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110219,삼육보건대학교,18,1,1,13,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110264,면목역 2번,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110243,중랑노인종합복지관,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130065,무학봉상점가,16,0,0,15,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110227,답십리공원,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110224,외대앞역 2번,11,0,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110125,사근동살곶이상점가,17,3,0,9,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130101,답십리현대시장,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110258,면동초등학교,7,1,0,2,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110055,황학동벼룩시장,9,0,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130096,동부시장,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110222,회기역 2번,14,0,0,9,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130103,이경시장,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3001494,종로·청계 관광특구,55,14,1,29,11,zero_in_source_candidate_set_not_verified_no_facilities
+3120066,장한평역(장한평),8,2,0,4,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120062,신설동역,9,1,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110226,장안1동주민센터,11,0,0,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110228,장안근린공원,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110247,먹골역 1번,11,2,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110194,홍파초등학교,5,0,0,2,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110035,동묘앞역 2번,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110037,신설동역 12번,6,1,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110181,신설동역 9번,13,0,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110200,동대문경찰서,3,0,0,1,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110184,용두사거리,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110183,한국의류시험연구원,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110217,자동차부품상가,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110036,동묘앞역 3번,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110185,용두초등학교,3,0,0,1,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130021,신설종합시장,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120037,동대문역사문화공원역,20,4,0,12,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120068,사가정역,7,2,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130327,"평화시장(남평화시장, 제일평화시장, 신평화패션타운)",8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130112,사가정시장,8,0,0,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130110,면목골목시장(면목시장),7,1,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110220,외대앞역 1번,20,3,2,8,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110259,사가정역 1번,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110254,오거리공원,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130054,황학동주방가구거리상점가,12,1,0,11,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110188,용두동신동아아파트,8,0,0,4,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110210,서울시립대,15,2,1,9,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110261,사가정역 4번,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110190,고대앞사거리,11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110266,면목동우체국,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130050,청평화시장,6,0,0,6,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110106,금북초등학교,9,0,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110117,성동구보건소,9,0,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110207,시립대앞사거리,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110215,회기역 1번,19,1,2,14,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110108,성동구립금호도서관,9,1,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110116,청계천박물관,5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130038,"평화시장(통일상가, 동화상가)",11,1,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130019,동대문상가D동,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120067,장안동사거리,11,6,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120039,신당역,22,2,0,18,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130052,서울중앙시장(신중앙시장),14,0,0,14,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120049,왕십리역(왕십리),24,7,0,17,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130053,백학시장,14,0,0,13,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120016,동대문역,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110158,중곡3동주민센터,13,1,0,9,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110056,신당역 3번,22,3,0,16,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130055,"황학시장(서울중앙시장, 신중앙시장)",14,1,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110112,행당역 2번,13,1,0,6,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110161,중곡역 3번,10,1,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130051,동화동 골목형상점가,15,1,0,11,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110053,청구역 1번,21,1,0,16,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130020,동묘시장(동묘벼룩시장),8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110114,왕십리파출소,10,1,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110253,중곡초등학교,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130098,회기시장,17,3,2,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110248,먹골파출소,13,0,0,11,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130049,신당 미래유산 먹거리 골목형상점가,10,1,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110051,한양공고앞 교차로,17,0,0,14,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110182,용두희망어린이공원,9,0,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110309,대광초등학교,9,0,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110213,청량초등학교,18,1,2,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130035,방산종합시장(방산시장),11,0,0,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110137,성수초등학교,22,1,0,21,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130018,동대문문구완구거리(동대문문구완구시장),6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120017,동묘앞역(동묘),5,0,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130046,team204(팀204),8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110136,경수초등학교,13,0,0,11,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110052,장충초등학교,19,1,0,14,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130015,창신골목시장,5,0,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110054,청구역 3번,22,2,0,13,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110049,장충단 고개,14,1,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110048,장충동주민센터,19,1,0,16,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130104,전곡시장,6,0,0,6,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130063,신금호역 골목형상점가,11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110267,망우역 2번,13,0,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110029,동대문역 1번,16,0,0,7,9,zero_in_source_candidate_set_not_verified_no_facilities
+3130128,돌곶이시장(석관황금시장),7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110225,촬영소사거리,9,1,0,2,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110334,석관중앙교회,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110104,신금호역 4번,14,0,0,13,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110030,동대문역 3번,5,0,0,1,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110242,면목5동주민센터,2,0,0,1,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110033,창신역 4번,7,1,0,2,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110203,떡전교사거리,5,0,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110336,석관고등학교,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110034,창신1동주민센터,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110032,수족관거리,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130017,동대문상가C동,5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120053,건대입구역(건대),27,8,0,19,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130010,종로신진시장,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130048,동평화시장,5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110140,건대입구역 6번,16,1,0,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110115,상왕십리역 3번,16,2,0,10,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110141,건대입구역 1번,18,0,0,14,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130047,테크노상가(엘리시움),7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130078,화양제일골목시장,22,0,0,18,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110057,황학코아루아파트,13,1,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130012,"동대문종합시장(동대문종합시장 신관, 동대문종합시장D동상가)",8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130079,한아름시장,22,0,0,17,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130077,조양시장,11,0,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120052,성수역,20,3,0,16,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110131,성수동카페거리,17,0,0,14,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120051,뚝섬역,18,4,1,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110335,석계역 7번,7,2,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110421,석계역 1번,7,2,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110205,경희대삼거리,14,2,1,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110333,돌곶이역 5번,7,2,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110423,석계역 2번,15,0,0,10,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110110,상왕십리역 6번,17,0,0,13,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110132,성수2가3동주민센터,11,1,1,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130127,석관시장,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110208,시조사삼거리,14,0,2,12,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130071,성수역 골목형상점가,12,0,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130085,용두시장,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130036,중부시장(신중부시장),13,0,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130007,광장시장(광장전통시장),8,1,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120011,종로4가,15,1,1,8,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130014,동문시장,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130016,동대문상가B동,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120036,장충동족발거리(남소영길),18,1,0,14,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110045,동대문역사문화공원역 5번,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130013,동대문상가A동,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110331,돌곶이역 8번,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110332,돌곶이역 3번,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110221,의릉,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110433,공릉역 2번,24,1,1,19,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120009,종로3가역,34,7,0,22,5,zero_in_source_candidate_set_not_verified_no_facilities
+3120031,을지로3가역,39,3,1,31,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120033,을지로4가역,17,1,0,15,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110232,동대부고,11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130033,대림상가(청계상가),15,0,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120035,퇴계로5가,11,0,0,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130005,세운상가가동,14,0,1,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110418,광운대학교 남단,12,0,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110044,관성묘,10,0,0,5,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110111,대현산장미원,4,0,0,2,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110231,장안교,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120064,경희대학교(경희대),14,2,1,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130069,"한양대앞상점가(한양시장, 왕십리맛골목)",20,1,0,15,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120015,종로6가,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110118,왕십리역 9번,18,0,0,18,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110330,돌곶이역 1번,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130102,이문제일시장,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110196,홍릉근린공원,3,0,0,1,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130070,뚝섬역상점가,15,3,1,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120038,약수역,21,3,0,9,9,zero_in_source_candidate_set_not_verified_no_facilities
+3110028,이화달팽이길,19,0,0,12,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110124,뚝섬역교차로,11,1,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110129,성원어린이공원,13,0,1,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110126,서울숲역 1번,13,1,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110105,금동어린이공원,12,0,0,12,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130083,"중곡제일시장(중곡제일골목시장, 광성시장)",13,0,0,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110165,국립정신건강센터,16,2,0,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110191,고려대역 6번,9,1,0,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110168,대원고등학교,11,2,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120014,종로5가역,12,1,0,5,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120084,공릉역,22,6,1,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120048,금호역,13,1,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110438,경춘선숲길 우측,23,3,1,18,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110214,경희대후문,15,0,2,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110223,군자초등학교,5,0,0,2,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120032,충무로역,17,6,0,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130042,약수시장,12,1,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110142,화양사거리,22,1,0,18,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120034,중구청(퇴계로4가),16,1,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110050,약수역 7번,14,1,0,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110047,다산성곽길,15,0,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110046,버티고개,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110229,장평중학교,11,1,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130032,인현시장,12,0,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130031,청계천공구상가,28,0,1,22,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110026,종로5가역 4번,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120055,군자역,25,9,0,12,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110147,능동우편취급국,18,1,0,13,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110156,군자역 5번,19,1,0,8,10,zero_in_source_candidate_set_not_verified_no_facilities
+3110150,중곡1동 마을마당,14,1,0,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110162,군자역 4번,21,0,0,18,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110329,우리은행체육관,4,1,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110121,한양대역 4번,15,3,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110153,중곡1동주민센터,16,1,0,9,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120006,종각역,40,13,1,19,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120008,인사동,29,1,1,23,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130004,낙원시장(낙원지하시장(대일상가)),21,0,1,19,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110019,창덕궁,10,0,1,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110120,서울숲카페거리,11,0,0,5,6,zero_in_source_candidate_set_not_verified_no_facilities
+3130011,충신시장,9,0,0,3,6,zero_in_source_candidate_set_not_verified_no_facilities
+3001492,명동 남대문 북창동 다동 무교동 관광특구,49,12,1,29,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120026,을지로입구역,40,2,1,30,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110435,서울과학기술대,13,1,1,11,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110109,금호삼성래미안아파트,10,1,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110155,광진구청,20,1,0,6,13,zero_in_source_candidate_set_not_verified_no_facilities
+3120030,중부경찰서(영화인의거리),28,1,0,16,11,zero_in_source_candidate_set_not_verified_no_facilities
+3120029,을지로2가,35,0,0,21,14,zero_in_source_candidate_set_not_verified_no_facilities
+3110043,충무초등학교,14,1,0,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130009,마전교지하쇼핑센터(구 한일상가),7,0,0,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110025,충신시장옆,9,1,0,4,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110031,창신역 1번,6,0,0,2,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120023,서울시청,27,3,0,17,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120028,명동(명동거리),35,2,0,27,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120022,북창동(시청역_6번),19,2,0,10,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120025,롯데백화점(시청광장 지하쇼핑센터),26,1,0,19,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120054,어린이대공원역,19,7,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110167,용마초등학교,25,1,0,20,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110186,종암초등학교,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110148,어린이대공원역 3번,16,0,0,14,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110144,어린이대공원역 4번,17,2,0,14,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110193,고려대역 4번,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110149,세종대학교,19,1,0,6,12,zero_in_source_candidate_set_not_verified_no_facilities
+3120083,등나무근린공원,12,1,1,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110327,상월곡역 2번,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130125,장위전통시장,4,0,0,2,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110432,대진고등학교,8,1,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110197,세종대왕기념관교차로,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110427,노원 을지대학교병원,11,0,0,3,8,zero_in_source_candidate_set_not_verified_no_facilities
+3110420,광운대역 1번,12,3,0,3,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110305,보문역 5번,14,1,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130126,새석관시장,3,0,0,2,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110313,안암역 3번,11,4,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110230,장안현대홈타운1차아파트,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130076,능동로골목시장,11,0,0,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110145,장안초등학교,17,0,0,15,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120010,원남동사거리,11,0,0,6,5,zero_in_source_candidate_set_not_verified_no_facilities
+3120013,이화사거리,14,1,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130064,금남시장,6,0,0,6,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110302,보문역 8번,9,0,0,5,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130074,영동교골목시장,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120056,구의역,27,5,0,16,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120059,구삼강변맛길,23,4,0,14,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110159,구의역 4번,20,2,0,11,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110166,구의1동주민센터,21,2,0,9,10,zero_in_source_candidate_set_not_verified_no_facilities
+3110170,동대부여고,22,1,2,14,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110173,구남초등학교,16,1,0,9,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110175,푸른동산공원,23,0,2,18,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130082,면곡골목시장,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120003,광화문역,29,4,0,21,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120004,종로구청,31,1,1,19,10,zero_in_source_candidate_set_not_verified_no_facilities
+3110304,보문역 4번,21,1,0,20,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110164,아차산역 5번,20,0,0,13,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110127,성수1가1동주민센터,12,1,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120071,성북구청,25,3,0,19,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110300,삼선동주민센터,25,0,0,20,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110297,경동고등학교,29,0,0,24,5,zero_in_source_candidate_set_not_verified_no_facilities
+3120057,아차산역,20,3,2,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120074,안암역,9,1,0,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110312,안암역 2번,11,1,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110174,아차산역 1번,13,1,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110172,광진초등학교,14,2,0,8,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110152,중곡어린이공원,8,0,0,5,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110177,동의초등학교,9,0,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120082,상계백병원,14,1,1,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110096,한남힐사이드아파트,2,0,0,0,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130156,시영2단지 무지개종합상가(중계 무지개2단지아파트상가),9,2,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130155,시영B상가(중계 그린아파트 B 상가),8,1,1,4,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120021,시청역_8번,14,1,0,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120020,시청역_1번,14,0,0,9,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110317,종암중학교,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3001491,이태원 관광특구,11,3,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120046,이태원(이태원역),10,3,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110095,한강진역 3번,8,0,0,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110085,경리단길남측,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110091,리움미술관,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110097,한남초등학교,6,0,0,0,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120075,월곡역,12,2,0,5,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110323,상월곡역 1번,6,1,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110042,남산골공원옆,10,1,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130034,필동 골목형상점가,9,0,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110324,월곡역 4번,5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130024,남대문시장(자유상가),13,0,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120043,서울역,25,2,0,17,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110328,상월곡역 3번,5,1,0,2,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120012,대학로(혜화역),38,19,0,15,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110139,자양4동주민센터,10,1,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110146,신자초등학교,12,0,0,6,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110024,혜회동주민센터,33,2,1,27,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110021,성균관대학교,27,2,1,21,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110143,뚝섬유원지역 1번,9,0,0,4,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110023,서울대병원,26,0,1,18,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110027,혜화역 1번,39,2,1,20,16,zero_in_source_candidate_set_not_verified_no_facilities
+3120060,강변역(테크노마트),14,0,0,11,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110169,성동초등학교,15,0,0,11,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110320,KB국민은행 종암동지점,6,0,0,6,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110417,월계역 3번,6,0,0,2,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120007,북촌(안국역),7,1,0,4,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120027,명동역(명동재미로),17,1,0,12,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110103,옥수터널,9,0,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110180,광진정보도서관,6,1,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110179,광나루역 1번,8,2,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110178,장로회신학대학교,9,0,0,5,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120018,중림동,14,2,0,7,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130081,자양골목전통시장(자양골목시장),15,0,0,9,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110093,우사단길,13,0,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110041,남산케이블카,9,0,0,3,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110082,용산구청,5,0,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130061,이태원시장,6,0,0,4,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110102,옥수역 6번,9,1,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110087,이태원엔틱가구거리,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110086,이태원역 북측,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130022,숭례문수입상가(남대문시장),10,0,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110326,장위동성당,5,0,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130115,우림골목시장,9,0,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110318,KT월곡지사,18,0,1,13,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120050,서울숲역,10,0,0,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110271,신내역 1번,1,0,0,0,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120081,노원역,29,10,0,16,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110268,망우3동주민센터,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130025,삼익패션타운(남대문시장),12,0,0,8,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120019,경찰청앞교차로,13,0,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130084,신성시장(신성골목시장),11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110319,종암동주민센터,10,1,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110291,한성대입구역 3번,30,1,0,14,15,zero_in_source_candidate_set_not_verified_no_facilities
+3110176,해오름공원,15,1,0,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120005,삼청동,7,0,0,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120024,회현역,12,1,0,6,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110012,성곡미술관,15,0,0,9,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110315,종암아이파크2차,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120070,한성대입구역,31,5,0,18,8,zero_in_source_candidate_set_not_verified_no_facilities
+3110293,삼선중학교,24,0,0,23,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110286,한성대입구역 5번,30,1,1,23,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110288,동구여중,15,0,0,11,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110079,후암동주민센터,9,1,0,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110274,서일대학교,3,1,0,2,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110040,중구회현체육센터(정화예술대남산캠퍼스),8,0,0,1,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110039,회현역 1번,9,0,0,3,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110022,경신고등학교,33,0,1,25,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120002,서촌(경복궁역),12,2,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130075,노룬산시장(노룬산골목시장),8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110099,유엔빌리지길,11,2,0,6,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110101,옥정중학교,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110018,중앙고등학교,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110270,혜원여고,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110321,동덕여대,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110316,숭곡초등학교,24,0,1,20,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120209,"강남구청(청담역_8번, 강남세무서)",12,3,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120061,올림픽대교북단,17,4,0,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120214,영동대교남단교차로,6,1,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120216,경기고교사거리(경기고교앞사거리),7,1,0,3,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110988,청담역 3번,10,0,0,5,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110985,청담근린공원,9,0,0,5,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110990,청담역 12번,6,0,0,3,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120072,성신여대,24,7,1,13,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130120,돈암시장(돈암제일시장),16,1,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120058,구의사거리,19,0,2,14,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110074,서울역 12번,16,0,0,9,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110066,서울역 15번,10,2,0,4,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110285,홍대부중,9,0,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110269,용마문화복지센터,4,1,0,1,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110171,중곡4동주민센터,11,1,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120243,천호역,16,6,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130318,로데오거리상점가,13,0,0,8,5,zero_in_source_candidate_set_not_verified_no_facilities
+3111059,강동역 4번(강풀만화거리),24,2,0,14,8,zero_in_source_candidate_set_not_verified_no_facilities
+3110314,종암경찰서,13,3,0,7,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130314,풍납시장,12,0,0,9,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111051,천호역 6번,18,0,0,13,5,zero_in_source_candidate_set_not_verified_no_facilities
+3111049,천호지구대(천호동자전거거리),10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111056,천호태영아파트,12,0,0,7,5,zero_in_source_candidate_set_not_verified_no_facilities
+3111048,천호역 1번(천호문구완구거리),8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120227,잠실역,22,7,0,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120190,강남을지병원,18,1,0,14,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110296,성신여대입구역 4번,17,0,1,15,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110301,성신여대입구역 7번,17,0,1,15,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110303,성신여대입구역 1번,15,0,0,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120001,서대문역,11,4,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110539,미근동,10,0,0,7,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110038,경향신문사,8,0,0,4,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110537,충정로현대아파트,9,1,0,5,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110536,돈의문센트레빌아파트입구,10,0,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110534,경기대학교,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111011,잠실나루역,10,0,0,4,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110107,금호사거리,5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120073,미아사거리,20,4,0,14,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130154,상계주공1단지(가)상가,6,0,0,0,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110422,노원역 9번,22,0,0,18,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110138,송정체육공원,15,0,0,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130002,세종마을음식문화거리(금천교시장),8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110008,배화여자대학교(박노수미술관),7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110015,청와대사랑채,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110013,체부동홍종문가옥,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130059,후암시장,5,0,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110067,배문고등학교,18,0,0,15,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110075,숙대입구역 1번,15,0,0,15,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110092,NH농협은행 보광동지점,11,0,0,5,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120078,미아사거리역,15,2,1,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110424,상계초등학교,27,2,1,18,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120079,창동역,22,5,0,11,6,zero_in_source_candidate_set_not_verified_no_facilities
+3130153,창동역상점가,13,0,0,8,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110409,창동역 2번,25,2,0,16,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120193,도산공원교차로,16,0,0,12,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110325,장곡초등학교,4,2,0,2,0,zero_in_source_candidate_set_not_verified_no_facilities
+3001495,잠실 관광특구,54,7,0,31,16,zero_in_source_candidate_set_not_verified_no_facilities
+3120246,길동역,23,6,0,15,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111068,강동성심병원,11,0,0,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130319,성내전통시장,16,0,0,9,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110308,길음역 8번,16,0,1,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111067,강동구립성내도서관,23,0,0,18,5,zero_in_source_candidate_set_not_verified_no_facilities
+3111063,강동구립 천호도서관,19,0,0,14,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110310,길음역 10번,12,0,1,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110272,신내1동주민센터,9,4,0,0,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110084,경리단길북측,5,3,0,1,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110299,정릉역 1번,9,0,1,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130121,길음시장,6,0,0,3,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110306,미아초등학교,10,1,0,3,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110307,길음역 7번,14,2,1,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110068,남영역 1번,16,2,0,14,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110591,충정로역 6번,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120097,충정로역,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130181,아현가구거리상점가,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110538,충정로역 3번,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110533,충정로역 7번,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110069,숙대입구,19,9,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130182,영천시장,12,1,0,6,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110311,종암아이파크2차후문,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110414,장석교회,7,0,0,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120045,남영동 먹자골목,14,0,0,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120042,"숙대입구역(남영역, 남영동)",15,1,0,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110154,광진정말공원,14,0,0,10,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110163,성자초등학교,10,0,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110426,상계2동주민센터,30,3,0,19,8,zero_in_source_candidate_set_not_verified_no_facilities
+3130114,유영시장,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120178,신사역,13,3,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120185,논현역,17,2,0,15,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120174,논현역 5번,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110950,논현역 7번,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110160,광진경찰서,12,0,0,5,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110953,학동근린공원,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110279,신내역 2번,2,0,0,0,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110378,송중동주민센터,10,0,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130143,방천골목시장,11,0,1,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110377,미아사거리역 3번,15,0,1,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120080,마들역,10,3,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110532,아현역 2번,6,1,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110020,서울국제고등학교,20,1,1,15,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110405,방학역 1번,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110410,방학역 2번,10,3,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110403,방학1동주민센터,20,1,0,14,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130151,신도봉시장,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120200,학동사거리,16,1,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120196,서울세관,10,1,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130140,숭인시장,13,0,1,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120203,강남구청역,10,2,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110397,도봉산입구,8,3,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110966,논현2동주민센터,9,0,0,6,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110371,삼양입구사거리,12,0,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110973,강남구청역 4번,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110374,송중초등학교,10,1,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110968,강남구청역 2번,5,1,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110368,송천초등학교,15,0,0,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110276,신내IC북측,0,0,0,0,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110275,하나은행 망우동지점,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120208,청담사거리(청담동명품거리),12,4,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120213,삼성중앙역,18,1,0,8,9,zero_in_source_candidate_set_not_verified_no_facilities
+3110072,열정도,10,0,0,7,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110982,강남구보훈회관,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110128,성원중학교,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110135,성동세무서,18,0,1,17,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110535,영천시장입구,10,0,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110273,장스여성병원,11,1,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110413,누원고등학교,13,1,0,7,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110113,응봉산,2,0,0,2,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130123,꿈의숲 장곡 골목형상점가,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110322,장위1동주민센터,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130116,동성타워프라자,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130124,번동시장,5,0,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120195,성수대교남단,13,2,0,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120188,압구정역,15,5,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120041,신용산역(용산역),20,10,0,4,6,zero_in_source_candidate_set_not_verified_no_facilities
+3120044,삼각지역,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110407,도봉역 2번,14,1,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110959,신구중학교,11,0,0,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110076,삼각지역 14번,1,0,0,0,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110411,도봉역 3번,15,0,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110073,삼각지역 3번,8,0,0,4,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130146,쌍문시장(쌍문역골목시장),13,1,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110396,쌍문역1번(쌍리단길),12,0,0,8,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130147,쌍문역동측상점가,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130113,신아타운,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110376,수송초등학교,12,1,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130145,쌍문역둘리상점가,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110388,도봉우체국,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110002,독립문역 1번,9,2,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110004,대신고등학교,10,1,0,5,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110370,도봉세무서,11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110365,미아역 5번,12,1,0,11,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130141,강북북부골목시장,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120077,미아역,9,3,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110364,미아역 8번,13,2,0,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110373,수유역 2번,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120191,학동역,12,3,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3111077,길동주민센터(강동도서관),18,2,0,14,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111078,굽은다리역 4번,22,2,0,19,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130324,길동복조리시장,14,0,0,11,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111072,굽은다리역 1번(십자성마을),16,0,0,15,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111071,천동초등학교,13,0,0,11,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110369,성신여대운정그린캠퍼스,12,0,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110425,계상초등학교,27,0,1,21,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110442,화랑대철도공원,1,0,0,0,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110017,정독도서관,2,0,0,2,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110007,사직공원(한국사회과학도서관),17,0,0,5,12,zero_in_source_candidate_set_not_verified_no_facilities
+3120076,수유역,13,5,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130139,강북종합전통시장(강북종합골목시장),11,0,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110406,도봉산역 1번,6,1,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110367,강북구청,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130135,수유중앙골목시장(수유중앙시장),9,0,0,9,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110359,수유시장옆,12,0,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110358,인수동 우편취급국,10,0,0,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110957,언북중학교,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110283,성북초등학교앞,8,0,0,3,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110100,옥수동우편취급국,9,0,0,5,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120245,둔촌역,12,4,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130323,둔촌역전통시장,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110064,효창공원앞역 2번,17,1,0,15,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111073,둔촌동역 1번(한산중학교),19,0,0,15,4,zero_in_source_candidate_set_not_verified_no_facilities
+3111062,둔촌동역 3번(성내3동주민센터),9,1,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111064,둔촌동역 4번,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110955,논현초등학교,12,0,0,8,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120194,언주역(차병원),12,0,0,9,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110584,아현역 4번,12,1,0,6,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130001,통인시장,7,1,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110394,방학중학교,15,1,1,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130198,아현시장,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110961,언주역 3번,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110402,도봉구 정병원,26,1,1,21,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110589,애오개역 3번,7,1,0,4,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120040,용산전자상가(용산역),19,1,0,12,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110431,상계역,17,1,0,15,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110430,중계초등학교,15,0,0,11,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130157,상계중앙시장,22,0,1,16,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110428,상계5동주민센터,19,3,1,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110586,서울서부지방법원,12,0,0,7,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110436,상계제일중학교,14,2,0,6,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110366,광산사거리,11,0,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110375,서울북부고용노동지청,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130158,상계역전종합상가,15,0,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110585,마포경찰서,8,1,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130142,강북북부시장,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130152,오!도봉거리 상점가,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110530,아현역 1번,11,0,0,6,5,zero_in_source_candidate_set_not_verified_no_facilities
+3120229,방이동먹자골목,16,2,0,9,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110927,잠원역,7,0,0,4,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110063,효창공원앞역 5번,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130122,밤나무골시장,10,0,0,6,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110372,강북중학교,10,0,0,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120207,선정릉역,16,1,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110976,언북초등학교,11,0,0,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110970,학동초등학교,5,0,0,4,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110974,언주중학교,7,0,0,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110065,남정초등학교,6,0,0,6,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130056,용산용문시장,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110060,효창공원앞역 6번,13,1,0,8,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110277,러스크서울병원,9,0,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110061,효창동주민센터,17,0,0,10,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110062,한강로동땡땡거리(은행나무길),13,0,0,8,5,zero_in_source_candidate_set_not_verified_no_facilities
+3130132,삼양골목시장(삼양시장),14,1,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120186,가로수길,12,4,0,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110278,망우본동주민센터,13,2,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110389,한일병원,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110077,삼광초등학교,9,0,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130137,"수유전통시장(수유시장, 수유골목시장)",11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130303,영동전통시장,10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120176,논현역 4번,8,0,0,8,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110412,창동중학교,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120225,잠실새내역(신천),22,12,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130311,새마을시장,24,5,0,15,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120248,명일역,21,8,0,11,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120095,홍제역,13,6,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120107,공덕역(공덕오거리),25,4,0,15,6,zero_in_source_candidate_set_not_verified_no_facilities
+3130195,도화동 상점가,17,1,0,11,5,zero_in_source_candidate_set_not_verified_no_facilities
+3120106,마포역,15,2,0,11,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130197,마포시장,11,0,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130196,공덕시장,10,0,0,7,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110581,염리초등학교,17,0,0,10,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120167,고속터미널(고속터미널역),30,11,0,11,8,zero_in_source_candidate_set_not_verified_no_facilities
+3120170,삼호가든사거리,11,3,0,5,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110415,수락산역 4번,16,4,0,6,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110419,수락산디자인거리,11,2,0,7,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110098,서울독일학교,10,0,0,7,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130302,강남시장(강남구 강남시장),7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110949,한남IC,7,0,0,6,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110090,한국폴리텍대학서울정수캠퍼스,5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110088,오산고등학교,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120247,굽은다리역,20,3,0,16,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130325,명일전통시장,18,1,0,16,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111080,굽은다리역 3번,20,1,0,18,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111075,굽은다리역 2번,19,1,0,17,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111070,천호초등학교,13,0,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3111069,천호1동주민센터,14,0,0,11,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120242,강동구청역,16,4,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111053,성내천어린이공원(하니사랑길),19,1,0,14,4,zero_in_source_candidate_set_not_verified_no_facilities
+3111050,강동구청(강동구청역 2번),11,0,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110576,대흥역 3번,18,1,1,14,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110081,해방촌 남동측,6,1,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120233,몽촌토성역,10,3,0,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3120177,신논현역 1번,14,0,0,11,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110952,논현목련공원,5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110360,수유초등학교,10,0,0,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120244,암사역,10,6,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130320,암사종합시장,11,0,0,9,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111060,암사역 2번(서울강동초등학교),11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111052,암사역 3번(천호동자전거거리),10,0,0,7,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111061,암사역 1번,11,0,0,10,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111054,암사역 4번(삼성광나루아파트),10,0,0,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111057,천호공원(해공체육문화센터),13,0,0,6,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120228,석촌역(석촌호수),21,3,0,14,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110151,자양한강도서관,8,0,0,6,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111058,성내중학교,14,1,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110587,공덕동주민센터,11,0,0,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111010,석촌역 7번,13,0,0,11,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110580,양원초등학교,24,0,1,14,9,zero_in_source_candidate_set_not_verified_no_facilities
+3110572,서강대역 1번,37,1,1,32,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110157,자양동우체국,7,1,0,3,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111074,명일역 1번,18,1,0,14,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120096,"이화여대(이대역, 이대)",43,1,2,37,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130148,방학동도깨비시장,13,0,1,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130179,"이화여대 3,5,7길 상점가",26,7,0,17,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110582,이대역 5번,17,0,1,13,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110520,경의중앙 신촌역,37,1,1,34,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110401,도봉구민회관,23,2,0,18,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130178,이대 앞 스타트업 상점가,23,1,0,20,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110575,대흥동주민센터,39,1,1,33,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110439,당고개역 5번,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110437,당고개역 2번,8,1,0,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110440,상계3동4동주민센터,2,0,0,2,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130177,인왕시장(홍제골목형상점가),14,0,0,13,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130176,유진상가,12,0,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110416,노원초등학교,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110529,홍제3동주민센터,16,2,0,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110527,홍제역 2번,16,1,0,13,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110521,홍제역 4번,10,0,0,5,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110522,홍제역 3번,10,0,0,4,6,zero_in_source_candidate_set_not_verified_no_facilities
+3130080,자양종합시장(기능상실),6,1,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110134,성수119안전센터,4,0,0,4,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110578,대흥역 2번,19,2,1,10,6,zero_in_source_candidate_set_not_verified_no_facilities
+3110399,창2동주민센터,13,2,0,7,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110280,북정마을,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111014,송파나루역 2번,13,0,0,10,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111066,암사동성당(효정하나플러스아파트),13,0,0,9,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130313,방이시장,14,0,0,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110577,용강동주민센터,13,1,0,9,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111019,한성백제역 3번,12,0,0,11,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110962,도산공원북측,12,0,0,7,5,zero_in_source_candidate_set_not_verified_no_facilities
+3111004,삼전역 1번,27,2,0,21,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110381,번동주공2단지,6,0,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130194,용강동 상점가,11,0,0,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120094,"신촌역(신촌역, 신촌로터리)",47,17,1,26,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110569,홍대땡땡거리,31,0,0,28,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130175,신촌 상인회(신촌상점가),26,1,0,24,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110573,신촌역 6번,27,1,0,24,2,zero_in_source_candidate_set_not_verified_no_facilities
+3001496,강남 마이스 관광특구,17,4,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120218,코엑스,16,2,0,11,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110583,공덕래미안3차아파트,8,0,0,5,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110579,마포역 4번,10,0,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3130062,보광시장,2,0,0,2,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120187,신논현역,21,7,0,13,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120047,한남오거리,7,2,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110361,삼양사거리역 1번,14,0,0,9,5,zero_in_source_candidate_set_not_verified_no_facilities
+3110574,서강대학교,12,1,1,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110058,성심여자고등학교,6,1,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111021,방이역 4번,18,3,0,14,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111032,방이역 1번,13,1,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120238,방이역,15,5,0,8,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111020,방이동고분군(방산고등학교),15,2,0,12,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111030,방이역 2번,10,1,0,8,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110571,신수동주민센터,11,0,0,11,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120222,삼성역,23,7,0,9,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120215,포스코사거리,45,1,0,37,7,zero_in_source_candidate_set_not_verified_no_facilities
+3120223,휘문고교사거리,33,0,0,26,7,zero_in_source_candidate_set_not_verified_no_facilities
+3110295,정릉우체국,11,0,1,9,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110298,솔숲어린이공원,10,2,1,3,4,zero_in_source_candidate_set_not_verified_no_facilities
+3130073,뚝도시장,3,0,0,3,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110525,홍은종합사회복지관,11,3,0,5,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111076,둔촌2동주민센터,12,2,0,10,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130136,수유재래시장,7,0,0,7,0,zero_in_source_candidate_set_not_verified_no_facilities
+3110951,신사은행나무공원,11,0,0,8,3,zero_in_source_candidate_set_not_verified_no_facilities
+3130058,이촌종합시장,7,0,0,5,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110071,한강미주맨션아파트,5,0,0,3,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120249,고덕역,9,3,0,5,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111013,송파나루역 1번(송리단길),18,1,0,12,5,zero_in_source_candidate_set_not_verified_no_facilities
+3111015,석촌역 3번,24,0,0,22,2,zero_in_source_candidate_set_not_verified_no_facilities
+3111012,석촌역 6번,14,1,0,13,0,zero_in_source_candidate_set_not_verified_no_facilities
+3130138,수유프라자,8,0,0,7,1,zero_in_source_candidate_set_not_verified_no_facilities
+3130321,장신구 특화거리 상점가,14,0,0,10,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110398,쌍문2동우체국,25,0,1,21,3,zero_in_source_candidate_set_not_verified_no_facilities
+3110408,가인초등학교,18,2,0,14,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110400,도봉구보건소,27,3,1,20,3,zero_in_source_candidate_set_not_verified_no_facilities
+3111018,풍납초등학교(풍납백제문화공원),4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110514,서대문우체국,34,0,1,32,1,zero_in_source_candidate_set_not_verified_no_facilities
+3120232,송파나루역,14,0,0,12,2,zero_in_source_candidate_set_not_verified_no_facilities
+3110971,선정릉역 4번,12,0,0,10,2,zero_in_source_candidate_set_not_verified_no_facilities
+3120103,홍대입구역(홍대),34,5,0,24,5,zero_in_source_candidate_set_not_verified_no_facilities
+3120230,송파사거리(송파역),16,5,0,11,0,zero_in_source_candidate_set_not_verified_no_facilities
+3120239,오금역,15,2,0,4,9,zero_in_source_candidate_set_not_verified_no_facilities
+3111029,오금역 4번,4,0,0,3,1,zero_in_source_candidate_set_not_verified_no_facilities
+3111035,오금공원(오주중학교),5,0,0,5,0,zero_in_source_candidate_set_not_verified_no_facilities
+3111022,석촌중학교(방이육교),15,0,0,12,3,zero_in_source_candidate_set_not_verified_no_facilities
+3120153,노량진역(노량진),35,17,0,9,9,zero_in_source_candidate_set_not_verified_no_facilities
+3120102,서교동(홍대),22,2,0,19,1,zero_in_source_candidate_set_not_verified_no_facilities
+3110566,경의선책거리,35,3,0,28,4,zero_in_source_candidate_set_not_verified_no_facilities
+3110832,노량진초등학교,30,1,0,27,2,zero_in_source_candidate_set_not_verified_no_facilities

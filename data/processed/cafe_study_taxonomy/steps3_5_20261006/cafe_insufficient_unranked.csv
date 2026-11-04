@@ -1,0 +1,331 @@
+﻿area_code,area_name,area_type_name,recommendation_eligible,exclusion_reason,coffee_stores,bakery_stores,total_stores_2025q4,coffee_sales_observed,bakery_sales_observed,score_status,score_status_reason,full_score,supply_only_score,legacy_full_score,score_version,spatial_basis,ranking_universe
+3110004,대신고등학교,골목상권,True,,3.0,0.0,36,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110012,성곡미술관,골목상권,True,,12.0,3.0,128,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110013,체부동홍종문가옥,골목상권,True,,3.0,1.0,37,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110015,청와대사랑채,골목상권,True,,3.0,0.0,22,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110017,정독도서관,골목상권,True,,5.0,0.0,57,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110018,중앙고등학교,골목상권,True,,18.0,0.0,183,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110019,창덕궁,골목상권,True,,20.0,3.0,213,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110020,서울국제고등학교,골목상권,True,,6.0,1.0,128,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110021,성균관대학교,골목상권,True,,13.0,2.0,149,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110022,경신고등학교,골목상권,True,,5.0,2.0,101,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110023,서울대병원,골목상권,True,,3.0,0.0,34,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110024,혜회동주민센터,골목상권,True,,13.0,0.0,92,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110027,혜화역 1번,골목상권,True,,9.0,2.0,77,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110029,동대문역 1번,골목상권,True,,8.0,2.0,134,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110035,동묘앞역 2번,골목상권,True,,5.0,0.0,118,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110037,신설동역 12번,골목상권,True,,4.0,0.0,98,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110038,경향신문사,골목상권,True,,5.0,1.0,60,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110040,중구회현체육센터(정화예술대남산캠퍼스),골목상권,True,,5.0,0.0,67,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110041,남산케이블카,골목상권,True,,15.0,1.0,179,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110045,동대문역사문화공원역 5번,골목상권,True,,6.0,2.0,117,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110048,장충동주민센터,골목상권,True,,4.0,1.0,123,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110049,장충단 고개,골목상권,True,,11.0,3.0,152,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110053,청구역 1번,골목상권,True,,6.0,3.0,170,False,True,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110054,청구역 3번,골목상권,True,,7.0,0.0,209,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110056,신당역 3번,골목상권,True,,12.0,1.0,268,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110057,황학코아루아파트,골목상권,True,,3.0,0.0,101,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110058,성심여자고등학교,골목상권,True,,6.0,3.0,247,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110060,효창공원앞역 6번,골목상권,True,,11.0,2.0,163,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110061,효창동주민센터,골목상권,True,,8.0,0.0,111,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110062,한강로동땡땡거리(은행나무길),골목상권,True,,41.0,3.0,333,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110066,서울역 15번,골목상권,True,,12.0,4.0,219,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110067,배문고등학교,골목상권,True,,8.0,1.0,180,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110068,남영역 1번,골목상권,True,,17.0,3.0,256,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110072,열정도,골목상권,True,,7.0,0.0,66,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110074,서울역 12번,골목상권,True,,8.0,4.0,265,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110075,숙대입구역 1번,골목상권,True,,13.0,3.0,154,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110076,삼각지역 14번,골목상권,True,,2.0,0.0,27,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110077,삼광초등학교,골목상권,True,,6.0,1.0,75,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110079,후암동주민센터,골목상권,True,,36.0,5.0,415,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110087,이태원엔틱가구거리,골목상권,True,,6.0,1.0,121,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110090,한국폴리텍대학서울정수캠퍼스,골목상권,True,,1.0,0.0,99,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110091,리움미술관,골목상권,True,,8.0,0.0,94,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110093,우사단길,골목상권,True,,12.0,2.0,308,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110096,한남힐사이드아파트,골목상권,True,,9.0,0.0,90,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110098,서울독일학교,골목상권,True,,6.0,0.0,83,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110105,금동어린이공원,골목상권,True,,5.0,2.0,113,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110107,금호사거리,골목상권,True,,5.0,0.0,51,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110109,금호삼성래미안아파트,골목상권,True,,11.0,1.0,169,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110112,행당역 2번,골목상권,True,,4.0,1.0,111,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110118,왕십리역 9번,골목상권,True,,3.0,1.0,158,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110120,서울숲카페거리,골목상권,True,,35.0,13.0,178,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110121,한양대역 4번,골목상권,True,,3.0,1.0,51,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110122,마장역 2번,골목상권,True,,4.0,0.0,196,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110124,뚝섬역교차로,골목상권,True,,10.0,5.0,203,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110126,서울숲역 1번,골목상권,True,,8.0,1.0,55,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110127,성수1가1동주민센터,골목상권,True,,8.0,1.0,134,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110129,성원어린이공원,골목상권,True,,13.0,3.0,214,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110133,서울교통공사,골목상권,True,,3.0,1.0,73,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110134,성수119안전센터,골목상권,True,,18.0,5.0,303,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110135,성동세무서,골목상권,True,,10.0,0.0,161,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110136,경수초등학교,골목상권,True,,48.0,14.0,529,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110137,성수초등학교,골목상권,True,,41.0,6.0,640,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110138,송정체육공원,골목상권,True,,9.0,4.0,176,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110140,건대입구역 6번,골목상권,True,,14.0,3.0,392,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110141,건대입구역 1번,골목상권,True,,7.0,3.0,143,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110142,화양사거리,골목상권,True,,18.0,1.0,264,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110144,어린이대공원역 4번,골목상권,True,,6.0,3.0,89,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110145,장안초등학교,골목상권,True,,2.0,4.0,31,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110146,신자초등학교,골목상권,True,,13.0,1.0,197,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110147,능동우편취급국,골목상권,True,,10.0,1.0,202,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110148,어린이대공원역 3번,골목상권,True,,9.0,0.0,95,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110150,중곡1동 마을마당,골목상권,True,,15.0,2.0,251,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110151,자양한강도서관,골목상권,True,,7.0,0.0,239,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110152,중곡어린이공원,골목상권,True,,3.0,0.0,93,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110154,광진정말공원,골목상권,True,,10.0,2.0,243,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110155,광진구청,골목상권,True,,10.0,1.0,145,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110156,군자역 5번,골목상권,True,,9.0,2.0,171,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110158,중곡3동주민센터,골목상권,True,,6.0,2.0,267,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110159,구의역 4번,골목상권,True,,13.0,3.0,418,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110163,성자초등학교,골목상권,True,,8.0,2.0,173,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110165,국립정신건강센터,골목상권,True,,5.0,0.0,162,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110168,대원고등학교,골목상권,True,,4.0,1.0,116,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110170,동대부여고,골목상권,True,,6.0,4.0,219,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110173,구남초등학교,골목상권,True,,4.0,0.0,85,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110175,푸른동산공원,골목상권,True,,12.0,2.0,150,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110176,해오름공원,골목상권,True,,7.0,2.0,206,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110178,장로회신학대학교,골목상권,True,,8.0,1.0,54,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110180,광진정보도서관,골목상권,True,,13.0,0.0,203,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110183,한국의류시험연구원,골목상권,True,,8.0,1.0,86,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110187,제기동역 6번,골목상권,True,,7.0,0.0,329,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110188,용두동신동아아파트,골목상권,True,,5.0,0.0,196,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110191,고려대역 6번,골목상권,True,,17.0,1.0,144,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110192,동의보감타워,골목상권,True,,1.0,0.0,107,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110197,세종대왕기념관교차로,골목상권,True,,1.0,0.0,25,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110203,떡전교사거리,골목상권,True,,4.0,1.0,87,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110204,간데메공원,골목상권,True,,9.0,2.0,222,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110206,텃골근린공원,골목상권,True,,9.0,4.0,169,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110207,시립대앞사거리,골목상권,True,,3.0,0.0,69,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110210,서울시립대,골목상권,True,,10.0,2.0,138,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110211,전곡마을마당공원,골목상권,True,,5.0,0.0,174,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110212,답십리초등학교,골목상권,True,,11.0,2.0,230,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110213,청량초등학교,골목상권,True,,7.0,0.0,40,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110215,회기역 1번,골목상권,True,,4.0,0.0,64,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110216,전농중학교,골목상권,True,,6.0,0.0,146,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110219,삼육보건대학교,골목상권,True,,16.0,1.0,254,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110220,외대앞역 1번,골목상권,True,,8.0,3.0,333,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110221,의릉,골목상권,True,,3.0,0.0,43,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110225,촬영소사거리,골목상권,True,,3.0,1.0,132,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110227,답십리공원,골목상권,True,,3.0,1.0,119,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110228,장안근린공원,골목상권,True,,7.0,2.0,293,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110229,장평중학교,골목상권,True,,10.0,3.0,330,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110230,장안현대홈타운1차아파트,골목상권,True,,4.0,0.0,164,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110234,중랑역 4번,골목상권,True,,3.0,1.0,88,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110237,메가박스 상봉,골목상권,True,,12.0,0.0,285,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110240,태릉시장 특화거리,골목상권,True,,4.0,1.0,136,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110244,중화역 4번,골목상권,True,,4.0,2.0,171,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110246,월드순복음교회,골목상권,True,,5.0,0.0,178,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110249,중화역 1번,골목상권,True,,9.0,3.0,268,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110251,장안중학교,골목상권,True,,5.0,1.0,164,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110254,오거리공원,골목상권,True,,5.0,3.0,312,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110255,상봉역 4번,골목상권,True,,11.0,0.0,315,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110256,면목2동체육관,골목상권,True,,8.0,1.0,291,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110258,면동초등학교,골목상권,True,,5.0,1.0,167,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110259,사가정역 1번,골목상권,True,,9.0,3.0,220,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110260,면목역 3번,골목상권,True,,2.0,1.0,168,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110261,사가정역 4번,골목상권,True,,7.0,2.0,148,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110262,상봉역 3번,골목상권,True,,6.0,3.0,320,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110263,면목역 1번,골목상권,True,,3.0,2.0,163,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110265,망우역 1번,골목상권,True,,7.0,1.0,146,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110266,면목동우체국,골목상권,True,,4.0,2.0,163,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110267,망우역 2번,골목상권,True,,10.0,1.0,213,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110268,망우3동주민센터,골목상권,True,,3.0,1.0,87,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110270,혜원여고,골목상권,True,,2.0,0.0,55,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110275,하나은행 망우동지점,골목상권,True,,6.0,1.0,95,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110277,러스크서울병원,골목상권,True,,5.0,5.0,162,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110280,북정마을,골목상권,True,,4.0,1.0,22,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110286,한성대입구역 5번,골목상권,True,,18.0,4.0,131,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110288,동구여중,골목상권,True,,13.0,4.0,130,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110293,삼선중학교,골목상권,True,,9.0,0.0,201,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110295,정릉우체국,골목상권,True,,2.0,2.0,152,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110296,성신여대입구역 4번,골목상권,True,,10.0,2.0,145,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110297,경동고등학교,골목상권,True,,15.0,3.0,224,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110299,정릉역 1번,골목상권,True,,7.0,2.0,259,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110300,삼선동주민센터,골목상권,True,,22.0,4.0,244,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110301,성신여대입구역 7번,골목상권,True,,4.0,3.0,125,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110305,보문역 5번,골목상권,True,,17.0,0.0,168,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110306,미아초등학교,골목상권,True,,5.0,0.0,100,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110309,대광초등학교,골목상권,True,,6.0,2.0,91,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110312,안암역 2번,골목상권,True,,12.0,2.0,152,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110313,안암역 3번,골목상권,True,,14.0,1.0,253,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110316,숭곡초등학교,골목상권,True,,11.0,1.0,350,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110317,종암중학교,골목상권,True,,7.0,0.0,95,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110327,상월곡역 2번,골목상권,True,,6.0,0.0,145,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110328,상월곡역 3번,골목상권,True,,4.0,0.0,69,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110330,돌곶이역 1번,골목상권,True,,3.0,1.0,112,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110331,돌곶이역 8번,골목상권,True,,13.0,1.0,170,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110333,돌곶이역 5번,골목상권,True,,6.0,1.0,153,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110358,인수동 우편취급국,골목상권,True,,8.0,0.0,112,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110359,수유시장옆,골목상권,True,,5.0,2.0,126,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110360,수유초등학교,골목상권,True,,5.0,0.0,191,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110367,강북구청,골목상권,True,,10.0,0.0,154,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110369,성신여대운정그린캠퍼스,골목상권,True,,11.0,0.0,262,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110370,도봉세무서,골목상권,True,,8.0,2.0,150,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110371,삼양입구사거리,골목상권,True,,5.0,1.0,132,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110372,강북중학교,골목상권,True,,6.0,1.0,130,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110373,수유역 2번,골목상권,True,,5.0,1.0,159,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110374,송중초등학교,골목상권,True,,3.0,0.0,273,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110375,서울북부고용노동지청,골목상권,True,,2.0,1.0,62,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110376,수송초등학교,골목상권,True,,13.0,1.0,315,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110377,미아사거리역 3번,골목상권,True,,3.0,0.0,77,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110388,도봉우체국,골목상권,True,,2.0,0.0,57,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110394,방학중학교,골목상권,True,,6.0,1.0,233,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110398,쌍문2동우체국,골목상권,True,,6.0,0.0,228,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110406,도봉산역 1번,골목상권,True,,4.0,1.0,132,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110408,가인초등학교,골목상권,True,,6.0,0.0,97,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110411,도봉역 3번,골목상권,True,,2.0,0.0,125,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110416,노원초등학교,골목상권,True,,4.0,1.0,169,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110417,월계역 3번,골목상권,True,,4.0,2.0,65,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110418,광운대학교 남단,골목상권,True,,3.0,0.0,76,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110420,광운대역 1번,골목상권,True,,8.0,0.0,147,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110421,석계역 1번,골목상권,True,,4.0,2.0,178,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110423,석계역 2번,골목상권,True,,4.0,1.0,140,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110425,계상초등학교,골목상권,True,,9.0,3.0,228,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110426,상계2동주민센터,골목상권,True,,9.0,3.0,216,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110429,공릉동 국수거리,골목상권,True,,14.0,8.0,438,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110432,대진고등학교,골목상권,True,,9.0,1.0,109,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110433,공릉역 2번,골목상권,True,,24.0,3.0,213,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110434,태릉입구역 4번,골목상권,True,,9.0,2.0,96,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110435,서울과학기술대,골목상권,True,,3.0,0.0,67,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110437,당고개역 2번,골목상권,True,,5.0,0.0,123,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110438,경춘선숲길 우측,골목상권,True,,10.0,4.0,290,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110439,당고개역 5번,골목상권,True,,4.0,0.0,106,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110520,경의중앙 신촌역,골목상권,True,,5.0,0.0,90,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110521,홍제역 4번,골목상권,True,,5.0,3.0,75,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110522,홍제역 3번,골목상권,True,,2.0,0.0,42,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110525,홍은종합사회복지관,골목상권,True,,6.0,1.0,93,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110527,홍제역 2번,골목상권,True,,4.0,0.0,130,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110537,충정로현대아파트,골목상권,True,,13.0,0.0,150,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110539,미근동,골목상권,True,,12.0,2.0,100,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110571,신수동주민센터,골목상권,True,,8.0,0.0,110,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110575,대흥동주민센터,골목상권,True,,4.0,0.0,90,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110577,용강동주민센터,골목상권,True,,4.0,2.0,123,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110579,마포역 4번,골목상권,True,,3.0,0.0,82,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110580,양원초등학교,골목상권,True,,4.0,0.0,83,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110582,이대역 5번,골목상권,True,,5.0,2.0,160,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110586,서울서부지방법원,골목상권,True,,18.0,3.0,338,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110587,공덕동주민센터,골목상권,True,,9.0,2.0,148,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110591,충정로역 6번,골목상권,True,,4.0,1.0,80,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110832,노량진초등학교,골목상권,True,,4.0,1.0,116,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110927,잠원역,골목상권,True,,3.0,1.0,100,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110949,한남IC,골목상권,True,,10.0,1.0,145,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110951,신사은행나무공원,골목상권,True,,7.0,3.0,96,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110953,학동근린공원,골목상권,True,,4.0,0.0,86,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110955,논현초등학교,골목상권,True,,32.0,1.0,407,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110957,언북중학교,골목상권,True,,14.0,2.0,243,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110961,언주역 3번,골목상권,True,,7.0,1.0,126,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110968,강남구청역 2번,골목상권,True,,3.0,2.0,57,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110971,선정릉역 4번,골목상권,True,,11.0,1.0,172,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110976,언북초등학교,골목상권,True,,7.0,1.0,149,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110985,청담근린공원,골목상권,True,,3.0,0.0,57,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3110990,청담역 12번,골목상권,True,,2.0,0.0,29,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111014,송파나루역 2번,골목상권,True,,3.0,3.0,139,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111015,석촌역 3번,골목상권,True,,31.0,10.0,418,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111019,한성백제역 3번,골목상권,True,,10.0,6.0,315,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111020,방이동고분군(방산고등학교),골목상권,True,,11.0,2.0,150,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111029,오금역 4번,골목상권,True,,3.0,2.0,88,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111035,오금공원(오주중학교),골목상권,True,,8.0,0.0,142,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111048,천호역 1번(천호문구완구거리),골목상권,True,,4.0,2.0,98,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111049,천호지구대(천호동자전거거리),골목상권,True,,5.0,4.0,196,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111050,강동구청(강동구청역 2번),골목상권,True,,6.0,0.0,46,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111051,천호역 6번,골목상권,True,,19.0,2.0,316,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111052,암사역 3번(천호동자전거거리),골목상권,True,,18.0,5.0,291,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111056,천호태영아파트,골목상권,True,,1.0,3.0,82,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111057,천호공원(해공체육문화센터),골목상권,True,,6.0,1.0,222,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111058,성내중학교,골목상권,True,,2.0,2.0,69,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111060,암사역 2번(서울강동초등학교),골목상권,True,,15.0,3.0,446,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111062,둔촌동역 3번(성내3동주민센터),골목상권,True,,21.0,4.0,186,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111063,강동구립 천호도서관,골목상권,True,,5.0,0.0,199,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111064,둔촌동역 4번,골목상권,True,,3.0,4.0,139,False,True,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111066,암사동성당(효정하나플러스아파트),골목상권,True,,7.0,0.0,187,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111068,강동성심병원,골목상권,True,,0.0,0.0,27,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111069,천호1동주민센터,골목상권,True,,6.0,0.0,109,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111071,천동초등학교,골목상권,True,,4.0,1.0,51,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111072,굽은다리역 1번(십자성마을),골목상권,True,,8.0,1.0,206,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111073,둔촌동역 1번(한산중학교),골목상권,True,,17.0,3.0,360,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111074,명일역 1번,골목상권,True,,3.0,0.0,80,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111075,굽은다리역 2번,골목상권,True,,2.0,0.0,134,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111076,둔촌2동주민센터,골목상권,True,,7.0,1.0,138,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3111080,굽은다리역 3번,골목상권,True,,18.0,3.0,169,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120004,종로구청,발달상권,True,,22.0,2.0,489,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120010,원남동사거리,발달상권,True,,15.0,1.0,271,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120011,종로4가,발달상권,True,,8.0,0.0,663,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120014,종로5가역,발달상권,True,,30.0,2.0,636,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120015,종로6가,발달상권,True,,11.0,1.0,179,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120016,동대문역,발달상권,True,,7.0,1.0,282,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120019,경찰청앞교차로,발달상권,True,,9.0,1.0,108,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120024,회현역,발달상권,True,,20.0,3.0,244,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120033,을지로4가역,발달상권,True,,13.0,1.0,239,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120034,중구청(퇴계로4가),발달상권,True,,13.0,1.0,203,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120035,퇴계로5가,발달상권,True,,10.0,0.0,169,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120040,용산전자상가(용산역),발달상권,True,,30.0,0.0,2580,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120044,삼각지역,발달상권,True,,37.0,13.0,430,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120045,남영동 먹자골목,발달상권,True,,24.0,5.0,295,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120050,서울숲역,발달상권,True,,13.0,6.0,224,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120058,구의사거리,발달상권,True,,8.0,0.0,198,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120059,구삼강변맛길,발달상권,True,,11.0,2.0,373,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120070,한성대입구역,발달상권,True,,15.0,4.0,344,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120071,성북구청,발달상권,True,,12.0,1.0,238,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120082,상계백병원,발달상권,True,,4.0,0.0,156,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120097,충정로역,발달상권,True,,5.0,0.0,117,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120102,서교동(홍대),발달상권,True,,75.0,7.0,895,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120176,논현역 4번,발달상권,True,,17.0,2.0,257,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120177,신논현역 1번,발달상권,True,,19.0,3.0,328,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120191,학동역,발달상권,True,,36.0,4.0,1255,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120195,성수대교남단,발달상권,True,,23.0,10.0,656,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120196,서울세관,발달상권,True,,14.0,1.0,517,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120207,선정릉역,발달상권,True,,41.0,7.0,1205,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120214,영동대교남단교차로,발달상권,True,,12.0,3.0,214,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120216,경기고교사거리(경기고교앞사거리),발달상권,True,,2.0,1.0,264,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120223,휘문고교사거리,발달상권,True,,11.0,0.0,161,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120229,방이동먹자골목,발달상권,True,,16.0,2.0,909,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120238,방이역,발달상권,True,,9.0,0.0,291,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3120239,오금역,발달상권,True,,22.0,3.0,519,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130001,통인시장,전통시장,True,,24.0,4.0,184,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130007,광장시장(광장전통시장),전통시장,True,,7.0,3.0,580,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130010,종로신진시장,전통시장,True,,11.0,2.0,272,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130015,창신골목시장,전통시장,True,,3.0,1.0,138,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130018,동대문문구완구거리(동대문문구완구시장),전통시장,True,,4.0,1.0,152,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130025,삼익패션타운(남대문시장),전통시장,True,,2.0,0.0,586,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130032,인현시장,전통시장,True,,8.0,0.0,135,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130033,대림상가(청계상가),전통시장,True,,8.0,0.0,202,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130035,방산종합시장(방산시장),전통시장,True,,25.0,0.0,432,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130036,중부시장(신중부시장),전통시장,True,,12.0,0.0,650,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130042,약수시장,전통시장,True,,5.0,1.0,152,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130046,team204(팀204),전통시장,True,,1.0,0.0,119,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130048,동평화시장,전통시장,True,,4.0,0.0,748,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130051,동화동 골목형상점가,전통시장,True,,7.0,3.0,231,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130052,서울중앙시장(신중앙시장),전통시장,True,,7.0,0.0,473,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130053,백학시장,전통시장,True,,2.0,3.0,218,False,True,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130055,"황학시장(서울중앙시장, 신중앙시장)",전통시장,True,,3.0,3.0,178,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130058,이촌종합시장,전통시장,True,,3.0,1.0,107,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130063,신금호역 골목형상점가,전통시장,True,,2.0,0.0,110,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130066,행당시장상점가,전통시장,True,,6.0,4.0,308,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130067,왕십리도선동상점가,전통시장,True,,15.0,0.0,483,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130068,마장축산물시장,전통시장,True,,3.0,0.0,1233,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130069,"한양대앞상점가(한양시장, 왕십리맛골목)",전통시장,True,,10.0,2.0,190,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130076,능동로골목시장,전통시장,True,,4.0,2.0,131,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130078,화양제일골목시장,전통시장,True,,2.0,1.0,94,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130086,서울약령시장,전통시장,True,,11.0,2.0,580,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130094,청량리청과물시장,전통시장,True,,9.0,1.0,272,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130095,청량리전통시장,전통시장,True,,3.0,1.0,183,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130098,회기시장,전통시장,True,,10.0,4.0,141,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130099,전농로터리시장,전통시장,True,,4.0,1.0,103,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130105,장미제일시장(중화동제일시장),전통시장,True,,6.0,1.0,74,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130106,중랑동부시장,전통시장,True,,5.0,1.0,253,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130109,묵1동도깨비시장,전통시장,True,,2.0,1.0,93,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130113,신아타운,전통시장,True,,1.0,1.0,183,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130132,삼양골목시장(삼양시장),전통시장,True,,4.0,2.0,120,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130137,"수유전통시장(수유시장, 수유골목시장)",전통시장,True,,2.0,2.0,270,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130152,오!도봉거리 상점가,전통시장,True,,3.0,0.0,55,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130175,신촌 상인회(신촌상점가),전통시장,True,,2.0,0.0,42,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130178,이대 앞 스타트업 상점가,전통시장,True,,5.0,1.0,111,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130181,아현가구거리상점가,전통시장,True,,5.0,0.0,114,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130182,영천시장,전통시장,True,,1.0,4.0,156,False,True,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130194,용강동 상점가,전통시장,True,,7.0,0.0,167,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130196,공덕시장,전통시장,True,,0.0,1.0,95,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130198,아현시장,전통시장,True,,2.0,1.0,169,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130303,영동전통시장,전통시장,True,,5.0,1.0,229,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130323,둔촌역전통시장,전통시장,True,,3.0,2.0,170,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
+3130324,길동복조리시장,전통시장,True,,2.0,1.0,135,True,False,insufficient,partial_or_unusable_sales,,,,6c591a7_residual_size_adjusted_draft_2025Q4,official_inside_counts_no_external_walk_component,not_ranked
