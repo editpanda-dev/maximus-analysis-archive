@@ -1,6 +1,6 @@
 # 리서치 진행 로그 요약 (건우)
 
-기준: 2026-11-03 · 상세 기록: [`gunwoo_research_log.md`](gunwoo_research_log.md) · 브랜치는 `codex/gunwoo/` 생략 표기
+기준: 2026-11-03 · 상세 기록: [`gunwoo_research_log.md`](gunwoo_research_log.md) · 브랜치는 `gunwoo/` 생략 표기
 
 ---
 
@@ -86,7 +86,7 @@ Phase 5  리뷰 수집 경로 조사 (11/3)
 ---
 
 ### Phase 2: 상권 단위 의외성 추천 모델 (SERP v0)
-**문서**: `[serendipity-ranking] docs/serendipity_recommendation_design.md` · 코드 `scripts/build_serendipity_ranking.py` · 11/2
+**문서**: `[serendipity] docs/serendipity/recommendation_design.md` · 코드 `scripts/build_serendipity_ranking.py` · 11/2
 
 **이유/판단**
 - '숨은 곳'을 "관성 기준선이 상위에 올리지 않는 곳"으로 정의 → 데이터로 계산 가능
@@ -143,7 +143,7 @@ Phase 5  리뷰 수집 경로 조사 (11/3)
 ---
 
 ### Phase 3: 선행연구 검증 → SERP v1 재설계
-**문서**: `[serendipity-research-notes] docs/serendipity_prior_research_notes.md`, `[serendipity-papers-explainer] docs/serendipity_papers_explained.md`, `docs/serendipity_followup_ideas.md` · 11/2~3
+**문서**: `[serendipity] docs/serendipity/prior_research_notes.md`, `[serendipity] docs/serendipity/model_explained.md`, `docs/serendipity/followup_ideas.md` · 11/2~3
 
 **이유/판단**
 - 발표·심사에서 "이 논문이 근거"라고 말하려면 원문 확인이 필수
@@ -191,7 +191,7 @@ Phase 5  리뷰 수집 경로 조사 (11/3)
 ---
 
 ### Phase 4: 점포 단위 추천
-**문서**: `[store-level-recommendation-options] docs/store_level_recommendation_options.md`, `docs/store_level_validation_v0.md`, `[store-level-v1-fixes] docs/store_level_v1_changes.md` · 11/2~3
+**문서**: `[store-level] docs/store_level/recommendation_options.md`, `docs/store_level/validation_v0.md`, `[store-level] docs/store_level/v1_changes.md` · 11/2~3
 
 **이유/판단**
 - 점포별 매출·방문·평점 공개 데이터 없음 → 가게의 '매력'을 직접 잴 수 없음

@@ -1,12 +1,12 @@
 # 김건우 연구 기록 (막시무스 프로젝트)
 
-정리: 2026-11-03 · 브랜치 `codex/gunwoo/research-log`
+정리: 2026-11-03 · 브랜치 `gunwoo/research-log`
 
 막시무스 프로젝트를 바탕으로 김건우가 한 작업을 한곳에 모은 기록이다. 각 문서는 원래 브랜치에 그대로 있고, 여기에는 무엇을 했고 어디까지 왔는지만 적는다.
 
 - 범위: 커밋 작성자가 `cokejazz-on-d-way`, `fastpageson-cmyk`, Claude인 작업과 2026-11-03 리뷰 수집 조사 세션
 - 읽는 법: 장마다 맨 앞에 요약이 있다. 자세한 내용은 요약 아래와 원래 문서를 본다.
-- 표기: 경로 앞의 `[브랜치]`는 그 파일이 있는 브랜치다. 브랜치 이름의 `codex/gunwoo/`는 생략했다.
+- 표기: 경로 앞의 `[브랜치]`는 그 파일이 있는 브랜치다. 브랜치 이름의 `gunwoo/`는 생략했다(`campus-hidden-spots`만 `codex/gunwoo/`).
 
 ---
 
@@ -121,7 +121,7 @@
 
 **상태**: 코드·테스트·결과 커밋 완료. 동대문구발 실제 OD(B078)가 없어 유입 관련 항은 프록시다.
 
-**문서**: `[serendipity-ranking] docs/serendipity_recommendation_design.md`, 코드 `scripts/build_serendipity_ranking.py`, 결과 `data/processed/serendipity_ranking/`
+**문서**: `[serendipity] docs/serendipity/recommendation_design.md`, 코드 `scripts/build_serendipity_ranking.py`, 결과 `data/processed/serendipity_ranking/`
 
 ### 2.1 관성 기준선
 | 기준선 | 정의 |
@@ -209,7 +209,7 @@ v1 서울캠 출발 식사 구간별 1위:
 
 **상태**: 노트·해설서·아이디어 메모 커밋 완료. 해설서를 v1 기준으로 다시 쓰는 계획(5단계)이 남았다.
 
-**문서**: `[serendipity-research-notes] docs/serendipity_prior_research_notes.md`, `[serendipity-papers-explainer] docs/serendipity_papers_explained.md`, `docs/serendipity_followup_ideas.md`
+**문서**: `[serendipity] docs/serendipity/prior_research_notes.md`, `[serendipity] docs/serendipity/model_explained.md`, `docs/serendipity/followup_ideas.md`
 
 ### 3.1 검증 노트에서 로직에 반영할 것 Top 5
 1. 관성 기준선 대비 정의를 Ge·Murakami의 primitive model 방식으로 명시한다.
@@ -257,7 +257,7 @@ v1 서울캠 출발 식사 구간별 1위:
 
 **상태**: v0 결과 커밋 완료. v1 규칙은 코드·테스트까지 하고 아직 실행하지 않았다. 원천이 로컬 Mac에만 있어 로컬 실행이 필요하다.
 
-**문서**: `[store-level-recommendation-options] docs/store_level_recommendation_options.md`, `docs/store_level_validation_v0.md`, `[store-level-v1-fixes] docs/store_level_v1_changes.md`, `docs/store_level_v1_local_run.md`, `docs/campus/seoul_store_raw_sources.md`, `data/processed/store_level/README.md`
+**문서**: `[store-level] docs/store_level/recommendation_options.md`, `docs/store_level/validation_v0.md`, `[store-level] docs/store_level/v1_changes.md`, `docs/prompts/store_level_v1_local_run.md`, `docs/campus/seoul_store_raw_sources.md`, `data/processed/store_level/README.md`
 
 ### 4.1 왜 점포 단위인가
 - 상권 대각선 중앙값: 골목상권 605m, 발달상권 879m, 관광특구 1.7km(최대 4.1km).
@@ -310,7 +310,7 @@ v0 상위 목록에서 보인 문제 세 가지를 고쳤다.
 
 - 사전 영향(v0 목록에 규칙을 덧씌운 추정, v1 결과 아님): 상위 130곳 중 32곳이 빠지고, 업종 보정 4곳, 쇼핑 희소 가점 상실 10곳.
 - 공부하기 좋은 일반 카페는 리뷰 키워드가 생긴 뒤(v2)에 다룬다.
-- 로컬 실행 방법은 `docs/store_level_v1_local_run.md`에 있다.
+- 로컬 실행 방법은 `docs/prompts/store_level_v1_local_run.md`에 있다.
 
 ### 4.7 네이버 장소 연결과 키워드 리뷰 수집 시도 (11-03)
 - 장소 연결: `map.naver.com` instant-search에 상호와 점포 좌표로 검색한다. 토큰 없이 된다. 1곳만 시험했다.
@@ -318,7 +318,7 @@ v0 상위 목록에서 보인 문제 세 가지를 고쳤다.
   - 받는 것: 키워드별 선택 인원, 참여 인원, 방문자 리뷰 수. 리뷰 본문·닉네임·사진은 받지 않는다.
   - 요청 규칙: 기본 간격 20초 + 무작위 최대 10초. 차단되면 60·120초 쉬고, 3번 연속이면 멈춘다.
 - 결과: **캡차 토큰 없이 보내면 첫 요청부터 429.** 헤더 형식을 브라우저와 맞추고 간격을 20초 이상으로 늘려도 같았다. 캡차 토큰을 재사용하는 수집은 하지 않았다.
-- 스크립트: `[store-level-recommendation-options] scripts/naver/match_naver_places_v0.py`, `collect_naver_keyword_reviews_v0.py`
+- 스크립트: `[store-level] scripts/naver/match_naver_places_v0.py`, `collect_naver_keyword_reviews_v0.py`
 
 ---
 
@@ -465,13 +465,12 @@ v0 상위 목록에서 보인 문제 세 가지를 고쳤다.
 
 | 브랜치 | 내용 | 마지막 커밋 |
 |---|---|---|
-| `codex/gunwoo/campus-hidden-spots` | 1장 글캠·서울캠 | 2026-10-31 |
-| `codex/gunwoo/serendipity-ranking` | 2장 SERP v0·v1 | 2026-11-02 |
-| `codex/gunwoo/serendipity-research-notes` | 3장 검증 노트 | 2026-11-02 |
-| `codex/gunwoo/serendipity-papers-explainer` | 3장 해설서·후속 아이디어 | 2026-11-03 |
-| `codex/gunwoo/store-level-recommendation-options` | 4장 설계·v0·네이버 스크립트 | 2026-11-03 |
-| `codex/gunwoo/store-level-v1-fixes` | 4장 v1 규칙 | 2026-11-03 |
-| `codex/gunwoo/research-log` | 이 문서 | 2026-11-03 |
+| `codex/gunwoo/campus-hidden-spots` | 1장 글캠·서울캠 (원본 레포에 있음) | 2026-10-31 |
+| `gunwoo/serendipity` | 2·3장 SERP v0·v1, 검증 노트, 해설서·후속 아이디어 | 2026-11-04 |
+| `gunwoo/store-level` | 4장 설계·v0·네이버 스크립트·v1 규칙 | 2026-11-04 |
+| `gunwoo/research-log` | 이 문서 | 2026-11-04 |
+
+2026-11-04에 포크 브랜치를 위 3개로 합쳤다. 옛 이름 → 새 이름: `serendipity-ranking`·`serendipity-research-notes`·`serendipity-papers-explainer` → `gunwoo/serendipity`, `store-level-recommendation-options`·`store-level-v1-fixes` → `gunwoo/store-level`.
 
 ## 10. 참고 링크 (5장)
 - mapjiri-datamining: https://github.com/MapJiri/mapjiri-datamining
