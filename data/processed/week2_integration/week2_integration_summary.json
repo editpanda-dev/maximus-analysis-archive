@@ -1,0 +1,11 @@
+{
+  "area_count": 786,
+  "living_movement_period_count": 26,
+  "study_score_q75": 50.85121336796989,
+  "movement_school_share_q75": 0.02302566559847529,
+  "study_ready_signal_count": 42,
+  "demand_signal_feature_gap_count": 47,
+  "feature_rich_validation_needed_count": 125,
+  "study_score_school_share_spearman": 0.19772321882779156,
+  "study_score_access_spearman": 0.08941415296863064
+}

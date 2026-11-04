@@ -1,0 +1,32 @@
+{
+  "rows": 786,
+  "tagged_universe": 780,
+  "purpose_driven": 31,
+  "low_transactions": 13,
+  "evening_tag": 14,
+  "weekend_tag": 11,
+  "young_tag": 44,
+  "specialty_mix": 34,
+  "scale_tier": {
+    "생활권": 557,
+    "지역핵심": 111,
+    "도시핵심": 74,
+    "자료부족": 38,
+    "": 6
+  },
+  "activity_ratio_q1_q4_spearman": 0.929,
+  "footfall_quadrant": {
+    "": 531,
+    "보통": 185,
+    "목적형(사람 적고 결제 많음)": 52,
+    "통과형(사람 많고 결제 적음)": 14,
+    "번화형": 3,
+    "한산형": 1
+  },
+  "transactions_per_street_person_median": {
+    "purpose_driven": 2.547,
+    "others_covered": 0.756
+  },
+  "purpose_driven_outside_v1_top50": 22,
+  "young_tag_outside_v1_top50": 38
+}

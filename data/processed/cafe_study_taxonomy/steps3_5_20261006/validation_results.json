@@ -1,0 +1,14 @@
+{
+  "code_commit": "dc92404",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "requirements_exact_pinned_versions": 26,
+  "pip_check": "No broken requirements found.",
+  "tests_passed": 10,
+  "data_qa_passed": 21,
+  "clean_checkout_output_files": 26,
+  "output_byte_equality": true,
+  "windows_updated_code_execution_verified": false,
+  "remote_steps1_2_push": "blocked_no_https_credentials_and_connector_403",
+  "true_common_network_score": "blocked_missing_shared_point_source_and_route_cache"
+}

@@ -1,0 +1,29 @@
+{
+  "quarter": 20254,
+  "area_count": 786,
+  "row_count": 1572,
+  "tourism_special_zone_area_count": 6,
+  "wholesale_or_specialized_market_count": 7,
+  "shopping_sales_observed_area_count": 650,
+  "shopping_sales_imputed_area_count": 136,
+  "shopping_high_confidence_area_count": 637,
+  "meal_high_confidence_area_count": 685,
+  "adult_or_nightlife_in_meal_score": false,
+  "bakery_in_meal_score": false,
+  "raw_score_vs_area_km2_pearson": {
+    "쇼핑": 0.13449761368789187,
+    "식사": 0.13370173042385836
+  },
+  "adjusted_score_vs_area_km2_pearson": {
+    "쇼핑": 0.017003060368438353,
+    "식사": 0.012596773949102531
+  },
+  "raw_score_vs_total_stores_pearson": {
+    "쇼핑": 0.33353472226538056,
+    "식사": 0.19421969730326852
+  },
+  "adjusted_score_vs_total_stores_pearson": {
+    "쇼핑": 0.12002255286233281,
+    "식사": -0.015127610374419929
+  }
+}
