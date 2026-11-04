@@ -1,0 +1,5 @@
+﻿subtype_code,subtype_name,source_feature_columns,source_feature_type_count,covered_area_count,covered_area_share,total_buffer400_count,snapshot_date,historical_2025_use_allowed
+viewing_exhibition,관람·전시,poi_museum_buffer400_count | poi_art_gallery_buffer400_count | poi_cinema_buffer400_count | poi_exhibition_space_buffer400_count,4,468,0.5954198473282443,1997,2026-09-16,False
+performance_culture,공연·문화활동,poi_performance_hall_buffer400_count | poi_cultural_center_buffer400_count,2,379,0.4821882951653944,1011,2026-09-16,False
+outdoor_park,야외·공원,poi_park_buffer400_count,1,337,0.4287531806615776,948,2026-09-16,False
+sports_activity,스포츠·활동,poi_sports_facility_buffer400_count,1,77,0.09796437659033079,616,2026-09-16,False
