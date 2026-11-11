@@ -35,6 +35,23 @@ def update_store(store_id: str, **fields):
     conn.close()
 
 
+# 리뷰 페이지에서 읽는 네이버 측 가게 정보 (매칭 검증용). 예전 DB에는 없어서 실행 시 추가한다.
+META_COLUMNS = {
+    "naver_category": "TEXT", "naver_road_address": "TEXT", "naver_address": "TEXT",
+    "naver_review_total": "INTEGER", "naver_review_score": "REAL",
+}
+
+
+def ensure_meta_columns():
+    conn = sqlite3.connect(DB_PATH)
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(excel_dining_stores)")}
+    for name, typ in META_COLUMNS.items():
+        if name not in cols:
+            conn.execute(f"ALTER TABLE excel_dining_stores ADD COLUMN {name} {typ}")
+    conn.commit()
+    conn.close()
+
+
 def get_canary_store():
     """이미 정상 매칭된 점포 하나 (STEP_1 검색어로 찾았고 이름이 정상인 것)."""
     conn = sqlite3.connect(DB_PATH)
@@ -98,6 +115,7 @@ def main():
     if not 0 <= args.shard < args.num_shards:
         sys.exit("--shard 는 0 이상 --num-shards 미만이어야 합니다")
     DB_PATH = args.db
+    ensure_meta_columns()
     purposes = [p.strip() for p in args.purposes.split(",") if p.strip()]
 
     stores = get_pending_stores(args.limit, purposes, args.shard, args.num_shards)
@@ -253,6 +271,12 @@ def process_store(crawler, s, max_reviews):
 
     # 2단계: 리뷰 본문 수집
     reviews = crawler.scrape_reviews(s_id, place_id, max_reviews=max_reviews)
+    try:
+        meta = crawler.read_place_meta(place_id)
+    except Exception:
+        meta = {}  # 가게 정보는 검증용 부가 정보라 실패해도 리뷰 저장은 진행
+    if meta.get("naver_place_name"):
+        update_store(s_id, **meta)
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     for r in reviews:

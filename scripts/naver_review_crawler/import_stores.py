@@ -32,6 +32,8 @@ CREATE TABLE IF NOT EXISTS excel_dining_stores (
     search_query_used TEXT,
     search_status TEXT DEFAULT 'PENDING',
     naver_place_id TEXT, naver_place_name TEXT,
+    naver_category TEXT, naver_road_address TEXT, naver_address TEXT,
+    naver_review_total INTEGER, naver_review_score REAL,
     review_status TEXT DEFAULT 'PENDING',
     review_count_collected INTEGER DEFAULT 0,
     last_error TEXT,

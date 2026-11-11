@@ -22,9 +22,11 @@ def main():
     conn = sqlite3.connect(f"file:{args.db}?mode=ro", uri=True)
     cols = [r[1] for r in conn.execute("PRAGMA table_info(excel_dining_stores)")]
     purpose = "s.purpose" if "purpose" in cols else "NULL"
+    meta_cols = ["naver_category", "naver_road_address", "naver_address", "naver_review_total", "naver_review_score"]
+    meta = "".join(f", s.{c}" if c in cols else f", NULL AS {c}" for c in meta_cols)
     cur = conn.execute(f"""
         SELECT r.id AS review_id, r.store_id, {purpose} AS purpose, s.store_name, s.area_code, s.area_name,
-               s.address, s.category_small, r.place_id, s.naver_place_name, r.author_name, r.rating,
+               s.address, s.category_small, r.place_id, s.naver_place_name{meta}, r.author_name, r.rating,
                r.visit_date, r.visit_count, r.keywords, r.review_text, r.collected_at
         FROM reviews r JOIN excel_dining_stores s ON r.store_id = s.store_id
         ORDER BY r.id

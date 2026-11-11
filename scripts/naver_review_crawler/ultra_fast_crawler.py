@@ -307,3 +307,24 @@ class UltraFastCrawler:
         except PlaywrightError as e:
             # 중간 실패 시 일부만 저장하면 '리뷰 n건' 점포로 굳어지므로 전체를 재시도한다.
             raise CrawlTransient(f"scrape_error: {str(e)[:120]}")
+
+    def read_place_meta(self, place_id: str) -> Dict[str, Any]:
+        """지금 열린 플레이스 페이지의 네이버 측 가게 정보 (추가 요청 없음).
+        검색 결과 링크 글자는 이미지 차단 때문에 '일시적인 오류…'가 되므로 페이지 데이터에서 읽는다."""
+        base = self.page.evaluate(
+            """(pid) => {
+                const s = window.__APOLLO_STATE__ || {};
+                return s['PlaceDetailBase:' + pid] || null;
+            }""",
+            place_id,
+        )
+        if not base:
+            return {}
+        return {
+            "naver_place_name": base.get("name"),
+            "naver_category": base.get("category"),
+            "naver_road_address": base.get("roadAddress"),
+            "naver_address": base.get("address"),
+            "naver_review_total": base.get("visitorReviewsTotal"),
+            "naver_review_score": base.get("visitorReviewsScore"),
+        }
