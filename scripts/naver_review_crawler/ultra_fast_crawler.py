@@ -323,7 +323,7 @@ class UltraFastCrawler:
         return {
             "naver_place_name": base.get("name"),
             "naver_category": base.get("category"),
-            "naver_road_address": base.get("roadAddress"),
+            "naver_road_address": base.get("roadAddress") or "",  # 도로명 없는 곳도 "확인함" 표시 (NULL이면 채우기가 무한 반복)
             "naver_address": base.get("address"),
             "naver_review_total": base.get("visitorReviewsTotal"),
             "naver_review_score": base.get("visitorReviewsScore"),
