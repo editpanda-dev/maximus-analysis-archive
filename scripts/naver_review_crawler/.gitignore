@@ -1,0 +1,6 @@
+# 로컬 수집 상태·결과 (리뷰에 작성자 닉네임 포함 → 공개 저장소 커밋 금지)
+crawler.db
+crawler.db-*
+logs/
+*.csv
+.venv/
