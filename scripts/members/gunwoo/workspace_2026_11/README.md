@@ -29,7 +29,9 @@
 | `eval_destination_ranking.py` | 시간 순 분할 평가 |
 | `eval_generalization.py` | 구 홀드아웃 평가 (핵심) |
 | `build_transit_time_matrix.py` | 출발동 × 상권 대중교통 시간 |
-| `serendipity_v1.py` | SERP-v1 |
+| `serendipity_v1.py` | SERP-v1.2 (기본, R = 목적 점수). `--v11`이면 v1.1 |
+| `serp_v1_validation.py` | v1.2 검증 4종: PATH-v0 비교, 리뷰 신호, 태그 필터, 시간 |
+| `serp_v1_followup.py` | 대중교통 단계별 점수, 동료 모형 비교·보정, 성북 대학 빼고 학생 검증 |
 | `student_flows.py`, `student_signal_by_*.py`, `hub_affinity.py` | 대학생 이동 근사, 왕십리 쏠림 점검 |
 
 **점포: 태그와 라벨** → 문서 `docs/store_level/tags_v3_and_labels.md`

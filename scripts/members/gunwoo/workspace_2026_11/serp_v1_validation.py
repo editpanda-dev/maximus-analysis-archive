@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""SERP-v1 검증 5종 (2026-11-16).
+"""SERP-v1(v1.2) 검증 4종 (2026-11-16).
 
 A. PATH-v0 상위는 의외성 추천으로 쓸 만한가: 상위 10곳의 관련성 R·의외성 U·실제 유입 순위·거리
 B. 리뷰 신호 대조: 의외성 상위 상권의 네이버 별점·리뷰 수가 같은 규모 상권보다 높은가
 C. 목적별 U: 점포 태그 비율로 식사 하위 목적(느좋·데이트·가성비 혼밥·단체 회식)마다 목록을 나누면 달라지는가
 D. 시간 검증: 앞 4달(2025-12~2026-03)로 고른 '덜 가는 곳'이 뒤 4달에 평균 회귀 이상으로 따라잡는가
-E. 대학생 하위집단: 다른 대학 학생 모형이 예상한 것보다 우리 캠퍼스 학생이 덜 가는 곳
+(대학생 하위집단은 serp_v1_followup.py 4번으로 옮김: 성북구 대학을 학습에 넣으면 성북 쪽 예상이 부풀어서)
 
-입력: 데이터/가공/elastic_net/serendipity_ranking_v1.csv, serp_v1_monthly_gap.csv,
+입력: 데이터/가공/elastic_net/serendipity_ranking_v1_2.csv, serp_v1_monthly_gap.csv,
       데이터/가공/naver_reviews/dining_store_by_area.csv, area_dining_review_summary.csv,
-      데이터/가공/store_level/store_tags_v3.csv, 데이터/가공/od_eval/students/202512-202607/ddm_campus_student_residual.csv
+      데이터/가공/store_level/store_tags_v3.csv
 출력: 데이터/가공/elastic_net/validation/*.csv, 요약은 표준 출력
 실행: ~/.venvs/maximus/bin/python 분석/serp_v1_validation.py
 """
@@ -28,11 +28,10 @@ OUT = G / "elastic_net/validation"
 TOP = 10
 TAGS = ["느좋", "감성 모임", "데이트·기념일", "가성비 혼밥", "단체 회식"]
 MIN_TAGGED = 5  # 태그 비율을 믿을 최소 판정 점포 수
-CAMPUS = {"회기동": "경희대", "이문1동": "한국외대", "전농2동": "서울시립대 쪽", "휘경2동": "삼육보건대 쪽"}
 
 
 def load_rank() -> pd.DataFrame:
-    r = pd.read_csv(G / "elastic_net/serendipity_ranking_v1.csv")
+    r = pd.read_csv(G / "elastic_net/serendipity_ranking_v1_2.csv")
     r["act_rank"] = r.groupby(["purpose", "age_grp"]).act.rank(ascending=False)
     r["dist_rank"] = r.groupby(["purpose", "age_grp"]).dist_km.rank()
     return r
@@ -145,7 +144,7 @@ def part_c(r: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 def part_d() -> pd.DataFrame:
     g = pd.read_csv(G / "elastic_net/serp_v1_monthly_gap.csv")
-    r = pd.read_csv(G / "elastic_net/serendipity_ranking_v1.csv")
+    r = pd.read_csv(G / "elastic_net/serendipity_ranking_v1_2.csv")
     rows = []
     for (purpose, age), d in g.groupby(["purpose", "age_grp"]):
         d = d.assign(half=np.where(d.month.astype(str) <= "202603", "앞", "뒤"))
@@ -167,19 +166,6 @@ def part_d() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def part_e() -> pd.DataFrame:
-    s = pd.read_csv(G / "od_eval/students/202512-202607/ddm_campus_student_residual.csv")
-    rk = pd.read_csv(G / "elastic_net/serendipity_ranking_v1.csv")
-    inertia = set(rk[rk.inertia].area_code)
-    s = s[(s.pred_n >= 20) & ~s.area_code.isin(inertia) & (s.primary_district_name != "동대문구")]
-    s["ratio"] = np.exp(s.resid)
-    out = (s.sort_values("resid").groupby("campus").head(TOP)
-             [["campus", "area_name", "primary_district_name", "dist_km", "pred_n", "y", "ratio"]])
-    out["학교"] = out.campus.map(CAMPUS)
-    out.to_csv(OUT / "e_campus_under_visited.csv", index=False, encoding="utf-8-sig")
-    return out
-
-
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     pd.set_option("display.width", 200)
@@ -192,8 +178,6 @@ def main() -> None:
     d = part_d()
     d.to_csv(OUT / "d_time_holdout.csv", index=False, encoding="utf-8-sig")
     print("\n[D] 시간 검증 (앞 4달로 고른 덜 가는 10곳의 뒤 4달)\n", d.round(3).to_string(index=False))
-    e = part_e()
-    print("\n[E] 다른 대학생 대비 우리 학생이 덜 가는 곳 (동대문구 밖, 예상 20명+)\n", e.round(2).to_string(index=False))
 
 
 if __name__ == "__main__":

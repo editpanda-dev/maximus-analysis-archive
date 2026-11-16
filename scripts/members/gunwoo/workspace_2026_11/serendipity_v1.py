@@ -12,6 +12,8 @@ SERP-v0와 다른 점
 
 목적 ↔ 도착 시간대: 식사=점심·저녁, 카페·쇼핑·공부=오후, 여가문화=심야. 연령: 전체·20대.
 v1.1(목적 차별화): R = 동료 예상 백분위 × 목적 가게 비중 백분위, 한 상권은 백분위가 가장 높은 목적 하나에만 배정.
+v1.2(기본, 2026-11-16): R = 목적 점수(PATH 여가 v1 정렬판) 백분위로 되돌림. 관련성은 "사용자가 고른 목적에 맞는가"라서.
+           동료 예상 유입은 백분위 0.5 이상 하한으로만 쓴다. --v11 이면 예전 판.
 변경 기록: 분석/SERP_v1_변경기록.md
 
 실행: ~/.venvs/maximus/bin/python 분석/serendipity_v1.py [--refit]  (--refit: 달별 동료 모형 다시 학습)
@@ -40,6 +42,9 @@ MIN_UNDER_MONTHS = 7  # 8달 중 덜 간 달 수 하한
 HUB_RATIO = 3.0       # 동료보다 이만큼 넘게 많이 가는 상위권 = 관성 거점
 INERTIA_TOP = 20
 R_FLOOR, PATH_FLOOR, TOP_K = 0.6, 0.5, 10
+PEER_FLOOR = 0.5  # v1.2: 동료 예상 유입 백분위 하한(다른 동네 사람도 웬만큼은 가는 곳)
+V12 = "--v11" not in sys.argv  # 기본 v1.2. --v11이면 예전 판(R = 동료 예상 × 목적 가게 비중)
+RANK_FILE = "serendipity_ranking_v1_2.csv" if V12 else "serendipity_ranking_v1_1.csv"
 OUT = e.HERE / "데이터/가공/elastic_net"
 
 
@@ -95,17 +100,21 @@ def score_purpose(g: pd.DataFrame, area: pd.DataFrame, path_v1: pd.DataFrame, pu
     # v1.1: 카페·쇼핑·공부는 같은 오후 시간대라 동료 예상(exp)이 똑같다 → 목적 특화도(그 목적 가게 비중 백분위)를 곱해 R을 목적별로 가른다
     g["r_flow"] = serp.pct_rank(g.exp)
     g["purpose_fit"] = serp.pct_rank(g[f"share_{pur}"].fillna(0))
-    g["relevance"] = serp.pct_rank(g.r_flow * g.purpose_fit)
+    if V12:  # v1.2: 관련성 = 사용자가 고른 목적에 맞는 정도(목적 점수 백분위). 동료 예상은 '갈 만한 곳' 하한으로만
+        g["relevance"] = g.path_pct
+    else:
+        g["relevance"] = serp.pct_rank(g.r_flow * g.purpose_fit)
     g["peer_ratio"] = np.exp(g.gap)
     g["unexpectedness"] = serp.pct_rank(-g.gap)
     act_rank = g.act.rank(ascending=False, method="first")
     g["inertia"] = (act_rank <= INERTIA_TOP) | ((g.peer_ratio > HUB_RATIO) & (act_rank <= 0.05 * len(g)))
-    g["eligible"] = ((g.relevance >= R_FLOOR) & (g.path_pct >= PATH_FLOOR) & ~g.inertia
+    gate = (g.r_flow >= PEER_FLOOR) if V12 else (g.relevance >= R_FLOOR)
+    g["eligible"] = (gate & (g.path_pct >= PATH_FLOOR) & ~g.inertia
                      & (g.under_months >= MIN_UNDER_MONTHS) & (g.area_type_name != TOURISM_TYPE))
     g["serendipity_score"] = (g.relevance * g.unexpectedness).where(g.eligible)
     g["score_pct"] = g.serendipity_score.rank(pct=True)  # 목적 안 자격 후보 사이 백분위
-    g["reason"] = [f"비슷한 조건 동료 기준 예상의 {r:.2f}배만 감 · {u}/8달 덜 감 · 대중교통 {t:.0f}분 · {pur} 가게 비중 상위 {1 - f:.0%}"
-                   for r, u, t, f in zip(g.peer_ratio, g.under_months, g.transit_min, g.purpose_fit)]
+    g["reason"] = [f"{pur} 목적 점수 상위 {1 - f:.0%} · 비슷한 조건 동료 기준 예상의 {r:.2f}배만 감 · {u}/8달 덜 감 · 대중교통 {t:.0f}분"
+                   for r, u, t, f in zip(g.peer_ratio, g.under_months, g.transit_min, g.path_pct)]
     return g
 
 
@@ -171,7 +180,8 @@ def main() -> None:
             "serendipity_score", "relevance", "r_flow", "purpose_fit", "unexpectedness", "peer_ratio", "under_months", "act", "exp",
             "path_pct", "transit_min", "dist_km", "inertia", "eligible", "assigned", "reason"]
     full = full.sort_values(["purpose", "age_grp", "mmr_rank", "score_rank"], na_position="last")
-    full[cols].to_csv(OUT / "serendipity_ranking_v1.csv", index=False, encoding="utf-8-sig")
+    full[cols].to_csv(OUT / RANK_FILE, index=False, encoding="utf-8-sig")
+    print("판:", "v1.2 (R=목적 점수)" if V12 else "v1.1", "→", RANK_FILE)
 
     print("\nR(동료 모형) 동대문 NDCG@10 8달:", ev.groupby("month").ndcg10.mean().round(3).to_dict(),
           "| 거리순", round(ev.ndcg10_거리순.mean(), 3))
