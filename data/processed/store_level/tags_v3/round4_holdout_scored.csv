@@ -1,0 +1,128 @@
+sid,tag,ans,claim,y,cy,name,p3,v3y
+semas:MA0101202601A0008677,느좋,yes,True,True,True,어떤날,0.912,1.0
+semas:MA0101202601A0008677,데이트·기념일,yes,True,True,True,어떤날,0.886,1.0
+semas:MA0101202601A0008677,이색 체험,no,True,False,False,어떤날,,
+semas:MA010120220811201353,감성 모임,no,True,False,False,종로고기집양연화로,0.614,1.0
+semas:MA010120220811201353,느좋,no,False,False,False,종로고기집양연화로,0.171,0.0
+semas:MA010120220811201353,단체 회식,yes,True,True,True,종로고기집양연화로,,
+semas:MA010120220811201353,야장·야외석,yes,True,True,True,종로고기집양연화로,,
+semas:MA010120220811201353,이색 체험,no,True,False,False,종로고기집양연화로,,
+semas:MA0101202501A0023653,감성 모임,yes,True,True,True,쉘터해방촌,0.892,1.0
+semas:MA0101202501A0023653,느좋,yes,True,True,True,쉘터해방촌,0.911,1.0
+semas:MA0101202501A0023653,야장·야외석,yes,True,True,True,쉘터해방촌,,
+semas:MA010120220803453773,느좋,yes,True,True,True,북해빙수,0.853,1.0
+semas:MA010120220803453773,이색 체험,yes,True,True,False,북해빙수,,
+semas:MA0101202604A0023267,느좋,no,False,False,False,에그리데이,0.662,1.0
+semas:MA010120220810332124,느좋,no,False,False,False,해랑,0.225,0.0
+semas:MA010120220803458523,감성 모임,yes,True,True,False,대나무와인삼겹살,0.209,0.0
+semas:MA010120220803458523,느좋,yes,False,True,False,대나무와인삼겹살,0.036,0.0
+semas:MA010120220803458523,단체 회식,yes,True,True,True,대나무와인삼겹살,,
+semas:MA010120220803458523,야장·야외석,yes,True,True,False,대나무와인삼겹살,,
+semas:MA0101202409A0053040,감성 모임,no,True,False,False,육전국밥종각역점,0.073,0.0
+semas:MA0101202409A0053040,느좋,yes,False,True,False,육전국밥종각역점,0.04,0.0
+semas:MA0101202409A0053040,단체 회식,yes,True,True,False,육전국밥종각역점,,
+semas:MA0101202409A0053040,혼밥 감성,yes,True,True,False,육전국밥종각역점,0.77,1.0
+semas:MA010120220806362658,느좋,no,False,False,False,본래순대 자양점,0.053,0.0
+semas:MA010120220806362658,혼밥 감성,yes,True,True,False,본래순대 자양점,0.769,1.0
+semas:MA0106202412A2424368,느좋,yes,False,True,True,더이탈리안클럽,0.783,1.0
+semas:MA0101202406A0396865,감성 모임,yes,True,True,False,베키오맨션,0.879,1.0
+semas:MA0101202406A0396865,느좋,yes,True,True,True,베키오맨션,0.935,1.0
+semas:MA0101202406A0396865,이색 체험,yes,True,True,False,베키오맨션,,
+semas:MA0101202406A0593289,감성 모임,yes,True,True,False,장인닭갈비종로,0.122,0.0
+semas:MA0101202406A0593289,느좋,no,False,False,False,장인닭갈비종로,0.137,0.0
+semas:MA0101202406A0593289,단체 회식,yes,True,True,True,장인닭갈비종로,,
+semas:MA0101202406A0593289,이색 체험,no,True,False,False,장인닭갈비종로,,
+semas:MA0101202508A0029226,가성비 감성,yes,True,True,False,최순옥명품국밥 노원점,0.862,1.0
+semas:MA0101202508A0029226,가성비 혼밥,yes,True,True,True,최순옥명품국밥 노원점,0.863,1.0
+semas:MA0101202508A0029226,느좋,no,False,False,False,최순옥명품국밥 노원점,0.035,0.0
+semas:MA0101202508A0029226,혼밥 감성,yes,True,True,False,최순옥명품국밥 노원점,0.609,1.0
+semas:MA0101202411A0079297,느좋,no,False,False,False,숙성소고기치익,0.028,0.0
+semas:MA0101202411A0079297,이색 체험,yes,True,True,False,숙성소고기치익,,
+semas:MA0101202602A0035707,느좋,yes,True,True,,,0.846,1.0
+semas:MA0101202307A0094169,느좋,yes,True,True,False,미가궁,0.431,0.0
+semas:MA0101202307A0094169,단체 회식,yes,True,True,True,미가궁,,
+semas:MA0101202604A0035100,느좋,no,False,False,False,우연고깃집정육식당,0.459,0.0
+semas:MA0101202604A0035100,야장·야외석,yes,True,True,True,우연고깃집정육식당,,
+semas:MA0101202604A0035100,이색 체험,yes,True,True,False,우연고깃집정육식당,,
+semas:MA0101202306A0029740,느좋,no,False,False,False,참존숯불바베큐,0.064,0.0
+semas:MA0101202306A0029740,야장·야외석,yes,True,True,True,참존숯불바베큐,,
+semas:MA0101202603A0013264,느좋,yes,True,True,False,어흥집,0.654,1.0
+semas:MA0101202603A0013264,이색 체험,no,True,False,False,어흥집,,
+semas:MA0101202306A0020599,감성 모임,yes,True,True,False,경복궁 방이점,0.369,0.0
+semas:MA0101202306A0020599,느좋,no,False,False,False,경복궁 방이점,0.071,0.0
+semas:MA0101202306A0020599,데이트·기념일,no,True,False,False,경복궁 방이점,0.294,0.0
+semas:MA010120220803526672,느좋,no,False,False,False,무교동북어국집,0.116,0.0
+semas:MA010120220800316415,느좋,yes,False,True,True,스페인클럽이태원점,0.912,1.0
+semas:MA0101202604A0044015,느좋,no,True,False,False,북창닭구이,0.421,0.0
+semas:MA0101202604A0044015,이색 체험,no,True,False,True,북창닭구이,,
+semas:MA0101202211A0070491,느좋,yes,True,True,False,포앤시드니신내SKV1 센터점,0.44,0.0
+semas:MA0101202406A0492779,느좋,yes,True,True,False,가밀148,0.583,1.0
+semas:MA0101202406A0265399,감성 모임,no,True,False,False,비에이치씨치킨강북 구청점,0.515,1.0
+semas:MA0101202406A0265399,느좋,no,False,False,False,비에이치씨치킨강북 구청점,0.277,0.0
+semas:MA0101202406A0265399,단체 회식,yes,True,True,False,비에이치씨치킨강북 구청점,,
+semas:MA0101202406A0265399,야장·야외석,no,True,False,True,비에이치씨치킨강북 구청점,,
+semas:MA0101202604A0026734,느좋,no,False,False,False,반반한김밥,0.355,0.0
+semas:MA0101202604A0026734,혼밥 감성,yes,True,True,False,반반한김밥,0.742,1.0
+semas:MA0106202211A0056052,감성 모임,yes,True,True,False,차이797SFC점,0.768,1.0
+semas:MA0106202211A0056052,느좋,yes,False,True,False,차이797SFC점,0.561,1.0
+semas:MA0106202211A0056052,단체 회식,yes,True,True,True,차이797SFC점,,
+semas:MA0106202211A0056052,데이트·기념일,yes,True,True,False,차이797SFC점,0.827,1.0
+semas:MA010120220813121815,가성비 혼밥,yes,True,True,True,스시키요이,0.853,1.0
+semas:MA010120220813121815,느좋,no,False,False,False,스시키요이,0.594,1.0
+semas:MA010120220808261106,느좋,yes,True,True,True,오파토,0.912,1.0
+semas:MA010120220808261106,데이트·기념일,yes,True,True,False,오파토,0.561,1.0
+semas:MA010120220808261106,이색 체험,no,True,False,False,오파토,,
+semas:MA010120220803956866,느좋,no,False,False,False,치킨뱅이수락산점,0.289,0.0
+semas:MA010120220803956866,야장·야외석,yes,True,True,False,치킨뱅이수락산점,,
+semas:MA0101202511A0006409,감성 모임,yes,True,True,False,천호해우리,0.471,0.0
+semas:MA0101202511A0006409,느좋,yes,True,True,False,천호해우리,0.457,0.0
+semas:MA0101202511A0006409,단체 회식,yes,True,True,True,천호해우리,,
+semas:MA0101202508A0011149,느좋,yes,False,True,False,포옹남종로,0.647,1.0
+semas:MA0101202508A0011149,혼밥 감성,yes,True,True,False,포옹남종로,0.669,1.0
+semas:MA0101202406A0134878,느좋,yes,False,True,False,먹새통,0.067,0.0
+semas:MA0101202406A0134878,야장·야외석,yes,True,True,True,먹새통,,
+semas:MA010120220804783047,느좋,yes,False,True,True,뉴오더클럽한남,0.868,1.0
+semas:MA0101202502A0023956,느좋,no,False,False,False,화계전통 서울시립대점,0.832,1.0
+semas:MA0101202602A0020063,감성 모임,yes,True,True,True,오담,0.929,1.0
+semas:MA0101202602A0020063,느좋,yes,True,True,True,오담,0.846,1.0
+semas:MA0101202602A0020063,데이트·기념일,yes,True,True,True,오담,0.914,1.0
+semas:MA0101202602A0020063,야장·야외석,yes,True,True,True,오담,,
+semas:MA0101202602A0020063,이색 체험,yes,True,True,False,오담,,
+semas:MA0101202603A0007433,느좋,yes,True,True,False,훈타을지로,0.798,1.0
+semas:MA0101202411A0171390,느좋,no,False,False,False,야키토리잔잔 방이점,0.807,1.0
+semas:MA0101202411A0171390,야장·야외석,yes,True,True,False,야키토리잔잔 방이점,,
+semas:MA0101202507A0010433,느좋,yes,False,True,False,마루숯불치킨바베큐,0.53,1.0
+semas:MA0101202409A0065757,느좋,yes,False,True,False,중식당몽,0.073,0.0
+semas:MA0101202409A0065757,이색 체험,no,True,False,False,중식당몽,,
+semas:MA0101202409A0056037,감성 모임,yes,True,True,True,호롱불,0.957,1.0
+semas:MA0101202409A0056037,느좋,yes,True,True,True,호롱불,0.888,1.0
+semas:MA0101202409A0056037,데이트·기념일,yes,True,True,True,호롱불,0.939,1.0
+semas:MA0101202409A0056037,이색 체험,yes,True,True,True,호롱불,,
+semas:MA0101202409A0014911,가성비 감성,yes,True,True,True,스시소라그린,0.398,0.0
+semas:MA0101202409A0014911,느좋,yes,False,True,False,스시소라그린,0.74,1.0
+semas:MA0101202501A0069161,느좋,yes,False,True,True,굿리스너스클럽,0.942,1.0
+semas:MA0101202506A0036824,가성비 감성,no,True,False,True,오사카데스서울 창동점,0.373,0.0
+semas:MA0101202506A0036824,감성 모임,yes,True,True,True,오사카데스서울 창동점,0.444,0.0
+semas:MA0101202506A0036824,느좋,yes,False,True,False,오사카데스서울 창동점,0.387,0.0
+semas:MA0101202506A0036824,데이트·기념일,yes,True,True,False,오사카데스서울 창동점,0.441,0.0
+semas:MA010120220805303449,느좋,no,True,False,True,태태삼겹,0.741,1.0
+semas:MA010120220805303449,야장·야외석,yes,True,True,True,태태삼겹,,
+semas:MA010120220805303449,이색 체험,yes,True,True,False,태태삼겹,,
+semas:MA010120220813592797,느좋,yes,False,True,False,남산밑유부,0.675,1.0
+semas:MA010120220813592797,혼밥 감성,yes,True,True,False,남산밑유부,0.607,1.0
+semas:MA0101202406A0264576,느좋,yes,True,True,False,랩씨labc,0.893,1.0
+semas:MA0101202406A0264576,이색 체험,yes,True,True,False,랩씨labc,,
+semas:MA0106202401A0397911,느좋,yes,False,True,False,다운타우너한남,0.86,1.0
+semas:MA0101202502A0033326,가성비 감성,yes,True,True,False,조현우국밥 숙대점,0.69,1.0
+semas:MA0101202502A0033326,가성비 혼밥,yes,True,True,True,조현우국밥 숙대점,0.776,1.0
+semas:MA0101202502A0033326,느좋,no,False,False,False,조현우국밥 숙대점,0.419,0.0
+semas:MA0101202502A0033326,혼밥 감성,yes,True,True,False,조현우국밥 숙대점,0.694,1.0
+semas:MA0101202604A0016096,느좋,yes,False,True,True,크레이브샌드위치클럽,0.926,1.0
+semas:MA010120220803521783,느좋,yes,True,True,False,에베레스트,0.74,1.0
+semas:MA010120220803521783,이색 체험,yes,True,True,False,에베레스트,,
+semas:MA0101202406A0291740,느좋,no,True,False,False,만족돈까스,0.543,1.0
+semas:MA010120220805002040,느좋,yes,False,True,False,전주순대국,0.067,0.0
+semas:MA010120220805002040,이색 체험,yes,True,True,False,전주순대국,,
+semas:MA010120220804946579,감성 모임,no,True,False,False,카카모루 성수점,0.461,0.0
+semas:MA010120220804946579,느좋,yes,True,True,False,카카모루 성수점,0.794,1.0
+semas:MA010120220804946579,혼밥 감성,yes,True,True,True,카카모루 성수점,0.581,1.0
