@@ -92,6 +92,45 @@ def brand_counts(stores: pd.Series, master: pd.Series) -> pd.Series:
     return keys.map(cnt)
 
 
+def exclude_flags(d, meta, pct_all, bcount=None):
+    """뺄 가게 후보 플래그 행 목록. bcount(같은 상호 수)를 안 주면 프랜차이즈 플래그는 건너뛴다."""
+    cat = meta.category_small
+    dd = d[d.store_id.isin(meta.index)]
+    txt = dd.review_text.fillna("")
+    takeout = txt.str.contains(r"포장|배달|테이크아웃").groupby(dd.store_id).mean()
+    rental = txt.str.contains(r"대관|파티룸|공간\s?대여|렌탈").groupby(dd.store_id).sum()
+    party = dd.chips.map(lambda ch: "파티하기 좋아요" in ch).groupby(dd.store_id).mean()
+    meat_chip = dd.chips.map(lambda ch: "고기 질이 좋아요" in ch).groupby(dd.store_id).mean()
+    area = area_features(meta)
+
+    flags = []
+    for sid in meta.index:
+        c, a = cat[sid], area.area_m2.get(sid)
+        f = []
+        if takeout[sid] >= 0.3 or (takeout[sid] >= 0.2 and pd.notna(a) and a <= 25):
+            f.append(("배달·포장 전문 의심", f"포장·배달 언급 리뷰 {takeout[sid]:.0%}, 면적 {a if pd.notna(a) else '-'}㎡"))
+        if rental[sid] >= 2 or (rental[sid] >= 1 and party[sid] >= 0.1):
+            f.append(("공간 대여 의심", f"대관·파티룸 언급 {int(rental[sid])}건, '파티하기 좋아요' {party[sid]:.0%}"))
+        if c not in MEAT and meat_chip[sid] >= 0.4:
+            f.append(("업종 오분류 의심(고깃집)", f"'고기 질이 좋아요' {meat_chip[sid]:.0%}"))
+        if area.lic_uptae.get(sid) == "식육(숯불구이)" and c not in MEAT:
+            f.append(("업종 오분류 의심(인허가 숯불구이)", "인허가 업태 식육(숯불구이)"))
+        if area.lic_uptae.get(sid) == "감성주점":
+            f.append(("감성주점", "인허가 업태 감성주점(헌팅포차류)"))
+        if bcount is not None and bcount[sid] >= 5:
+            land = pct_all.loc[sid, "감성·인테리어·뷰"] >= 0.9
+            f.append(("프랜차이즈" + (" (랜드마크 지점 후보)" if land else ""),
+                      f"같은 상호 {bcount[sid]}곳" + (", 감성·뷰 전체 상위 10%" if land else "")))
+        for kind, ev in f:
+            flags.append({"store_id": sid, "store_name": meta.at[sid, "store_name"],
+                          "naver_name": meta.at[sid, "naver_place_name"], "area_name": meta.at[sid, "area_name"],
+                          "category": c, "flag": kind, "evidence": ev,
+                          "place_url": f"https://m.place.naver.com/restaurant/{meta.at[sid, 'place_id']}/home",
+                          "proposal": "제외" if kind.startswith(("배달", "공간", "감성주점")) else "검토",
+                          "feedback": ""})
+    return flags
+
+
 def main(cand_path: Path, label_dir: Path):
     d = load()
     meta, n, pct, pct_all, hit, evid = store_features(d)
@@ -112,42 +151,8 @@ def main(cand_path: Path, label_dir: Path):
     allow = pd.DataFrame(rows)
 
     # ② 뺄 가게 후보
-    dd = d[d.store_id.isin(meta.index)]
-    txt = dd.review_text.fillna("")
-    takeout = txt.str.contains(r"포장|배달|테이크아웃").groupby(dd.store_id).mean()
-    rental = txt.str.contains(r"대관|파티룸|공간\s?대여|렌탈").groupby(dd.store_id).sum()
-    party = dd.chips.map(lambda ch: "파티하기 좋아요" in ch).groupby(dd.store_id).mean()
-    meat_chip = dd.chips.map(lambda ch: "고기 질이 좋아요" in ch).groupby(dd.store_id).mean()
-    area = area_features(meta)
     master = pd.read_sql("select name from master_dining_stores", sqlite3.connect(DB)).name
-    bcount = brand_counts(meta.store_name, master)
-
-    flags = []
-    for sid in meta.index:
-        c, a = cat[sid], area.area_m2.get(sid)
-        f = []
-        if takeout[sid] >= 0.3 or (takeout[sid] >= 0.2 and pd.notna(a) and a <= 25):
-            f.append(("배달·포장 전문 의심", f"포장·배달 언급 리뷰 {takeout[sid]:.0%}, 면적 {a if pd.notna(a) else '-'}㎡"))
-        if rental[sid] >= 2 or (rental[sid] >= 1 and party[sid] >= 0.1):
-            f.append(("공간 대여 의심", f"대관·파티룸 언급 {int(rental[sid])}건, '파티하기 좋아요' {party[sid]:.0%}"))
-        if c not in MEAT and meat_chip[sid] >= 0.4:
-            f.append(("업종 오분류 의심(고깃집)", f"'고기 질이 좋아요' {meat_chip[sid]:.0%}"))
-        if area.lic_uptae.get(sid) == "식육(숯불구이)" and c not in MEAT:
-            f.append(("업종 오분류 의심(인허가 숯불구이)", "인허가 업태 식육(숯불구이)"))
-        if area.lic_uptae.get(sid) == "감성주점":
-            f.append(("감성주점", "인허가 업태 감성주점(헌팅포차류)"))
-        if bcount[sid] >= 5:
-            land = pct_all.loc[sid, "감성·인테리어·뷰"] >= 0.9
-            f.append(("프랜차이즈" + (" (랜드마크 지점 후보)" if land else ""),
-                      f"같은 상호 {bcount[sid]}곳" + (", 감성·뷰 전체 상위 10%" if land else "")))
-        for kind, ev in f:
-            flags.append({"store_id": sid, "store_name": meta.at[sid, "store_name"],
-                          "naver_name": meta.at[sid, "naver_place_name"], "area_name": meta.at[sid, "area_name"],
-                          "category": c, "flag": kind, "evidence": ev,
-                          "place_url": f"https://m.place.naver.com/restaurant/{meta.at[sid, 'place_id']}/home",
-                          "proposal": "제외" if kind.startswith(("배달", "공간", "감성주점")) else "검토",
-                          "feedback": ""})
-    ex = pd.DataFrame(flags)
+    ex = pd.DataFrame(exclude_flags(d, meta, pct_all, brand_counts(meta.store_name, master)))
 
     OUT.mkdir(parents=True, exist_ok=True)
     allow.to_csv(OUT / "tag_category_allow_v0.csv", index=False, encoding="utf-8-sig")

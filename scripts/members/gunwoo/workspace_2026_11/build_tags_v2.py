@@ -20,6 +20,7 @@
 """
 import json
 import re
+import sqlite3
 import sys
 from pathlib import Path
 
@@ -29,13 +30,17 @@ from sklearn.linear_model import LogisticRegression
 
 sys.path.insert(0, str(Path(__file__).parent))
 from build_label_round import ROOT, SEED, area_features, evidence, load, store_features  # noqa: E402
-from build_tag_review_csv import MEAT, TAGS  # noqa: E402
+from build_tag_review_csv import MEAT, TAGS, exclude_flags  # noqa: E402
 from build_tags_v1 import CAFE_MENU, MENU, REVIEW, read_labels  # noqa: E402
 
 OUT = ROOT / "데이터/가공/store_level/store_tags_v2.csv"
 FRANCHISE = ROOT / "데이터/가공/store_level/store_franchise_v1.csv"
+SNAPSHOT = ROOT / "데이터/캐시/naver_reviews/crawler_snapshot.db"  # build_naver_reviews.py가 뜬 사본
 VIBE_FEATS = {"감성·인테리어·뷰": "분위기·인테리어", "조용·아늑": "조용·아늑", "특별함": "특별함", "가성비·양": "가성비"}
 VIBE_TH, FR_VIBE_TH = 0.6, 0.85
+# 11-17: 칩 달린 리뷰 20건(=수집 상한) 기준이면 1.1만 곳만 남는다. 15건으로 2.2만 곳.
+# 같은 라벨로 교차검증 AUC 0.892→0.890, 처음 보는 4회차 0.794→0.791, 겹치는 1.1만 곳 느좋 판정 99% 일치.
+V2_MIN_N = 10  # 11-24 15→10 (build_label_round.MIN_N과 맞춤)
 EXCLUDE = ("배달", "공간", "감성주점")
 # 4회차 확인(11-15): '클럽'(스페인클럽·샌드위치클럽 등)과 '합석'(일반 식당 리뷰)은 유흥이 아닌 곳만 잡아서 뺐다
 NIGHTLIFE_NAME = r"혼술바|헌팅|부킹|감성주점|룸살롱|나이트클럽"
@@ -52,6 +57,17 @@ ROUND = 4
 PICK = {"느좋_경계": 15, "느좋_프랜차이즈": 6, "야장·야외석": 10, "이색 체험": 10, "혼밥 감성": 8, "유흥 제외": 6}
 
 
+def naver_menus(store_ids):
+    """네이버 메뉴판에서 rep_menu·signature_menu 채우기 (리뷰 기반 후보가 없는 점포용). 대표 메뉴 우선, 최대 3개."""
+    con = sqlite3.connect(f"file:{SNAPSHOT}?mode=ro", uri=True)
+    m = pd.read_sql("select store_id, name, is_repr, menu_order from place_menus", con)
+    con.close()
+    m = m[m.store_id.isin(store_ids)].sort_values(["store_id", "is_repr", "menu_order"], ascending=[True, False, True])
+    rep = m.groupby("store_id").name.apply(lambda s: ", ".join(s.head(3)))
+    sig = m[m.is_repr == 1].groupby("store_id").name.apply(lambda s: ", ".join(s.head(3)))
+    return pd.DataFrame({"rep_menu": rep, "signature_menu": sig}).reindex(store_ids).fillna("")
+
+
 def vibe_model(pct_all, labels):
     X = pct_all[list(VIBE_FEATS)]
     y = labels[labels.index.isin(X.index)]
@@ -66,7 +82,7 @@ def pct_txt(p):
 def main(label_dir: Path, out_json: Path, prev: list[Path]):
     rng = np.random.default_rng(SEED + ROUND)
     d = load()
-    meta, n, pct, pct_all, hit, evid = store_features(d)
+    meta, n, pct, pct_all, hit, evid = store_features(d, min_n=V2_MIN_N)
     cat = meta.category_small
     area = area_features(meta)
     allow = pd.read_csv(REVIEW / "tag_category_allow_v0.csv", keep_default_na=False)
@@ -75,7 +91,14 @@ def main(label_dir: Path, out_json: Path, prev: list[Path]):
     ex = pd.read_csv(REVIEW / "store_exclude_candidates_v0.csv", keep_default_na=False)
     flags = ex[~ex.flag.str.startswith("프랜차이즈")].groupby("store_id").flag.agg(list).to_dict()
     fr = pd.read_csv(FRANCHISE, keep_default_na=False).drop_duplicates("store_id").set_index("store_id")
-    menu = pd.read_csv(MENU, index_col=0, keep_default_na=False).reindex(meta.index).fillna("")
+    menu_rv = pd.read_csv(MENU, index_col=0, keep_default_na=False)
+    new = meta.index.difference(menu_rv.index)  # 리뷰 메뉴 후보·제외 후보 검토(11-13) 뒤에 들어온 점포
+    if len(new):
+        ex = pd.concat([ex, pd.DataFrame(exclude_flags(d, meta.loc[new], pct_all))], ignore_index=True)
+        flags = ex[~ex.flag.str.startswith("프랜차이즈")].groupby("store_id").flag.agg(list).to_dict()
+        menu_rv = pd.concat([menu_rv, naver_menus(new)])
+        print(f"새 점포 {len(new):,}곳: 제외 플래그는 같은 규칙으로 계산, 메뉴는 네이버 메뉴판(대표 메뉴 우선)")
+    menu = menu_rv.reindex(meta.index).fillna("")
     cafe_like = menu.rep_menu.str.contains(CAFE_MENU)
 
     dd = d[d.store_id.isin(meta.index)]
