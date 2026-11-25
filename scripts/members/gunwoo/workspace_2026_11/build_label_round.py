@@ -29,7 +29,7 @@ sys.path.insert(0, str(ROOT / "maximus-analysis-archive/scripts/store_level"))
 from build_keyword_theme_map_v0 import SRC, THEME_MAP, THEMES  # noqa: E402
 
 M = 20          # 경험적 베이즈 축소 강도
-MIN_N = 20      # 평가에 쓰는 최소 리뷰 수
+MIN_N = 10      # 평가에 쓰는 최소 칩 리뷰 수. 11-24 20→10: 가게당 최대 20건만 모아서 20이면 전부 칩인 가게만 남았다
 SEED = 0
 # 조합 태그: 이름 → (테마들, 화면 설명)
 COMBOS = {
@@ -59,7 +59,7 @@ def load():
     return d[d.chips.str.len() > 0].reset_index(drop=True)
 
 
-def store_features(d):
+def store_features(d, min_n=MIN_N):
     k2t = {k: v[0] for k, v in THEME_MAP.items()}
     R = np.array([[t in {x for k in ch for x in k2t.get(k, [])} for t in THEMES] for ch in d.chips], float)
     sid, idx = np.unique(d.store_id, return_inverse=True)
@@ -71,7 +71,7 @@ def store_features(d):
     mu = pd.DataFrame(C / n[:, None]).groupby(cat).transform("mean").clip(lower=1e-3).values
     P = (C + M * mu) / (n[:, None] + M)
     L = pd.DataFrame(np.log(P / mu), index=sid, columns=THEMES)
-    ok = n >= MIN_N
+    ok = n >= min_n
     Lk = L[ok]
     pct_cat = Lk.groupby(cat[ok]).rank(pct=True)                     # 같은 업종 안 상대 순위
     pct_all = pd.DataFrame(P, index=sid, columns=THEMES)[ok].rank(pct=True)  # 전체 가게 기준 절대 순위

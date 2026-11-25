@@ -45,6 +45,11 @@ R_FLOOR, PATH_FLOOR, TOP_K = 0.6, 0.5, 10
 PEER_FLOOR = 0.5  # v1.2: 동료 예상 유입 백분위 하한(다른 동네 사람도 웬만큼은 가는 곳)
 V12 = "--v11" not in sys.argv  # 기본 v1.2. --v11이면 예전 판(R = 동료 예상 × 목적 가게 비중)
 RANK_FILE = "serendipity_ranking_v1_2.csv" if V12 else "serendipity_ranking_v1_1.csv"
+# --origin <통계청 행정동 코드>: 동대문구 전체 대신 출발동 하나로 실제·예상 유입을 계산한다(11-24, 외대 서울캠 = 이문1동 1106089).
+# 결과 파일 이름 끝에 _<코드>가 붙고, 교통시간도 그 동 기준이다. 학습(동료 모형)은 그대로 동대문 밖 120개 동.
+ORIGIN = sys.argv[sys.argv.index("--origin") + 1] if "--origin" in sys.argv else None
+SUFFIX = f"_{ORIGIN}" if ORIGIN else ""
+RANK_FILE = RANK_FILE.replace(".csv", SUFFIX + ".csv")
 OUT = e.HERE / "데이터/가공/elastic_net"
 
 
@@ -55,7 +60,7 @@ def month_gap(month: str, ctx) -> tuple[pd.DataFrame, pd.DataFrame]:
     panel = pd.read_csv(e.PANEL / f"seoul_od_E_{month}.csv.gz", dtype={"origin": str, "dest": str})
     lab = e.stratum_labels(panel, alloc, codes)
     origins = sorted(set(lab.origin) & set(origin_xy.index))
-    test_o = [o for o in origins if origin_xy.at[o, "district"] == "동대문구"]
+    test_o = [o for o in origins if origin_xy.at[o, "district"] == "동대문구" and (ORIGIN is None or o == ORIGIN)]
     pool = [o for o in origins if origin_xy.at[o, "district"] != "동대문구"]
     train_o = list(np.random.default_rng(0).choice(pool, size=e.N_TRAIN_ORIGINS, replace=False))
     pop = lab[lab.origin.isin(pool) & (lab.age_grp == "전체")].groupby("area_code")["y"].sum()
@@ -141,7 +146,7 @@ def main() -> None:
     ctx = e.load_common()
     xw, alloc, origin_xy, *_ = ctx
     # 달별 동료 모형 결과는 저장해 두고 다시 쓴다(8달 학습 약 8분). 모형을 바꿨으면 --refit
-    gap_f, ev_f = OUT / "serp_v1_monthly_gap.csv", OUT / "serp_v1_r_ndcg_by_month.csv"
+    gap_f, ev_f = OUT / f"serp_v1_monthly_gap{SUFFIX}.csv", OUT / f"serp_v1_r_ndcg_by_month{SUFFIX}.csv"
     if gap_f.exists() and ev_f.exists() and "--refit" not in sys.argv:
         monthly = pd.read_csv(gap_f, dtype={"area_code": str, "month": str})
         ev = pd.read_csv(ev_f, dtype={"month": str})
@@ -164,7 +169,7 @@ def main() -> None:
 
     # 동대문 출발동 평균 교통시간
     tt = pd.read_csv(e.TRANSIT, dtype={"origin": str, "area_code": str})
-    ddm_o = origin_xy.index[origin_xy.district == "동대문구"]
+    ddm_o = [ORIGIN] if ORIGIN else origin_xy.index[origin_xy.district == "동대문구"]
     tt = tt[tt.origin.isin(ddm_o)].groupby("area_code").transit_min.mean()
 
     v1 = build_v1_root()
