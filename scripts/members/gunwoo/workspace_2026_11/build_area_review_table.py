@@ -21,7 +21,7 @@
   ddm_act, ddm_exp, ddm_peer_ratio, ddm_inertia
                          SERP-v1(식사, 전체 연령): 동대문구민 실제 유입, 동료 출발지 기준 예상 유입, 실제÷예상, 늘 가던 곳 여부.
                          peer_ratio < 1 이면 동대문구민이 비슷한 조건보다 덜 간다
-입력: 데이터/가공/naver_reviews/{dining_store_by_area,dining_reviews_clean}.csv, 데이터/가공/store_level/store_tags_v5.csv
+입력: 데이터/가공/naver_reviews/{dining_store_by_area,dining_reviews_clean}.csv, 데이터/가공/store_level/store_tags_v5_1.csv
 출력: 데이터/가공/area_level/area_review_table_v1.csv
 실행: ~/.venvs/maximus/bin/python 분석/build_area_review_table.py
 """
@@ -32,7 +32,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 NR = ROOT / "데이터/가공/naver_reviews"
 SERP = ROOT / "데이터/가공/elastic_net/serendipity_ranking_v1_2.csv"
-TAGS_CSV = ROOT / "데이터/가공/store_level/store_tags_v5.csv"
+TAGS_CSV = ROOT / "데이터/가공/store_level/store_tags_v5_1.csv"
 OUT = ROOT / "데이터/가공/area_level/area_review_table_v1.csv"
 TAGS = ["감성 모임", "데이트·기념일", "가성비 혼밥", "단체 회식", "야장·야외석", "이색 체험"]
 
